@@ -1,0 +1,72 @@
+{%- doc -%}
+  Renders product disclosures on the product page.
+
+  @param {object} product - the product object
+  @param {boolean} [collapse_content] - if true, wraps disclosures in a collapsible accordion
+  @param {object} [block] - pass only in contexts where block.shopify_attributes is not handled by a wrapper (e.g. below-gallery)
+{%- enddoc -%}
+
+{%- assign disclosures = product.metafields.shopify.disclosure.value -%}
+{%- assign details_html = '' -%}
+{%- assign rendered_disclosures_count = 0 -%}
+
+{%- if disclosures != blank -%}
+  {%- for disclosure in disclosures -%}
+    {%- assign surfaces = disclosure.display_preferences.value.surfaces -%}
+
+    {%- if surfaces contains 'product_page' -%}
+      {%- assign disclosure_title = disclosure.title.value -%}
+      {%- assign img = disclosure.symbol.value -%}
+      {%- assign content = disclosure.content -%}
+
+      {%- capture details_item -%}
+        <div class="v-stack gap-1">
+          {%- if disclosure_title != blank or img != blank -%}
+            <span class="h-stack gap-1">
+              {%- if img != blank -%}
+                <span>{{- img | image_url: width: 40 | image_tag: loading: 'lazy', alt: '', widths: '20, 40', class: 'constrained-image', style: '--image-max-width: 20px' -}}</span>
+              {%- endif -%}
+              {%- if disclosure_title != blank -%}
+                <span class="h6">{{ disclosure_title | escape }}</span>
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+          {{ content | metafield_tag }}
+        </div>
+      {%- endcapture -%}
+
+      {%- capture details_html -%}{{ details_html }}{{ details_item }}{%- endcapture -%}
+      {%- assign rendered_disclosures_count = rendered_disclosures_count | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if rendered_disclosures_count > 0 -%}
+  {% liquid
+    if rendered_disclosures_count > 1
+      capture accordion_content
+        echo '<div class="v-stack gap-4">'
+        echo details_html
+        echo '</div>'
+      endcapture
+    else
+      assign accordion_content = details_html
+    endif
+  %}
+
+  {%- assign disclosure_label = 'product.disclosures.title' | t -%}
+
+  {%- if collapse_content -%}
+    {%- if block != null -%}
+      {%- assign disclosure_accordion_size = 'lg' -%}
+    {%- endif -%}
+    {%- render 'accordion', title: disclosure_label, content: accordion_content, icon: 'none', prose_content: true, size: disclosure_accordion_size, block: block -%}
+  {%- else -%}
+    <div class="v-stack gap-2 {% if block != nil %}product-content-below-gallery__description{% endif %}">
+      <p class="h6">{{ disclosure_label }}</p>
+      <div class="prose">
+        {{- accordion_content -}}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
