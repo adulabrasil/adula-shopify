@@ -53,8 +53,8 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "title": "Novidades da Adüla",
-            "content": "<p>Receba lançamentos, inspirações e novidades da Adüla por e-mail.</p>"
+            "title": "Cadastre-se e receba novidades e promoções",
+            "content": "<p>Receba lançamentos e condições especiais da Adüla por e-mail.</p>"
           }
         },
         "links": {
@@ -69,15 +69,31 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "Adüla",
-            "content": "<p>Joias de design autoral, delicadas e cheias de significado para acompanhar todos os seus momentos.</p>"
+            "title": "Atendimento",
+            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5531999174942\">(31) 99917-4942</a><br><a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a><br>Segunda a sexta, das 10h às 19h<br>Sábado, das 10h às 14h</p>"
+          }
+        },
+        "support": {
+          "type": "text",
+          "settings": {
+            "title": "Ajuda & Suporte",
+            "content": "<p><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/account\">Meus Pedidos</a><br><a href=\"https://melhorrastreio.com.br/\">Rastreio rápido</a><br><a href=\"/pages/guia-de-medidas\">Guia de Medidas</a><br><a href=\"https://app.zoppy.com.br/\">Consulte seu Giftback</a></p>"
+          }
+        },
+        "company": {
+          "type": "text",
+          "settings": {
+            "title": "Adüla | Semijoias Minimalistas",
+            "content": "<p>Adula Semijoias Ltda<br>CNPJ 33.429.865/0001-27<br>Rua Paraíba, 1441 - Loja 4<br>Savassi - Belo Horizonte - MG<br>30130-148</p>"
           }
         }
       },
       "block_order": [
         "newsletter",
         "links",
-        "text"
+        "text",
+        "support",
+        "company"
       ],
       "settings": {
         "show_social_media": true,
