@@ -69,52 +69,6 @@
         "subheading": "Acabaram de chegar"
       }
     },
-    "benefits": {
-      "type": "multi-column",
-      "blocks": {
-        "pix": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "Pagamento no Pix",
-            "heading_tag": "h4",
-            "content": "<p>Condições especiais para pagamento à vista.</p>"
-          }
-        },
-        "installments": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "Parcele suas compras",
-            "heading_tag": "h4",
-            "content": "<p>Escolha a melhor condição para você.</p>"
-          }
-        },
-        "shipping": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "Envio para todo o Brasil",
-            "heading_tag": "h4",
-            "content": "<p>Calcule prazo e valor do frete pelo seu CEP.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "pix",
-        "installments",
-        "shipping"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "columns_per_row": 3,
-        "stack_on_mobile": false,
-        "overlap_image": false,
-        "content_alignment": "center",
-        "text_alignment": "center",
-        "spacing": "sm",
-        "subheading": "",
-        "title": "Comprar na Adüla"
-      }
-    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -188,7 +142,6 @@
     "fio-de-luz",
     "new-arrivals",
     "love-paris",
-    "benefits",
     "testimonials"
   ]
 }
