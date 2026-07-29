@@ -1,4 +1,11 @@
 {
+  "404": {
+    "general": {
+      "title": "404",
+      "not_found_info": "Não conseguimos encontrar a página que está procurando. Por favor, utilize o menu ou o botão abaixo para retornar ao nosso site.",
+      "continue_shopping": "Continuar comprando"
+    }
+  },
   "general": {
     "page": "Página {{ page }}",
     "home": "Início",
@@ -87,7 +94,7 @@
       "add_to_cart_button": "Adicionar ao carrinho",
       "pre_order_button": "Pré-venda",
       "sold_out_button": "Esgotado",
-      "unavailable_button": "Unavailable",
+      "unavailable_button": "Indisponível",
       "choose_options": "Escolher opções",
       "choose_options_with_title": "Escolher opções para {{ title }}",
       "added_to_cart": "Adicionado ao carrinho!",
@@ -100,7 +107,7 @@
       "view_in_space": "Veja em seu ambiente",
       "taxes_included": "Tributo incluído.",
       "taxes_excluded": "Tributo excluído.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frete<\/a> calculado no checkout",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frete</a> calculado no checkout",
       "size_chart": "Guia de medidas",
       "available_colors_count": {
         "one": "{{ count }} cor disponível",
@@ -361,7 +368,7 @@
       "order_note": "Observações",
       "save_note": "Salvar observações",
       "view_cart": "Ver carrinho",
-      "checkout": "Checkout",
+      "checkout": "Finalizar compra",
       "we_accept": "Aceitamos"
     },
     "order": {
@@ -389,13 +396,6 @@
     "discount": {
       "label": "Código de desconto",
       "error": "Insira um código de desconto válido"
-    }
-  },
-  "404": {
-    "general": {
-      "title": "404",
-      "not_found_info": "Não conseguimos encontrar a página que está procurando. Por favor, utilize o menu ou o botão abaixo para retornar ao nosso site.",
-      "continue_shopping": "Continuar comprando"
     }
   },
   "search": {
