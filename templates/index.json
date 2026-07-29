@@ -19,7 +19,7 @@
           "settings": {
             "products_count": 8,
             "title": "Mais vendidos",
-            "link_url": "shopify://collections/all",
+            "link_url": "/collections/all?sort_by=best-selling",
             "link_text": "Ver todas as peças",
             "collection": "all"
           }
@@ -48,7 +48,7 @@
           "settings": {
             "products_count": 8,
             "title": "Novidades",
-            "link_url": "shopify://collections/all",
+            "link_url": "/collections/all?sort_by=created-descending",
             "link_text": "Ver novidades",
             "collection": "all"
           }
@@ -121,7 +121,7 @@
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
         "text_alignment": "center",
-        "liquid": "<style>\n  .adula-editorial-banner { display: block; width: 100%; overflow: hidden; background: #f3ece7; }\n  .adula-editorial-banner img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; transition: transform .45s ease; }\n  @media (hover: hover) { .adula-editorial-banner:hover img { transform: scale(1.012); } }\n  @media (max-width: 699px) {\n    .adula-editorial-banner img { height: clamp(250px, 74vw, 340px); aspect-ratio: auto; object-fit: cover; object-position: center; }\n  }\n</style>\n<a href=\"/collections/fio-de-luz\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Fio de Luz\">\n  <img src=\"{{ 'adula-fio-de-luz.webp' | asset_url }}\" alt=\"Coleção Fio de Luz da Adüla com brincos coloridos\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
+        "liquid": "<style>\\n  .adula-editorial-banner { display: block; width: 100%; overflow: hidden; background: #f3ece7; }\\n  .adula-editorial-banner img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; transition: transform .45s ease; }\\n  .adula-editorial-banner:focus-visible { outline: 3px solid #4a3428; outline-offset: -3px; }\\n  @media (hover: hover) { .adula-editorial-banner:hover img { transform: scale(1.012); } }\\n  @media (prefers-reduced-motion: reduce) { .adula-editorial-banner img { transition: none; } }\\n  @media (max-width: 699px) {\\n    .adula-editorial-banner img { height: clamp(250px, 74vw, 340px); aspect-ratio: auto; object-fit: cover; object-position: center; }\\n  }\\n</style>\\n<a href=\"/collections/fio-de-luz\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Fio de Luz\">\n  <img src=\"{{ 'adula-fio-de-luz.webp' | asset_url }}\" alt=\"Coleção Fio de Luz da Adüla com brincos coloridos\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
       }
     },
     "love-paris": {
@@ -132,7 +132,7 @@
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
         "text_alignment": "center",
-        "liquid": "<style>\n  .adula-editorial-banner { display: block; width: 100%; overflow: hidden; background: #f3ece7; }\n  .adula-editorial-banner img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; transition: transform .45s ease; }\n  @media (hover: hover) { .adula-editorial-banner:hover img { transform: scale(1.012); } }\n  @media (max-width: 699px) {\n    .adula-editorial-banner img { height: clamp(250px, 74vw, 340px); aspect-ratio: auto; object-fit: cover; object-position: center; }\n  }\n</style>\n<a href=\"/collections/love-paris\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Love Paris\">\n  <img src=\"{{ 'adula-love-paris.webp' | asset_url }}\" alt=\"Coleção Love Paris da Adüla inspirada nos encantos de Paris\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
+        "liquid": "<a href=\"/collections/love-paris\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Love Paris\">\n  <img src=\"{{ 'adula-love-paris.webp' | asset_url }}\" alt=\"Coleção Love Paris da Adüla inspirada nos encantos de Paris\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
       }
     }
   },
