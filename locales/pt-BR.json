@@ -49,9 +49,9 @@
     },
     "newsletter": {
       "email": "E-mail",
-      "subscribe": "Quero receber",
+      "subscribe": "Assinar",
       "notify_me": "Me avise",
-      "subscribed_successfully": "Cadastro realizado! Agora você receberá as novidades da Adüla por e-mail."
+      "subscribed_successfully": "Você foi inscrito em nossa newsletter."
     },
     "localization": {
       "country": "País",
@@ -238,7 +238,7 @@
       "email": "E-mail",
       "message": "Mensagem",
       "submit": "Enviar mensagem",
-      "success_message": "Mensagem enviada com sucesso! Nossa equipe retornará pelo e-mail informado."
+      "success_message": "Sua mensagem foi enviada."
     }
   },
   "customer": {
