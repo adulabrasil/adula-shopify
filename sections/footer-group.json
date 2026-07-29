@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -8,33 +17,25 @@
         "icon-1": {
           "type": "item",
           "settings": {
-            "icon": "picto-delivery-truck",
-            "title": "Envio para todo o Brasil",
-            "content": "<p>Frete calculado pelo CEP.</p>"
+            "title": "Envio para todo o Brasil"
           }
         },
         "icon-2": {
           "type": "item",
           "settings": {
-            "icon": "picto-lock",
-            "title": "Compra segura",
-            "content": "<p>Pagamento protegido em todas as etapas.</p>"
+            "title": "Compra segura"
           }
         },
         "icon-3": {
           "type": "item",
           "settings": {
-            "icon": "picto-customer-support",
-            "title": "Atendimento especializado",
-            "content": "<p>Conte com a equipe Adüla para escolher suas peças.</p>"
+            "title": "Atendimento especializado"
           }
         },
         "icon-4": {
           "type": "item",
           "settings": {
-            "icon": "picto-return",
-            "title": "Troca facilitada",
-            "content": "<p>Trocas conforme nossa política.</p>"
+            "title": "Troca facilitada"
           }
         }
       },
