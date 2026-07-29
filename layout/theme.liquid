@@ -11,6 +11,7 @@
       {%- else -%}
         {{- page_title -}}
         {%- if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
       {%- endif %}
     </title>
 
