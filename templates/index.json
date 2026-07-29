@@ -1,45 +1,14 @@
 {
   "sections": {
     "hero": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "text": "ADÜLA"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Joias que contam histórias",
-            "heading_tag": "h1"
-          }
-        },
-        "text": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Design autoral, delicadeza e significado para acompanhar todos os seus momentos.</p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "Conheça nossas peças",
-            "url": "shopify://collections/all",
-            "background": "#fffdfb",
-            "text_color": "#2d2926"
-          }
-        }
-      },
-      "block_order": ["subheading", "heading", "text", "button"],
+      "type": "custom-liquid",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "content_width": "md",
-        "text_position": "center",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "text_alignment": "center",
+        "liquid": "<a href=\"/collections/all\" class=\"adula-campaign-hero\" aria-label=\"Conheça as novidades da Adüla\">\n  <img\n    src=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-3-zpohp.jpg?v=1785175647\"\n    alt=\"Campanha Adüla — joias que contam histórias\"\n    width=\"1600\"\n    height=\"900\"\n    fetchpriority=\"high\"\n    decoding=\"async\"\n    style=\"display:block;width:100%;height:auto;\"\n  >\n</a>"
       }
     },
     "best-sellers": {
@@ -56,7 +25,9 @@
           }
         }
       },
-      "block_order": ["collection"],
+      "block_order": [
+        "collection"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
@@ -100,7 +71,12 @@
           }
         }
       },
-      "block_order": ["subheading", "heading", "text", "button"],
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
@@ -123,7 +99,9 @@
           }
         }
       },
-      "block_order": ["collection"],
+      "block_order": [
+        "collection"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
@@ -164,7 +142,11 @@
           }
         }
       },
-      "block_order": ["pix", "installments", "shipping"],
+      "block_order": [
+        "pix",
+        "installments",
+        "shipping"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
@@ -209,7 +191,11 @@
           }
         }
       },
-      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"],
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": true,
@@ -217,39 +203,14 @@
         "cycle_speed": 5,
         "font_size_factor": 1
       }
-    },
-    "newsletter-copy": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "text": "Novidades Adüla"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Faça parte do nosso universo",
-            "heading_tag": "h2"
-          }
-        },
-        "text": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Cadastre-se no rodapé para receber lançamentos, campanhas e condições especiais em primeira mão.</p>"
-          }
-        }
-      },
-      "block_order": ["subheading", "heading", "text"],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
     }
   },
-  "order": ["hero", "best-sellers", "editorial", "new-arrivals", "benefits", "testimonials", "newsletter-copy"]
+  "order": [
+    "hero",
+    "best-sellers",
+    "editorial",
+    "new-arrivals",
+    "benefits",
+    "testimonials"
+  ]
 }
