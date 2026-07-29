@@ -8,25 +8,33 @@
         "icon-1": {
           "type": "item",
           "settings": {
-            "title": "Envio para todo o Brasil"
+            "icon": "picto-delivery-truck",
+            "title": "Envio para todo o Brasil",
+            "content": "<p>Frete calculado pelo CEP.</p>"
           }
         },
         "icon-2": {
           "type": "item",
           "settings": {
-            "title": "Compra segura"
+            "icon": "picto-lock",
+            "title": "Compra segura",
+            "content": "<p>Pagamento protegido em todas as etapas.</p>"
           }
         },
         "icon-3": {
           "type": "item",
           "settings": {
-            "title": "Atendimento especializado"
+            "icon": "picto-customer-support",
+            "title": "Atendimento especializado",
+            "content": "<p>Conte com a equipe Adüla para escolher suas peças.</p>"
           }
         },
         "icon-4": {
           "type": "item",
           "settings": {
-            "title": "Troca facilitada"
+            "icon": "picto-return",
+            "title": "Troca facilitada",
+            "content": "<p>Trocas conforme nossa política.</p>"
           }
         }
       },
