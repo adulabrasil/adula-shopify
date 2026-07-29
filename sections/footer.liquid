@@ -184,6 +184,29 @@
         ------------------------------------------------------------------------------------------------------------------
       {%- endcomment -%}
 
+      {%- capture policy_links -%}
+        {%- if shop.refund_policy != blank -%}
+          <li><a href="{{ shop.refund_policy.url }}" class="link-faded">Política de trocas e devoluções</a></li>
+        {%- endif -%}
+        {%- if shop.shipping_policy != blank -%}
+          <li><a href="{{ shop.shipping_policy.url }}" class="link-faded">Política de envio</a></li>
+        {%- endif -%}
+        {%- if shop.privacy_policy != blank -%}
+          <li><a href="{{ shop.privacy_policy.url }}" class="link-faded">Política de privacidade</a></li>
+        {%- endif -%}
+        {%- if shop.terms_of_service != blank -%}
+          <li><a href="{{ shop.terms_of_service.url }}" class="link-faded">Termos de serviço</a></li>
+        {%- endif -%}
+      {%- endcapture -%}
+
+      {%- if policy_links != blank -%}
+        <nav aria-label="Políticas da loja">
+          <ul class="h-stack wrap gap-x-5 gap-y-2 unstyled-list text-sm" role="list">
+            {{- policy_links -}}
+          </ul>
+        </nav>
+      {%- endif -%}
+
       <div class="footer__aside">
         {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
           {%- assign show_country_selector = true -%}
