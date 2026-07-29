@@ -1,1 +1,43 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"contact-form":{"type":"contact","settings":{}}},"order":["main","contact-form"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "contact-form": {
+      "type": "contact",
+      "settings": {
+        "subheading": "Fale com a Adüla",
+        "title": "Como podemos ajudar?",
+        "heading_style": "h1",
+        "content": "<p>Envie sua mensagem pelo formulário. Nossa equipe retornará pelo e-mail informado.</p>"
+      },
+      "blocks": {
+        "assunto": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Assunto",
+            "values": "Dúvidas sobre produtos, Pedido e entrega, Trocas e devoluções, Outro"
+          }
+        },
+        "telefone": {
+          "type": "text",
+          "settings": {
+            "title": "Telefone (opcional)",
+            "use_long_text": false,
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "assunto",
+        "telefone"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "contact-form"
+  ]
+}
