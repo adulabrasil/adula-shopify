@@ -61,7 +61,9 @@
           "type": "links",
           "settings": {
             "menu": "footer",
-            "show_menu_title": true
+            "collapse_on_mobile": true,
+            "show_menu_title": true,
+            "menu_title": "Atendimento"
           }
         },
         "text": {
@@ -77,7 +79,13 @@
         "links",
         "text"
       ],
-      "settings": {}
+      "settings": {
+        "show_social_media": true,
+        "show_payment_icons": true,
+        "show_powered_by_shopify": false,
+        "show_country_selector": false,
+        "show_locale_selector": false
+      }
     }
   },
   "order": [
