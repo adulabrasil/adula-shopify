@@ -186,7 +186,7 @@
 
           <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
             <div class="predictive-search__pages v-stack justify-items-start gap-3">
-              {%- render 'predictive-search-result-item' for predictive_search.resources.pages as page, type: 'page' -%}
+              {%- render 'predictive-search-result-item' for page_results as page, type: 'page' -%}
             </div>
           </div>
         {%- endif -%}
