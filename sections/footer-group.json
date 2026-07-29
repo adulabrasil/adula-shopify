@@ -52,7 +52,10 @@
       "blocks": {
         "newsletter": {
           "type": "newsletter",
-          "settings": {}
+          "settings": {
+            "title": "Novidades da Adüla",
+            "content": "<p>Receba lançamentos, inspirações e novidades da Adüla por e-mail.</p>"
+          }
         },
         "links": {
           "type": "links",
