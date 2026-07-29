@@ -35,9 +35,9 @@
         "hide_for_account_holders": true,
         "show_only_once": true,
         "show_newsletter_form": true,
-        "title": "Novidades da Adüla",
-        "content": "Cadastre seu e-mail para receber lançamentos, inspirações e novidades da Adüla.",
-        "button_text": "Quero receber"
+        "title": "Ganhe 10% de desconto na sua primeira compra!",
+        "content": "Inscreva-se agora em nossa newsletter e receba um cupom de desconto de 10% exclusivo. Limite de 1 cupom por CPF.",
+        "button_text": "Eu quero!"
       }
     }
   },
