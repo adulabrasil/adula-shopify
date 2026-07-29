@@ -40,51 +40,6 @@
         "subheading": "Os favoritos da Adüla"
       }
     },
-    "editorial": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "text": "Inspiração francesa"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Elegância em cada detalhe",
-            "heading_tag": "h2"
-          }
-        },
-        "text": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Peças delicadas, versáteis e cheias de personalidade para transformar o cotidiano.</p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "style": "outline",
-            "text": "Descobrir",
-            "url": "shopify://collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "subheading",
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "content_width": "md",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
-    },
     "new-arrivals": {
       "type": "featured-collections",
       "blocks": {
@@ -203,13 +158,36 @@
         "cycle_speed": 5,
         "font_size_factor": 1
       }
+    },
+    "fio-de-luz": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "text_alignment": "center",
+        "liquid": "<style>\n  .adula-editorial-banner { display: block; width: 100%; overflow: hidden; background: #f3ece7; }\n  .adula-editorial-banner img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; transition: transform .45s ease; }\n  @media (hover: hover) { .adula-editorial-banner:hover img { transform: scale(1.012); } }\n  @media (max-width: 699px) {\n    .adula-editorial-banner img { height: clamp(250px, 74vw, 340px); aspect-ratio: auto; object-fit: cover; object-position: center; }\n  }\n</style>\n<a href=\"/collections/fio-de-luz\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Fio de Luz\">\n  <img src=\"{{ 'adula-fio-de-luz.webp' | asset_url }}\" alt=\"Coleção Fio de Luz da Adüla com brincos coloridos\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
+      }
+    },
+    "love-paris": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "text_alignment": "center",
+        "liquid": "<style>\n  .adula-editorial-banner { display: block; width: 100%; overflow: hidden; background: #f3ece7; }\n  .adula-editorial-banner img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; transition: transform .45s ease; }\n  @media (hover: hover) { .adula-editorial-banner:hover img { transform: scale(1.012); } }\n  @media (max-width: 699px) {\n    .adula-editorial-banner img { height: clamp(250px, 74vw, 340px); aspect-ratio: auto; object-fit: cover; object-position: center; }\n  }\n</style>\n<a href=\"/collections/love-paris\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Love Paris\">\n  <img src=\"{{ 'adula-love-paris.webp' | asset_url }}\" alt=\"Coleção Love Paris da Adüla inspirada nos encantos de Paris\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
+      }
     }
   },
   "order": [
     "hero",
     "best-sellers",
-    "editorial",
+    "fio-de-luz",
     "new-arrivals",
+    "love-paris",
     "benefits",
     "testimonials"
   ]
