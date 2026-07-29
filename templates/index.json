@@ -17,7 +17,7 @@
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
         "text_alignment": "center",
-        "liquid": "<style>\n  .adula-campaign-hero { display: grid; grid-template-columns: minmax(0, 44%) minmax(0, 56%); min-height: min(720px, 72vw); color: #4a3428; background: #f3ece7; }\n  .adula-campaign-hero__content { display: flex; align-items: center; padding: clamp(32px, 6vw, 96px); }\n  .adula-campaign-hero__copy { max-width: 480px; text-align: left; }\n  .adula-campaign-hero__eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }\n  .adula-campaign-hero__title { margin: 0; color: inherit; font-size: clamp(40px, 5vw, 72px); line-height: 1; }\n  .adula-campaign-hero__text { margin: 18px 0 26px; max-width: 390px; font-size: clamp(15px, 1.4vw, 19px); }\n  .adula-campaign-hero__button { display: inline-flex; min-height: 46px; align-items: center; padding: 0 24px; color: #fffdfb; background: #4a3428; font-weight: 600; }\n  .adula-campaign-hero__media, .adula-campaign-hero__media img { display: block; width: 100%; height: 100%; }\n  .adula-campaign-hero__media { min-height: 560px; overflow: hidden; }\n  .adula-campaign-hero__media img { object-fit: cover; object-position: center 48%; }\n  @media (max-width: 699px) {\n    .adula-campaign-hero { display: flex; min-height: 0; flex-direction: column-reverse; }\n    .adula-campaign-hero__media { min-height: 0; aspect-ratio: 1362 / 2048; }\n    .adula-campaign-hero__media img { object-fit: contain; }\n    .adula-campaign-hero__content { padding: 30px 20px 34px; }\n    .adula-campaign-hero__title { font-size: clamp(36px, 11vw, 48px); }\n    .adula-campaign-hero__text { margin: 12px 0 20px; }\n  }\n</style>\n<a href=\"/collections/all\" class=\"adula-campaign-hero\" aria-label=\"Personalize sua peça na Adüla\">\n  <div class=\"adula-campaign-hero__content\">\n    <div class=\"adula-campaign-hero__copy\">\n      <p class=\"adula-campaign-hero__eyebrow\">Afeto em cada detalhe</p>\n      <h1 class=\"adula-campaign-hero__title\">Personalize sua peça</h1>\n      <p class=\"adula-campaign-hero__text\">Escolha símbolos que representam quem você ama e transforme memórias em uma joia única.</p>\n      <span class=\"adula-campaign-hero__button\">Personalizar agora</span>\n    </div>\n  </div>\n  <div class=\"adula-campaign-hero__media\">\n    <img src=\"{{ 'adula-personalize-familia.webp' | asset_url }}\" alt=\"Criança tocando pulseiras personalizadas no pulso da mãe\" width=\"1362\" height=\"2048\" fetchpriority=\"high\" decoding=\"async\">\n  </div>\n</a>"
+        "liquid": "<style>\n  .adula-bagy-hero { display: block; position: relative; overflow: hidden; color: #fff; background: #b7895d; }\n  .adula-bagy-hero__desktop { display: block; width: 100%; height: auto; max-height: 720px; object-fit: cover; }\n  .adula-bagy-hero__mobile { display: none; width: 100%; height: auto; }\n  .adula-bagy-hero__copy { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: clamp(28px, 5vw, 80px); text-shadow: 0 1px 8px rgba(55, 32, 17, .18); }\n  .adula-bagy-hero__offer { justify-self: end; max-width: 430px; text-align: center; }\n  .adula-bagy-hero__title { margin: 0; color: inherit; font-family: var(--heading-font-family); font-size: clamp(48px, 6vw, 92px); font-weight: 400; line-height: .92; text-transform: uppercase; }\n  .adula-bagy-hero__condition { margin: 16px 0 0; font-size: clamp(16px, 1.6vw, 23px); }\n  .adula-bagy-hero__note { position: absolute; top: 18px; left: 50%; width: min(700px, 90%); transform: translateX(-50%); text-align: center; font-size: 13px; }\n  .adula-bagy-hero:focus-visible { outline: 3px solid currentColor; outline-offset: -5px; }\n  @media (max-width: 699px) {\n    .adula-bagy-hero__desktop, .adula-bagy-hero__copy, .adula-bagy-hero__note { display: none; }\n    .adula-bagy-hero__mobile { display: block; }\n  }\n</style>\n<a href=\"/collections/all\" class=\"adula-bagy-hero\" aria-label=\"Compre e ganhe brindes em compras participantes\">\n  <img class=\"adula-bagy-hero__desktop\" src=\"{{ 'adula-hero-desktop.jpg' | asset_url }}\" alt=\"Adüla: compre e ganhe brindes\" width=\"2048\" height=\"1362\" fetchpriority=\"high\" decoding=\"async\">\n  <img class=\"adula-bagy-hero__mobile\" src=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-3-zpohp.jpg?v=1785175647\" alt=\"Adüla: compre e ganhe brindes em compras acima de R$199 e R$399\" width=\"500\" height=\"650\" fetchpriority=\"high\" decoding=\"async\">\n  <span class=\"adula-bagy-hero__note\">*Brindes não acumulativos, válidos enquanto durarem os estoques. Consulte a disponibilidade no carrinho.</span>\n  <span class=\"adula-bagy-hero__copy\"><span></span><span class=\"adula-bagy-hero__offer\"><strong class=\"adula-bagy-hero__title\">Compre<br>&amp; ganhe*</strong><span class=\"adula-bagy-hero__condition\">Brindes nas compras acima de R$199 e R$399</span></span></span>\n</a>"
       }
     },
     "best-sellers": {
@@ -46,7 +46,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "Os favoritos da Adüla"
+        "subheading": ""
       }
     },
     "new-arrivals": {
@@ -75,7 +75,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "Acabaram de chegar"
+        "subheading": "Confira nossos lançamentos"
       }
     },
     "testimonials": {
@@ -84,7 +84,7 @@
         "testimonial-1": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>As peças são perfeitas. São as únicas que uso que não me dão alergia e não escurecem nem perdem a qualidade com o uso diário.</p>",
+            "content": "<p>Atendimento perfeito como sempre, tanto pelo WhatsApp com a Patrícia quanto com a Bárbara presencialmente. Sou cliente fiel da loja há dois anos e as peças são perfeitas. São as únicas peças que uso que não me dão alergia e não escurecem nem perdem a qualidade com o uso diário.</p>",
             "author": "Júlia Maia",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100
@@ -93,8 +93,8 @@
         "testimonial-2": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>Peças lindas, sofisticadas e com ótimo preço. Foi uma experiência maravilhosa.</p>",
-            "author": "Polliana Rodrigues",
+            "content": "<p>Amo comprar na Adüla. Sempre sou muito bem atendida e são os únicos brincos que não me dão alergia — e sou super alérgica. A do Pátio Savassi é uma graça.</p>",
+            "author": "Larissa Ambrosio",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100
           }
@@ -102,8 +102,26 @@
         "testimonial-3": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>Peças elegantes, delicadas e de excelente qualidade. Uma ótima escolha para presentear.</p>",
-            "author": "Juliana Munhoz",
+            "content": "<p>Sou apaixonada pela Adüla! Peças impecáveis que, além de lindas, duram uma vida. Sempre sou muito bem atendida na unidade da Savassi.</p>",
+            "author": "Maria Alice de Araújo Ferreira",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>A loja mais perfeita! Só uso peças da loja de vocês, vou para a praia, não tiro nada e continua tudo perfeito. Amo muito.</p>",
+            "author": "Joanna Ribeiro",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Loja linda, com muita variedade de acessórios. A qualidade das peças da Adüla é excelente. A Isa sempre me atende muito bem, seja no WhatsApp ou presencialmente.</p>",
+            "author": "Camila Dias Abreu Figueiredo",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100
           }
@@ -112,14 +130,16 @@
       "block_order": [
         "testimonial-1",
         "testimonial-2",
-        "testimonial-3"
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5"
       ],
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "auto_rotate_between_testimonials": true,
         "cycle_speed": 5,
-        "font_size_factor": 1
+        "font_size_factor": 0.85
       }
     },
     "fio-de-luz": {
@@ -143,14 +163,54 @@
         "text_alignment": "center",
         "liquid": "<a href=\"/collections/love-paris\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Love Paris\">\n  <img src=\"{{ 'adula-love-paris.webp' | asset_url }}\" alt=\"Coleção Love Paris da Adüla inspirada nos encantos de Paris\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>"
       }
+    },
+    "instagram": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "@adulabrasil",
+            "heading_tag": "h2"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Siga a Adüla no Instagram",
+            "url": "https://www.instagram.com/adulabrasil/"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center"
+      }
+    },
+    "quem-somos": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "text_alignment": "left",
+        "liquid": "<style>\n  .adula-about { max-width: 1120px; margin: 0 auto; }\n  .adula-about h2 { margin-bottom: 28px; text-align: center; }\n  .adula-about__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); }\n  .adula-about__stores { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 38px; text-align: center; }\n  .adula-about__stores strong { display: block; }\n  @media (max-width: 699px) { .adula-about__grid, .adula-about__stores { grid-template-columns: 1fr; } }\n</style>\n<div class=\"adula-about\">\n  <h2 class=\"h2\">Quem somos</h2>\n  <div class=\"adula-about__grid prose\">\n    <div><p>Criada por uma francesa apaixonada por sua terra natal, a Adüla nasce inspirada no charme europeu. Nossa fundadora e designer, Nadia Fontaine, cria exclusivamente para a marca, trazendo delicadeza e identidade única em cada peça.</p><p>Meiga e minimalista, a Adüla se destaca por suas semijoias delicadas e versáteis, que podem ser usadas sozinhas ou combinadas, criando composições únicas para o dia a dia.</p></div>\n    <div><p>Nossas peças são produzidas no Brasil, com acabamento impecável, banhadas a ouro 18K ou ródio branco, além de joias em Prata 925. São hipoalergênicas, livres de níquel e feitas para acompanhar você todos os dias.</p><p>Desde 2017 encantando clientes em todo o Brasil, hoje contamos com lojas físicas em Belo Horizonte. Oferecemos garantia de 6 meses e frete grátis nas compras acima de R$300. Verdadeiros mimos para você se sentir ainda mais especial — vem ser Adülada ♥</p></div>\n  </div>\n  <h3 class=\"h4\" style=\"margin-top:40px;text-align:center\">Onde estamos</h3>\n  <div class=\"adula-about__stores\"><p><strong>Savassi</strong>Loja Conceito<br>Belo Horizonte - MG</p><p><strong>Boulevard</strong>Shopping Boulevard<br>Belo Horizonte - MG</p><p><strong>Pátio Savassi</strong>Pátio Savassi<br>Belo Horizonte - MG</p><p><strong>BH Shopping</strong>BH Shopping<br>Belo Horizonte - MG</p></div>\n</div>"
+      }
     }
   },
   "order": [
     "hero",
     "best-sellers",
-    "fio-de-luz",
     "new-arrivals",
-    "love-paris",
-    "testimonials"
+    "testimonials",
+    "instagram",
+    "quem-somos"
   ]
 }
