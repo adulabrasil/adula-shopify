@@ -35,24 +35,14 @@
         "hide_for_account_holders": true,
         "show_only_once": true,
         "show_newsletter_form": true,
-        "title": "Signup for our newsletter",
-        "content": "Describe what your customers will receive when subscribing to your newsletter.",
-        "button_text": "Subscribe"
-      }
-    },
-    "privacy-banner": {
-      "type": "privacy-banner",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "title": "🍪 Cookie policy",
-        "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+        "title": "Novidades da Adüla",
+        "content": "Cadastre seu e-mail para receber lançamentos, inspirações e novidades da Adüla.",
+        "button_text": "Quero receber"
       }
     }
   },
   "order": [
     "cart-drawer",
-    "newsletter-popup",
-    "privacy-banner"
+    "newsletter-popup"
   ]
 }
