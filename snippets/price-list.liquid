@@ -168,3 +168,16 @@
     {%- endif -%}
   {%- endunless -%}
 </price-list>
+
+{%- if context == 'card' or context == 'product' -%}
+  {%- assign payment_item = variant | default: product.selected_or_first_available_variant -%}
+  {%- if payment_item != blank -%}
+    {%- assign pix_price = payment_item.price | times: 97 | divided_by: 100 -%}
+    {%- assign installment_count = payment_item.price | divided_by: 1000 | at_least: 1 | at_most: 4 -%}
+    {%- assign installment_price = payment_item.price | divided_by: installment_count -%}
+    <div class="adula-payment-conditions text-subdued text-sm">
+      <span>{{ pix_price | money }} no Pix</span>
+      <span>{{ payment_item.price | money }} em até {{ installment_count }}x de {{ installment_price | money }} sem juros</span>
+    </div>
+  {%- endif -%}
+{%- endif -%}
