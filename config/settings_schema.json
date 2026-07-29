@@ -564,7 +564,7 @@
           {
             "value": "lowercase",
             "label": "t:theme_settings.product_card.text_casing_options.lowercase"
-          },
+          }
         ],
         "default": "inherit"
       },
