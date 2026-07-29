@@ -199,11 +199,11 @@
   },
   "blog": {
     "general": {
-      "empty_blog": "Esse blog está vazio",
+      "empty_blog": "Em breve, novas histórias e inspirações da Adüla por aqui.",
       "back_to_home": "Voltar ao início",
       "view": "Ver",
-      "all_posts": "Todos os posts",
-      "read_more": "Ver mais"
+      "all_posts": "Todos os artigos",
+      "read_more": "Ler artigo"
     },
     "post": {
       "written_by": "Por {{ author }}",
@@ -218,7 +218,7 @@
       "email": "E-mail",
       "message": "Comentário",
       "submit": "Publicar comentário",
-      "comment_sent": "Comentário enviado. Será publicado depois que o lojista aprova-lo.",
+      "comment_sent": "Comentário enviado. Ele será publicado após a aprovação.",
       "comment_published": "Seu comentário foi publicado.",
       "count": {
         "one": "{{ count }} comentário",
