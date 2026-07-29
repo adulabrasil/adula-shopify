@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -36,11 +32,18 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
-          "settings": {}
+          "settings": {
+            "hide_sold_out_variants": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch"
+          }
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -50,9 +53,35 @@
           "type": "buy_buttons",
           "settings": {}
         },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
+        "care": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-jewelry",
+            "title": "Cuidados com sua joia",
+            "content": "<p>Guarde sua joia separadamente, em local seco, e evite contato direto com perfumes, cremes e produtos químicos. Após o uso, limpe delicadamente com um pano macio.</p>",
+            "liquid": ""
+          }
+        },
+        "shipping_returns": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-return",
+            "title": "Envios e trocas",
+            "content": "<p>Consulte as condições, prazos e orientações nas nossas políticas de <a href=\"/policies/shipping-policy\">envio</a> e <a href=\"/policies/refund-policy\">trocas e devoluções</a>.</p>",
+            "liquid": ""
+          }
+        },
+        "secure_checkout": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "Pagamento seguro",
+            "icon": "picto-lock",
+            "icon_width": 16,
+            "background": "#fffdfb",
+            "text_color": "#2d2926"
+          }
         },
         "complementary_products": {
           "type": "complementary_products",
@@ -60,7 +89,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "payment_terms",
@@ -69,6 +97,9 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "care",
+        "shipping_returns",
+        "secure_checkout",
         "complementary_products"
       ],
       "settings": {
