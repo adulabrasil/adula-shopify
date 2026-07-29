@@ -4,12 +4,16 @@
   <div class="container container--xs">
     <div class="empty-state">
       <div class="prose">
-        <h1 class="h4">{{ '404.general.title' | t }}</h1>
-        <p>{{ '404.general.not_found_info' | t }}</p>
+        <p class="h6">Página não encontrada</p>
+        <h1 class="h3">Vamos ajudar você a encontrar sua próxima joia?</h1>
+        <p>O endereço acessado pode ter mudado, mas o universo Adüla continua a poucos cliques.</p>
 
-        {%- assign button_content = '404.general.continue_shopping' | t -%}
-        {%- assign button_link = section.settings.link | default: routes.all_products_collection_url -%}
-        {%- render 'button', content: button_content, href: button_link -%}
+        <div class="button-group justify-center">
+          {%- render 'button', content: 'Voltar ao início', href: routes.root_url -%}
+
+          {%- assign shopping_link = section.settings.link | default: routes.all_products_collection_url -%}
+          {%- render 'button', content: 'Continuar comprando', href: shopping_link, style: 'outline' -%}
+        </div>
       </div>
     </div>
   </div>
