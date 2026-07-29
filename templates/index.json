@@ -1,1 +1,255 @@
-{"sections":{"hero":{"type":"slideshow","blocks":{"slide-1":{"type":"image","settings":{"subheading":"ADÜLA","title":"Joias que contam histórias","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","content_max_width":620,"button_1_text":"Conheça nossas peças","button_1_link":"shopify://collections/all","button_1_style":"fill","button_1_background":"#ffffff","button_1_text_color":"#2d2926","button_2_style":"solid","button_2_background":"#2d2926","button_2_text_color":"#ffffff","background_opacity":35,"text_color":"#ffffff","gradient_overlay":"linear-gradient(180deg, rgba(45, 41, 38, 0.08), rgba(45, 41, 38, 0.48) 100%)"}}},"block_order":["slide-1"],"settings":{"allow_transparent_header":true,"show_next_section_button":true,"media_size":"fill","show_initial_transition":true,"autoplay":false,"autoplay_pause_on_video":true,"cycle_speed":5,"background":"#b9a89b","controls_color":"#ffffff"}},"brand-intro":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"text":"Design autoral, delicadeza e significado","heading_tag":"h1"}}},"block_order":["heading"],"settings":{"color_scheme":"scheme-1","separate_section_with_border":false,"content_width":"sm","text_position":"center","remove_vertical_spacing":false}},"best-sellers":{"type":"featured-collections","blocks":{"collection":{"type":"collection","settings":{"products_count":8,"title":"Mais vendidos","link_url":"shopify://collections/all","link_text":"Ver todas as peças","collection":"all"}}},"block_order":["collection"],"settings":{"color_scheme":"scheme-1","separate_section_with_border":false,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":"Os favoritos da Adüla"}},"editorial":{"type":"image-with-text-overlay","blocks":{"subheading":{"type":"subheading","settings":{"text":"Inspiração francesa"}},"heading":{"type":"heading","settings":{"text":"Elegância em cada detalhe","heading_tag":"h2"}},"button":{"type":"button","settings":{"style":"solid","text":"Descobrir","link":"shopify://collections/all","background":"#ffffff","text_color":"#2d2926"}}},"block_order":["subheading","heading","button"],"settings":{"color_scheme":"scheme-4","image_size":"sm","allow_transparent_header":false,"reveal_on_scroll":true,"remove_vertical_spacing":true,"content_width":"md","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","overlay_color":"#2d2926","overlay_opacity":25}},"new-arrivals":{"type":"featured-collections","blocks":{"collection":{"type":"collection","settings":{"products_count":8,"title":"Novidades","link_url":"shopify://collections/all","link_text":"Ver novidades","collection":"all"}}},"block_order":["collection"],"settings":{"color_scheme":"scheme-1","separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":"Acabaram de chegar"}},"benefits":{"type":"multi-column","blocks":{"pix":{"type":"image_with_text","settings":{"title":"Pagamento no Pix","heading_tag":"h4","content":"<p>Condições especiais para pagamento à vista.</p>"}},"installments":{"type":"image_with_text","settings":{"title":"Parcele suas compras","heading_tag":"h4","content":"<p>Escolha a melhor condição para você.</p>"}},"shipping":{"type":"image_with_text","settings":{"title":"Envio para todo o Brasil","heading_tag":"h4","content":"<p>Calcule prazo e valor do frete pelo seu CEP.</p>"}}},"block_order":["pix","installments","shipping"],"settings":{"color_scheme":"scheme-2","separate_section_with_border":true,"columns_per_row":3,"stack_on_mobile":false,"overlap_image":false,"content_alignment":"center","text_alignment":"center","spacing":"sm","subheading":"","title":"Comprar na Adüla"}},"testimonials":{"type":"testimonials","blocks":{"testimonial-1":{"type":"testimonial","settings":{"content":"<p>As peças são perfeitas. São as únicas que uso que não me dão alergia e não escurecem nem perdem a qualidade com o uso diário.</p>","author":"Júlia Maia","logo_max_width":140,"logo_mobile_max_width":100}},"testimonial-2":{"type":"testimonial","settings":{"content":"<p>Peças lindas, sofisticadas e com ótimo preço. Foi uma experiência maravilhosa.</p>","author":"Polliana Rodrigues","logo_max_width":140,"logo_mobile_max_width":100}},"testimonial-3":{"type":"testimonial","settings":{"content":"<p>Peças elegantes, delicadas e de excelente qualidade. Uma ótima escolha para presentear.</p>","author":"Juliana Munhoz","logo_max_width":140,"logo_mobile_max_width":100}}},"block_order":["testimonial-1","testimonial-2","testimonial-3"],"settings":{"color_scheme":"scheme-3","separate_section_with_border":true,"auto_rotate_between_testimonials":true,"cycle_speed":5,"font_size_factor":1}},"newsletter":{"type":"newsletter","settings":{"color_scheme":"scheme-3","separate_section_with_border":true,"image_size":"md","subheading":"Novidades Adüla","title":"Faça parte do nosso universo","content":"<p>Receba lançamentos, campanhas e condições especiais em primeira mão.</p>","button_text":"Quero receber","overlay_color":"#2d2926","overlay_opacity":20}}},"order":["hero","brand-intro","best-sellers","editorial","new-arrivals","benefits","testimonials","newsletter"]}
+{
+  "sections": {
+    "hero": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "text": "ADÜLA"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Joias que contam histórias",
+            "heading_tag": "h1"
+          }
+        },
+        "text": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Design autoral, delicadeza e significado para acompanhar todos os seus momentos.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Conheça nossas peças",
+            "url": "shopify://collections/all",
+            "background": "#fffdfb",
+            "text_color": "#2d2926"
+          }
+        }
+      },
+      "block_order": ["subheading", "heading", "text", "button"],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": false,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "best-sellers": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "products_count": 8,
+            "title": "Mais vendidos",
+            "link_url": "shopify://collections/all",
+            "link_text": "Ver todas as peças",
+            "collection": "all"
+          }
+        }
+      },
+      "block_order": ["collection"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Os favoritos da Adüla"
+      }
+    },
+    "editorial": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "text": "Inspiração francesa"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Elegância em cada detalhe",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Peças delicadas, versáteis e cheias de personalidade para transformar o cotidiano.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Descobrir",
+            "url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": ["subheading", "heading", "text", "button"],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "new-arrivals": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "products_count": 8,
+            "title": "Novidades",
+            "link_url": "shopify://collections/all",
+            "link_text": "Ver novidades",
+            "collection": "all"
+          }
+        }
+      },
+      "block_order": ["collection"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Acabaram de chegar"
+      }
+    },
+    "benefits": {
+      "type": "multi-column",
+      "blocks": {
+        "pix": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Pagamento no Pix",
+            "heading_tag": "h4",
+            "content": "<p>Condições especiais para pagamento à vista.</p>"
+          }
+        },
+        "installments": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Parcele suas compras",
+            "heading_tag": "h4",
+            "content": "<p>Escolha a melhor condição para você.</p>"
+          }
+        },
+        "shipping": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Envio para todo o Brasil",
+            "heading_tag": "h4",
+            "content": "<p>Calcule prazo e valor do frete pelo seu CEP.</p>"
+          }
+        }
+      },
+      "block_order": ["pix", "installments", "shipping"],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "subheading": "",
+        "title": "Comprar na Adüla"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>As peças são perfeitas. São as únicas que uso que não me dão alergia e não escurecem nem perdem a qualidade com o uso diário.</p>",
+            "author": "Júlia Maia",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Peças lindas, sofisticadas e com ótimo preço. Foi uma experiência maravilhosa.</p>",
+            "author": "Polliana Rodrigues",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Peças elegantes, delicadas e de excelente qualidade. Uma ótima escolha para presentear.</p>",
+            "author": "Juliana Munhoz",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100
+          }
+        }
+      },
+      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "auto_rotate_between_testimonials": true,
+        "cycle_speed": 5,
+        "font_size_factor": 1
+      }
+    },
+    "newsletter-copy": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "text": "Novidades Adüla"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Faça parte do nosso universo",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Cadastre-se no rodapé para receber lançamentos, campanhas e condições especiais em primeira mão.</p>"
+          }
+        }
+      },
+      "block_order": ["subheading", "heading", "text"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    }
+  },
+  "order": ["hero", "best-sellers", "editorial", "new-arrivals", "benefits", "testimonials", "newsletter-copy"]
+}
