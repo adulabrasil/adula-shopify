@@ -1,1 +1,1 @@
-{"sections":{"main":{"type":"main-article","settings":{}},"prev-next-blog-posts":{"type":"prev-next-blog-posts","settings":{}}},"order":["main","prev-next-blog-posts"]}
+{"sections":{"main":{"type":"main-article","settings":{"show_image":true,"enable_parallax":false,"image_size":"medium","content_width":"sm","show_date":true,"show_category":true,"show_author":false,"show_share_buttons":true,"show_sticky_bar":true}},"prev-next-blog-posts":{"type":"prev-next-blog-posts","settings":{}}},"order":["main","prev-next-blog-posts"]}
