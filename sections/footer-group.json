@@ -11,42 +11,6 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "text-with-icons": {
-      "type": "text-with-icons",
-      "blocks": {
-        "icon-1": {
-          "type": "item",
-          "settings": {
-            "title": "Envio para todo o Brasil"
-          }
-        },
-        "icon-2": {
-          "type": "item",
-          "settings": {
-            "title": "Compra segura"
-          }
-        },
-        "icon-3": {
-          "type": "item",
-          "settings": {
-            "title": "Atendimento especializado"
-          }
-        },
-        "icon-4": {
-          "type": "item",
-          "settings": {
-            "title": "Troca facilitada"
-          }
-        }
-      },
-      "block_order": [
-        "icon-1",
-        "icon-2",
-        "icon-3",
-        "icon-4"
-      ],
-      "settings": {}
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -105,7 +69,6 @@
     }
   },
   "order": [
-    "text-with-icons",
     "footer"
   ]
 }

@@ -17,7 +17,66 @@
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
         "text_alignment": "center",
-        "liquid": "<style>\n  .adula-bagy-hero { display: block; position: relative; overflow: hidden; color: #fff; background: #b7895d; }\n  .adula-bagy-hero__desktop { display: block; width: 100%; height: auto; max-height: 720px; object-fit: cover; }\n  .adula-bagy-hero__mobile { display: none; width: 100%; height: auto; }\n  .adula-bagy-hero__copy { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: clamp(28px, 5vw, 80px); text-shadow: 0 1px 8px rgba(55, 32, 17, .18); }\n  .adula-bagy-hero__offer { justify-self: end; max-width: 430px; text-align: center; }\n  .adula-bagy-hero__title { margin: 0; color: inherit; font-family: var(--heading-font-family); font-size: clamp(48px, 6vw, 92px); font-weight: 400; line-height: .92; text-transform: uppercase; }\n  .adula-bagy-hero__condition { margin: 16px 0 0; font-size: clamp(16px, 1.6vw, 23px); }\n  .adula-bagy-hero__note { position: absolute; top: 18px; left: 50%; width: min(700px, 90%); transform: translateX(-50%); text-align: center; font-size: 13px; }\n  .adula-bagy-hero:focus-visible { outline: 3px solid currentColor; outline-offset: -5px; }\n  @media (max-width: 699px) {\n    .adula-bagy-hero__desktop, .adula-bagy-hero__copy, .adula-bagy-hero__note { display: none; }\n    .adula-bagy-hero__mobile { display: block; }\n  }\n</style>\n<a href=\"/collections/all\" class=\"adula-bagy-hero\" aria-label=\"Compre e ganhe brindes em compras participantes\">\n  <img class=\"adula-bagy-hero__desktop\" src=\"{{ 'adula-hero-desktop.jpg' | asset_url }}\" alt=\"Adüla: compre e ganhe brindes\" width=\"2048\" height=\"1362\" fetchpriority=\"high\" decoding=\"async\">\n  <img class=\"adula-bagy-hero__mobile\" src=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-3-zpohp.jpg?v=1785175647\" alt=\"Adüla: compre e ganhe brindes em compras acima de R$199 e R$399\" width=\"500\" height=\"650\" fetchpriority=\"high\" decoding=\"async\">\n  <span class=\"adula-bagy-hero__note\">*Brindes não acumulativos, válidos enquanto durarem os estoques. Consulte a disponibilidade no carrinho.</span>\n  <span class=\"adula-bagy-hero__copy\"><span></span><span class=\"adula-bagy-hero__offer\"><strong class=\"adula-bagy-hero__title\">Compre<br>&amp; ganhe*</strong><span class=\"adula-bagy-hero__condition\">Brindes nas compras acima de R$199 e R$399</span></span></span>\n</a>"
+        "liquid": "<style>\n  .adula-bagy-slider { position: relative; overflow: hidden; background: #f7f3ed; }\n  .adula-bagy-slider__track { display: flex; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; }\n  .adula-bagy-slider__track::-webkit-scrollbar { display: none; }\n  .adula-bagy-slider__slide { display: block; min-width: 100%; scroll-snap-align: start; }\n  .adula-bagy-slider__slide img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 500; object-fit: cover; }\n  .adula-bagy-slider__dots { position: absolute; bottom: 14px; left: 50%; display: flex; gap: 8px; transform: translateX(-50%); }\n  .adula-bagy-slider__dot { width: 28px; height: 4px; padding: 0; border: 0; background: rgba(255,255,255,.58); box-shadow: 0 1px 3px rgba(0,0,0,.18); cursor: pointer; }\n  .adula-bagy-slider__dot[aria-current=\"true\"] { background: #fff; }\n  .adula-bagy-slider__dot:focus-visible { outline: 2px solid #2d2926; outline-offset: 3px; }\n  @media (max-width: 699px) {\n    .adula-bagy-slider__slide img { aspect-ratio: 10 / 13; object-fit: cover; }\n    .adula-bagy-slider__dots { bottom: 10px; }\n    .adula-bagy-slider__dot { width: 20px; }\n  }\n  @media (prefers-reduced-motion: reduce) { .adula-bagy-slider__track { scroll-behavior: auto; } }\n</style>\n<div class=\"adula-bagy-slider\" data-adula-slider aria-label=\"Campanhas Adüla\">\n  <div class=\"adula-bagy-slider__track\" data-adula-slider-track>\n    <a class=\"adula-bagy-slider__slide\" href=\"/collections/love-paris\" aria-label=\"Conheça a coleção Love Paris\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-6-5ntvl.jpg?v=1785174810\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-1-hjkiv.jpg?v=1785174796\" alt=\"Love Paris, a nova coleção da Adüla\" width=\"1920\" height=\"500\" fetchpriority=\"high\" decoding=\"async\"></picture></a>\n    <a class=\"adula-bagy-slider__slide\" href=\"/collections/dia-dos-pais\" aria-label=\"Conheça a seleção de Dia dos Pais\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-10-grzeo.jpg?v=1785174766\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-6-cxxah.jpg?v=1785174761\" alt=\"Dia dos Pais Adüla\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\"></picture></a>\n    <a class=\"adula-bagy-slider__slide\" href=\"https://app.zoppy.com.br/check-giftback/v1JijlXh5mReDbwfS57kbN_AJORsL1HQ3Qn9CbY1WD4\" target=\"_blank\" rel=\"noopener\" aria-label=\"Consulte seu saldo Giftback\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-11-hg9vf.jpg?v=1785180192\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-7-auda5.jpg?v=1785180190\" alt=\"Consulte seu saldo Giftback\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\"></picture></a>\n    <a class=\"adula-bagy-slider__slide\" href=\"/collections/fio-de-luz\" aria-label=\"Conheça a coleção Fio de Luz\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-4-cabcn.jpg?v=1785175555\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-4-stutj.png?v=1785175517\" alt=\"Coleção Fio de Luz\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\"></picture></a>\n    <a class=\"adula-bagy-slider__slide\" href=\"/collections/eternize-seu-amor\" aria-label=\"Conheça Eternize seu amor\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-8-iqh2m.jpg?v=1785175603\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-4-3xomi.jpg?v=1785175585\" alt=\"Eternize seu amor com a Adüla\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\"></picture></a>\n    <div class=\"adula-bagy-slider__slide\"><picture><source media=\"(max-width: 699px)\" srcset=\"https://cdn.dooca.store/149411/files/banner-site-versao-bagycelular-3-zpohp.jpg?v=1785175647\"><img src=\"https://cdn.dooca.store/149411/files/ganhe-3-ue8ug.jpg?v=1785175631\" alt=\"Compre e ganhe brindes Adüla\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\"></picture></div>\n  </div>\n  <div class=\"adula-bagy-slider__dots\" aria-label=\"Escolha uma campanha\">\n    <button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 1\" aria-current=\"true\"></button><button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 2\"></button><button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 3\"></button><button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 4\"></button><button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 5\"></button><button class=\"adula-bagy-slider__dot\" type=\"button\" aria-label=\"Campanha 6\"></button>\n  </div>\n</div>\n<script>\n  (() => {\n    const root = document.currentScript.previousElementSibling;\n    const track = root.querySelector('[data-adula-slider-track]');\n    const dots = [...root.querySelectorAll('.adula-bagy-slider__dot')];\n    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;\n    let current = 0;\n    let timer;\n    const go = (index) => { current = (index + dots.length) % dots.length; track.scrollTo({ left: current * track.clientWidth, behavior: reducedMotion ? 'auto' : 'smooth' }); dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false')); };\n    const start = () => { if (!reducedMotion) timer = setInterval(() => go(current + 1), 6000); };\n    const stop = () => clearInterval(timer);\n    dots.forEach((dot, index) => dot.addEventListener('click', () => { stop(); go(index); start(); }));\n    track.addEventListener('scrollend', () => { current = Math.round(track.scrollLeft / track.clientWidth); dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false')); });\n    root.addEventListener('mouseenter', stop); root.addEventListener('mouseleave', start); root.addEventListener('focusin', stop); root.addEventListener('focusout', start); start();\n  })();\n</script>"
+      }
+    },
+    "benefits": {
+      "type": "text-with-icons",
+      "blocks": {
+        "nickel-free": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Níquel free",
+            "content": "<p>Peças hipoalergênicas</p>"
+          }
+        },
+        "design": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-star",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Design Francês",
+            "content": "<p>Minimalista</p>"
+          }
+        },
+        "shipping": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Frete grátis",
+            "content": "<p>Em compras acima de R$300</p>"
+          }
+        },
+        "returns": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Trocas e devoluções",
+            "content": "<p>Consulte nossa política</p>"
+          }
+        }
+      },
+      "block_order": [
+        "nickel-free",
+        "design",
+        "shipping",
+        "returns"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "stack_on_mobile": false,
+        "icon_color": "#b49347",
+        "text_color": "#2d2926",
+        "text_alignment": "center"
       }
     },
     "best-sellers": {
@@ -139,7 +198,9 @@
         "separate_section_with_border": true,
         "auto_rotate_between_testimonials": true,
         "cycle_speed": 5,
-        "font_size_factor": 0.85
+        "font_size_factor": 0.85,
+        "title": "Avaliações da Loja",
+        "heading_style": "h2"
       }
     },
     "fio-de-luz": {
@@ -207,6 +268,7 @@
   },
   "order": [
     "hero",
+    "benefits",
     "best-sellers",
     "new-arrivals",
     "testimonials",
