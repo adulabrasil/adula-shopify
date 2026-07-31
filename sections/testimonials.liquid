@@ -8,6 +8,47 @@
   <style>
     #shopify-section-{{ section.id }} {
       --testimonials-font-size: calc(clamp(1.125rem, 1.064516129032258rem + 0.25806451612903225vw, 1.25rem) * {{ section.settings.font_size_factor }});
+      --adula-reviews-background: #f5f2ef;
+      --adula-reviews-text: #4a3428;
+      --adula-reviews-accent: #ad924f;
+      --adula-reviews-star: #f4c430;
+    }
+
+    #shopify-section-{{ section.id }} .section-spacing {
+      background: var(--adula-reviews-background);
+      color: var(--adula-reviews-text);
+    }
+
+    #shopify-section-{{ section.id }} .section-header {
+      color: var(--adula-reviews-text);
+    }
+
+    #shopify-section-{{ section.id }} .adula-testimonial-stars {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-block-end: 18px;
+      color: var(--adula-reviews-star);
+    }
+
+    #shopify-section-{{ section.id }} .adula-testimonial-stars svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      filter: drop-shadow(0 1px 0 rgba(74, 52, 40, .12));
+    }
+
+    #shopify-section-{{ section.id }} .testimonial-item .prose {
+      color: var(--adula-reviews-text);
+    }
+
+    #shopify-section-{{ section.id }} .testimonial-item .text-base {
+      color: var(--adula-reviews-text);
+      font-weight: 700;
+    }
+
+    #shopify-section-{{ section.id }} .page-dots button[aria-current="true"]::after {
+      background: var(--adula-reviews-accent);
     }
   </style>
 
@@ -50,6 +91,14 @@
 
             {%- for block in section.blocks -%}
               <div class="testimonial-item text-center {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+                <div class="adula-testimonial-stars" role="img" aria-label="5 de 5 estrelas">
+                  {%- for i in (1..5) -%}
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="m12 2.6 2.82 5.72 6.31.92-4.57 4.45 1.08 6.28L12 17l-5.64 2.97 1.08-6.28-4.57-4.45 6.31-.92L12 2.6Z"/>
+                    </svg>
+                  {%- endfor -%}
+                </div>
+
                 {%- if block.settings.content != blank -%}
                   <div class="prose">
                     {{- block.settings.content -}}
