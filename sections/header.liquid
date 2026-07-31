@@ -147,10 +147,9 @@
   }
 
   #shopify-section-{{ section.id }} .header-support__brand-image {
-    width: auto;
-    max-width: 8.75rem;
-    max-height: 2.5rem;
-    object-fit: contain;
+    display: block;
+    width: min(9.375rem, 100%);
+    height: auto;
   }
 
   #shopify-section-{{ section.id }} .header-support__brand-text {
@@ -488,12 +487,14 @@
 
               <div class="header-support__panel">
                 <div class="header-support__brand">
-                  {%- if section.settings.logo != blank -%}
-                    {%- assign support_logo_alt = section.settings.logo.alt | default: shop.name -%}
-                    {{- section.settings.logo | image_url: width: 320 | image_tag: widths: '140, 210, 280, 320', sizes: '140px', alt: support_logo_alt, loading: 'lazy', class: 'header-support__brand-image' -}}
-                  {%- else -%}
-                    <span class="header-support__brand-text">{{ shop.name }}</span>
-                  {%- endif -%}
+                  <img
+                    class="header-support__brand-image"
+                    src="{{ 'adula-logo-dourada.png' | asset_url }}"
+                    width="250"
+                    height="150"
+                    alt="Adüla — Fina e Delicada"
+                    loading="eager"
+                  >
                 </div>
 
                 <a class="header-support__button header-support__button--whatsapp" href="{{ section.settings.support_whatsapp_url }}" target="_blank" rel="noopener">
