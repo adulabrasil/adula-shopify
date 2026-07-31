@@ -399,6 +399,10 @@
                 payment_button_text_color: block.settings.payment_button_text_color
             -%}
 
+            {%- if context == 'main_product' and product.selected_or_first_available_variant.requires_shipping -%}
+              {%- render 'product-shipping-estimator', product: product, product_form_id: product_form_id -%}
+            {%- endif -%}
+
           {%- when 'pickup_availability' -%}
             {%- if product != blank -%}
               {%- render 'pickup-availability', product_variant: product.selected_or_first_available_variant -%}
