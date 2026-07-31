@@ -153,10 +153,70 @@
         "heading_style": "h2",
         "content": ""
       }
+    },
+    "benefits": {
+      "type": "text-with-icons",
+      "blocks": {
+        "nickel-free": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Níquel free",
+            "content": "<p>Peças hipoalergênicas</p>"
+          }
+        },
+        "design": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-star",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Design Francês",
+            "content": "<p>Minimalista</p>"
+          }
+        },
+        "shipping": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Frete Grátis",
+            "content": "<p>Sudeste acima de R$ 199,00<br>Demais estados acima de R$ 299,00</p>"
+          }
+        },
+        "returns": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "icon_width": 34,
+            "mobile_icon_width": 30,
+            "title": "Trocas e devoluções",
+            "content": "<p>Troca fácil em até 7 dias</p>"
+          }
+        }
+      },
+      "block_order": [
+        "nickel-free",
+        "design",
+        "shipping",
+        "returns"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "stack_on_mobile": false,
+        "icon_color": "#b49347",
+        "text_color": "#2d2926",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "hero",
+    "benefits",
     "best-sellers",
     "fio-de-luz",
     "new-arrivals",
