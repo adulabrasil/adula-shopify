@@ -78,6 +78,14 @@
       assign swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />'
       assign swatch_style = '--swatch-background: linear-gradient(to right, ' | append: downcase_label | append: ', ' | append: downcase_label | append: ')'
 
+      # Adula's finishes use commercial names that are not valid CSS colors.
+      # Provide a branded fallback while preserving any merchant-defined swatch below.
+      if downcase_label contains 'prata' or downcase_label contains 'ródio branco' or downcase_label contains 'rodio branco'
+        assign swatch_style = '--swatch-background: linear-gradient(135deg, #f7f7f7 0%, #b8b8b8 48%, #ededed 100%)'
+      elsif downcase_label contains 'dourad' or downcase_label contains 'ouro'
+        assign swatch_style = '--swatch-background: linear-gradient(135deg, #e3c77b 0%, #b08d57 48%, #d8b968 100%)'
+      endif
+
       for swatch_item in swatch_config
         assign swatch_parts = swatch_item | split: ':'
         assign swatch_name = swatch_parts.first | downcase | strip
