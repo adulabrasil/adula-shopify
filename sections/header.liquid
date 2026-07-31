@@ -137,6 +137,28 @@
     inset-inline-end: -0.5rem;
   }
 
+  #shopify-section-{{ section.id }} .header-support__brand {
+    min-height: 3.25rem;
+    padding-block-end: 0.75rem;
+    border-block-end: 1px solid rgb(var(--border-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__brand-image {
+    width: auto;
+    max-width: 8.75rem;
+    max-height: 2.5rem;
+    object-fit: contain;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__brand-text {
+    font-family: var(--heading-font-family);
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+  }
+
   #shopify-section-{{ section.id }} .header-support__button {
     min-height: 2.75rem;
     padding: 0.65rem 1rem;
@@ -465,6 +487,15 @@
               </summary>
 
               <div class="header-support__panel">
+                <div class="header-support__brand">
+                  {%- if section.settings.logo != blank -%}
+                    {%- assign support_logo_alt = section.settings.logo.alt | default: shop.name -%}
+                    {{- section.settings.logo | image_url: width: 320 | image_tag: widths: '140, 210, 280, 320', sizes: '140px', alt: support_logo_alt, loading: 'lazy', class: 'header-support__brand-image' -}}
+                  {%- else -%}
+                    <span class="header-support__brand-text">{{ shop.name }}</span>
+                  {%- endif -%}
+                </div>
+
                 <a class="header-support__button header-support__button--whatsapp" href="{{ section.settings.support_whatsapp_url }}" target="_blank" rel="noopener">
                   {%- render 'icon' with 'whatsapp', width: 18 -%}
                   Fale pelo WhatsApp
