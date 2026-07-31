@@ -239,11 +239,14 @@
         </p>
 
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
-          <ul class="payment-methods unstyled-list">
-            {%- for type in shop.enabled_payment_types -%}
-              <li>{{- type | payment_type_svg_tag -}}</li>
-            {%- endfor -%}
-          </ul>
+          <div class="v-stack gap-2">
+            <p class="heading text-subdued text-xxs">Pagamento seguro</p>
+            <ul class="payment-methods unstyled-list" aria-label="Formas de pagamento aceitas">
+              {%- for type in shop.enabled_payment_types -%}
+                <li>{{- type | payment_type_svg_tag -}}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
         {%- endif -%}
       </div>
     </div>
