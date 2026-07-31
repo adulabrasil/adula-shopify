@@ -41,12 +41,15 @@
       }
 
       #shopify-section-{{ section.id }} .header__primary-nav {
-        grid-template-columns: repeat(8, max-content);
+        max-width: 74rem;
+        margin-inline: auto;
+        padding-inline: 1.25rem;
         justify-content: center;
-        column-gap: clamp(0.875rem, 1.55vw, 1.5rem);
-        row-gap: 0.75rem;
+        column-gap: clamp(1.25rem, 2.2vw, 2.25rem);
+        row-gap: 1rem;
         width: 100%;
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
       }
 
       #shopify-section-{{ section.id }} .header__primary-nav-item {
@@ -58,7 +61,10 @@
   @media screen and (min-width: 1800px) {
     {%- if primary_menu_link_count > 10 and section.settings.layout != 'drawer' -%}
       #shopify-section-{{ section.id }} .header__primary-nav {
-        grid-template-columns: repeat({{ primary_menu_link_count }}, max-content);
+        max-width: none;
+        padding-inline: 0;
+        flex-wrap: nowrap;
+        column-gap: clamp(1rem, 1.35vw, 1.75rem);
       }
     {%- endif -%}
   }
