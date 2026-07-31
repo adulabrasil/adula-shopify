@@ -85,6 +85,135 @@
       }
     }
   {%- endif -%}
+
+  #shopify-section-{{ section.id }} .header__support-link {
+    order: 2;
+    position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .header__search-link {
+    order: 1;
+  }
+
+  #shopify-section-{{ section.id }} .header__account-link {
+    order: 3;
+  }
+
+  #shopify-section-{{ section.id }} .header__cart-link {
+    order: 4;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__trigger {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: grid;
+    place-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__trigger svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__panel {
+    width: min(20rem, calc(100vw - 1.5rem));
+    padding: 0.875rem;
+    border: 1px solid rgb(var(--border-color));
+    border-radius: 0.5rem;
+    background: rgb(var(--background));
+    color: rgb(var(--text-color));
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.16);
+    display: grid;
+    gap: 0.75rem;
+    position: absolute;
+    z-index: 10;
+    inset-block-start: calc(100% + 0.875rem);
+    inset-inline-end: -0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__button {
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__button--whatsapp {
+    background: #25a84a;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__button--message {
+    background: #b5964e;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__button:hover {
+    filter: brightness(0.94);
+  }
+
+  #shopify-section-{{ section.id }} .header-support__contact,
+  #shopify-section-{{ section.id }} .header-support__tracking {
+    padding-block-start: 0.75rem;
+    border-block-start: 1px solid rgb(var(--border-color));
+  }
+
+  #shopify-section-{{ section.id }} .header-support__contact {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__contact a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__tracking-title {
+    margin-block-end: 0.55rem;
+    font-weight: 600;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__tracking-form {
+    grid-template-columns: minmax(0, 1fr) 2.75rem;
+    display: grid;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__tracking-input {
+    min-width: 0;
+    height: 2.75rem;
+    padding-inline: 0.75rem;
+    border: 1px solid rgb(var(--border-color));
+    border-radius: 0.2rem 0 0 0.2rem;
+    background: rgb(var(--background));
+  }
+
+  #shopify-section-{{ section.id }} .header-support__tracking-submit {
+    height: 2.75rem;
+    border-radius: 0 0.2rem 0.2rem 0;
+    background: #b5964e;
+    color: #fff;
+    display: grid;
+    place-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .header-support__tracking-help {
+    margin-block-start: 0.45rem;
+    color: rgb(var(--text-color) / 0.7);
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 699px) {
+    #shopify-section-{{ section.id }} .header-support__panel {
+      position: fixed;
+      inset-block-start: var(--header-height, 4.5rem);
+      inset-inline-end: 0.75rem;
+    }
+  }
 </style>
 
 <height-observer variable="header">
@@ -318,6 +447,50 @@
           </li>
         {%- endif -%}
 
+        {%- if section.settings.enable_support_panel -%}
+          <li class="header__support-link">
+            <details data-header-support>
+              <summary class="header-support__trigger" aria-label="Atendimento e rastreamento">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9.9 9.25a2.2 2.2 0 1 1 3.55 1.74c-.93.72-1.45 1.17-1.45 2.26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="12" cy="16.75" r=".9" fill="currentColor"/>
+                </svg>
+              </summary>
+
+              <div class="header-support__panel">
+                <a class="header-support__button header-support__button--whatsapp" href="{{ section.settings.support_whatsapp_url }}" target="_blank" rel="noopener">
+                  {%- render 'icon' with 'whatsapp', width: 18 -%}
+                  Fale pelo WhatsApp
+                </a>
+
+                <a class="header-support__button header-support__button--message" href="mailto:{{ section.settings.support_email | escape }}">
+                  {%- render 'icon' with 'email', width: 18 -%}
+                  Envie uma mensagem
+                </a>
+
+                <div class="header-support__contact">
+                  <strong>E-mail:</strong><br>
+                  <a href="mailto:{{ section.settings.support_email | escape }}">{{ section.settings.support_email }}</a><br>
+                  <a href="{{ routes.account_url }}">Consultar meus pedidos</a>
+                </div>
+
+                <div class="header-support__tracking">
+                  <p class="header-support__tracking-title">Rastrear pedido</p>
+                  <form class="header-support__tracking-form" data-header-tracking-form data-tracking-base="{{ section.settings.tracking_base_url | escape }}" action="{{ section.settings.tracking_base_url }}" method="get" target="_blank">
+                    <label class="sr-only" for="header-tracking-code-{{ section.id }}">Código de rastreio</label>
+                    <input id="header-tracking-code-{{ section.id }}" class="header-support__tracking-input" type="text" name="codigo" placeholder="Código de rastreio" autocapitalize="characters" autocomplete="off" required>
+                    <button class="header-support__tracking-submit" type="submit" aria-label="Rastrear pedido">
+                      {%- render 'icon' with 'arrow-right', width: 14 -%}
+                    </button>
+                  </form>
+                  <p class="header-support__tracking-help">Digite o código recebido após o envio do pedido.</p>
+                </div>
+              </div>
+            </details>
+          </li>
+        {%- endif -%}
+
         <li class="relative header__cart-link">
           <a
             href="{{ routes.cart_url }}"
@@ -362,6 +535,40 @@
 
 <script>
   document.documentElement.style.setProperty('--header-height', `${document.getElementById('shopify-section-{{ section.id }}').clientHeight.toFixed(2)}px`);
+
+  (() => {
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    const support = section.querySelector('[data-header-support]');
+    const trackingForm = section.querySelector('[data-header-tracking-form]');
+
+    if (!support || !trackingForm) return;
+
+    trackingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const input = trackingForm.querySelector('input[name="codigo"]');
+      const code = input.value.trim().replace(/\s+/g, '');
+
+      if (!code) {
+        input.reportValidity();
+        return;
+      }
+
+      const baseUrl = trackingForm.dataset.trackingBase.replace(/\/+$/, '');
+      window.open(`${baseUrl}/${encodeURIComponent(code)}`, '_blank', 'noopener');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (support.open && !support.contains(event.target)) support.removeAttribute('open');
+    });
+
+    support.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        support.removeAttribute('open');
+        support.querySelector('summary').focus();
+      }
+    });
+  })();
 </script>
 
 {% schema %}
@@ -490,6 +697,34 @@
       "id": "enable_search",
       "label": "t:sections.header.enable_search",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Atendimento e rastreamento"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_support_panel",
+      "label": "Exibir painel de atendimento",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "support_whatsapp_url",
+      "label": "Link do WhatsApp",
+      "default": "https://api.whatsapp.com/send?phone=5531999174942"
+    },
+    {
+      "type": "text",
+      "id": "support_email",
+      "label": "E-mail de atendimento",
+      "default": "atendimento@adulabrasil.com"
+    },
+    {
+      "type": "text",
+      "id": "tracking_base_url",
+      "label": "Endereço do rastreamento",
+      "default": "https://melhorrastreio.com.br/"
     },
     {
       "type": "header",
