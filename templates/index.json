@@ -135,12 +135,62 @@
             "logo_mobile_max_width": 100,
             "author": "Juliana Munhoz"
           }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Amo as peças dessa loja e fui muito bem atendida pela Nina. Obrigada pelo atendimento!</p>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": "Ana Cecilia Ciça"
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Já compro na loja há um tempo e não abro mão. Peças e atendimento de ótima qualidade.</p>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": "Paula Ferreira"
+          }
+        },
+        "testimonial-6": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>As peças são incríveis e a Geane, do quiosque do Shopping Boulevard em BH, é muito atenciosa!</p>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": "Aline Vasconcelos"
+          }
+        },
+        "testimonial-7": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Amo a Adüla! Qualidade sempre impecável, tenho várias peças, e atendimento incrível. Recomendo.</p>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": "Mariana Nolasco"
+          }
+        },
+        "testimonial-8": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Fiz a compra pelo WhatsApp com a Isa. Muito atenciosa, e a encomenda chegou rápido e bem embalada. Voltarei a comprar!</p>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": "Juliana Duarte"
+          }
         }
       },
       "block_order": [
         "testimonial-1",
         "testimonial-2",
-        "testimonial-3"
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5",
+        "testimonial-6",
+        "testimonial-7",
+        "testimonial-8"
       ],
       "settings": {
         "color_scheme": "scheme-3",
@@ -148,7 +198,7 @@
         "auto_rotate_between_testimonials": true,
         "cycle_speed": 5,
         "font_size_factor": 1,
-        "subheading": "",
+        "subheading": "Avaliações reais de clientes no Google",
         "title": "Avaliações da Loja",
         "heading_style": "h2",
         "content": ""
