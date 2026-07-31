@@ -200,29 +200,44 @@
         }
 
         let addedItemKey = null;
-        let originalQuantity = 0;
 
         this.setLoading(true);
         this.showMessage('Consultando as melhores opções para o seu CEP…');
 
         try {
-          const cart = await this.fetchJson(`${Shopify.routes.root}cart.js`);
-          const originalQuantities = new Map(cart.items.map((item) => [item.key, item.quantity]));
+          // Force an isolated quote line so an existing line for the same variant
+          // is never changed during the estimate.
+          const quoteToken = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 
           const addResponse = await this.fetchJson(`${Shopify.routes.root}cart/add.js`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify({ items: [{ id: variantId, quantity }] })
+            body: JSON.stringify({
+              items: [{
+                id: variantId,
+                quantity,
+                properties: { _adula_shipping_quote: quoteToken }
+              }]
+            })
           });
 
           const addedItem = addResponse.items?.[0] || addResponse;
           addedItemKey = addedItem.key;
-          originalQuantity = originalQuantities.get(addedItemKey) || 0;
+
+          if (!addedItemKey) {
+            const updatedCart = await this.fetchJson(`${Shopify.routes.root}cart.js`);
+            addedItemKey = updatedCart.items.find(
+              (item) => item.properties?._adula_shipping_quote === quoteToken
+            )?.key;
+          }
+
+          if (!addedItemKey) {
+            throw new Error('Não foi possível preparar o produto para a cotação. Tente novamente.');
+          }
 
           const query = new URLSearchParams({
             'shipping_address[zip]': zip,
-            'shipping_address[country]': 'Brazil',
-            'shipping_address[province]': ''
+            'shipping_address[country]': 'BR'
           });
 
           const prepareResponse = await fetch(`${Shopify.routes.root}cart/prepare_shipping_rates.json?${query}`, {
@@ -235,7 +250,7 @@
             throw new Error(this.readError(error) || 'Não foi possível consultar este CEP.');
           }
 
-          const rates = await this.pollRates(query);
+          const rates = await this.getRates(query);
           this.showRates(rates, zip);
         } catch (error) {
           this.showMessage(error.message || 'Não foi possível calcular o frete agora. Tente novamente.', true);
@@ -245,7 +260,7 @@
               await this.fetchJson(`${Shopify.routes.root}cart/change.js`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-                body: JSON.stringify({ id: addedItemKey, quantity: originalQuantity })
+                body: JSON.stringify({ id: addedItemKey, quantity: 0 })
               });
             } catch (restoreError) {
               console.error('Não foi possível restaurar o carrinho após a cotação de frete.', restoreError);
@@ -256,20 +271,36 @@
         }
       };
 
+      async getRates(query) {
+        let asyncError = null;
+
+        try {
+          const rates = await this.pollRates(query);
+
+          if (rates.length) return rates;
+        } catch (error) {
+          asyncError = error;
+        }
+
+        // The async pair is preferred, but carrier services can intermittently
+        // finish with 422 or an empty result. Shopify's synchronous endpoint is a
+        // safe fallback and reads the same rates configured for checkout.
+        try {
+          return await this.fetchSynchronousRates(query);
+        } catch (fallbackError) {
+          throw asyncError || fallbackError;
+        }
+      }
+
       async pollRates(query) {
-        /*
-         * Carrier-calculated rates (including Frenet) are asynchronous. Shopify can
-         * legitimately answer with HTTP 202 and an empty body while the carrier is
-         * still calculating. Treat those responses as pending instead of attempting
-         * to parse them as JSON.
-         */
-        for (let attempt = 0; attempt < 30; attempt += 1) {
+        let lastError = null;
+
+        for (let attempt = 0; attempt < 24; attempt += 1) {
           const response = await fetch(`${Shopify.routes.root}cart/async_shipping_rates.json?${query}`, {
             headers: { Accept: 'application/json' },
             cache: 'no-store'
           });
-          const text = await response.text();
-          const responseBody = text.trim();
+          const responseBody = (await response.text()).trim();
 
           if (response.status === 202 || responseBody === '' || responseBody === 'null') {
             await new Promise((resolve) => window.setTimeout(resolve, 750));
@@ -281,11 +312,23 @@
           try {
             data = JSON.parse(responseBody);
           } catch (error) {
-            throw new Error('A Frenet retornou uma resposta inesperada. Tente novamente em instantes.');
+            lastError = new Error('A Frenet retornou uma resposta inesperada.');
+            await new Promise((resolve) => window.setTimeout(resolve, 750));
+            continue;
           }
 
           if (!response.ok) {
-            throw new Error(this.readError(data.error || data) || 'Não foi possível consultar o frete para este CEP.');
+            lastError = new Error(
+              this.readError(data.error || data) || 'Não foi possível consultar o frete para este CEP.'
+            );
+
+            // These statuses can be temporary while a carrier rate is calculating.
+            if (response.status === 422 || response.status === 429 || response.status >= 500) {
+              await new Promise((resolve) => window.setTimeout(resolve, 750));
+              continue;
+            }
+
+            throw lastError;
           }
 
           if (Array.isArray(data.shipping_rates)) {
@@ -295,7 +338,23 @@
           await new Promise((resolve) => window.setTimeout(resolve, 750));
         }
 
-        throw new Error('A Frenet demorou para responder. Tente novamente em alguns instantes.');
+        throw lastError || new Error('A Frenet demorou para responder. Tente novamente em alguns instantes.');
+      }
+
+      async fetchSynchronousRates(query) {
+        const response = await fetch(`${Shopify.routes.root}cart/shipping_rates.json?${query}`, {
+          headers: { Accept: 'application/json' },
+          cache: 'no-store'
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(
+            this.readError(data.error || data) || 'Não foi possível consultar o frete para este CEP.'
+          );
+        }
+
+        return Array.isArray(data.shipping_rates) ? data.shipping_rates : [];
       }
 
       async fetchJson(url, options = {}) {
@@ -338,10 +397,12 @@
             const service = document.createElement('span');
             service.textContent = rate.presentment_name || rate.name || 'Entrega';
 
-            if (rate.delivery_date) {
+            if (rate.delivery_date || rate.delivery_days?.length) {
               const deadline = document.createElement('small');
               deadline.className = 'product-shipping-estimator__deadline';
-              deadline.textContent = `Previsão: ${new Intl.DateTimeFormat('pt-BR').format(new Date(`${rate.delivery_date}T12:00:00`))}`;
+              deadline.textContent = rate.delivery_date
+                ? `Previsão: ${new Intl.DateTimeFormat('pt-BR').format(new Date(`${rate.delivery_date}T12:00:00`))}`
+                : this.formatDeliveryDays(rate.delivery_days);
               service.append(deadline);
             }
 
@@ -367,18 +428,3 @@
 
       showMessage(message, isError = false) {
         this.result.textContent = message;
-        this.result.dataset.error = isError ? 'true' : 'false';
-        this.result.hidden = false;
-      }
-
-      setLoading(isLoading) {
-        this.button.disabled = isLoading;
-        this.input.disabled = isLoading;
-        this.button.toggleAttribute('aria-busy', isLoading);
-        this.button.textContent = isLoading ? 'Calculando…' : 'Calcular';
-      }
-    }
-
-    customElements.define('product-shipping-estimator', ProductShippingEstimator);
-  }
-</script>
