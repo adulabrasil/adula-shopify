@@ -428,3 +428,26 @@
 
       showMessage(message, isError = false) {
         this.result.textContent = message;
+        this.result.dataset.error = isError ? 'true' : 'false';
+        this.result.hidden = false;
+      }
+
+      formatDeliveryDays(days) {
+        const [minimum, maximum = minimum] = days;
+
+        return minimum === maximum
+          ? `Prazo: ${maximum} ${maximum === 1 ? 'dia útil' : 'dias úteis'}`
+          : `Prazo: de ${minimum} a ${maximum} dias úteis`;
+      }
+
+      setLoading(isLoading) {
+        this.button.disabled = isLoading;
+        this.input.disabled = isLoading;
+        this.button.toggleAttribute('aria-busy', isLoading);
+        this.button.textContent = isLoading ? 'Calculando…' : 'Calcular';
+      }
+    }
+
+    customElements.define('product-shipping-estimator', ProductShippingEstimator);
+  }
+</script>
