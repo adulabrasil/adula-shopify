@@ -19,15 +19,36 @@
           "settings": {
             "text": "Pague com PIX e receba 3% OFF"
           }
+        },
+        "parcelamento": {
+          "type": "message",
+          "settings": {
+            "text": "Parcele em até 4x sem juros"
+          }
+        },
+        "frete": {
+          "type": "message",
+          "settings": {
+            "text": "Frete grátis nas compras acima de R$300"
+          }
+        },
+        "garantia": {
+          "type": "message",
+          "settings": {
+            "text": "6 meses de garantia"
+          }
         }
       },
       "block_order": [
-        "pix"
+        "pix",
+        "parcelamento",
+        "frete",
+        "garantia"
       ],
       "settings": {
         "color_scheme": "scheme-3",
         "enable_sticky": false,
-        "autoplay": false,
+        "autoplay": true,
         "cycle_speed": 5,
         "desktop_font_size": 12,
         "mobile_font_size": 11,
