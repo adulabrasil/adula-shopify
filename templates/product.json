@@ -69,7 +69,7 @@
             "show_below_gallery": false,
             "icon": "picto-return",
             "title": "Envios e trocas",
-            "content": "<p>Consulte as condições, prazos e orientações nas nossas políticas de <a href=\"/policies/shipping-policy\">envio</a> e <a href=\"/policies/refund-policy\">trocas e devoluções</a>.</p>",
+            "content": "<p><strong>Envios:</strong> o valor do frete e o prazo de entrega são calculados de acordo com o CEP e informados antes da finalização da compra.</p><p><strong>Trocas e devoluções:</strong> a solicitação deve ser feita em até 7 dias corridos após o recebimento do pedido. A peça deve estar na embalagem original, com a etiqueta intacta, em perfeito estado, sem vestígios de uso e acompanhada do Certificado de Garantia Adüla.</p><p>Por questões de higiene, brincos e piercings possuem condições específicas. Para solicitar atendimento, entre em contato pelo e-mail <a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a>.</p><p><a href=\"/pages/trocas-e-devolucoes\"><strong>Ver política completa de trocas e devoluções</strong></a></p>",
             "liquid": ""
           }
         },
