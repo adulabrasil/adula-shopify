@@ -403,6 +403,9 @@
               {%- render 'product-shipping-estimator', product: product, product_form_id: product_form_id -%}
             {%- endif -%}
 
+          {%- when 'product_benefits' -%}
+            {%- render 'product-benefits' -%}
+
           {%- when 'pickup_availability' -%}
             {%- if product != blank -%}
               {%- render 'pickup-availability', product_variant: product.selected_or_first_available_variant -%}

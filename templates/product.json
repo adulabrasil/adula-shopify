@@ -53,6 +53,10 @@
           "type": "buy_buttons",
           "settings": {}
         },
+        "product_benefits": {
+          "type": "product_benefits",
+          "settings": {}
+        },
         "care": {
           "type": "accordion",
           "settings": {
@@ -97,6 +101,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "product_benefits",
         "care",
         "shipping_returns",
         "secure_checkout",

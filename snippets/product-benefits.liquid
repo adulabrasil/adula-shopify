@@ -1,0 +1,88 @@
+<div class="product-benefits" aria-label="Benefícios Adüla">
+  <ul class="product-benefits__list" role="list">
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-return', width: 24 -%}</span>
+      <span><strong>7 dias</strong> para troca ou devolução</span>
+    </li>
+
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-love', width: 24 -%}</span>
+      <span>Design exclusivo Francês e feito artesanalmente</span>
+    </li>
+
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-shield', width: 24 -%}</span>
+      <span>Peças Hipoalergênicas (Sem níquel)</span>
+    </li>
+
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-jewelry', width: 24 -%}</span>
+      <span>Prata 925 ou Latão banhado a ouro 18K / Ródio Branco</span>
+    </li>
+
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-award-gift', width: 24 -%}</span>
+      <span>Garantia de <strong>6 meses*</strong> para defeito de fabricação</span>
+    </li>
+
+    <li class="product-benefits__item">
+      <span class="product-benefits__icon" aria-hidden="true">{%- render 'icon', icon: 'picto-delivery-truck', width: 24 -%}</span>
+      <span>Frete grátis para compras acima de <strong>R$ 199</strong> para Sudeste e demais estados <strong>R$ 299</strong></span>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .product-benefits {
+    border-block-start: 1px solid rgb(var(--text-color) / 0.14);
+    padding-block-start: 1.25rem;
+  }
+
+  .product-benefits__list {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-benefits__item {
+    display: grid;
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .product-benefits__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #b08d57;
+  }
+
+  .product-benefits__icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 1.4;
+  }
+
+  .product-benefits__item strong {
+    color: #3a2922;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 699px) {
+    .product-benefits {
+      padding-block-start: 1rem;
+    }
+
+    .product-benefits__list {
+      gap: 0.7rem;
+    }
+
+    .product-benefits__item {
+      font-size: 0.84rem;
+    }
+  }
+</style>
