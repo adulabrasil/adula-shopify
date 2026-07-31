@@ -35,6 +35,10 @@
       {%- endcase -%}
     }
 
+    #shopify-section-{{ section.id }} .header__primary-nav-link {
+      font-size: 0.8125rem;
+    }
+
     {%- if primary_menu_link_count > 10 and section.settings.layout != 'drawer' -%}
       #shopify-section-{{ section.id }} {
         --header-grid: ". logo secondary-nav" "primary-nav primary-nav primary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
@@ -329,7 +333,7 @@
                   <a
                     href="{{ link.url }}"
                     data-title="{{ link.title | escape }}"
-                    class="block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}"
+                    class="header__primary-nav-link block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}"
                     {% if link.current %}
                       aria-current="page"
                     {% endif %}
@@ -339,7 +343,7 @@
                 {%- else -%}
                   {%- capture disclosure_content -%}
                     <details class="header__menu-disclosure">
-                      <summary data-follow-link="{{ link.url }}" {% if section.settings.menu_text_font == 'heading' %}class="h6"{% endif %} data-title="{{ link.title | escape }}">
+                      <summary class="header__primary-nav-link {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" data-follow-link="{{ link.url }}" data-title="{{ link.title | escape }}">
                         {{- link.title -}}
                       </summary>
 
