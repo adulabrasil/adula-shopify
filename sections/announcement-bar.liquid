@@ -25,6 +25,11 @@
       --announcement-bar-font-size: {{ section.settings.mobile_font_size | divided_by: 16.0 }}rem;
     }
 
+    #shopify-section-{{ section.id }} .announcement-bar {
+      background: {{ section.settings.custom_background }};
+      color: {{ section.settings.custom_text_color }};
+    }
+
     @media screen and (min-width: 999px) {
       #shopify-section-{{ section.id }} {
         --announcement-bar-font-size: {{ section.settings.desktop_font_size | divided_by: 16.0 }}rem;
@@ -104,6 +109,18 @@
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
       "default": "scheme-3"
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Cor de fundo da faixa",
+      "default": "#AD924F"
+    },
+    {
+      "type": "color",
+      "id": "custom_text_color",
+      "label": "Cor do texto da faixa",
+      "default": "#FFFFFF"
     },
     {
       "type": "checkbox",
