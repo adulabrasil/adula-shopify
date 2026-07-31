@@ -74,7 +74,7 @@
         "enable_support_panel": true,
         "support_whatsapp_url": "https://api.whatsapp.com/send?phone=5531999174942",
         "support_email": "atendimento@adulabrasil.com",
-        "tracking_base_url": "https://melhorrastreio.com.br/",
+        "tracking_base_url": "https://rastreio.frenet.com.br/?_gl=1*690czk*_gcl_au*MTY3MTA5MDA5NS4xNzgxMDI0OTY1",
         "sidebar_color_scheme": "scheme-2",
         "sidebar_text_font": "heading",
         "sidebar_show_dividers": true,
