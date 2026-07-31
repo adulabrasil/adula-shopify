@@ -21,32 +21,32 @@
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#fffdfb",
-            "text_color": "#2d2926",
-            "primary_button_background": "#2d2926",
-            "primary_button_text_color": "#ffffff",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#2d2926"
+            "background": "#FFF9F1",
+            "text_color": "#3A2922",
+            "primary_button_background": "#B08D57",
+            "primary_button_text_color": "#2B211D",
+            "circle_button_background": "#F2E6D8",
+            "circle_button_icon": "#3A2922"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#f3ece7",
-            "text_color": "#2d2926",
-            "primary_button_background": "#2d2926",
-            "primary_button_text_color": "#ffffff",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#2d2926"
+            "background": "#F2E6D8",
+            "text_color": "#3A2922",
+            "primary_button_background": "#3A2922",
+            "primary_button_text_color": "#FFF9F1",
+            "circle_button_background": "#B08D57",
+            "circle_button_icon": "#2B211D"
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#3b2f2b",
-            "text_color": "#fffdfb",
-            "primary_button_background": "#fffdfb",
-            "primary_button_text_color": "#2d2926",
-            "circle_button_background": "#fffdfb",
-            "circle_button_icon": "#2d2926"
+            "background": "#3A2922",
+            "text_color": "#FFF9F1",
+            "primary_button_background": "#B08D57",
+            "primary_button_text_color": "#2B211D",
+            "circle_button_background": "#F2E6D8",
+            "circle_button_icon": "#3A2922"
           }
         },
         "scheme-4": {
@@ -73,10 +73,10 @@
       "success_color": "#307a07",
       "warning_color": "#ed8a00",
       "error_color": "#cb2b2b",
-      "product_rating_color": "#1c1c1c",
+      "product_rating_color": "#B08D57",
       "product_on_sale_accent": "#8d3f3f",
       "product_sold_out_badge_background": "#efefef",
-      "product_custom_badge_background": "#1c1c1c",
+      "product_custom_badge_background": "#3A2922",
       "cart_type": "drawer",
       "cart_icon": "shopping_bag",
       "cart_empty_cart_link": "/collections/all",
