@@ -8368,3 +8368,61 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+
+/* Adula: payment conditions shown immediately below product prices. */
+.adula-payment-conditions {
+  color: rgb(var(--text-color) / .82);
+  display: grid;
+  font-size: .75rem;
+  gap: .15rem;
+  justify-items: center;
+  line-height: 1.35;
+  margin-block-start: .2rem;
+  text-align: center;
+}
+
+.adula-payment-conditions p {
+  margin: 0;
+}
+
+.adula-payment-conditions strong {
+  color: rgb(var(--text-color));
+  font-weight: 700;
+}
+
+.adula-payment-conditions__installment span,
+.adula-payment-conditions__discount {
+  white-space: nowrap;
+}
+
+.adula-payment-conditions__pix {
+  align-items: center;
+  color: #3a2922;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+  justify-content: center;
+}
+
+.adula-payment-conditions__pix svg {
+  color: #b08d57;
+  flex: 0 0 auto;
+}
+
+.adula-payment-conditions--product {
+  font-size: .875rem;
+  gap: .25rem;
+  justify-items: start;
+  margin-block-start: .35rem;
+  text-align: start;
+}
+
+.adula-payment-conditions--product .adula-payment-conditions__pix {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 699px) {
+  .adula-payment-conditions__discount {
+    display: none;
+  }
+}
