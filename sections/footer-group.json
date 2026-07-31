@@ -27,7 +27,7 @@
             "menu": "footer",
             "collapse_on_mobile": true,
             "show_menu_title": true,
-            "menu_title": "Atendimento"
+            "menu_title": "Institucional"
           }
         },
         "text": {
@@ -41,7 +41,7 @@
           "type": "text",
           "settings": {
             "title": "Ajuda & Suporte",
-            "content": "<p><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/account\">Meus Pedidos</a><br><a href=\"https://melhorrastreio.com.br/\">Rastreio rápido</a><br><a href=\"/pages/guia-de-medidas\">Guia de Medidas</a><br><a href=\"https://app.zoppy.com.br/\">Consulte seu Giftback</a></p>"
+            "content": "<p><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/account\">Meus Pedidos</a><br><a href=\"https://melhorrastreio.com.br/\">Rastreio rápido</a><br><a href=\"/pages/guia-de-medidas\">Guia de Medidas</a><br><a href=\"https://app.zoppy.com.br/check-giftback/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWQiOiI3NmE5MzU4Yi0wNGE2LTQyMGUtYTc2Mi1kODZmNGQ2N2JkYTIiLCJpYXQiOjE1MTYyMzkwMjJ9.tfuxTtP1-D1DVI-3HFss4MuahHoxKHz3Sxt5--i8Kjs\">Consulte seu Giftback</a></p>"
           }
         },
         "company": {
@@ -53,10 +53,10 @@
         }
       },
       "block_order": [
-        "newsletter",
         "links",
-        "text",
         "support",
+        "text",
+        "newsletter",
         "company"
       ],
       "settings": {
