@@ -1,3 +1,5 @@
+{%- assign primary_menu_link_count = section.settings.menu.links.size -%}
+
 <style>
   :root {
     --header-is-sticky: {% if section.settings.enable_sticky %}1{% else %}0{% endif %};
@@ -32,6 +34,33 @@
           --header-grid: ". logo secondary-nav" "primary-nav primary-nav primary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
       {%- endcase -%}
     }
+
+    {%- if primary_menu_link_count > 10 and section.settings.layout != 'drawer' -%}
+      #shopify-section-{{ section.id }} {
+        --header-grid: ". logo secondary-nav" "primary-nav primary-nav primary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+      }
+
+      #shopify-section-{{ section.id }} .header__primary-nav {
+        grid-template-columns: repeat(8, max-content);
+        justify-content: center;
+        column-gap: clamp(0.875rem, 1.55vw, 1.5rem);
+        row-gap: 0.75rem;
+        width: 100%;
+        display: grid;
+      }
+
+      #shopify-section-{{ section.id }} .header__primary-nav-item {
+        white-space: nowrap;
+      }
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 1800px) {
+    {%- if primary_menu_link_count > 10 and section.settings.layout != 'drawer' -%}
+      #shopify-section-{{ section.id }} .header__primary-nav {
+        grid-template-columns: repeat({{ primary_menu_link_count }}, max-content);
+      }
+    {%- endif -%}
   }
 
   {%- if section.settings.enable_sticky -%}
