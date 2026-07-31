@@ -11,16 +11,41 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
+    "1785527168bed36748": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_6GbfJA": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_6GbfJA"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {
-            "title": "Cadastre-se e receba novidades e promoções",
-            "content": "<p>Receba lançamentos e condições especiais da Adüla por e-mail.</p>"
-          }
-        },
         "links": {
           "type": "links",
           "settings": {
@@ -30,25 +55,37 @@
             "menu_title": "Institucional"
           }
         },
-        "text": {
-          "type": "text",
-          "settings": {
-            "title": "Atendimento",
-            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5531999174942\">(31) 99917-4942</a><br><a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a><br>Segunda a sexta, das 10h às 19h<br>Sábado, das 10h às 14h</p>"
-          }
-        },
         "support": {
           "type": "text",
           "settings": {
             "title": "Ajuda & Suporte",
-            "content": "<p><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/account\">Meus Pedidos</a><br><a href=\"https://melhorrastreio.com.br/\">Rastreio rápido</a><br><a href=\"/pages/guia-de-medidas\">Guia de Medidas</a><br><a href=\"https://app.zoppy.com.br/check-giftback/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWQiOiI3NmE5MzU4Yi0wNGE2LTQyMGUtYTc2Mi1kODZmNGQ2N2JkYTIiLCJpYXQiOjE1MTYyMzkwMjJ9.tfuxTtP1-D1DVI-3HFss4MuahHoxKHz3Sxt5--i8Kjs\">Consulte seu Giftback</a></p>"
+            "content": "<p><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/account\">Meus Pedidos</a><br><a href=\"https://melhorrastreio.com.br/\">Rastreio rápido</a><br><a href=\"/pages/guia-de-medidas\">Guia de Medidas</a><br><a href=\"https://app.zoppy.com.br/check-giftback/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWQiOiI3NmE5MzU4Yi0wNGE2LTQyMGUtYTc2Mi1kODZmNGQ2N2JkYTIiLCJpYXQiOjE1MTYyMzkwMjJ9.tfuxTtP1-D1DVI-3HFss4MuahHoxKHz3Sxt5--i8Kjs\">Consulte seu Giftback</a></p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "Atendimento",
+            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5531999174942\">(31) 99917-4942</a><br><a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a><br>Segunda a sexta, das 10h às 19h<br>Sábado, das 10h às 14h</p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Cadastre-se e receba novidades e promoções",
+            "content": "<p>Receba lançamentos e condições especiais da Adüla por e-mail.</p>",
+            "button_background": "",
+            "button_text_color": ""
           }
         },
         "company": {
           "type": "text",
           "settings": {
             "title": "Adüla | Semijoias Minimalistas",
-            "content": "<p>Adula Semijoias Ltda<br>CNPJ 33.429.865/0001-27<br>Rua Paraíba, 1441 - Loja 4<br>Savassi - Belo Horizonte - MG<br>30130-148</p>"
+            "content": "<p>Adula Semijoias Ltda<br>CNPJ 33.429.865/0001-27<br>Rua Paraíba, 1441 - Loja 4<br>Savassi - Belo Horizonte - MG<br>30130-148</p>",
+            "enable_follow_on_shop": true
           }
         }
       },
@@ -60,15 +97,20 @@
         "company"
       ],
       "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": true,
         "show_powered_by_shopify": false,
         "show_country_selector": false,
+        "show_country_name": true,
+        "show_country_flag": true,
         "show_locale_selector": false
       }
     }
   },
   "order": [
+    "1785527168bed36748",
     "footer"
   ]
 }
