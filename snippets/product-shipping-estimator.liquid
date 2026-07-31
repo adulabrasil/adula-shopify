@@ -1,0 +1,359 @@
+{%- doc -%}
+  Shipping quote for the selected product variant. The component temporarily adds the
+  selected quantity to the cart, requests Shopify's configured shipping rates and then
+  restores the cart to its original state.
+
+  @param {object} product
+  @param {string} product_form_id
+{%- enddoc -%}
+
+<product-shipping-estimator class="product-shipping-estimator" product-form-id="{{ product_form_id }}">
+  <form class="product-shipping-estimator__form" novalidate>
+    <label class="product-shipping-estimator__label" for="ShippingZip-{{ section.id }}">
+      Frete e prazo
+    </label>
+
+    <div class="product-shipping-estimator__controls">
+      <input
+        id="ShippingZip-{{ section.id }}"
+        class="product-shipping-estimator__input"
+        type="text"
+        name="shipping_zip"
+        inputmode="numeric"
+        autocomplete="postal-code"
+        maxlength="9"
+        placeholder="Insira seu CEP"
+        aria-describedby="ShippingResult-{{ section.id }}"
+        required
+      >
+      <button class="product-shipping-estimator__button" type="submit">Calcular</button>
+    </div>
+  </form>
+
+  <div
+    id="ShippingResult-{{ section.id }}"
+    class="product-shipping-estimator__result"
+    role="status"
+    aria-live="polite"
+    hidden
+  ></div>
+</product-shipping-estimator>
+
+<style>
+  .product-shipping-estimator {
+    display: block;
+    padding-block-start: .25rem;
+  }
+
+  .product-shipping-estimator__form {
+    align-items: center;
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .product-shipping-estimator__label {
+    color: #3a2922;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .product-shipping-estimator__controls {
+    display: grid;
+    gap: .625rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .product-shipping-estimator__input {
+    background: #fff9f1;
+    border: 1px solid rgba(58, 41, 34, .22);
+    border-radius: 2px;
+    color: #3a2922;
+    min-height: 2.75rem;
+    padding: .65rem .875rem;
+    width: 100%;
+  }
+
+  .product-shipping-estimator__input:focus {
+    border-color: #b08d57;
+    box-shadow: 0 0 0 1px #b08d57;
+    outline: none;
+  }
+
+  .product-shipping-estimator__button {
+    background: #b08d57;
+    border: 1px solid #b08d57;
+    border-radius: 2px;
+    color: #3a2922;
+    font-weight: 700;
+    min-height: 2.75rem;
+    padding-inline: 1.35rem;
+    transition: background-color .2s ease, border-color .2s ease;
+  }
+
+  .product-shipping-estimator__button:hover {
+    background: #c09b61;
+    border-color: #c09b61;
+  }
+
+  .product-shipping-estimator__button[aria-busy="true"] {
+    cursor: wait;
+    opacity: .7;
+  }
+
+  .product-shipping-estimator__result {
+    background: #f2e6d8;
+    border-left: 3px solid #b08d57;
+    color: #3a2922;
+    margin-block-start: .75rem;
+    padding: .75rem .875rem;
+  }
+
+  .product-shipping-estimator__result-title {
+    font-size: .875rem;
+    font-weight: 600;
+    margin-block-end: .5rem;
+  }
+
+  .product-shipping-estimator__rates {
+    display: grid;
+    gap: .5rem;
+  }
+
+  .product-shipping-estimator__rate {
+    align-items: start;
+    display: flex;
+    font-size: .875rem;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .product-shipping-estimator__rate-price {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .product-shipping-estimator__deadline {
+    display: block;
+    font-size: .75rem;
+    margin-block-start: .125rem;
+    opacity: .75;
+  }
+
+  @media screen and (max-width: 699px) {
+    .product-shipping-estimator__form {
+      align-items: stretch;
+      grid-template-columns: 1fr;
+    }
+
+    .product-shipping-estimator__controls {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .product-shipping-estimator__button {
+      padding-inline: 1rem;
+    }
+  }
+</style>
+
+<script>
+  if (!customElements.get('product-shipping-estimator')) {
+    class ProductShippingEstimator extends HTMLElement {
+      connectedCallback() {
+        this.form = this.querySelector('form');
+        this.input = this.querySelector('[name="shipping_zip"]');
+        this.button = this.querySelector('[type="submit"]');
+        this.result = this.querySelector('[role="status"]');
+
+        this.input.addEventListener('input', this.formatZip);
+        this.form.addEventListener('submit', this.calculateShipping);
+      }
+
+      disconnectedCallback() {
+        this.input?.removeEventListener('input', this.formatZip);
+        this.form?.removeEventListener('submit', this.calculateShipping);
+      }
+
+      formatZip = (event) => {
+        const digits = event.target.value.replace(/\D/g, '').slice(0, 8);
+        event.target.value = digits.length > 5 ? `${digits.slice(0, 5)}-${digits.slice(5)}` : digits;
+      };
+
+      calculateShipping = async (event) => {
+        event.preventDefault();
+
+        const zip = this.input.value.replace(/\D/g, '');
+        if (zip.length !== 8) {
+          this.showMessage('Digite um CEP válido com 8 números.', true);
+          this.input.focus();
+          return;
+        }
+
+        const productForm = document.getElementById(this.getAttribute('product-form-id'));
+        const formData = productForm ? new FormData(productForm) : null;
+        const variantId = Number(formData?.get('id'));
+        const quantity = Math.max(1, Number(formData?.get('quantity')) || 1);
+
+        if (!variantId) {
+          this.showMessage('Selecione uma opção do produto antes de calcular o frete.', true);
+          return;
+        }
+
+        let addedItemKey = null;
+        let originalQuantity = 0;
+
+        this.setLoading(true);
+        this.showMessage('Consultando as melhores opções para o seu CEP…');
+
+        try {
+          const cart = await this.fetchJson(`${Shopify.routes.root}cart.js`);
+          const originalQuantities = new Map(cart.items.map((item) => [item.key, item.quantity]));
+
+          const addResponse = await this.fetchJson(`${Shopify.routes.root}cart/add.js`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ items: [{ id: variantId, quantity }] })
+          });
+
+          const addedItem = addResponse.items?.[0] || addResponse;
+          addedItemKey = addedItem.key;
+          originalQuantity = originalQuantities.get(addedItemKey) || 0;
+
+          const query = new URLSearchParams({
+            'shipping_address[zip]': zip,
+            'shipping_address[country]': 'Brazil',
+            'shipping_address[province]': ''
+          });
+
+          const prepareResponse = await fetch(`${Shopify.routes.root}cart/prepare_shipping_rates.json?${query}`, {
+            method: 'POST',
+            headers: { Accept: 'application/json' }
+          });
+
+          if (!prepareResponse.ok) {
+            const error = await prepareResponse.json().catch(() => ({}));
+            throw new Error(this.readError(error) || 'Não foi possível consultar este CEP.');
+          }
+
+          const rates = await this.pollRates(query);
+          this.showRates(rates, zip);
+        } catch (error) {
+          this.showMessage(error.message || 'Não foi possível calcular o frete agora. Tente novamente.', true);
+        } finally {
+          if (addedItemKey) {
+            try {
+              await this.fetchJson(`${Shopify.routes.root}cart/change.js`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify({ id: addedItemKey, quantity: originalQuantity })
+              });
+            } catch (restoreError) {
+              console.error('Não foi possível restaurar o carrinho após a cotação de frete.', restoreError);
+            }
+          }
+
+          this.setLoading(false);
+        }
+      };
+
+      async pollRates(query) {
+        for (let attempt = 0; attempt < 12; attempt += 1) {
+          const response = await fetch(`${Shopify.routes.root}cart/async_shipping_rates.json?${query}`, {
+            headers: { Accept: 'application/json' }
+          });
+          const text = await response.text();
+
+          if (response.ok && text !== 'null') {
+            return JSON.parse(text).shipping_rates || [];
+          }
+
+          await new Promise((resolve) => window.setTimeout(resolve, 500));
+        }
+
+        throw new Error('A transportadora demorou para responder. Tente novamente em instantes.');
+      }
+
+      async fetchJson(url, options = {}) {
+        const response = await fetch(url, options);
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(data.description || data.message || 'Não foi possível concluir a consulta.');
+        }
+
+        return data;
+      }
+
+      readError(error) {
+        if (typeof error === 'string') return error;
+        if (Array.isArray(error)) return error.join(' ');
+
+        return Object.values(error || {}).flat().join(' ');
+      }
+
+      showRates(rates, zip) {
+        this.result.replaceChildren();
+
+        const title = document.createElement('p');
+        title.className = 'product-shipping-estimator__result-title';
+        title.textContent = rates.length
+          ? `Opções para o CEP ${zip.slice(0, 5)}-${zip.slice(5)}`
+          : 'Nenhuma opção de entrega foi encontrada para este CEP.';
+        this.result.append(title);
+
+        if (rates.length) {
+          const list = document.createElement('ul');
+          list.className = 'product-shipping-estimator__rates';
+          list.setAttribute('role', 'list');
+
+          rates.forEach((rate) => {
+            const item = document.createElement('li');
+            item.className = 'product-shipping-estimator__rate';
+
+            const service = document.createElement('span');
+            service.textContent = rate.presentment_name || rate.name || 'Entrega';
+
+            if (rate.delivery_date) {
+              const deadline = document.createElement('small');
+              deadline.className = 'product-shipping-estimator__deadline';
+              deadline.textContent = `Previsão: ${new Intl.DateTimeFormat('pt-BR').format(new Date(`${rate.delivery_date}T12:00:00`))}`;
+              service.append(deadline);
+            }
+
+            const price = document.createElement('span');
+            price.className = 'product-shipping-estimator__rate-price';
+            const numericPrice = Number(rate.price);
+            price.textContent = numericPrice === 0
+              ? 'Grátis'
+              : new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: rate.currency || 'BRL'
+                }).format(numericPrice);
+
+            item.append(service, price);
+            list.append(item);
+          });
+
+          this.result.append(list);
+        }
+
+        this.result.hidden = false;
+      }
+
+      showMessage(message, isError = false) {
+        this.result.textContent = message;
+        this.result.dataset.error = isError ? 'true' : 'false';
+        this.result.hidden = false;
+      }
+
+      setLoading(isLoading) {
+        this.button.disabled = isLoading;
+        this.input.disabled = isLoading;
+        this.button.toggleAttribute('aria-busy', isLoading);
+        this.button.textContent = isLoading ? 'Calculando…' : 'Calcular';
+      }
+    }
+
+    customElements.define('product-shipping-estimator', ProductShippingEstimator);
+  }
+</script>
