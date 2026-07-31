@@ -106,7 +106,7 @@
         "text_alignment": "center"
       }
     },
-    "testimonials": {
+    "google-reviews": {
       "type": "testimonials",
       "blocks": {
         "testimonial-1": {
@@ -223,6 +223,6 @@
     "fio-de-luz",
     "new-arrivals",
     "love-paris",
-    "testimonials"
+    "google-reviews"
   ]
 }
