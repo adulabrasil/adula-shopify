@@ -155,61 +155,13 @@
       }
     },
     "benefits": {
-      "type": "text-with-icons",
-      "blocks": {
-        "nickel-free": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-shield",
-            "icon_width": 34,
-            "mobile_icon_width": 30,
-            "title": "Níquel free",
-            "content": "<p>Peças hipoalergênicas</p>"
-          }
-        },
-        "design": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-star",
-            "icon_width": 34,
-            "mobile_icon_width": 30,
-            "title": "Design Francês",
-            "content": "<p>Minimalista</p>"
-          }
-        },
-        "shipping": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-delivery-truck",
-            "icon_width": 34,
-            "mobile_icon_width": 30,
-            "title": "Frete Grátis",
-            "content": "<p>Sudeste acima de R$ 199,00<br>Demais estados acima de R$ 299,00</p>"
-          }
-        },
-        "returns": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-return",
-            "icon_width": 34,
-            "mobile_icon_width": 30,
-            "title": "Trocas e devoluções",
-            "content": "<p>Troca fácil em até 7 dias</p>"
-          }
-        }
-      },
-      "block_order": [
-        "nickel-free",
-        "design",
-        "shipping",
-        "returns"
-      ],
+      "type": "custom-liquid",
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "stack_on_mobile": false,
-        "icon_color": "#b49347",
-        "text_color": "#2d2926",
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n  .adula-home-benefits { background: #f5f2ef; color: #2d2926; padding: 32px max(20px, 4vw); }\n  .adula-home-benefits__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; max-width: 1240px; margin: 0 auto; padding: 0; list-style: none; }\n  .adula-home-benefits__item { display: grid; justify-items: center; align-content: start; gap: 8px; text-align: center; }\n  .adula-home-benefits__icon { display: grid; place-items: center; width: 42px; height: 42px; color: #ad924f; }\n  .adula-home-benefits__icon svg { width: 34px; height: 34px; }\n  .adula-home-benefits__title { margin: 0; color: #2d2926; font-size: 15px; font-weight: 700; line-height: 1.25; }\n  .adula-home-benefits__text { margin: 0; color: #2d2926; font-size: 13px; line-height: 1.45; }\n  @media (max-width: 699px) {\n    .adula-home-benefits { padding: 26px 16px; }\n    .adula-home-benefits__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }\n    .adula-home-benefits__title { font-size: 14px; }\n    .adula-home-benefits__text { font-size: 12px; }\n  }\n</style>\n<section class=\"adula-home-benefits\" aria-label=\"Benefícios Adüla\">\n  <ul class=\"adula-home-benefits__list\" role=\"list\">\n    <li class=\"adula-home-benefits__item\">\n      <span class=\"adula-home-benefits__icon\" aria-hidden=\"true\">{% render 'icon' with 'picto-shield' %}</span>\n      <p class=\"adula-home-benefits__title\">Níquel free</p>\n      <p class=\"adula-home-benefits__text\">Peças hipoalergênicas</p>\n    </li>\n    <li class=\"adula-home-benefits__item\">\n      <span class=\"adula-home-benefits__icon\" aria-hidden=\"true\">{% render 'icon' with 'picto-star' %}</span>\n      <p class=\"adula-home-benefits__title\">Design Francês</p>\n      <p class=\"adula-home-benefits__text\">Minimalista</p>\n    </li>\n    <li class=\"adula-home-benefits__item\">\n      <span class=\"adula-home-benefits__icon\" aria-hidden=\"true\">{% render 'icon' with 'picto-delivery-truck' %}</span>\n      <p class=\"adula-home-benefits__title\">Frete Grátis</p>\n      <p class=\"adula-home-benefits__text\">Sudeste acima de R$ 199,00<br>Demais estados acima de R$ 299,00</p>\n    </li>\n    <li class=\"adula-home-benefits__item\">\n      <span class=\"adula-home-benefits__icon\" aria-hidden=\"true\">{% render 'icon' with 'picto-return' %}</span>\n      <p class=\"adula-home-benefits__title\">Trocas e devoluções</p>\n      <p class=\"adula-home-benefits__text\">Troca fácil em até 7 dias</p>\n    </li>\n  </ul>\n</section>",
         "text_alignment": "center"
       }
     }
