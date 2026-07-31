@@ -172,12 +172,19 @@
 {%- if context == 'card' or context == 'product' -%}
   {%- assign payment_item = variant | default: product.selected_or_first_available_variant -%}
   {%- if payment_item != blank -%}
-    {%- assign pix_price = payment_item.price | times: 97 | divided_by: 100 -%}
-    {%- assign installment_count = payment_item.price | divided_by: 1000 | at_least: 1 | at_most: 4 -%}
-    {%- assign installment_price = payment_item.price | divided_by: installment_count -%}
-    <div class="adula-payment-conditions text-subdued text-sm">
-      <span>{{ pix_price | money }} no Pix</span>
-      <span>{{ payment_item.price | money }} em até {{ installment_count }}x de {{ installment_price | money }} sem juros</span>
+    {%- assign pix_price = payment_item.price | times: 0.97 -%}
+    {%- assign installment_price = payment_item.price | divided_by: 4.0 -%}
+    <div class="adula-payment-conditions{% if context == 'product' %} adula-payment-conditions--product{% endif %}" aria-label="Condições de pagamento">
+      <p class="adula-payment-conditions__installment">
+        em até <strong>4x de {{ installment_price | money }}</strong> <span>sem juros</span>
+      </p>
+      <p class="adula-payment-conditions__pix">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.09 3.55 3.64 8a2.83 2.83 0 0 0 0 4l4.45 4.45a2.83 2.83 0 0 0 4 0l1.18-1.18M15.91 20.45 20.36 16a2.83 2.83 0 0 0 0-4l-4.45-4.45a2.83 2.83 0 0 0-4 0l-1.18 1.18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="m8.25 13.75 1.76 1.76a2.83 2.83 0 0 0 4 0l1.75-1.75M15.75 10.25l-1.76-1.76a2.83 2.83 0 0 0-4 0l-1.75 1.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <strong>{{ pix_price | money }}</strong> no Pix <span class="adula-payment-conditions__discount">(3% de desconto)</span>
+      </p>
     </div>
   {%- endif -%}
 {%- endif -%}
