@@ -10,14 +10,47 @@
 {
   "sections": {
     "hero": {
-      "type": "custom-liquid",
+      "type": "adula-hero-carousel",
+      "blocks": {
+        "personalize": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Afeto em cada detalhe",
+            "heading": "Personalize sua peça",
+            "text": "<p>Escolha símbolos que representam quem você ama e transforme memórias em uma joia única.</p>",
+            "button_label": "Personalizar agora",
+            "link": "/collections/all"
+          }
+        },
+        "fios-de-luz": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Cool e minimalista",
+            "heading": "Fios de Luz",
+            "text": "<p>Escolha seu fio, combine seus pingentes e crie uma composição que tenha a sua cara.</p>",
+            "button_label": "Conheça a coleção",
+            "link": "/collections/fio-de-luz"
+          }
+        },
+        "amuletos-paris": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Símbolos que contam histórias",
+            "heading": "Amuletos de Paris",
+            "text": "<p>Charms inspirados em Paris para levar afeto, sorte e memórias sempre com você.</p>",
+            "button_label": "Descobrir a coleção",
+            "link": "/collections/love-paris"
+          }
+        }
+      },
+      "block_order": [
+        "personalize",
+        "fios-de-luz",
+        "amuletos-paris"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  .adula-campaign-hero { display: grid; grid-template-columns: minmax(0, 44%) minmax(0, 56%); min-height: min(720px, 72vw); color: #4a3428; background: #f3ece7; }\n  .adula-campaign-hero__content { display: flex; align-items: center; padding: clamp(32px, 6vw, 96px); }\n  .adula-campaign-hero__copy { max-width: 480px; text-align: left; }\n  .adula-campaign-hero__eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }\n  .adula-campaign-hero__title { margin: 0; color: inherit; font-size: clamp(40px, 5vw, 72px); line-height: 1; }\n  .adula-campaign-hero__text { margin: 18px 0 26px; max-width: 390px; font-size: clamp(15px, 1.4vw, 19px); }\n  .adula-campaign-hero__button { display: inline-flex; min-height: 46px; align-items: center; padding: 0 24px; color: #fffdfb; background: #4a3428; font-weight: 600; }\n  .adula-campaign-hero__media, .adula-campaign-hero__media img { display: block; width: 100%; height: 100%; }\n  .adula-campaign-hero__media { min-height: 560px; overflow: hidden; }\n  .adula-campaign-hero__media img { object-fit: cover; object-position: center 48%; }\n  @media (max-width: 699px) {\n    .adula-campaign-hero { display: flex; min-height: 0; flex-direction: column-reverse; }\n    .adula-campaign-hero__media { min-height: 0; aspect-ratio: 1362 / 2048; }\n    .adula-campaign-hero__media img { object-fit: contain; }\n    .adula-campaign-hero__content { padding: 30px 20px 34px; }\n    .adula-campaign-hero__title { font-size: clamp(36px, 11vw, 48px); }\n    .adula-campaign-hero__text { margin: 12px 0 20px; }\n  }\n</style>\n<a href=\"/collections/all\" class=\"adula-campaign-hero\" aria-label=\"Personalize sua peça na Adüla\">\n  <div class=\"adula-campaign-hero__content\">\n    <div class=\"adula-campaign-hero__copy\">\n      <p class=\"adula-campaign-hero__eyebrow\">Afeto em cada detalhe</p>\n      <h1 class=\"adula-campaign-hero__title\">Personalize sua peça</h1>\n      <p class=\"adula-campaign-hero__text\">Escolha símbolos que representam quem você ama e transforme memórias em uma joia única.</p>\n      <span class=\"adula-campaign-hero__button\">Personalizar agora</span>\n    </div>\n  </div>\n  <div class=\"adula-campaign-hero__media\">\n    <img src=\"{{ 'adula-personalize-familia.webp' | asset_url }}\" alt=\"Criança tocando pulseiras personalizadas no pulso da mãe\" width=\"1362\" height=\"2048\" fetchpriority=\"high\" decoding=\"async\">\n  </div>\n</a>",
-        "text_alignment": "center"
+        "autoplay": true,
+        "change_slides_speed": 4
       }
     },
     "benefits": {
