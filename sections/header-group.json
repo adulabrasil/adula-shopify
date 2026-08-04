@@ -40,13 +40,13 @@
       ],
       "settings": {
         "color_scheme": "scheme-3",
+        "custom_background": "#ad924f",
+        "custom_text_color": "#ffffff",
         "enable_sticky": false,
         "autoplay": true,
         "cycle_speed": 5,
-        "desktop_font_size": 12,
-        "mobile_font_size": 11,
-        "custom_background": "#AD924F",
-        "custom_text_color": "#FFFFFF"
+        "desktop_font_size": 13,
+        "mobile_font_size": 12
       }
     },
     "header": {
