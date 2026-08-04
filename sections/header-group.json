@@ -71,7 +71,7 @@
         "support_email": "atendimento@adulabrasil.com",
         "tracking_base_url": "https://rastreio.frenet.com.br/?_gl=1*690czk*_gcl_au*MTYzMTA5MDA5NS4xNzgxMDI0OTY1",
         "sidebar_color_scheme": "scheme-2",
-        "sidebar_text_font": "heading",
+        "sidebar_text_font": "body",
         "sidebar_show_dividers": true,
         "sidebar_open_second_level_menus": false,
         "layout": "logo_center_navigation_inline",
