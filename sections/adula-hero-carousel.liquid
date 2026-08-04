@@ -11,20 +11,27 @@
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__slide {
+    position: relative;
     display: none;
-    grid-template-columns: minmax(0, 44%) minmax(0, 56%);
-    min-height: min(720px, 72vw);
+    width: 100%;
+    aspect-ratio: 1920 / 500;
+    min-height: 0;
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-    display: grid;
+    display: block;
     animation: adula-hero-fade-{{ section.id }} .55s ease both;
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__content {
+    position: absolute;
+    z-index: 2;
+    inset: 0 auto 0 0;
     display: flex;
+    width: min(44%, 680px);
     align-items: center;
-    padding: clamp(32px, 6vw, 96px);
+    padding: clamp(20px, 3.2vw, 58px);
+    background: linear-gradient(90deg, rgba(243, 236, 231, .94) 0%, rgba(243, 236, 231, .82) 72%, rgba(243, 236, 231, 0) 100%);
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__copy {
@@ -42,7 +49,7 @@
   #shopify-section-{{ section.id }} .adula-hero-carousel__title {
     margin: 0;
     color: inherit;
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(30px, 3.5vw, 56px);
     line-height: 1;
   }
 
@@ -72,13 +79,19 @@
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__media {
-    min-height: 560px;
+    position: absolute;
+    inset: 0;
+    min-height: 0;
     overflow: hidden;
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
     object-fit: cover;
     object-position: center;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__slide:first-child .adula-hero-carousel__media img {
+    object-position: center 52%;
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
@@ -146,23 +159,26 @@
   }
 
   @media (max-width: 699px) {
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide,
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-      min-height: 0;
-      flex-direction: column-reverse;
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-      display: flex;
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__media {
-      min-height: 0;
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide {
       aspect-ratio: 4 / 5;
     }
 
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
+      display: block;
+    }
+
     #shopify-section-{{ section.id }} .adula-hero-carousel__content {
-      padding: 30px 20px 58px;
+      inset: auto 0 0;
+      width: 100%;
+      align-items: flex-end;
+      padding: 42px 20px 58px;
+      background: linear-gradient(0deg, rgba(243, 236, 231, .96) 0%, rgba(243, 236, 231, .82) 68%, rgba(243, 236, 231, 0) 100%);
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__media {
+      position: absolute;
+      inset: 0;
+      min-height: 0;
     }
 
     #shopify-section-{{ section.id }} .adula-hero-carousel__title {
