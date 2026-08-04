@@ -1,0 +1,379 @@
+{%- liquid
+  assign slide_count = section.blocks.size
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .adula-hero-carousel {
+    position: relative;
+    overflow: hidden;
+    color: #4a3428;
+    background: #f3ece7;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__slide {
+    display: none;
+    grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+    min-height: min(720px, 72vw);
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
+    display: grid;
+    animation: adula-hero-fade-{{ section.id }} .55s ease both;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__content {
+    display: flex;
+    align-items: center;
+    padding: clamp(32px, 6vw, 96px);
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__copy {
+    max-width: 500px;
+    text-align: left;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__eyebrow {
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__title {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__text {
+    margin: 18px 0 26px;
+    max-width: 410px;
+    font-size: clamp(15px, 1.4vw, 19px);
+    line-height: 1.55;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__button {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 0 24px;
+    color: #fffdfb;
+    background: #4a3428;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media {
+    min-height: 560px;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
+    position: absolute;
+    z-index: 3;
+    right: clamp(18px, 2.5vw, 40px);
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__dot {
+    border: 0;
+    cursor: pointer;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 50%;
+    color: #4a3428;
+    background: rgba(255, 253, 251, .88);
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 11px;
+    border-radius: 20px;
+    background: rgba(255, 253, 251, .88);
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(74, 52, 40, .35);
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__dot[aria-current="true"] {
+    width: 24px;
+    border-radius: 8px;
+    background: #4a3428;
+  }
+
+  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow:focus-visible,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__dot:focus-visible,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__button:focus-visible,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media:focus-visible {
+    outline: 3px solid #ad924f;
+    outline-offset: 2px;
+  }
+
+  @keyframes adula-hero-fade-{{ section.id }} {
+    from { opacity: .2; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 699px) {
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide,
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
+      min-height: 0;
+      flex-direction: column-reverse;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
+      display: flex;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__media {
+      min-height: 0;
+      aspect-ratio: 4 / 5;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__content {
+      padding: 30px 20px 58px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__title {
+      font-size: clamp(36px, 11vw, 48px);
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__text {
+      margin: 12px 0 20px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
+      right: 16px;
+      bottom: 14px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-hero-carousel__arrow {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
+      animation: none;
+    }
+  }
+</style>
+
+<section
+  class="adula-hero-carousel"
+  data-adula-hero-carousel
+  data-autoplay="{{ section.settings.autoplay }}"
+  data-interval="{{ section.settings.change_slides_speed | times: 1000 }}"
+  aria-roledescription="carrossel"
+  aria-label="Destaques Adüla"
+>
+  <div class="adula-hero-carousel__slides" aria-live="polite">
+    {%- for block in section.blocks -%}
+      <article
+        class="adula-hero-carousel__slide{% if forloop.first %} is-active{% endif %}"
+        data-adula-hero-slide
+        aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}"
+        aria-label="{{ forloop.index }} de {{ slide_count }}"
+        {{ block.shopify_attributes }}
+      >
+        <div class="adula-hero-carousel__content">
+          <div class="adula-hero-carousel__copy">
+            {%- if block.settings.eyebrow != blank -%}
+              <p class="adula-hero-carousel__eyebrow">{{ block.settings.eyebrow }}</p>
+            {%- endif -%}
+            <h2 class="adula-hero-carousel__title">{{ block.settings.heading }}</h2>
+            {%- if block.settings.text != blank -%}
+              <div class="adula-hero-carousel__text">{{ block.settings.text }}</div>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank and block.settings.link != blank -%}
+              <a class="adula-hero-carousel__button" href="{{ block.settings.link }}">{{ block.settings.button_label }}</a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <a class="adula-hero-carousel__media" href="{{ block.settings.link | default: '#' }}" tabindex="{% if block.settings.link == blank %}-1{% else %}0{% endif %}" aria-label="{{ block.settings.heading | escape }}">
+          {%- if block.settings.image != blank -%}
+            {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '(max-width: 699px) 100vw, 56vw', loading: 'lazy', alt: block.settings.image.alt -}}
+          {%- elsif forloop.index == 1 -%}
+            <img src="{{ 'adula-personalize-familia.webp' | asset_url }}" alt="Criança tocando pulseiras personalizadas no pulso da mãe" width="1362" height="2048" fetchpriority="high" decoding="async">
+          {%- elsif forloop.index == 2 -%}
+            <img src="{{ 'adula-fio-de-luz.webp' | asset_url }}" alt="Coleção Fios de Luz da Adüla" width="1920" height="500" loading="lazy" decoding="async">
+          {%- else -%}
+            <img src="{{ 'adula-love-paris.webp' | asset_url }}" alt="Coleção Amuletos de Paris da Adüla" width="1920" height="500" loading="lazy" decoding="async">
+          {%- endif -%}
+        </a>
+      </article>
+    {%- endfor -%}
+  </div>
+
+  {%- if slide_count > 1 -%}
+    <div class="adula-hero-carousel__controls" aria-label="Controles do carrossel">
+      <button class="adula-hero-carousel__arrow" type="button" data-adula-hero-prev aria-label="Imagem anterior">&#8249;</button>
+      <div class="adula-hero-carousel__dots">
+        {%- for block in section.blocks -%}
+          <button class="adula-hero-carousel__dot" type="button" data-adula-hero-dot="{{ forloop.index0 }}" aria-label="Mostrar imagem {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+        {%- endfor -%}
+      </div>
+      <button class="adula-hero-carousel__arrow" type="button" data-adula-hero-next aria-label="Próxima imagem">&#8250;</button>
+    </div>
+  {%- endif -%}
+</section>
+
+<script>
+  (() => {
+    const root = document.currentScript.previousElementSibling;
+    if (!root || !root.matches('[data-adula-hero-carousel]')) return;
+
+    const slides = [...root.querySelectorAll('[data-adula-hero-slide]')];
+    const dots = [...root.querySelectorAll('[data-adula-hero-dot]')];
+    const previous = root.querySelector('[data-adula-hero-prev]');
+    const next = root.querySelector('[data-adula-hero-next]');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let activeIndex = 0;
+    let timer;
+    let touchStartX = 0;
+
+    const show = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === activeIndex;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false'));
+    };
+
+    const stop = () => window.clearInterval(timer);
+    const start = () => {
+      stop();
+      if (root.dataset.autoplay !== 'true' || reduceMotion || slides.length < 2) return;
+      timer = window.setInterval(() => show(activeIndex + 1), Number(root.dataset.interval) || 4000);
+    };
+
+    previous?.addEventListener('click', () => { show(activeIndex - 1); start(); });
+    next?.addEventListener('click', () => { show(activeIndex + 1); start(); });
+    dots.forEach((dot) => dot.addEventListener('click', () => { show(Number(dot.dataset.adulaHeroDot)); start(); }));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+    root.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (event) => {
+      const distance = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(distance) < 45) return;
+      show(activeIndex + (distance < 0 ? 1 : -1));
+      start();
+    }, { passive: true });
+
+    start();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Carrossel Adüla",
+  "tag": "section",
+  "class": "shopify-section--adula-hero-carousel",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Trocar imagens automaticamente",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "s",
+      "label": "Tempo entre imagens",
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Imagem",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagem"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Texto pequeno"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Título",
+          "default": "Destaque Adüla"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Descrição"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Texto do botão",
+          "default": "Conheça"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrossel Adüla",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}
