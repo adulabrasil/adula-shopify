@@ -86,12 +86,8 @@
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__slide:first-child .adula-hero-carousel__media img {
-    object-position: center 52%;
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
@@ -224,24 +220,9 @@
         aria-label="{{ forloop.index }} de {{ slide_count }}"
         {{ block.shopify_attributes }}
       >
-        <div class="adula-hero-carousel__content">
-          <div class="adula-hero-carousel__copy">
-            {%- if block.settings.eyebrow != blank -%}
-              <p class="adula-hero-carousel__eyebrow">{{ block.settings.eyebrow }}</p>
-            {%- endif -%}
-            <h2 class="adula-hero-carousel__title">{{ block.settings.heading }}</h2>
-            {%- if block.settings.text != blank -%}
-              <div class="adula-hero-carousel__text">{{ block.settings.text }}</div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank and block.settings.link != blank -%}
-              <a class="adula-hero-carousel__button" href="{{ block.settings.link }}">{{ block.settings.button_label }}</a>
-            {%- endif -%}
-          </div>
-        </div>
-
         <a class="adula-hero-carousel__media" href="{{ block.settings.link | default: '#' }}" tabindex="{% if block.settings.link == blank %}-1{% else %}0{% endif %}" aria-label="{{ block.settings.heading | escape }}">
           {%- if block.settings.image != blank -%}
-            {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '(max-width: 699px) 100vw, 56vw', loading: 'lazy', alt: block.settings.image.alt -}}
+            {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: 'lazy', alt: block.settings.image.alt -}}
           {%- elsif forloop.index == 1 -%}
             <img src="{{ 'adula-personalize-familia.webp' | asset_url }}" alt="Criança tocando pulseiras personalizadas no pulso da mãe" width="1362" height="2048" fetchpriority="high" decoding="async">
           {%- elsif forloop.index == 2 -%}
