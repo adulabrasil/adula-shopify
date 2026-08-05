@@ -1,0 +1,159 @@
+<style>
+  #shopify-section-{{ section.id }} .adula-about {
+    padding: clamp(52px, 6vw, 88px) max(20px, 4vw);
+    background: #fffdfb;
+    color: #4a3428;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__heading {
+    margin: 0 0 clamp(32px, 3.5vw, 46px);
+    color: #4a3428;
+    font-size: clamp(26px, 2.4vw, 36px);
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__heading::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 1px;
+    margin: 11px auto 0;
+    background: #ad924f;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__layout {
+    display: grid;
+    grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr);
+    gap: clamp(38px, 5vw, 76px);
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__copy {
+    max-width: 690px;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__copy p {
+    margin: 0 0 16px;
+    color: #4a3428;
+    font-size: clamp(15px, 1.1vw, 17px);
+    line-height: 1.72;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about__signature {
+    color: #6a3f2d;
+    font-weight: 600;
+  }
+
+  @media (max-width: 899px) {
+    #shopify-section-{{ section.id }} .adula-about__layout {
+      grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__copy p {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  }
+
+  @media (max-width: 699px) {
+    #shopify-section-{{ section.id }} .adula-about {
+      padding: 44px 20px 52px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__heading {
+      margin-bottom: 26px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__layout {
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__media {
+      max-width: 520px;
+      margin: 0 auto 30px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__copy {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    #shopify-section-{{ section.id }} .adula-about__copy p {
+      margin-bottom: 14px;
+    }
+  }
+</style>
+
+<section class="adula-about" aria-labelledby="adula-about-title">
+  <div class="adula-about__inner">
+    <h2 class="adula-about__heading" id="adula-about-title">Sobre a Adüla</h2>
+
+    <div class="adula-about__layout">
+      <div class="adula-about__media">
+        <img
+          class="adula-about__image"
+          src="{{ 'adula-quem-somos-nadia.webp' | asset_url }}"
+          alt="Nadia Fontaine, fundadora e designer da Adüla, celebrando a história da marca"
+          width="1066"
+          height="1600"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+      <div class="adula-about__copy">
+        <p>Criada por uma francesa apaixonada por sua terra natal, a Adüla foi inspirada no charme europeu.</p>
+
+        <p>Nossa fundadora e designer, Nadia Fontaine, cria exclusivamente para a Adüla. Meiga e delicada, ela deixa sua marca registrada em nossas semijoias: peças delicadas e minimalistas, que podem ser usadas sozinhas ou juntas, combináveis de múltiplas formas.</p>
+
+        <p>Verdadeiros mimos, que fazem com que você queira ser adulada ♥ a todo momento!</p>
+
+        <p>As nossas semijoias têm qualidade e design impecáveis, são feitas de forma artesanal no Brasil, banhadas a ouro 18K ou ródio branco, mas também temos verdadeiras joias produzidas em Prata 925. Elas contam com tecnologia antialérgica, são livres de níquel — tudo isso a preços bem acessíveis!</p>
+
+        <p>Além disso, oferecemos garantia de seis (6) meses para defeitos de fabricação e o conforto de receber as peças em casa, com frete grátis em compras a partir de R$ 300 para todo o Brasil.</p>
+
+        <p>Desde 2017, com vendas online, conquistamos clientes de norte a sul do Brasil. Agora estamos com vários cantinhos adulantes em Belo Horizonte: quiosques no Boulevard Shopping, Pátio Savassi e BH Shopping, além de uma loja conceito no coração da Savassi.</p>
+
+        <p class="adula-about__signature">Vem ser Adülada! ♥</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sobre a Adüla",
+  "tag": "section",
+  "class": "shopify-section--adula-about",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Sobre a Adüla"
+    }
+  ]
+}
+{% endschema %}

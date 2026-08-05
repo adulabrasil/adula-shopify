@@ -360,7 +360,7 @@
       }
     },
     "quem-somos": {
-      "type": "custom-liquid",
+      "type": "adula-about",
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
