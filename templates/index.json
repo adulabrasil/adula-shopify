@@ -360,6 +360,17 @@
       }
     },
     "quem-somos": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "text_alignment": "left",
+        "liquid": "<style>\n  .adula-who { padding: clamp(52px, 6vw, 88px) max(20px, 4vw); background: #fffdfb; color: #4a3428; }\n  .adula-who__inner { max-width: 1320px; margin: 0 auto; }\n  .adula-who__heading { margin: 0 0 clamp(32px, 3.5vw, 46px); color: #4a3428; font-size: clamp(26px, 2.4vw, 36px); font-weight: 500; letter-spacing: .1em; line-height: 1.2; text-align: center; text-transform: uppercase; }\n  .adula-who__heading::after { content: ''; display: block; width: 34px; height: 1px; margin: 11px auto 0; background: #ad924f; }\n  .adula-who__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 1.8vw, 26px); }\n  .adula-who__card { min-width: 0; }\n  .adula-who__image { display: block; width: 100%; aspect-ratio: 2 / 3; margin: 0 0 18px; border-radius: 7px; object-fit: cover; }\n  .adula-who__text { margin: 0; color: #4a3428; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.7; }\n  @media (max-width: 999px) and (min-width: 700px) {\n    .adula-who__inner { max-width: 760px; }\n    .adula-who__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 24px; }\n    .adula-who__text { font-size: 15px; line-height: 1.65; }\n  }\n  @media (max-width: 699px) {\n    .adula-who { padding: 44px 0 52px; overflow: hidden; }\n    .adula-who__heading { padding: 0 20px; margin-bottom: 26px; }\n    .adula-who__grid { grid-template-columns: none; grid-auto-columns: minmax(290px, 86vw); grid-auto-flow: column; gap: 16px; padding: 0 20px 10px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; scrollbar-width: none; }\n    .adula-who__grid::-webkit-scrollbar { display: none; }\n    .adula-who__card { scroll-snap-align: start; }\n    .adula-who__text { font-size: 15px; line-height: 1.65; }\n  }\n</style>\n<section class=\"adula-who\" aria-labelledby=\"adula-who-title\">\n  <div class=\"adula-who__inner\">\n    <h2 class=\"adula-who__heading\" id=\"adula-who-title\">Quem Somos</h2>\n    <div class=\"adula-who__grid\">\n      <article class=\"adula-who__card\">\n        <img class=\"adula-who__image\" src=\"{{ 'adula-quem-somos-nadia.webp' | asset_url }}\" alt=\"Nadia Fontaine, fundadora da Adüla, celebrando o aniversário da marca\" width=\"1066\" height=\"1600\" loading=\"lazy\" decoding=\"async\">\n        <p class=\"adula-who__text\">Criada por uma francesa apaixonada por sua terra natal, a Adüla nasce inspirada no charme europeu. Nossa fundadora e designer, Nadia Fontaine, cria exclusivamente para a marca, trazendo delicadeza e identidade única em cada peça.</p>\n      </article>\n      <article class=\"adula-who__card\">\n        <img class=\"adula-who__image\" src=\"{{ 'adula-quem-somos-estilo.webp' | asset_url }}\" alt=\"Ambiente da Adüla com imagens que expressam o estilo da marca\" width=\"1066\" height=\"1600\" loading=\"lazy\" decoding=\"async\">\n        <p class=\"adula-who__text\">Meiga e minimalista, a Adüla se destaca por suas semijoias delicadas e versáteis, que podem ser usadas sozinhas ou combinadas, criando composições únicas para o dia a dia.</p>\n      </article>\n      <article class=\"adula-who__card\">\n        <img class=\"adula-who__image\" src=\"{{ 'adula-quem-somos-materiais.webp' | asset_url }}\" alt=\"Artesão realizando o acabamento de uma peça Adüla\" width=\"1066\" height=\"1600\" loading=\"lazy\" decoding=\"async\">\n        <p class=\"adula-who__text\">Nossas peças são produzidas no Brasil, com acabamento impecável, banhadas a ouro 18K ou ródio branco, além de joias em Prata 925. São hipoalergênicas, livres de níquel e feitas para acompanhar você todos os dias.</p>\n      </article>\n      <article class=\"adula-who__card\">\n        <img class=\"adula-who__image\" src=\"{{ 'adula-quem-somos-lojas.webp' | asset_url }}\" alt=\"Clientes em uma das lojas físicas da Adüla em Belo Horizonte\" width=\"1200\" height=\"1600\" loading=\"lazy\" decoding=\"async\">\n        <p class=\"adula-who__text\">Desde 2017 encantando clientes em todo o Brasil, hoje contamos com lojas físicas em Belo Horizonte. Oferecemos garantia de 6 meses e frete grátis acima de R$ 199 no Sudeste e R$ 299 nos demais estados. Verdadeiros mimos para você se sentir ainda mais especial — vem ser Adülada ♥</p>\n      </article>\n    </div>\n  </div>\n</section>"
+      }
+    },
+    "sobre-adula": {
       "type": "adula-about",
       "settings": {}
     },
@@ -398,6 +409,7 @@
     "instagram-heading",
     "178552753853021db8",
     "quem-somos",
+    "sobre-adula",
     "guia-garantia",
     "onde-estamos"
   ]
