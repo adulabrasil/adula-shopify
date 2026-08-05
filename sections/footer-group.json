@@ -15,12 +15,11 @@
       "type": "footer",
       "blocks": {
         "links": {
-          "type": "links",
+          "type": "text",
           "settings": {
-            "menu": "footer",
-            "collapse_on_mobile": true,
-            "show_menu_title": true,
-            "menu_title": "Institucional"
+            "title": "Institucional",
+            "content": "<p><a href=\"/pages/sobre-a-adula\">Sobre a Adüla</a><br/><a href=\"/pages/garantia\">Garantia</a><br/><a href=\"/pages/politica-de-privacidade\">Política de Privacidade</a></p>",
+            "enable_follow_on_shop": false
           }
         },
         "support": {
