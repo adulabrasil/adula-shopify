@@ -1,8 +1,14 @@
 <style>
   #shopify-section-{{ section.id }} .adula-about {
+    display: none;
     padding: clamp(52px, 6vw, 88px) max(20px, 4vw);
     background: #fffdfb;
     color: #4a3428;
+  }
+
+  #shopify-section-{{ section.id }} .adula-about:target,
+  #shopify-section-{{ section.id }} .adula-about.is-visible {
+    display: block;
   }
 
   #shopify-section-{{ section.id }} .adula-about__inner {
