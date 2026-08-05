@@ -50,14 +50,9 @@
     {% if section.settings.reveal %}
       reveal-on-scroll="true"
     {% endif %}
-    class="collection-banner color-scheme color-scheme--{{ section.settings.color_scheme.id }}"
-    {% if section.settings.allow_transparent_header %}
-      allow-transparent-header
-    {% endif %}
+    class="collection-banner color-scheme color-scheme--scheme-1"
   >
-    {%- unless section.settings.allow_transparent_header -%}
-      {{- collection_breadcrumb -}}
-    {%- endunless -%}
+    {{- collection_breadcrumb -}}
 
     <div class="content-over-media content-over-media--{{ section.settings.image_size }}">
       {%- capture picture_content -%}
@@ -258,3 +253,16 @@
       "label": "t:global.colors.overlay_color",
       "default": "#000000"
     },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:global.colors.overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 30
+    }
+  ]
+}
+{% endschema %}
