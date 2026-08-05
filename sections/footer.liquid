@@ -103,10 +103,28 @@
 
                 {%- when 'links' -%}
                   {%- assign menu = block.settings.menu -%}
+                  {%- assign menu_title = block.settings.menu_title | default: menu.title -%}
 
-                  {%- if menu != blank and menu.links.size > 0 -%}
-                    {%- assign menu_title = block.settings.menu_title | default: menu.title -%}
-                    
+                  {%- if menu_title == 'Institucional' -%}
+                    {%- capture menu_content -%}
+                      <ul class="v-stack gap-2.5 unstyled-list" role="list">
+                        <li><a href="/pages/sobre-a-adula" class="link-faded">Sobre a Adüla</a></li>
+                        <li><a href="/pages/garantia" class="link-faded">Garantia</a></li>
+                        <li><a href="/policies/privacy-policy" class="link-faded">Política de Privacidade</a></li>
+                      </ul>
+                    {%- endcapture -%}
+
+                    <div class="v-stack gap-4 sm:gap-5 {% if block.settings.collapse_on_mobile %}sm-max:hidden{% endif %}">
+                      {%- if block.settings.show_menu_title != blank -%}
+                        <p class="h6">{{ menu_title }}</p>
+                      {%- endif -%}
+                      {{- menu_content -}}
+                    </div>
+
+                    {%- if block.settings.collapse_on_mobile -%}
+                      {%- render 'accordion', title: menu_title, content: menu_content, class: 'sm:hidden' -%}
+                    {%- endif -%}
+                  {%- elsif menu != blank and menu.links.size > 0 -%}
                     {%- capture menu_content -%}
                       <ul class="v-stack gap-2.5 unstyled-list" role="list">
                         {%- for link in menu.links -%}
@@ -121,7 +139,6 @@
                       {%- if block.settings.show_menu_title != blank -%}
                         <p class="h6">{{ menu_title }}</p>
                       {%- endif -%}
-
                       {{- menu_content -}}
                     </div>
 
