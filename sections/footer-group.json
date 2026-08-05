@@ -18,7 +18,7 @@
           "type": "text",
           "settings": {
             "title": "Institucional",
-            "content": "<p><a href=\"/pages/sobre-a-adula\">Sobre a Adüla</a><br><a href=\"/pages/garantia\">Garantia</a><br><a href=\"/policies/privacy-policy\">Política de Privacidade</a></p>",
+            "content": "<p><a href=\"/pages/sobre-a-adula\">Sobre a Adüla</a><br><a href=\"/#adula-locations-title\">Nossas Lojas</a><br><a href=\"/pages/garantia\">Garantia</a><br><a href=\"/pages/trocas-e-devolucoes\">Trocas &amp; Devoluções</a><br><a href=\"/policies/privacy-policy\">Política de Privacidade</a></p>",
             "enable_follow_on_shop": false
           }
         },
