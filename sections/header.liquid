@@ -338,6 +338,60 @@
       inset-inline-end: 0.75rem;
     }
   }
+
+  /* ADULA CATEGORY NAV EMPHASIS
+     Keep the desktop category row easy to scan at 100% zoom while preserving the compact sizing. */
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .header__primary-nav {
+      position: relative;
+      z-index: 0;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav::before {
+      content: "";
+      width: 100vw;
+      position: absolute;
+      z-index: -1;
+      inset-block: -0.7rem;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+      background: #F2E6D8;
+      border-block: 1px solid rgb(176 141 87 / 0.18);
+      pointer-events: none;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link {
+      color: #3A2922;
+      transition: color 160ms ease, background-color 160ms ease;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link:hover,
+    #shopify-section-{{ section.id }} .header__primary-nav-link[aria-current="page"] {
+      color: #B08D57;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item + .header__primary-nav-item::before {
+      background: rgb(176 141 87 / 0.45);
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="sale" i],
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="oferta" i],
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="promo" i] {
+      padding: 0.45rem 0.7rem;
+      border-radius: 0.4rem;
+      background: #3A2922;
+      color: #FFF9F1;
+      font-weight: 600;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="sale" i]:hover,
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="oferta" i]:hover,
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="promo" i]:hover {
+      background: #B08D57;
+      color: #2B211D;
+    }
+  }
+
 </style>
 
 <height-observer variable="header">
