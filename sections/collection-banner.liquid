@@ -90,7 +90,14 @@
     </div>
   </collection-banner>
 {%- elsif collection_content != blank -%}
-  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+  {%- comment -%}
+    Collections without a banner image sit on the light Adula page background.
+    The default collection scheme (scheme-4) is transparent with white text,
+    which makes the breadcrumb, title and description look invisible here.
+    Use the light brand scheme only for this no-image fallback; image banners
+    keep the editor-selected scheme above so white overlay text still works.
+  {%- endcomment -%}
+  <div class="color-scheme color-scheme--scheme-1">
     <div class="relative section-spacing section-spacing--tight">
       <div class="container container--{{ section.settings.content_width }} container--align-{{ text_alignment }}">
         {{- collection_breadcrumb -}}
@@ -251,16 +258,3 @@
       "label": "t:global.colors.overlay_color",
       "default": "#000000"
     },
-    {
-      "type": "range",
-      "id": "overlay_opacity",
-      "label": "t:global.colors.overlay_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "default": 30
-    }
-  ]
-}
-{% endschema %}
