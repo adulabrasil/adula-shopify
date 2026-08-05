@@ -336,7 +336,8 @@
 
         event.preventDefault();
         document.getElementById('sobre-a-adula')?.classList.remove('is-visible');
-        if (target.id === 'sobre-a-adula') {
+        document.getElementById('guia-garantia')?.classList.remove('is-visible');
+        if (target.id === 'sobre-a-adula' || target.id === 'guia-garantia') {
           target.classList.add('is-visible');
         }
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
