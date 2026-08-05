@@ -72,6 +72,7 @@
   }
 
   #shopify-section-{{ section.id }} .adula-hero-carousel__media,
+  #shopify-section-{{ section.id }} .adula-hero-carousel__media picture,
   #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
     display: block;
     width: 100%;
@@ -221,8 +222,17 @@
         {{ block.shopify_attributes }}
       >
         <a class="adula-hero-carousel__media" href="{{ block.settings.link | default: '#' }}" tabindex="{% if block.settings.link == blank %}-1{% else %}0{% endif %}" aria-label="{{ block.settings.heading | escape }}">
-          {%- if block.settings.image != blank -%}
-            {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: 'lazy', alt: block.settings.image.alt -}}
+          {%- if block.settings.image != blank or block.settings.image_mobile != blank -%}
+            <picture>
+              {%- if block.settings.image_mobile != blank -%}
+                <source media="(max-width: 699px)" srcset="{{ block.settings.image_mobile | image_url: width: 1400 }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: 'lazy', alt: block.settings.image.alt -}}
+              {%- else -%}
+                {{- block.settings.image_mobile | image_url: width: 1400 | image_tag: widths: '500, 700, 1000, 1400', sizes: '100vw', loading: 'lazy', alt: block.settings.image_mobile.alt -}}
+              {%- endif -%}
+            </picture>
           {%- elsif forloop.index == 1 -%}
             <img src="{{ 'adula-personalize-familia.webp' | asset_url }}" alt="Criança tocando pulseiras personalizadas no pulso da mãe" width="1362" height="2048" fetchpriority="high" decoding="async">
           {%- elsif forloop.index == 2 -%}
@@ -330,7 +340,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Imagem"
+          "label": "Imagem desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Imagem mobile"
         },
         {
           "type": "text",
