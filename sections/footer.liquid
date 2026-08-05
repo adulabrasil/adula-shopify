@@ -108,9 +108,9 @@
                   {%- if menu_title == 'Institucional' -%}
                     {%- capture menu_content -%}
                       <ul class="v-stack gap-2.5 unstyled-list" role="list">
-                        <li><a href="/#sobre-a-adula" class="link-faded">Sobre a Adüla</a></li>
-                        <li><a href="{% if request.page_type == 'index' %}#guia-garantia{% else %}{{ routes.root_url }}#guia-garantia{% endif %}" class="link-faded">Garantia</a></li>
-                        <li><a href="/policies/privacy-policy" class="link-faded">Política de Privacidade</a></li>
+                        <li><a href="{% if request.page_type == 'index' %}#sobre-a-adula{% else %}{{ routes.root_url }}#sobre-a-adula{% endif %}" class="link-faded adula-section-link" data-adula-target="sobre-a-adula">Sobre a Adüla</a></li>
+                        <li><a href="{% if request.page_type == 'index' %}#guia-garantia{% else %}{{ routes.root_url }}#guia-garantia{% endif %}" class="link-faded adula-section-link" data-adula-target="guia-garantia">Garantia</a></li>
+                        <li><a href="{% if shop.privacy_policy != blank %}{{ shop.privacy_policy.url }}{% else %}https://www.adulabrasil.com/politica-de-privacidade{% endif %}" class="link-faded">Política de Privacidade</a></li>
                       </ul>
                     {%- endcapture -%}
 
@@ -323,6 +323,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  (() => {
+    const footer = document.currentScript.closest('.shopify-section--footer');
+
+    footer?.querySelectorAll('.adula-section-link').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const target = document.getElementById(link.dataset.adulaTarget);
+
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + link.dataset.adulaTarget);
+      });
+    });
+  })();
+</script>
 
 {% schema %}
 {
