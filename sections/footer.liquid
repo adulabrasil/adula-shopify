@@ -327,23 +327,45 @@
 <script>
   (() => {
     const footer = document.currentScript.closest('.shopify-section--footer');
+    const institutionalIds = ['sobre-a-adula', 'guia-garantia'];
+
+    const revealInstitutionalSection = (targetId, shouldScroll = true) => {
+      const target = document.getElementById(targetId);
+      if (!target) return false;
+
+      institutionalIds.forEach((id) => {
+        document.getElementById(id)?.classList.toggle('is-visible', id === targetId);
+      });
+
+      if (shouldScroll) {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+      return true;
+    };
+
+    const revealFromHash = () => {
+      const targetId = window.location.hash.slice(1);
+      if (institutionalIds.includes(targetId)) {
+        revealInstitutionalSection(targetId);
+      }
+    };
 
     footer?.querySelectorAll('.adula-section-link').forEach((link) => {
       link.addEventListener('click', (event) => {
-        const target = document.getElementById(link.dataset.adulaTarget);
+        const targetId = link.dataset.adulaTarget;
 
-        if (!target) return;
+        if (!revealInstitutionalSection(targetId)) return;
 
         event.preventDefault();
-        document.getElementById('sobre-a-adula')?.classList.remove('is-visible');
-        document.getElementById('guia-garantia')?.classList.remove('is-visible');
-        if (target.id === 'sobre-a-adula' || target.id === 'guia-garantia') {
-          target.classList.add('is-visible');
-        }
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', '#' + link.dataset.adulaTarget);
+        history.replaceState(null, '', '#' + targetId);
       });
     });
+
+    revealFromHash();
+    window.addEventListener('hashchange', revealFromHash);
   })();
 </script>
 
