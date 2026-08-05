@@ -385,6 +385,10 @@
         "text_alignment": "center"
       }
     },
+    "trocas-devolucoes": {
+      "type": "adula-exchanges",
+      "settings": {}
+    },
     "guia-garantia": {
       "type": "custom-liquid",
       "settings": {
@@ -411,6 +415,7 @@
     "quem-somos",
     "sobre-adula",
     "guia-garantia",
+    "trocas-devolucoes",
     "onde-estamos"
   ]
 }
