@@ -2,6 +2,46 @@
   #shopify-section-{{ section.id }} {
     --footer-content-justify-items: {% if section.settings.blocks.size <= 2 %}start{% else %}space-between{% endif %};
   }
+
+  #shopify-section-{{ section.id }} .footer {
+    background: #ffffff !important;
+    color: #3A2922;
+  }
+
+  #shopify-section-{{ section.id }} .footer .h6 {
+    color: #221b18;
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .footer .text-subdued,
+  #shopify-section-{{ section.id }} .footer .link-faded {
+    color: #3A2922;
+    opacity: 1;
+  }
+
+  #shopify-section-{{ section.id }} .footer a:hover {
+    color: #B08D57;
+  }
+
+  #shopify-section-{{ section.id }} .adula-footer-security {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3A2922;
+  }
+
+  #shopify-section-{{ section.id }} .adula-footer-security svg {
+    width: 22px;
+    height: 22px;
+    color: #B08D57;
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .footer__block-list {
+      align-items: start;
+      column-gap: 40px;
+    }
+  }
 </style>
 
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -240,12 +280,26 @@
 
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
           <div class="v-stack gap-2">
-            <p class="heading text-subdued text-xxs">Pagamento seguro</p>
+            <p class="heading text-subdued text-xxs">Pagamento</p>
             <ul class="payment-methods unstyled-list" aria-label="Formas de pagamento aceitas">
               {%- for type in shop.enabled_payment_types -%}
                 <li>{{- type | payment_type_svg_tag -}}</li>
               {%- endfor -%}
             </ul>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_security_badge -%}
+          <div class="v-stack gap-2">
+            <p class="heading text-subdued text-xxs">Segurança</p>
+            <div class="adula-footer-security" aria-label="Ambiente seguro com SSL">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="4.5" y="10" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 10V7.5a4 4 0 0 1 8 0V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 14v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span class="text-sm">Ambiente protegido por SSL</span>
+            </div>
           </div>
         {%- endif -%}
       </div>
@@ -283,6 +337,12 @@
       "type": "checkbox",
       "id": "show_payment_icons",
       "label": "t:sections.footer.show_payment_icons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_security_badge",
+      "label": "Mostrar segurança SSL",
       "default": true
     },
     {
