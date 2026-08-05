@@ -335,6 +335,9 @@
         if (!target) return;
 
         event.preventDefault();
+        if (target.id === 'sobre-a-adula') {
+          target.classList.add('is-visible');
+        }
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.replaceState(null, '', '#' + link.dataset.adulaTarget);
       });
