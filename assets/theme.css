@@ -8617,3 +8617,29 @@ ul {
     line-height: 1.5 !important;
   }
 }
+
+
+/* Adula: keep collection headings and desktop dropdowns legible on light backgrounds. */
+.shopify-section--collection-banner .collection-banner {
+  --text-color: 58 41 34 !important;
+  color: #3a2922 !important;
+}
+
+.shopify-section--collection-banner .collection-banner :is(.h1, .breadcrumb, .collection-description, a) {
+  color: #3a2922 !important;
+  opacity: 1 !important;
+}
+
+@media screen and (min-width: 1000px) {
+  .header__dropdown-menu {
+    --background: 255 249 241 !important;
+    --text-color: 58 41 34 !important;
+    background: #fff9f1 !important;
+    color: #3a2922 !important;
+  }
+
+  .header__dropdown-menu :is(a, summary, .link-faded, .link-faded-reverse) {
+    color: #3a2922 !important;
+    opacity: 1 !important;
+  }
+}
