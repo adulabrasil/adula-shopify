@@ -42,7 +42,8 @@
           "settings": {
             "hide_sold_out_variants": true,
             "selector_style": "block",
-            "swatch_selector_style": "swatch"
+            "swatch_selector_style": "swatch",
+            "size_chart_page": "guia-de-medidas"
           }
         },
         "quantity_selector": {
