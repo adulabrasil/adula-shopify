@@ -5,6 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
 
+    {%- comment -%}
+      Keep legacy institutional URLs working while these contents live as
+      on-demand sections on the home page.
+    {%- endcomment -%}
+    {%- if request.path == '/pages/trocas-e-devolucoes' -%}
+      <script>window.location.replace({{ routes.root_url | append: '#trocas-devolucoes' | json }});</script>
+    {%- endif -%}
+
     <title>
       {% if page_title == blank -%}
         {{- shop.name -}}
