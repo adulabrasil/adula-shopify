@@ -17,6 +17,14 @@
   assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ','
   assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ','
   assign variant_image_options = variant_image_options | replace: ', ', ',' | downcase | split: ','
+  assign is_ring_product = false
+
+  for product_collection in product.collections
+    if product_collection.handle == 'aneis'
+      assign is_ring_product = true
+      break
+    endif
+  endfor
 
   if context == 'main_product'
     assign is_main_product = true
@@ -75,7 +83,7 @@
             {%- endif -%}
           </div>
 
-          {%- if size_chart_page != blank and size_label_list contains option_downcase -%}
+          {%- if is_ring_product and size_chart_page != blank and size_label_list contains option_downcase -%}
             {%- capture id -%}size-chart-{{ option.position }}-{{ form_id }}{%- endcapture -%}
 
             <button type="button" class="link" aria-controls="{{ id | escape }}" aria-expanded="false">
