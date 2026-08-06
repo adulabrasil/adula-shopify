@@ -129,7 +129,11 @@
                       <ul class="v-stack gap-2.5 unstyled-list" role="list">
                         {%- for link in menu.links -%}
                           <li>
-                            <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
+                            {%- if link.title == 'Trocas & Devoluções' or link.title == 'Trocas e Devoluções' or link.url contains '/pages/trocas-e-devolucoes' -%}
+                              <a href="{% if request.page_type == 'index' %}#trocas-devolucoes{% else %}{{ routes.root_url }}#trocas-devolucoes{% endif %}" class="link-faded adula-section-link" data-adula-target="trocas-devolucoes">{{ link.title }}</a>
+                            {%- else -%}
+                              <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
+                            {%- endif -%}
                           </li>
                         {%- endfor -%}
                       </ul>
