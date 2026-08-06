@@ -90,7 +90,13 @@
         },
         "complementary_products": {
           "type": "complementary_products",
-          "settings": {}
+          "settings": {
+            "title": "Combine com",
+            "products_count": 3,
+            "show_below_gallery": false,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
         }
       },
       "block_order": [
