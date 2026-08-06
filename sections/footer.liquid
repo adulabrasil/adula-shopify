@@ -131,6 +131,8 @@
                           <li>
                             {%- if link.title == 'Trocas & Devoluções' or link.title == 'Trocas e Devoluções' or link.url contains '/pages/trocas-e-devolucoes' -%}
                               <a href="{% if request.page_type == 'index' %}#trocas-devolucoes{% else %}{{ routes.root_url }}#trocas-devolucoes{% endif %}" class="link-faded adula-section-link" data-adula-target="trocas-devolucoes">{{ link.title }}</a>
+                            {%- elsif link.title == 'Guia de Medidas' or link.url contains '/pages/guia-de-medidas' or link.url contains '/pages/guia-de-medida' -%}
+                              <a href="{% if request.page_type == 'index' %}#guia-medidas{% else %}{{ routes.root_url }}#guia-medidas{% endif %}" class="link-faded adula-section-link" data-adula-target="guia-medidas">{{ link.title }}</a>
                             {%- else -%}
                               <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
                             {%- endif -%}
@@ -325,7 +327,7 @@
 <script>
   (() => {
     const footer = document.currentScript.closest('.shopify-section--footer');
-    const institutionalIds = ['sobre-a-adula', 'guia-garantia', 'trocas-devolucoes'];
+    const institutionalIds = ['sobre-a-adula', 'guia-garantia', 'trocas-devolucoes', 'guia-medidas'];
 
     const revealInstitutionalSection = (targetId, shouldScroll = true) => {
       const target = document.getElementById(targetId);
