@@ -46,6 +46,15 @@
             "size_chart_page": "guia-de-medidas"
           }
         },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "show_in_stock_quantity": false,
+            "show_progress_bar": false,
+            "progress_bar_max_value": 50,
+            "low_inventory_threshold": 3
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -106,6 +115,7 @@
         "separator",
         "description",
         "variant_picker",
+        "inventory",
         "quantity_selector",
         "buy_buttons",
         "product_benefits",
