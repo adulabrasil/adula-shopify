@@ -52,6 +52,12 @@
     {%- for option in product.options_with_values -%}
       {% liquid
         assign option_downcase = option.name | downcase
+        assign is_ring_size_option = false
+
+        if size_label_list contains option_downcase or option_downcase contains 'tamanho de anel' or option_downcase == 'aro'
+          assign is_ring_size_option = true
+        endif
+
         assign resolved_option_selector_style = selector_style
 
         assign swatch_count = option.values | map: 'swatch' | compact | size
@@ -83,7 +89,7 @@
             {%- endif -%}
           </div>
 
-          {%- if is_ring_product and size_chart_page != blank and size_label_list contains option_downcase -%}
+          {%- if is_ring_product and size_chart_page != blank and is_ring_size_option -%}
             {%- capture id -%}size-chart-{{ option.position }}-{{ form_id }}{%- endcapture -%}
 
             <button type="button" class="link" aria-controls="{{ id | escape }}" aria-expanded="false">
