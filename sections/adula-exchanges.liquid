@@ -7,7 +7,8 @@
     color: #4a3428;
   }
 
-  .adula-exchanges.is-visible { display: block; }
+  .adula-exchanges.is-visible,
+  .adula-exchanges:target { display: block; }
 
   .adula-exchanges__inner {
     width: min(100%, 1040px);
@@ -166,6 +167,32 @@
     </div>
   </div>
 </section>
+
+<script id="adula-exchanges-navigation">
+  (() => {
+    const revealExchanges = () => {
+      const section = document.getElementById('trocas-devolucoes');
+      if (!section || window.location.hash !== '#trocas-devolucoes') return;
+      section.classList.add('is-visible');
+      window.requestAnimationFrame(() => section.scrollIntoView({ block: 'start' }));
+    };
+
+    revealExchanges();
+    window.addEventListener('hashchange', revealExchanges);
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[data-adula-target="trocas-devolucoes"]');
+      if (!link || window.location.pathname !== '/') return;
+
+      event.preventDefault();
+      const section = document.getElementById('trocas-devolucoes');
+      if (!section) return;
+      section.classList.add('is-visible');
+      history.replaceState(null, '', '#trocas-devolucoes');
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  })();
+</script>
 
 {% schema %}
 {
