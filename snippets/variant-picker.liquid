@@ -18,13 +18,18 @@
   assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ','
   assign variant_image_options = variant_image_options | replace: ', ', ',' | downcase | split: ','
   assign is_ring_product = false
+  assign product_title_downcase = product.title | downcase
 
   for product_collection in product.collections
-    if product_collection.handle == 'aneis'
+    if product_collection.handle == 'aneis' or product_collection.handle contains 'aneis'
       assign is_ring_product = true
       break
     endif
   endfor
+
+  if product_title_downcase contains 'anel '
+    assign is_ring_product = true
+  endif
 
   if context == 'main_product'
     assign is_main_product = true
