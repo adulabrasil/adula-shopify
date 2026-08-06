@@ -133,10 +133,25 @@
     "related-products": {
       "type": "related-products",
       "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 6,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "title": "Vistos recentemente",
+        "heading_style": "h2",
+        "content": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "recently-viewed"
   ]
 }
