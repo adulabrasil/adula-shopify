@@ -15,14 +15,14 @@
       "type": "cart-drawer",
       "settings": {
         "color_scheme": "",
-        "show_cart_note": true,
-        "allow_discount_application": false,
+        "show_cart_note": false,
+        "allow_discount_application": true,
         "show_shipping_text": true,
         "show_view_cart_button": false,
         "show_checkout_button": true,
         "show_price_in_checkout_button": true,
         "cross_sell_products": [],
-        "cross_sell_title": "Complete with",
+        "cross_sell_title": "Complete seu look",
         "cross_sell_stack_products": false
       }
     },
