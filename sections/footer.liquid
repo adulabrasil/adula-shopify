@@ -246,14 +246,8 @@
       {%- endcomment -%}
 
       {%- capture policy_links -%}
-        {%- if shop.refund_policy != blank -%}
-          <li><a href="{{ shop.refund_policy.url }}" class="link-faded">Política de trocas e devoluções</a></li>
-        {%- endif -%}
         {%- if shop.shipping_policy != blank -%}
           <li><a href="{{ shop.shipping_policy.url }}" class="link-faded">Política de envio</a></li>
-        {%- endif -%}
-        {%- if shop.privacy_policy != blank -%}
-          <li><a href="{{ shop.privacy_policy.url }}" class="link-faded">Política de privacidade</a></li>
         {%- endif -%}
         {%- if shop.terms_of_service != blank -%}
           <li><a href="{{ shop.terms_of_service.url }}" class="link-faded">Termos de serviço</a></li>
