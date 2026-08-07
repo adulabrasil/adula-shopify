@@ -101,6 +101,59 @@
       position: static;
     }
 
+    /* Keep the visual mega menu inside the viewport even when the navigation has
+       many collection columns plus promo cards. Prestige's default flex sizing
+       can make the contents wider than the header, which creates internal scroll. */
+    #shopify-section-{{ section.id }} .mega-menu {
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 480px);
+      gap: clamp(1.5rem, 3vw, 3.5rem);
+      width: 100%;
+      max-width: 100%;
+      justify-content: stretch;
+      overflow-x: hidden;
+      display: grid;
+    }
+
+    #shopify-section-{{ section.id }} .mega-menu__linklist {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem clamp(1rem, 2vw, 2.25rem);
+      min-width: 0;
+      display: grid;
+    }
+
+    #shopify-section-{{ section.id }} .mega-menu__linklist > * {
+      min-width: 0;
+      max-width: none;
+    }
+
+    #shopify-section-{{ section.id }} .mega-menu__promo {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      min-width: 0;
+      align-items: start;
+      display: grid;
+    }
+
+    #shopify-section-{{ section.id }} .mega-menu__promo > * {
+      min-width: 0;
+      max-width: none;
+    }
+
+    #shopify-section-{{ section.id }} .mega-menu__promo img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 1199px) {
+      #shopify-section-{{ section.id }} .mega-menu {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 38vw);
+      }
+
+      #shopify-section-{{ section.id }} .mega-menu__linklist {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     #shopify-section-{{ section.id }} .header__primary-nav-item > dropdown-menu-disclosure,
     #shopify-section-{{ section.id }} .header__primary-nav-item > dropdown-menu-disclosure > .header__menu-disclosure {
       display: block;
