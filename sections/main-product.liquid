@@ -117,12 +117,20 @@
               {%- case block.type -%}
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
+                    {%- assign compact_product_description = product.description
+                      | replace: '<p>&nbsp;</p>', ''
+                      | replace: '<p><br></p>', ''
+                      | replace: '<p><br><br></p>', ''
+                      | replace: '<p><br><br><br></p>', ''
+                      | replace: '<p><br /></p>', ''
+                      | replace: '<p><br /><br /></p>', ''
+                    -%}
                     {%- if block.settings.collapse_content -%}
                       {%- assign accordion_title = 'product.general.description' | t -%}
-                      {%- render 'accordion', title: accordion_title, content: product.description, prose_content: true, size: 'lg', class: 'product-description', block: block -%}
+                      {%- render 'accordion', title: accordion_title, content: compact_product_description, prose_content: true, size: 'lg', class: 'product-description', block: block -%}
                     {%- else -%}
                       <div class="product-content-below-gallery__description prose product-description">
-                        {{- product.description -}}
+                        {{- compact_product_description -}}
                       </div>
                     {%- endif -%}
                   {%- endif -%}
