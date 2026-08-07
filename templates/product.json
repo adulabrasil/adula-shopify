@@ -134,8 +134,8 @@
         "desktop_media_layout": "carousel_thumbnails_left",
         "desktop_media_grid_gap": 20,
         "mobile_controls": "thumbnails",
-        "enable_media_autoplay": false,
-        "enable_video_looping": false,
+        "enable_media_autoplay": true,
+        "enable_video_looping": true,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3
       }
