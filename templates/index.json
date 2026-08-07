@@ -135,6 +135,13 @@
     "adula-stories": {
       "type": "adula-stories",
       "blocks": {
+        "story_yddVJg": {
+          "type": "story",
+          "settings": {
+            "video": "shopify://files/videos/IMG_1017_HOME_ADULA.mp4",
+            "title": "Conheça a Adüla"
+          }
+        },
         "conheca-adula": {
           "type": "story",
           "settings": {
@@ -143,6 +150,7 @@
         }
       },
       "block_order": [
+        "story_yddVJg",
         "conheca-adula"
       ],
       "settings": {
