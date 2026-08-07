@@ -8650,15 +8650,20 @@ ul {
   line-height: 1.5;
 }
 
-:is(.product-description.prose, .product-description .prose) :where(:not(meta, span) + *) {
-  margin-block-start: .55rem;
+:is(.product-description.prose, .product-description .prose) > :where(p, h1, h2, h3, h4, h5, h6, ul, ol),
+.product-description .prose > :where(p, h1, h2, h3, h4, h5, h6, ul, ol) {
+  margin-block: .45rem 0 !important;
+}
+
+:is(.product-description.prose, .product-description .prose) > :first-child,
+.product-description .prose > :first-child {
+  margin-block-start: 0 !important;
 }
 
 :is(.product-description.prose, .product-description .prose) :is(p:empty, p:has(> br:only-child)) {
-  display: none;
+  display: none !important;
 }
 
 :is(.product-description.prose, .product-description .prose) :is(ul, ol) {
-  margin-block-start: .55rem;
-  margin-block-end: .55rem;
+  margin-block: .45rem 0 !important;
 }
