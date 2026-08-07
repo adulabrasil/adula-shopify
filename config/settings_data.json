@@ -34,7 +34,8 @@
     "cart_type": "drawer",
     "cart_icon": "shopping_bag",
     "cart_empty_cart_link": "/collections/all",
-    "cart_show_free_shipping_bar": false,
+    "cart_show_free_shipping_bar": true,
+    "cart_free_shipping_threshold": "299",
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
