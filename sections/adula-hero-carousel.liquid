@@ -214,6 +214,14 @@
 >
   <div class="adula-hero-carousel__slides" aria-live="polite">
     {%- for block in section.blocks -%}
+      {%- liquid
+        assign hero_loading = 'lazy'
+        assign hero_fetchpriority = 'low'
+        if forloop.first
+          assign hero_loading = 'eager'
+          assign hero_fetchpriority = 'high'
+        endif
+      -%}
       <article
         class="adula-hero-carousel__slide{% if forloop.first %} is-active{% endif %}"
         data-adula-hero-slide
@@ -225,12 +233,16 @@
           {%- if block.settings.image != blank or block.settings.image_mobile != blank -%}
             <picture>
               {%- if block.settings.image_mobile != blank -%}
-                <source media="(max-width: 699px)" srcset="{{ block.settings.image_mobile | image_url: width: 1400 }}">
+                <source
+                  media="(max-width: 699px)"
+                  srcset="{{ block.settings.image_mobile | image_url: width: 500 }} 500w, {{ block.settings.image_mobile | image_url: width: 700 }} 700w, {{ block.settings.image_mobile | image_url: width: 1000 }} 1000w, {{ block.settings.image_mobile | image_url: width: 1400 }} 1400w"
+                  sizes="100vw"
+                >
               {%- endif -%}
               {%- if block.settings.image != blank -%}
-                {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: 'lazy', alt: block.settings.image.alt -}}
+                {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: hero_loading, fetchpriority: hero_fetchpriority, alt: block.settings.image.alt -}}
               {%- else -%}
-                {{- block.settings.image_mobile | image_url: width: 1400 | image_tag: widths: '500, 700, 1000, 1400', sizes: '100vw', loading: 'lazy', alt: block.settings.image_mobile.alt -}}
+                {{- block.settings.image_mobile | image_url: width: 1400 | image_tag: widths: '500, 700, 1000, 1400', sizes: '100vw', loading: hero_loading, fetchpriority: hero_fetchpriority, alt: block.settings.image_mobile.alt -}}
               {%- endif -%}
             </picture>
           {%- elsif forloop.index == 1 -%}
