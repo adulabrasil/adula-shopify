@@ -10,9 +10,96 @@
   {%- if cart.empty? -%}
     <p class="h5 text-center">{{ 'cart.general.empty' | t }}</p>
   {%- else -%}
-    {%- if settings.cart_show_free_shipping_bar -%}
-      {%- render 'free-shipping-bar' -%}
-    {%- endif -%}
+    {%- liquid
+      assign adula_shipping_total = cart.total_price
+      assign adula_southeast_threshold = 19900
+      assign adula_brazil_threshold = 29900
+      assign adula_progress = adula_shipping_total | times: 100.0 | divided_by: adula_brazil_threshold
+
+      if adula_progress > 100
+        assign adula_progress = 100
+      endif
+
+      assign adula_remaining_southeast = adula_southeast_threshold | minus: adula_shipping_total
+      assign adula_remaining_brazil = adula_brazil_threshold | minus: adula_shipping_total
+    -%}
+
+    <div class="adula-free-shipping" aria-live="polite">
+      <p class="adula-free-shipping__message text-sm">
+        {%- if adula_shipping_total >= adula_brazil_threshold -%}
+          Frete grátis conquistado ✓
+        {%- elsif adula_shipping_total >= adula_southeast_threshold -%}
+          Frete grátis no Sudeste ✓ · Faltam {{ adula_remaining_brazil | money }} para demais regiões
+        {%- else -%}
+          Faltam {{ adula_remaining_southeast | money }} para frete grátis no Sudeste · {{ adula_remaining_brazil | money }} para demais regiões
+        {%- endif -%}
+      </p>
+
+      <div
+        class="adula-free-shipping__track"
+        role="progressbar"
+        aria-label="Progresso para frete grátis"
+        aria-valuemin="0"
+        aria-valuemax="299"
+        aria-valuenow="{{ adula_shipping_total | divided_by: 100 }}"
+      >
+        <span class="adula-free-shipping__fill" style="width: {{ adula_progress }}%;"></span>
+        <span class="adula-free-shipping__southeast-mark" aria-hidden="true"></span>
+      </div>
+
+      <div class="adula-free-shipping__labels text-xs text-subdued">
+        <span>Sudeste · R$ 199</span>
+        <span>Demais regiões · R$ 299</span>
+      </div>
+    </div>
+
+    <style>
+      #shopify-section-{{ section.id }} .adula-free-shipping {
+        border-block-end: 1px solid rgb(var(--border-color));
+        margin-inline: calc(-1 * var(--drawer-body-padding-inline));
+        padding: .9rem var(--drawer-body-padding-inline) .85rem;
+      }
+
+      #shopify-section-{{ section.id }} .adula-free-shipping__message {
+        margin: 0 0 .65rem;
+        line-height: 1.4;
+      }
+
+      #shopify-section-{{ section.id }} .adula-free-shipping__track {
+        background: rgb(var(--text-color) / .12);
+        border-radius: 999px;
+        height: 5px;
+        overflow: visible;
+        position: relative;
+      }
+
+      #shopify-section-{{ section.id }} .adula-free-shipping__fill {
+        background: #b08d57;
+        border-radius: inherit;
+        display: block;
+        height: 100%;
+        max-width: 100%;
+        transition: width .25s ease;
+      }
+
+      #shopify-section-{{ section.id }} .adula-free-shipping__southeast-mark {
+        background: rgb(var(--background));
+        border: 1px solid #b08d57;
+        border-radius: 50%;
+        height: 9px;
+        left: 66.56%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 9px;
+      }
+
+      #shopify-section-{{ section.id }} .adula-free-shipping__labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: .45rem;
+      }
+    </style>
 
     <div class="cart-drawer__items">
       {%- for line_item in cart.items -%}
