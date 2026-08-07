@@ -142,6 +142,27 @@
             "title": "Conheça a Adüla"
           }
         },
+        "story_t7Vzrm": {
+          "type": "story",
+          "settings": {
+            "video": "shopify://files/videos/IMG_1017_HOME_ADULA.mp4",
+            "title": "Conheça a Adüla"
+          }
+        },
+        "story_DBdYq7": {
+          "type": "story",
+          "settings": {
+            "video": "shopify://files/videos/IMG_1017_HOME_ADULA.mp4",
+            "title": "Conheça a Adüla"
+          }
+        },
+        "story_D46m7q": {
+          "type": "story",
+          "settings": {
+            "video": "shopify://files/videos/IMG_1017_HOME_ADULA.mp4",
+            "title": "Conheça a Adüla"
+          }
+        },
         "conheca-adula": {
           "type": "story",
           "settings": {
@@ -151,6 +172,9 @@
       },
       "block_order": [
         "story_yddVJg",
+        "story_t7Vzrm",
+        "story_DBdYq7",
+        "story_D46m7q",
         "conheca-adula"
       ],
       "settings": {
