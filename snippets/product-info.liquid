@@ -212,7 +212,7 @@
                 {%- assign accordion_title = 'product.general.description' | t -%}
                 {%- render 'accordion', title: accordion_title, content: product_description, prose_content: true, class: 'product-description', block: block -%}
               {%- else -%}
-                <div class="prose">
+                <div class="prose product-description">
                   {{- product_description -}}
                 </div>
               {%- endif -%}
