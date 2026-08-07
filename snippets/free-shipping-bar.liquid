@@ -20,18 +20,22 @@
   endfor
 
   assign calculated_total_price = calculated_total_price | minus: total_cart_discount
+
+  # Some Shopify setups can report cart.requires_shipping as false before checkout.
+  # Keep the progress bar visible in the drawer and use the cart total as a safe fallback.
+  if calculated_total_price <= 0 and cart.total_price > 0
+    assign calculated_total_price = cart.total_price
+  endif
 -%}
 
-{%- if cart.requires_shipping -%}
-  <free-shipping-bar
-    class="free-shipping-bar"
-    threshold="{{ settings.cart_free_shipping_threshold }}"
-    southeast-threshold="199"
-    total-price="{{ calculated_total_price }}"
-    reached-message="{{ 'cart.free_shipping_bar.limit_reached_html' | t | escape }}"
-    unreached-message="{{ 'cart.free_shipping_bar.limit_unreached_html' | t | escape }}"
-  >
-    {%- comment -%}The span below is the placeholder where the content will be inserted in JS{%- endcomment -%}
-    <span class="text-subdued">&nbsp;</span>
-  </free-shipping-bar>
-{%- endif -%}
+<free-shipping-bar
+  class="free-shipping-bar"
+  threshold="{{ settings.cart_free_shipping_threshold }}"
+  southeast-threshold="199"
+  total-price="{{ calculated_total_price }}"
+  reached-message="{{ 'cart.free_shipping_bar.limit_reached_html' | t | escape }}"
+  unreached-message="{{ 'cart.free_shipping_bar.limit_unreached_html' | t | escape }}"
+>
+  {%- comment -%}The span below is the placeholder where the content will be inserted in JS{%- endcomment -%}
+  <span class="text-subdued">&nbsp;</span>
+</free-shipping-bar>
