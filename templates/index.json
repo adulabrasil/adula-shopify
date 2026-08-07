@@ -132,6 +132,24 @@
         "heading": "Navegue por Categorias"
       }
     },
+    "adula-stories": {
+      "type": "adula-stories",
+      "blocks": {
+        "conheca-adula": {
+          "type": "story",
+          "settings": {
+            "title": "Conheça a Adüla"
+          }
+        }
+      },
+      "block_order": [
+        "conheca-adula"
+      ],
+      "settings": {
+        "heading": "",
+        "background": "#ffffff"
+      }
+    },
     "best-sellers": {
       "type": "featured-collections",
       "blocks": {
@@ -405,6 +423,7 @@
     "hero",
     "benefits",
     "category-navigation",
+    "adula-stories",
     "best-sellers",
     "campaign-banners",
     "new-arrivals",
