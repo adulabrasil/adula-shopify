@@ -8652,7 +8652,7 @@ ul {
 
 :is(.product-description.prose, .product-description .prose) > :where(p, h1, h2, h3, h4, h5, h6, ul, ol),
 .product-description .prose > :where(p, h1, h2, h3, h4, h5, h6, ul, ol) {
-  margin-block: .45rem 0 !important;
+  margin-block: .25rem 0 !important;
 }
 
 :is(.product-description.prose, .product-description .prose) > :first-child,
@@ -8665,5 +8665,5 @@ ul {
 }
 
 :is(.product-description.prose, .product-description .prose) :is(ul, ol) {
-  margin-block: .45rem 0 !important;
+  margin-block: .25rem 0 !important;
 }
