@@ -91,6 +91,16 @@
       position: relative;
     }
 
+    /* Mega menus must use the full navigation row as their positioning context.
+       Keeping the LI relative constrains Prestige's mega menu to the width of its label. */
+    #shopify-section-{{ section.id }} .header__primary-nav-item:has(> mega-menu-disclosure) {
+      position: static;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item:has(> mega-menu-disclosure) > mega-menu-disclosure > .header__menu-disclosure {
+      position: static;
+    }
+
     #shopify-section-{{ section.id }} .header__primary-nav-item > dropdown-menu-disclosure,
     #shopify-section-{{ section.id }} .header__primary-nav-item > dropdown-menu-disclosure > .header__menu-disclosure {
       display: block;
