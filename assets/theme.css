@@ -8643,3 +8643,22 @@ ul {
     opacity: 1 !important;
   }
 }
+
+
+/* Adula: compact product descriptions and specification blocks imported from Bagy. */
+:is(.product-description.prose, .product-description .prose) {
+  line-height: 1.5;
+}
+
+:is(.product-description.prose, .product-description .prose) :where(:not(meta, span) + *) {
+  margin-block-start: .55rem;
+}
+
+:is(.product-description.prose, .product-description .prose) :is(p:empty, p:has(> br:only-child)) {
+  display: none;
+}
+
+:is(.product-description.prose, .product-description .prose) :is(ul, ol) {
+  margin-block-start: .55rem;
+  margin-block-end: .55rem;
+}
