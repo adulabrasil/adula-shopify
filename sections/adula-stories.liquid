@@ -41,7 +41,7 @@
                         | image_tag:
                           loading: 'lazy',
                           widths: '120,180,240,300,360',
-                          sizes: '(max-width: 699px) 86px, 108px',
+                          sizes: '(max-width: 699px) 40vw, 170px',
                           class: 'adula-stories__image',
                           alt: block.settings.title
                       -}}
@@ -114,10 +114,16 @@
     #AdulaStories-{{ section.id }} .adula-stories__rail {
       display: flex;
       justify-content: center;
-      gap: clamp(18px, 2.6vw, 34px);
+      gap: clamp(18px, 2.7vw, 42px);
       padding: 4px 24px 8px;
     }
-    #AdulaStories-{{ section.id }} .adula-stories__item { flex: 0 0 auto; width: 112px; text-align: center; }
+    #AdulaStories-{{ section.id }} .adula-stories__item {
+      --adula-story-item-size: clamp(128px, 14vw, 184px);
+      --adula-story-ring-size: calc(var(--adula-story-item-size) - 14px);
+      flex: 0 0 var(--adula-story-item-size);
+      width: var(--adula-story-item-size);
+      text-align: center;
+    }
     #AdulaStories-{{ section.id }} .adula-stories__trigger {
       display: grid;
       justify-items: center;
@@ -132,8 +138,8 @@
     #AdulaStories-{{ section.id }} .adula-stories__ring {
       display: grid;
       place-items: center;
-      width: 112px;
-      height: 112px;
+      width: var(--adula-story-ring-size);
+      height: var(--adula-story-ring-size);
       padding: 3px;
       border-radius: 50%;
       background: linear-gradient(145deg, var(--adula-story-gold), #d6bf7e 48%, #6a3f2d);
@@ -174,8 +180,8 @@
     #AdulaStories-{{ section.id }} .adula-stories__play svg { width: 15px; height: 15px; }
     #AdulaStories-{{ section.id }} .adula-stories__title {
       display: block;
-      max-width: 112px;
-      font-size: 13px;
+      max-width: var(--adula-story-item-size);
+      font-size: clamp(14px, 1.05vw, 16px);
       font-weight: 500;
       letter-spacing: .01em;
       line-height: 1.3;
@@ -228,7 +234,7 @@
       #AdulaStories-{{ section.id }} .adula-stories__heading { margin-bottom: 20px; font-size: 22px; }
       #AdulaStories-{{ section.id }} .adula-stories__rail {
         justify-content: flex-start;
-        gap: 16px;
+        gap: 20px;
         padding: 3px 18px 8px;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
@@ -236,10 +242,20 @@
         scrollbar-width: none;
       }
       #AdulaStories-{{ section.id }} .adula-stories__rail::-webkit-scrollbar { display: none; }
-      #AdulaStories-{{ section.id }} .adula-stories__item { width: 88px; scroll-snap-align: start; }
-      #AdulaStories-{{ section.id }} .adula-stories__ring { width: 88px; height: 88px; padding: 2px; }
+      #AdulaStories-{{ section.id }} .adula-stories__item {
+        --adula-story-item-size: clamp(126px, 31vw, 158px);
+        --adula-story-ring-size: calc(var(--adula-story-item-size) - 14px);
+        width: var(--adula-story-item-size);
+        flex-basis: var(--adula-story-item-size);
+        scroll-snap-align: start;
+      }
+      #AdulaStories-{{ section.id }} .adula-stories__ring {
+        width: var(--adula-story-ring-size);
+        height: var(--adula-story-ring-size);
+        padding: 2px;
+      }
       #AdulaStories-{{ section.id }} .adula-stories__thumb { padding: 2px; }
-      #AdulaStories-{{ section.id }} .adula-stories__title { max-width: 88px; font-size: 12px; }
+      #AdulaStories-{{ section.id }} .adula-stories__title { max-width: var(--adula-story-item-size); font-size: 14px; }
       #AdulaStories-{{ section.id }} .adula-stories__play { right: 4px; bottom: 4px; width: 24px; height: 24px; }
     }
     @media (prefers-reduced-motion: reduce) {
