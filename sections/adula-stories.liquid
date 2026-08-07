@@ -7,11 +7,18 @@
   endfor
 -%}
 
-{%- if active_stories > 0 -%}
+{%- if active_stories > 0 or request.design_mode -%}
   <section id="AdulaStories-{{ section.id }}" class="adula-stories" aria-label="{{ section.settings.heading | default: 'Adüla Stories' | escape }}">
     <div class="adula-stories__inner">
       {%- if section.settings.heading != blank -%}
         <h2 class="adula-stories__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if request.design_mode and active_stories == 0 -%}
+        <div class="adula-stories__editor-placeholder">
+          <strong>Adüla Stories</strong>
+          <span>Selecione “Conheça a Adüla” no editor e escolha o vídeo.</span>
+        </div>
       {%- endif -%}
 
       <div class="adula-stories__rail" role="list">
@@ -91,6 +98,19 @@
       line-height: 1.2;
       text-align: center;
     }
+    #AdulaStories-{{ section.id }} .adula-stories__editor-placeholder {
+      display: grid;
+      gap: 6px;
+      max-width: 520px;
+      margin: 0 auto 18px;
+      padding: 16px 20px;
+      border: 1px dashed #cdbd9d;
+      border-radius: 8px;
+      background: #fffaf3;
+      color: var(--adula-story-brown);
+      text-align: center;
+    }
+    #AdulaStories-{{ section.id }} .adula-stories__editor-placeholder span { font-size: 13px; line-height: 1.4; }
     #AdulaStories-{{ section.id }} .adula-stories__rail {
       display: flex;
       justify-content: center;
