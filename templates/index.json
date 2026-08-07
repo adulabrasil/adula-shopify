@@ -152,7 +152,7 @@
         "story_DBdYq7": {
           "type": "story",
           "settings": {
-            "video": "shopify://files/videos/Adula_Stories_Chic_Sans_Effort_Sem_Legenda.mp4",
+            "video": "shopify://files/videos/IMG_1023.MOV",
             "title": "Chic Sans Effort"
           }
         },
@@ -166,7 +166,8 @@
         "conheca-adula": {
           "type": "story",
           "settings": {
-            "title": "Conheça a Adüla"
+            "video": "shopify://files/videos/Patrocinado03.mov",
+            "title": "Pontos de Venda"
           }
         }
       },
