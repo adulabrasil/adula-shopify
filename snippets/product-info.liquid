@@ -207,6 +207,16 @@
               {%- assign product_description = product.description -%}
             {%- endif -%}
 
+            {%- comment -%}Remove empty paragraphs left by the Bagy import so they do not create large vertical gaps.{%- endcomment -%}
+            {%- assign product_description = product_description
+              | replace: '<p>&nbsp;</p>', ''
+              | replace: '<p><br></p>', ''
+              | replace: '<p><br><br></p>', ''
+              | replace: '<p><br><br><br></p>', ''
+              | replace: '<p><br /></p>', ''
+              | replace: '<p><br /><br /></p>', ''
+            -%}
+
             {%- if product_description != blank -%}
               {%- if block.settings.collapse_content -%}
                 {%- assign accordion_title = 'product.general.description' | t -%}
