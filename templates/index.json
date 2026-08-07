@@ -132,6 +132,16 @@
         "heading": "Navegue por Categorias"
       }
     },
+    "adula-editorial-video": {
+      "type": "video",
+      "settings": {
+        "autoplay": true,
+        "show_controls": false,
+        "video_size": "lg",
+        "external_video_url": "",
+        "text_color": "#ffffff"
+      }
+    },
     "best-sellers": {
       "type": "featured-collections",
       "blocks": {
@@ -416,6 +426,7 @@
     "hero",
     "benefits",
     "category-navigation",
+    "adula-editorial-video",
     "best-sellers",
     "campaign-banners",
     "new-arrivals",
