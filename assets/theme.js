@@ -1542,10 +1542,22 @@ _threshold = new WeakMap();
 _FreeShippingBar_instances = new WeakSet();
 updateMessage_fn = function() {
   const messageElement = this.querySelector("span");
-  if (this.totalPrice >= __privateGet(this, _threshold)) {
+  const southeastThresholdAttribute = this.getAttribute("southeast-threshold");
+  if (southeastThresholdAttribute) {
+    const southeastThreshold = parseFloat(southeastThresholdAttribute.replace(/[^0-9.]/g, "")) * 100;
+    const otherRegionsThreshold = __privateGet(this, _threshold);
+    const formatRemaining = (value) => __privateGet(this, _currencyFormatter).format(Math.max(0, value) / 100);
+    if (this.totalPrice >= otherRegionsThreshold) {
+      messageElement.innerHTML = "Frete grátis conquistado ✓";
+    } else if (this.totalPrice >= southeastThreshold) {
+      messageElement.innerHTML = `Frete grátis no Sudeste ✓ · Faltam ${formatRemaining(otherRegionsThreshold - this.totalPrice)} para demais regiões`;
+    } else {
+      messageElement.innerHTML = `Faltam ${formatRemaining(southeastThreshold - this.totalPrice)} para frete grátis no Sudeste · Demais regiões: ${formatRemaining(otherRegionsThreshold - this.totalPrice)}`;
+    }
+  } else if (this.totalPrice >= __privateGet(this, _threshold)) {
     messageElement.innerHTML = this.getAttribute("reached-message");
   } else {
-    const replacement = `${__privateGet(this, _currencyFormatter).format((__privateGet(this, _threshold) - this.totalPrice) / 100).replace(/\$/g, "$$$$")}`;
+    const replacement = `${__privateGet(this, _currencyFormatter).format((__privateGet(this, _threshold) - this.totalPrice) / 100).replace(/\$/g, "$$")}`;
     messageElement.innerHTML = this.getAttribute("unreached-message").replace(new RegExp("({{.*}})", "g"), replacement);
   }
 };
