@@ -37,6 +37,13 @@
     "cart_empty_cart_link": "/collections/all",
     "cart_show_free_shipping_bar": false,
     "content_for_index": [],
+    "blocks": {
+      "1987381849243170004": {
+        "type": "shopify://apps/apphero-free-gift/blocks/app-embed/775538df-2a18-473b-ada3-d731b074c1a3",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
