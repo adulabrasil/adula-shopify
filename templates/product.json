@@ -20,7 +20,9 @@
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "show_taxes_notice": false
+          }
         },
         "payment_terms": {
           "type": "payment_terms",
@@ -43,6 +45,8 @@
             "hide_sold_out_variants": true,
             "selector_style": "block",
             "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "variant_image_show_underline": false,
             "size_chart_page": "guia-de-medidas"
           }
         },
@@ -50,9 +54,9 @@
           "type": "inventory",
           "settings": {
             "show_in_stock_quantity": false,
+            "low_inventory_threshold": 3,
             "show_progress_bar": false,
-            "progress_bar_max_value": 50,
-            "low_inventory_threshold": 3
+            "progress_bar_max_value": 50
           }
         },
         "quantity_selector": {
@@ -61,7 +65,14 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "settings": {}
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
         },
         "product_benefits": {
           "type": "product_benefits",
@@ -74,7 +85,8 @@
             "icon": "picto-jewelry",
             "title": "Cuidados com sua joia",
             "content": "<p>Guarde sua joia separadamente, em local seco, e evite contato direto com perfumes, cremes e produtos químicos. Após o uso, limpe delicadamente com um pano macio.</p>",
-            "liquid": ""
+            "liquid": "",
+            "page": ""
           }
         },
         "shipping_returns": {
@@ -84,17 +96,20 @@
             "icon": "picto-return",
             "title": "Envios e trocas",
             "content": "<p><strong>Envios:</strong> o valor do frete e o prazo de entrega são calculados de acordo com o CEP e informados antes da finalização da compra.</p><p><strong>Trocas e devoluções:</strong> podem ser solicitadas em até 7 dias corridos após o recebimento. A peça deve estar na embalagem original, com a etiqueta intacta, em perfeito estado, sem vestígios de uso e acompanhada do Certificado de Garantia Adüla.</p><p>Por questões de higiene, brincos e piercings possuem condições específicas. Para solicitar atendimento, entre em contato pelo e-mail <a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a>.</p><p><a href=\"/#trocas-devolucoes\"><strong>Ver política completa de trocas e devoluções</strong></a></p>",
-            "liquid": ""
+            "liquid": "",
+            "page": ""
           }
         },
         "secure_checkout": {
           "type": "feature_with_icon",
           "settings": {
             "text": "Pagamento seguro",
+            "link": "",
             "icon": "picto-lock",
             "icon_width": 16,
             "background": "#fffdfb",
-            "text_color": "#2d2926"
+            "text_color": "#2d2926",
+            "border_color": ""
           }
         },
         "complementary_products": {
@@ -127,6 +142,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "allow_transparent_header": false,
+        "transparent_header_use_primary_colors": false,
         "container_size": "xl",
         "product_info_size": 38,
         "show_sticky_add_to_cart": true,
@@ -142,26 +158,68 @@
     },
     "related-products": {
       "type": "related-products",
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "recommendations_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Related products",
+        "heading_style": "h2",
+        "content": ""
+      }
     },
     "recently-viewed": {
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
+        "color_scheme": "",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
+        "subheading": "",
         "title": "Vistos recentemente",
         "heading_style": "h2",
         "content": ""
+      }
+    },
+    "17863900215222df89": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_Pzxemg": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_Pzxemg"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "recently-viewed"
+    "recently-viewed",
+    "17863900215222df89"
   ]
 }
