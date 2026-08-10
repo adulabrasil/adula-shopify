@@ -152,7 +152,7 @@
         "story_DBdYq7": {
           "type": "story",
           "settings": {
-            "video": "shopify://files/videos/IMG_1023.MOV",
+            "video": "shopify://files/videos/Adula_Sobre_Compactado.mp4",
             "title": "Chic Sans Effort"
           }
         },
@@ -166,7 +166,6 @@
         "conheca-adula": {
           "type": "story",
           "settings": {
-            "video": "shopify://files/videos/Patrocinado03.mov",
             "title": "Pontos de Venda"
           }
         }
