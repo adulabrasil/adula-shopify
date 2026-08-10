@@ -44,13 +44,33 @@
         "custom_text_color": "#ffffff",
         "enable_sticky": false,
         "autoplay": true,
-        "cycle_speed": 5,
+        "cycle_speed": 3,
         "desktop_font_size": 13,
         "mobile_font_size": 12
       }
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega-menu-colecoes": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "COLEÇÕES",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/anel-belle-3.webp",
+            "image_1_heading": "Anéis",
+            "image_1_text": "",
+            "image_1_link": "/collections/aneis",
+            "image_2": "shopify://shop_images/pulseira-boho-chic-perola-natural-dourado-e-prata.webp",
+            "image_2_heading": "Pulseiras",
+            "image_2_text": "",
+            "image_2_link": "/collections/pulseiras"
+          }
+        }
+      },
+      "block_order": [
+        "mega-menu-colecoes"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "enable_sticky": true,
@@ -81,27 +101,7 @@
         "show_country_flag": false,
         "show_locale_selector": false,
         "transparent_header_text_color": "#ffffff"
-      },
-      "blocks": {
-        "mega-menu-colecoes": {
-          "type": "mega_menu",
-          "settings": {
-            "menu_item": "COLEÇÕES",
-            "images_position": "right",
-            "image_1": "shopify://shop_images/anel-belle-3.webp",
-            "image_1_heading": "Anéis",
-            "image_1_text": "",
-            "image_1_link": "/collections/aneis",
-            "image_2": "shopify://shop_images/pulseira-boho-chic-perola-natural-dourado-e-prata.webp",
-            "image_2_heading": "Pulseiras",
-            "image_2_text": "",
-            "image_2_link": "/collections/pulseiras"
-          }
-        }
-      },
-      "block_order": [
-        "mega-menu-colecoes"
-      ]
+      }
     }
   },
   "order": [
