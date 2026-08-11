@@ -56,6 +56,15 @@
                 {%- continue -%}
               {%- endif -%}
 
+              {%- assign is_gift_property = false -%}
+              {%- if property.first == 'Embalar para presente' or property.first == 'Quantidade para presente' or property.first == 'Recadinho do presente' -%}
+                {%- assign is_gift_property = true -%}
+              {%- endif -%}
+
+              {%- if show_quantity_selector and is_gift_property -%}
+                {%- continue -%}
+              {%- endif -%}
+
               <li>
                 {%- if property.last contains '/uploads/' or property.last contains '/files/' -%}
                   <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
@@ -75,6 +84,63 @@
       {%- endif -%}
 
       {%- render 'cart-disclosures', product: line_item.product -%}
+
+      {%- if show_quantity_selector and line_item.gift_card == false and line_item.final_price > 0 -%}
+        {%- assign gift_wrap_selected = false -%}
+        {%- if line_item.properties['Embalar para presente'] == 'Sim' -%}
+          {%- assign gift_wrap_selected = true -%}
+        {%- endif -%}
+
+        {%- assign gift_quantity = line_item.properties['Quantidade para presente'] | default: 1 | plus: 0 -%}
+        {%- if gift_quantity < 1 or gift_quantity > line_item.quantity -%}
+          {%- assign gift_quantity = 1 -%}
+        {%- endif -%}
+
+        <gift-options
+          class="gift-options"
+          data-line-key="{{ line_item.key | escape }}"
+          data-variant-id="{{ line_item.variant_id }}"
+          data-properties="{{ line_item.properties | json | escape }}"
+        >
+          <label class="gift-options__toggle">
+            <input type="checkbox" class="gift-options__checkbox" {% if gift_wrap_selected %}checked{% endif %}>
+            <span>
+              <strong>Embalar para presente</strong>
+              <small>Embalagem gratuita Adüla com cartão.</small>
+            </span>
+          </label>
+
+          <div class="gift-options__fields" {% unless gift_wrap_selected %}hidden{% endunless %}>
+            {%- if line_item.quantity > 1 -%}
+              <label class="gift-options__field">
+                <span>Quantidade para presente</span>
+                <select class="gift-options__quantity">
+                  {%- for quantity in (1..line_item.quantity) -%}
+                    <option value="{{ quantity }}" {% if quantity == gift_quantity %}selected{% endif %}>
+                      {{ quantity }} de {{ line_item.quantity }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+              </label>
+            {%- else -%}
+              <input type="hidden" class="gift-options__quantity" value="1">
+            {%- endif -%}
+
+            <label class="gift-options__field">
+              <span>Escreva seu recadinho</span>
+              <textarea
+                class="gift-options__message"
+                maxlength="200"
+                rows="3"
+                placeholder="Ex.: Feliz aniversário! Com carinho, Maria."
+              >{{ line_item.properties['Recadinho do presente'] | escape }}</textarea>
+              <small class="gift-options__counter"><span>{{ line_item.properties['Recadinho do presente'].size }}</span>/200</small>
+            </label>
+          </div>
+
+          <p class="gift-options__status text-xs" role="status" aria-live="polite"></p>
+        </gift-options>
+      {%- endif -%}
 
       {%- if show_quantity_selector -%}
         <line-item-quantity class="h-stack gap-4 {% if request.page_type == 'cart' %}sm:hidden{% endif %}">
