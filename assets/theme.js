@@ -1577,6 +1577,8 @@ var GiftOptions = class extends HTMLElement {
   constructor() {
     super();
     this.saveTimeout = null;
+    this.saveInProgress = false;
+    this.savePending = false;
     this.checkbox = this.querySelector(".gift-options__checkbox");
     this.fields = this.querySelector(".gift-options__fields");
     this.quantity = this.querySelector(".gift-options__quantity");
@@ -1599,11 +1601,28 @@ var GiftOptions = class extends HTMLElement {
 
   scheduleSave(delay) {
     window.clearTimeout(this.saveTimeout);
-    this.saveTimeout = window.setTimeout(() => this.save(), delay);
+    this.saveTimeout = window.setTimeout(() => this.requestSave(), delay);
+  }
+
+  async requestSave() {
+    if (this.saveInProgress) {
+      this.savePending = true;
+      return;
+    }
+
+    this.saveInProgress = true;
+
+    do {
+      this.savePending = false;
+      await this.save();
+    } while (this.savePending);
+
+    this.saveInProgress = false;
   }
 
   async save() {
     const lineKey = this.getAttribute("data-line-key");
+    const lineNumber = Number(this.getAttribute("data-line-number"));
     let properties = {};
 
     try {
@@ -1636,26 +1655,18 @@ var GiftOptions = class extends HTMLElement {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          id: lineKey,
+          line: lineNumber,
           properties
         })
       });
 
+      const cartContent = await response.json().catch(() => ({}));
+
       if (!response.ok) {
-        throw new Error("Não foi possível salvar as opções do presente.");
+        throw new Error(cartContent.description || "Não foi possível salvar as opções do presente.");
       }
 
-      const cartContent = await response.json();
-      const variantId = Number(this.getAttribute("data-variant-id"));
-      const updatedLineItem = cartContent.items.find((item) => {
-        if (item.variant_id !== variantId) {
-          return false;
-        }
-
-        const itemProperties = item.properties || {};
-        return Object.entries(properties).every(([key, value]) => itemProperties[key] === value)
-          && Object.keys(itemProperties).length === Object.keys(properties).length;
-      });
+      const updatedLineItem = cartContent.items?.[lineNumber - 1];
 
       if (updatedLineItem) {
         this.setAttribute("data-line-key", updatedLineItem.key);

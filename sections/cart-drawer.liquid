@@ -103,7 +103,7 @@
 
     <div class="cart-drawer__items">
       {%- for line_item in cart.items -%}
-        {%- render 'line-item', line_item: line_item, show_quantity_selector: true -%}
+        {%- render 'line-item', line_item: line_item, show_quantity_selector: true, line_number: forloop.index -%}
       {%- endfor -%}
     </div>
 

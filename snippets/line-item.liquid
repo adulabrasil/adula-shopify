@@ -3,6 +3,7 @@
 
   @param {object} line_item - the line item to render
   @param {boolean} [show_quantity_selector] - if set to true, the quantity selector is displayed (useful for instance in mini-cart)
+  @param {number} [line_number] - 1-based position of the item in the cart
   @param {object} [section]
 {%- enddoc -%}
 
@@ -99,6 +100,7 @@
         <gift-options
           class="gift-options"
           data-line-key="{{ line_item.key | escape }}"
+          data-line-number="{{ line_number }}"
           data-variant-id="{{ line_item.variant_id }}"
           data-properties="{{ line_item.properties | json | escape }}"
         >
