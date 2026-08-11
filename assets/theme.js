@@ -1572,6 +1572,124 @@ if (!window.customElements.get("free-shipping-bar")) {
   window.customElements.define("free-shipping-bar", FreeShippingBar);
 }
 
+// Adula: gift wrapping options attached to each cart line item.
+var GiftOptions = class extends HTMLElement {
+  constructor() {
+    super();
+    this.saveTimeout = null;
+    this.checkbox = this.querySelector(".gift-options__checkbox");
+    this.fields = this.querySelector(".gift-options__fields");
+    this.quantity = this.querySelector(".gift-options__quantity");
+    this.message = this.querySelector(".gift-options__message");
+    this.counter = this.querySelector(".gift-options__counter span");
+    this.status = this.querySelector(".gift-options__status");
+
+    this.checkbox?.addEventListener("change", () => {
+      this.fields.hidden = !this.checkbox.checked;
+      this.scheduleSave(0);
+    });
+    this.quantity?.addEventListener("change", () => this.scheduleSave(0));
+    this.message?.addEventListener("input", () => {
+      if (this.counter) {
+        this.counter.textContent = this.message.value.length;
+      }
+      this.scheduleSave(500);
+    });
+  }
+
+  scheduleSave(delay) {
+    window.clearTimeout(this.saveTimeout);
+    this.saveTimeout = window.setTimeout(() => this.save(), delay);
+  }
+
+  async save() {
+    const lineKey = this.getAttribute("data-line-key");
+    let properties = {};
+
+    try {
+      properties = JSON.parse(this.getAttribute("data-properties") || "{}");
+    } catch (error) {
+      properties = {};
+    }
+
+    if (this.checkbox.checked) {
+      properties["Embalar para presente"] = "Sim";
+      properties["Quantidade para presente"] = this.quantity?.value || "1";
+
+      if (this.message?.value.trim()) {
+        properties["Recadinho do presente"] = this.message.value.trim();
+      } else {
+        delete properties["Recadinho do presente"];
+      }
+    } else {
+      delete properties["Embalar para presente"];
+      delete properties["Quantidade para presente"];
+      delete properties["Recadinho do presente"];
+    }
+
+    this.setAttribute("aria-busy", "true");
+    this.status.classList.remove("gift-options__status--error");
+    this.status.textContent = "Salvando...";
+
+    try {
+      const response = await fetch(`${Shopify.routes.root}cart/change.js`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: lineKey,
+          properties
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Não foi possível salvar as opções do presente.");
+      }
+
+      const cartContent = await response.json();
+      const variantId = Number(this.getAttribute("data-variant-id"));
+      const updatedLineItem = cartContent.items.find((item) => {
+        if (item.variant_id !== variantId) {
+          return false;
+        }
+
+        const itemProperties = item.properties || {};
+        return Object.entries(properties).every(([key, value]) => itemProperties[key] === value)
+          && Object.keys(itemProperties).length === Object.keys(properties).length;
+      });
+
+      if (updatedLineItem) {
+        this.setAttribute("data-line-key", updatedLineItem.key);
+        this.setAttribute("data-properties", JSON.stringify(updatedLineItem.properties || {}));
+
+        document.querySelectorAll("[data-line-key]").forEach((element) => {
+          if (element.getAttribute("data-line-key") === lineKey) {
+            element.setAttribute("data-line-key", updatedLineItem.key);
+          }
+        });
+
+        document.querySelectorAll('a[href*="/cart/change"]').forEach((link) => {
+          const url = new URL(link.href);
+
+          if (url.searchParams.get("id") === lineKey) {
+            url.searchParams.set("id", updatedLineItem.key);
+            link.href = url.toString();
+          }
+        });
+      }
+
+      this.status.textContent = "Salvo";
+    } catch (error) {
+      this.status.textContent = error.message;
+      this.status.classList.add("gift-options__status--error");
+    } finally {
+      this.removeAttribute("aria-busy");
+    }
+  }
+};
+if (!window.customElements.get("gift-options")) {
+  window.customElements.define("gift-options", GiftOptions);
+}
+
 // js/common/cart/line-item-quantity.js
 import { Delegate } from "vendor";
 var _delegate, _LineItemQuantity_instances, onQuantityChanged_fn, onChangeLinkClicked_fn, changeLineItemQuantity_fn;
