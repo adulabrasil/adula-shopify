@@ -48,7 +48,7 @@
               <tbody class="order-summary__body">
                 {%- for line_item in cart.items -%}
                   <tr>
-                    <td>{%- render 'line-item', line_item: line_item, show_quantity_selector: true -%}</td>
+                    <td>{%- render 'line-item', line_item: line_item, show_quantity_selector: true, line_number: forloop.index -%}</td>
 
                     <td class="text-center">
                       <div class="v-stack gap-2">
