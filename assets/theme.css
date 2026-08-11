@@ -1833,6 +1833,100 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   flex-shrink: 0;
 }
 
+.gift-options {
+  width: 100%;
+  max-width: 24rem;
+  margin-block-start: .35rem;
+  padding: .75rem;
+  border: 1px solid rgba(83, 46, 29, .18);
+  border-radius: .5rem;
+  background: rgba(83, 46, 29, .035);
+  color: #532e1d;
+  display: block;
+}
+
+.gift-options__toggle {
+  align-items: flex-start;
+  gap: .55rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.gift-options__checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin-block-start: .15rem;
+  accent-color: #532e1d;
+  flex: 0 0 auto;
+}
+
+.gift-options__toggle span,
+.gift-options__field {
+  display: grid;
+  gap: .2rem;
+}
+
+.gift-options__toggle strong,
+.gift-options__field > span {
+  font-size: .78rem;
+  line-height: 1.35;
+}
+
+.gift-options__toggle small,
+.gift-options__counter {
+  color: rgba(83, 46, 29, .72);
+  font-size: .68rem;
+  line-height: 1.4;
+}
+
+.gift-options__fields {
+  margin-block-start: .75rem;
+  padding-block-start: .75rem;
+  border-block-start: 1px solid rgba(83, 46, 29, .14);
+  display: grid;
+  gap: .7rem;
+}
+
+.gift-options__fields[hidden] {
+  display: none;
+}
+
+.gift-options__field select,
+.gift-options__field textarea {
+  width: 100%;
+  border: 1px solid rgba(83, 46, 29, .25);
+  border-radius: .35rem;
+  background: #fff;
+  color: #532e1d;
+  padding: .55rem .65rem;
+  font: inherit;
+  font-size: .75rem;
+}
+
+.gift-options__field textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.gift-options__counter {
+  justify-self: end;
+}
+
+.gift-options__status {
+  min-height: 1em;
+  margin-block-start: .35rem;
+  color: rgba(83, 46, 29, .72);
+}
+
+.gift-options__status--error {
+  color: #bf1515;
+}
+
+.gift-options[aria-busy="true"] {
+  opacity: .7;
+  pointer-events: none;
+}
+
 @media screen and (min-width: 700px) {
   .line-item {
     --line-item-media-width: 7.5rem;
