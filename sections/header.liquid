@@ -247,6 +247,12 @@
     }
   {%- endif -%}
 
+  /* Match the main Adüla logo to the announcement-bar brown.
+     The transparent logo is intentionally excluded so it stays legible over hero imagery. */
+  #shopify-section-{{ section.id }} .header__logo-image:not(.header__logo-image--transparent) {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(26%) saturate(1465%) hue-rotate(337deg) brightness(91%) contrast(91%);
+  }
+
   #shopify-section-{{ section.id }} .header__support-link {
     order: 2;
     position: relative;
