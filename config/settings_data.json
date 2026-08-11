@@ -59,6 +59,16 @@
         "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
+      },
+      "2883025457459210873": {
+        "type": "shopify://apps/wishlist-power/blocks/embed-wishlist-setup/c6cb23f2-39d1-403f-9967-53314ebdad10",
+        "disabled": false,
+        "settings": {
+          "selected_theme": "prestige",
+          "access_to_wishlist": "all",
+          "shared_wishlist": true,
+          "use_variants": true
+        }
       }
     },
     "color_schemes": {
