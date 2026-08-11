@@ -36,6 +36,10 @@
           "type": "separator",
           "settings": {}
         },
+        "product_benefits": {
+          "type": "product_benefits",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -77,10 +81,6 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
-        },
-        "product_benefits": {
-          "type": "product_benefits",
-          "settings": {}
         },
         "care": {
           "type": "accordion",
@@ -133,12 +133,12 @@
         "price",
         "payment_terms",
         "separator",
+        "product_benefits",
         "description",
         "variant_picker",
         "inventory",
         "quantity_selector",
         "buy_buttons",
-        "product_benefits",
         "care",
         "shipping_returns",
         "secure_checkout",
