@@ -69,6 +69,19 @@
           "shared_wishlist": true,
           "use_variants": true
         }
+      },
+      "13997699835324413730": {
+        "type": "shopify://apps/wishlist-power/blocks/embed-wishlist-product-card/c6cb23f2-39d1-403f-9967-53314ebdad10",
+        "disabled": false,
+        "settings": {
+          "position": "top-end",
+          "border_radius": 100,
+          "icon_name": "heart",
+          "icon_size": 18,
+          "icon_thickness": 1,
+          "button_background": "#C94F4F",
+          "icon_color": "#FFFFFF"
+        }
       }
     },
     "color_schemes": {
