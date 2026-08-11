@@ -1626,7 +1626,24 @@ var GiftOptions = class extends HTMLElement {
     let properties = {};
 
     try {
-      properties = JSON.parse(this.getAttribute("data-properties") || "{}");
+      const storedProperties = JSON.parse(this.getAttribute("data-properties") || "{}");
+
+      if (Array.isArray(storedProperties)) {
+        properties = Object.fromEntries(
+          storedProperties.map((property) => {
+            if (Array.isArray(property)) {
+              return property;
+            }
+
+            return [
+              property.name ?? property.first,
+              property.value ?? property.last
+            ];
+          }).filter(([name]) => typeof name === "string" && name.length > 0)
+        );
+      } else if (storedProperties && typeof storedProperties === "object") {
+        properties = { ...storedProperties };
+      }
     } catch (error) {
       properties = {};
     }
