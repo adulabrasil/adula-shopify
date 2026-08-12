@@ -26,8 +26,52 @@
     }
 
     #shopify-section-{{ section.id }} .announcement-bar {
+      padding-block: 0.72em;
+      padding-inline: 0;
       background: {{ section.settings.custom_background }};
       color: {{ section.settings.custom_text_color }};
+      display: block;
+      overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .announcement-bar__marquee {
+      width: 100%;
+      text-align: start;
+      white-space: nowrap;
+      user-select: none;
+      display: block;
+      overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .announcement-bar__marquee::part(scroller) {
+      min-width: max-content;
+      display: inline-flex;
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .announcement-bar__track {
+      min-width: max-content;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #shopify-section-{{ section.id }} .announcement-bar__message {
+      padding-inline: clamp(1rem, 2.2vw, 2rem);
+      letter-spacing: 0.035em;
+      white-space: nowrap;
+    }
+
+    #shopify-section-{{ section.id }} .announcement-bar__separator {
+      color: #B08D57;
+      font-size: 0.9em;
+      line-height: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #shopify-section-{{ section.id }} .announcement-bar__marquee::part(scroller) {
+        transform: none !important;
+      }
     }
 
     @media screen and (min-width: 999px) {
@@ -39,38 +83,23 @@
 
   <height-observer variable="announcement-bar">
     <div class="announcement-bar color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
-      {%- assign carousel_id = 'carousel-' | append: section.id -%}
-
-      {%- if section.blocks.size > 1 -%}
-        <carousel-prev-button aria-controls="{{ carousel_id }}" class="contents">
-          <button type="button" class="tap-area">
-            <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
-            {%- render 'icon' with 'arrow-left', width: 12, direction_aware: true -%}
-          </button>
-        </carousel-prev-button>
-      {%- endif -%}
-
-      <announcement-bar-carousel
-        allow-swipe
-        {% if section.settings.autoplay %}
-          autoplay="{{ section.settings.cycle_speed }}"
+      <marquee-text
+        speed="{{ section.settings.scrolling_speed }}"
+        direction="left"
+        {% if section.settings.pause_on_hover %}
+          pause-on-hover
         {% endif %}
-        id="{{ carousel_id }}"
-        class="announcement-bar__carousel"
+        class="announcement-bar__marquee"
       >
-        {%- for block in section.blocks -%}
-          <p class="prose heading {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>{{- block.settings.text -}}</p>
-        {%- endfor -%}
-      </announcement-bar-carousel>
-
-      {%- if section.blocks.size > 1 -%}
-        <carousel-next-button aria-controls="{{ carousel_id }}" class="contents">
-          <button type="button" class="tap-area">
-            <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
-            {%- render 'icon' with 'arrow-right', width: 12, direction_aware: true -%}
-          </button>
-        </carousel-next-button>
-      {%- endif -%}
+        <div class="announcement-bar__track">
+          {%- for block in section.blocks -%}
+            <p class="announcement-bar__message prose heading" {{ block.shopify_attributes }}>
+              {{- block.settings.text -}}
+            </p>
+            <span class="announcement-bar__separator" aria-hidden="true">•</span>
+          {%- endfor -%}
+        </div>
+      </marquee-text>
     </div>
   </height-observer>
 
@@ -128,21 +157,19 @@
       "label": "t:sections.announcement_bar.enable_sticky_bar"
     },
     {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "t:sections.announcement_bar.auto_rotate_between_messages",
-      "default": true
+      "type": "range",
+      "id": "scrolling_speed",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "label": "Velocidade do movimento",
+      "default": 0.3
     },
     {
-      "type": "range",
-      "id": "cycle_speed",
-      "min": 2,
-      "max": 20,
-      "step": 1,
-      "unit": "sec",
-      "label": "t:sections.announcement_bar.cycle_speed",
-      "default": 5,
-      "visible_if": "{{ section.settings.autoplay }}"
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pausar ao passar o mouse",
+      "default": true
     },
     {
       "type": "range",
