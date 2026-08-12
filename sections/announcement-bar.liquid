@@ -1,4 +1,7 @@
 {%- if section.blocks.size > 0 -%}
+  {%- assign announcement_speed_offset = section.settings.scrolling_speed | times: 24 -%}
+  {%- assign announcement_duration = 34 | minus: announcement_speed_offset -%}
+
   <style>
     :root {
       --announcement-bar-is-sticky: {% if section.settings.enable_sticky %}1{% else %}0{% endif %};
@@ -36,24 +39,25 @@
 
     #shopify-section-{{ section.id }} .announcement-bar__marquee {
       width: 100%;
-      text-align: start;
       white-space: nowrap;
       user-select: none;
       display: block;
       overflow: hidden;
     }
 
-    #shopify-section-{{ section.id }} .announcement-bar__marquee::part(scroller) {
-      min-width: max-content;
-      display: inline-flex;
-      position: relative;
+    #shopify-section-{{ section.id }} .announcement-bar__ticker {
+      width: max-content;
+      display: flex;
+      will-change: transform;
+      animation: adula-announcement-scroll-{{ section.id }} {{ announcement_duration }}s linear infinite;
     }
 
-    #shopify-section-{{ section.id }} .announcement-bar__track {
-      min-width: max-content;
+    #shopify-section-{{ section.id }} .announcement-bar__group {
+      min-width: 100vw;
       flex-shrink: 0;
       display: flex;
       align-items: center;
+      justify-content: space-around;
     }
 
     #shopify-section-{{ section.id }} .announcement-bar__message {
@@ -68,9 +72,19 @@
       line-height: 1;
     }
 
+    @keyframes adula-announcement-scroll-{{ section.id }} {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      #shopify-section-{{ section.id }} .announcement-bar__marquee::part(scroller) {
-        transform: none !important;
+      #shopify-section-{{ section.id }} .announcement-bar__ticker {
+        animation: none;
       }
     }
 
@@ -83,23 +97,23 @@
 
   <height-observer variable="announcement-bar">
     <div class="announcement-bar color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
-      <marquee-text
-        speed="{{ section.settings.scrolling_speed }}"
-        direction="left"
-        {% if section.settings.pause_on_hover %}
-          pause-on-hover
-        {% endif %}
-        class="announcement-bar__marquee"
-      >
-        <div class="announcement-bar__track">
-          {%- for block in section.blocks -%}
-            <p class="announcement-bar__message prose heading" {{ block.shopify_attributes }}>
-              {{- block.settings.text -}}
-            </p>
-            <span class="announcement-bar__separator" aria-hidden="true">•</span>
+      <div class="announcement-bar__marquee">
+        <div class="announcement-bar__ticker">
+          {%- for copy_index in (1..2) -%}
+            <div class="announcement-bar__group" {% if copy_index == 2 %}aria-hidden="true"{% endif %}>
+              {%- for block in section.blocks -%}
+                <p
+                  class="announcement-bar__message prose heading"
+                  {% if copy_index == 1 %}{{ block.shopify_attributes }}{% endif %}
+                >
+                  {{- block.settings.text -}}
+                </p>
+                <span class="announcement-bar__separator" aria-hidden="true">•</span>
+              {%- endfor -%}
+            </div>
           {%- endfor -%}
         </div>
-      </marquee-text>
+      </div>
     </div>
   </height-observer>
 
@@ -164,12 +178,6 @@
       "step": 0.1,
       "label": "Velocidade do movimento",
       "default": 0.3
-    },
-    {
-      "type": "checkbox",
-      "id": "pause_on_hover",
-      "label": "Pausar ao passar o mouse",
-      "default": true
     },
     {
       "type": "range",
