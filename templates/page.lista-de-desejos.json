@@ -20,7 +20,7 @@
     "17864781352108fe2f": {
       "type": "apps",
       "blocks": {
-        "wishlist_power_block_wishlist_page_listing_yjFJjF": {
+        "wishlist_power_block_wishlist_page_listing_xHFcyC": {
           "type": "shopify://apps/wishlist-power/blocks/block-wishlist-page-listing/c6cb23f2-39d1-403f-9967-53314ebdad10",
           "settings": {
             "section_spacing": 0,
@@ -45,7 +45,7 @@
         }
       },
       "block_order": [
-        "wishlist_power_block_wishlist_page_listing_yjFJjF"
+        "wishlist_power_block_wishlist_page_listing_xHFcyC"
       ],
       "settings": {
         "color_scheme": "",
