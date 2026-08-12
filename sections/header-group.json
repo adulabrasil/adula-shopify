@@ -14,6 +14,12 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_CeEnQa": {
+          "type": "message",
+          "settings": {
+            "text": "Frete grátis acima de <strong>R$ 199</strong> no Sudeste · <strong>R$ 299</strong> nas demais regiões"
+          }
+        },
         "pix": {
           "type": "message",
           "settings": {
@@ -34,6 +40,7 @@
         }
       },
       "block_order": [
+        "message_CeEnQa",
         "pix",
         "parcelamento",
         "giftback"
