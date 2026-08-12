@@ -366,7 +366,27 @@
 
     revealFromHash();
     window.addEventListener('hashchange', revealFromHash);
-  })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        /* exemple du bouton dans l'image */
+        window.Maestrooo?.moveProductPageButton({
+          target: '.product-info__block-item[data-block-type="title"] .product-title',
+          buttonSelector: '.product-info [id*="_block_wishlist_product_page_button_"] ooo-wl-access-button',
+          useWrapper: true,
+          hideMessage: true,
+          cssStyle: {
+            width: '100%',
+            gap: '16px',
+            justifyContent: 'space-between',
+
+            '--ooo-wl-product-page-button-width': 'auto',
+            '--ooo-wl-product-page-button-min-width': 'max-content',
+            '--ooo-wl-product-page-button-height': '42px',
+            '--ooo-wl-product-page-button-padding-inline': '14px'
+          }
+        });
+    })();
 </script>
 
 {% schema %}
