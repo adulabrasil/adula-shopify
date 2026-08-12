@@ -1,0 +1,166 @@
+{%- comment -%}
+  Cupom de primeira compra exibido somente no produto principal.
+  O desconto precisa existir no admin da Shopify com o código PRIMEIRADULA.
+{%- endcomment -%}
+
+<div class="adula-first-purchase" aria-label="Cupom de primeira compra">
+  <div class="adula-first-purchase__copy">
+    <span class="adula-first-purchase__eyebrow">10% OFF na primeira compra</span>
+    <span class="adula-first-purchase__hint">Use o cupom no checkout</span>
+  </div>
+
+  <button
+    type="button"
+    class="adula-first-purchase__button"
+    data-first-purchase-copy
+    data-coupon-code="PRIMEIRADULA"
+    aria-label="Copiar cupom PRIMEIRADULA"
+  >
+    <span data-first-purchase-label>PRIMEIRADULA</span>
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
+      <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  </button>
+
+  <span class="sr-only" data-first-purchase-status aria-live="polite"></span>
+</div>
+
+<style>
+  .adula-first-purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .8rem .9rem;
+    border: 1px solid rgba(166, 126, 87, .38);
+    border-radius: 8px;
+    background: #fffdf9;
+    color: rgb(var(--text-color));
+  }
+
+  .adula-first-purchase__copy {
+    display: grid;
+    gap: .1rem;
+    min-width: 0;
+  }
+
+  .adula-first-purchase__eyebrow {
+    color: #6a3826;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .025em;
+    line-height: 1.3;
+  }
+
+  .adula-first-purchase__hint {
+    color: rgba(var(--text-color), .68);
+    font-size: .7rem;
+    line-height: 1.3;
+  }
+
+  .adula-first-purchase__button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    min-height: 2rem;
+    padding: .4rem .65rem;
+    border: 1px dashed #a67e57;
+    border-radius: 999px;
+    background: transparent;
+    color: #6a3826;
+    font: inherit;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease;
+  }
+
+  .adula-first-purchase__button:hover,
+  .adula-first-purchase__button:focus-visible {
+    border-color: #6a3826;
+    background: rgba(166, 126, 87, .09);
+  }
+
+  .adula-first-purchase__button svg {
+    flex: 0 0 auto;
+  }
+
+  @media screen and (max-width: 430px) {
+    .adula-first-purchase {
+      align-items: flex-start;
+      gap: .65rem;
+      padding: .75rem;
+    }
+
+    .adula-first-purchase__eyebrow {
+      font-size: .73rem;
+    }
+
+    .adula-first-purchase__hint {
+      font-size: .66rem;
+    }
+
+    .adula-first-purchase__button {
+      padding-inline: .55rem;
+      font-size: .62rem;
+    }
+  }
+</style>
+
+<script>
+  (() => {
+    if (window.adulaFirstPurchaseCouponReady) return;
+    window.adulaFirstPurchaseCouponReady = true;
+
+    const fallbackCopy = (text) => {
+      const input = document.createElement('textarea');
+      input.value = text;
+      input.setAttribute('readonly', '');
+      input.style.position = 'fixed';
+      input.style.opacity = '0';
+      document.body.appendChild(input);
+      input.select();
+      const copied = document.execCommand('copy');
+      input.remove();
+      return copied;
+    };
+
+    document.addEventListener('click', async (event) => {
+      const button = event.target.closest('[data-first-purchase-copy]');
+      if (!button) return;
+
+      const code = button.dataset.couponCode;
+      const label = button.querySelector('[data-first-purchase-label]');
+      const status = button.parentElement.querySelector('[data-first-purchase-status]');
+      let copied = false;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(code);
+          copied = true;
+        } else {
+          copied = fallbackCopy(code);
+        }
+      } catch (error) {
+        copied = fallbackCopy(code);
+      }
+
+      if (!copied) return;
+
+      label.textContent = 'COPIADO!';
+      status.textContent = 'Cupom PRIMEIRADULA copiado.';
+      button.setAttribute('aria-label', 'Cupom PRIMEIRADULA copiado');
+
+      window.setTimeout(() => {
+        label.textContent = code;
+        status.textContent = '';
+        button.setAttribute('aria-label', 'Copiar cupom ' + code);
+      }, 2200);
+    });
+  })();
+</script>
