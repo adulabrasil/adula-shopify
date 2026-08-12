@@ -1,0 +1,81 @@
+{%- doc -%}
+  Displays the Adüla exchange and material badges below the product price.
+
+  @param {product} product
+  @param {variant} variant
+{%- enddoc -%}
+
+{%- liquid
+  assign selected_variant = variant | default: product.selected_or_first_available_variant
+  assign variant_sku_suffix = selected_variant.sku | slice: -2, 2 | upcase
+
+  capture material_reference
+    echo product.title
+    echo ' '
+    echo selected_variant.title
+    echo ' '
+
+    for option_value in selected_variant.options
+      echo option_value
+      echo ' '
+    endfor
+  endcapture
+
+  assign material_key = material_reference | handleize
+  assign material_label = ''
+
+  if material_key contains 'prata-925' or material_key contains 'prata-de-lei' or variant_sku_suffix == '-P'
+    assign material_label = 'JOIAS EM PRATA 925'
+  elsif material_key contains 'rodio' or material_key contains 'prateado' or variant_sku_suffix == '-R'
+    assign material_label = 'BANHO RÓDIO BRANCO'
+  elsif material_key contains 'dourad' or material_key contains 'ouro-18k' or variant_sku_suffix == '-D'
+    assign material_label = 'BANHO OURO 18K'
+  endif
+-%}
+
+<style>
+  .product-assurance-badges {
+    margin-block-start: 0.45rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .product-assurance-badge {
+    min-height: 1.55rem;
+    padding: 0.28rem 0.68rem;
+    border: 1px solid rgb(176 141 87 / 0.7);
+    border-radius: 999px;
+    background: #fff9f1;
+    color: #532e1d;
+    font-size: 0.66rem;
+    font-weight: 650;
+    letter-spacing: 0.045em;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 699px) {
+    .product-assurance-badges {
+      gap: 0.35rem;
+    }
+
+    .product-assurance-badge {
+      min-height: 1.45rem;
+      padding-inline: 0.58rem;
+      font-size: 0.61rem;
+    }
+  }
+</style>
+
+<div class="product-assurance-badges" aria-label="Benefícios e material do produto">
+  <span class="product-assurance-badge">1ª TROCA GRÁTIS</span>
+
+  {%- if material_label != blank -%}
+    <span class="product-assurance-badge">{{ material_label }}</span>
+  {%- endif -%}
+</div>
