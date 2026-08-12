@@ -2,6 +2,12 @@ name: Auditar fotos duplicadas dos produtos
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - .github/workflows/audit-duplicate-product-images.yml
+      - scripts/audit-duplicate-product-images.mjs
 
 permissions:
   contents: read
