@@ -44,7 +44,6 @@
         "custom_text_color": "#ffffff",
         "enable_sticky": false,
         "scrolling_speed": 0.4,
-        "pause_on_hover": true,
         "desktop_font_size": 13,
         "mobile_font_size": 12
       }
