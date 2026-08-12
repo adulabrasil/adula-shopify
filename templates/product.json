@@ -67,6 +67,10 @@
             "payment_button_text_color": ""
           }
         },
+        "product_benefits": {
+          "type": "product_benefits",
+          "settings": {}
+        },
         "care": {
           "type": "accordion",
           "settings": {
@@ -101,10 +105,6 @@
             "border_color": ""
           }
         },
-        "product_benefits": {
-          "type": "product_benefits",
-          "settings": {}
-        },
         "separator_JACxVT": {
           "type": "separator",
           "settings": {}
@@ -136,10 +136,10 @@
         "inventory",
         "quantity_selector",
         "buy_buttons",
+        "product_benefits",
         "care",
         "shipping_returns",
         "secure_checkout",
-        "product_benefits",
         "separator_JACxVT",
         "description",
         "complementary_products"
