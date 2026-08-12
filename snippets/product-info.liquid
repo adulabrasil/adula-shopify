@@ -160,13 +160,21 @@
           {%- when 'price' -%}
             {%- if product.selected_or_first_available_variant != nil -%}
               <div class="v-stack">
-                {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
-
                 {%- if context == 'main_product' -%}
+                  <div class="product-price-with-giftback">
+                    {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
+                    {%- render 'product-giftback',
+                      product: product,
+                      variant: product.selected_or_first_available_variant
+                    -%}
+                  </div>
+
                   {%- render 'product-assurance-badges',
                     product: product,
                     variant: product.selected_or_first_available_variant
                   -%}
+                {%- else -%}
+                  {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
                 {%- endif -%}
 
                 {%- if block.settings.show_taxes_notice -%}
