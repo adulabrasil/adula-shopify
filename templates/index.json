@@ -67,11 +67,20 @@
     "category-navigation": {
       "type": "adula-category-navigation",
       "blocks": {
+        "category_ijx8eG": {
+          "type": "category",
+          "settings": {
+            "collection": "presentes-adulantes",
+            "image": "shopify://shop_images/alianca-lacos.webp",
+            "title": "Presente",
+            "link": ""
+          }
+        },
         "aneis": {
           "type": "category",
           "settings": {
             "collection": "aneis",
-            "image": "shopify://shop_images/alianca-lacos.webp",
+            "image": "shopify://shop_images/produtos-site-quadrado-27.webp",
             "title": "Anéis",
             "link": "/collections/aneis"
           }
@@ -123,6 +132,7 @@
         }
       },
       "block_order": [
+        "category_ijx8eG",
         "aneis",
         "brincos",
         "colares",
