@@ -162,6 +162,13 @@
               <div class="v-stack">
                 {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
 
+                {%- if context == 'main_product' -%}
+                  {%- render 'product-assurance-badges',
+                    product: product,
+                    variant: product.selected_or_first_available_variant
+                  -%}
+                {%- endif -%}
+
                 {%- if block.settings.show_taxes_notice -%}
                   <p class="text-sm text-subdued">
                     {%- if cart.taxes_included -%}
