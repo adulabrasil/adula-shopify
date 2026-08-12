@@ -2,9 +2,9 @@ import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import sharp from 'sharp';
 
-const shop = process.env.SHOPIFY_SHOP;
-const clientId = process.env.SHOPIFY_CLIENT_ID;
-const clientSecret = process.env.SHOPIFY_CLIENT_SECRET;
+const shop = process.env.SHOPIFY_SHOP?.trim();
+const clientId = process.env.SHOPIFY_CLIENT_ID?.trim();
+const clientSecret = process.env.SHOPIFY_CLIENT_SECRET?.trim();
 
 if (!shop || !clientId || !clientSecret) {
   throw new Error('SHOPIFY_SHOP, SHOPIFY_CLIENT_ID e SHOPIFY_CLIENT_SECRET são obrigatórios.');
