@@ -1,0 +1,149 @@
+{%- doc -%}
+  Displays the estimated 10% Adüla Giftback for the selected product variant.
+
+  @param {product} product
+  @param {variant} variant
+{%- enddoc -%}
+
+{%- liquid
+  assign selected_variant = variant | default: product.selected_or_first_available_variant
+  assign giftback_value = selected_variant.price | divided_by: 10
+-%}
+
+{%- if giftback_value > 0 -%}
+  <style>
+    .product-price-with-giftback {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.55rem 0.7rem;
+    }
+
+    .product-giftback {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.55rem;
+    }
+
+    .product-giftback__pill {
+      min-height: 1.7rem;
+      padding: 0.3rem 0.72rem;
+      border: 1px solid rgb(176 141 87 / 0.55);
+      border-radius: 999px;
+      background: #f4ebdd;
+      color: #532e1d;
+      font-size: 0.7rem;
+      font-weight: 650;
+      letter-spacing: 0.025em;
+      line-height: 1;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-giftback__details {
+      position: relative;
+    }
+
+    .product-giftback__summary {
+      color: #532e1d;
+      font-size: 0.72rem;
+      line-height: 1.3;
+      text-decoration: underline;
+      text-decoration-color: rgb(83 46 29 / 0.35);
+      text-underline-offset: 0.18em;
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28rem;
+    }
+
+    .product-giftback__summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .product-giftback__summary::before {
+      content: "i";
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-family: Arial, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      display: inline-grid;
+      place-items: center;
+    }
+
+    .product-giftback__explanation {
+      width: min(19rem, calc(100vw - 2rem));
+      margin-block-start: 0.5rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid rgb(176 141 87 / 0.45);
+      border-radius: 0.45rem;
+      background: #fff9f1;
+      color: #532e1d;
+      box-shadow: 0 8px 22px rgb(83 46 29 / 0.1);
+      font-size: 0.75rem;
+      line-height: 1.45;
+      position: absolute;
+      z-index: 3;
+      inset-inline-start: 0;
+      inset-block-start: 100%;
+    }
+
+    .product-giftback__explanation strong {
+      display: block;
+      margin-block-end: 0.2rem;
+    }
+
+    .product-giftback__note {
+      display: block;
+      margin-block-start: 0.35rem;
+      color: rgb(83 46 29 / 0.7);
+      font-size: 0.68rem;
+    }
+
+    @media screen and (max-width: 699px) {
+      .product-price-with-giftback {
+        align-items: flex-start;
+      }
+
+      .product-giftback {
+        width: 100%;
+      }
+
+      .product-giftback__pill {
+        min-height: 1.55rem;
+        padding-inline: 0.62rem;
+        font-size: 0.65rem;
+      }
+
+      .product-giftback__explanation {
+        inset-inline-start: auto;
+        inset-inline-end: 0;
+      }
+    }
+  </style>
+
+  <div class="product-giftback">
+    <span class="product-giftback__pill">
+      GANHE {{ giftback_value | money }} DE GIFTBACK
+    </span>
+
+    <details class="product-giftback__details">
+      <summary class="product-giftback__summary">Como funciona?</summary>
+
+      <div class="product-giftback__explanation" role="note">
+        <strong>10% para sua próxima compra</strong>
+        Após esta compra, você receberá 10% do valor pago em crédito para usar em uma próxima compra na Adüla.
+        <span class="product-giftback__note">O valor final pode variar conforme descontos aplicados no carrinho.</span>
+      </div>
+    </details>
+  </div>
+{%- endif -%}
