@@ -85,8 +85,8 @@
         "wishlist_power_block_wishlist_product_page_button_HwdQdF": {
           "type": "shopify://apps/wishlist-power/blocks/block-wishlist-product-page-button/c6cb23f2-39d1-403f-9967-53314ebdad10",
           "settings": {
-            "add_to_wishlist_label": "Add to wishlist",
-            "remove_from_wishlist_label": "Remove from wishlist",
+            "add_to_wishlist_label": "",
+            "remove_from_wishlist_label": "",
             "button_style": "outline",
             "button_height": 48,
             "button_vertical_spacing": 0,
@@ -96,8 +96,8 @@
             "icon_name": "heart",
             "icon_size": 18,
             "icon_thickness": 1,
-            "button_background": "#000000",
-            "button_text": "#FFFFFF"
+            "button_background": "rgba(0,0,0,0)",
+            "button_text": "#000000"
           }
         },
         "care": {
