@@ -12,6 +12,8 @@ if (!shop || !clientId || !clientSecret) {
 
 const apiVersion = '2026-07';
 const outputDir = process.env.OUTPUT_DIR || 'duplicate-image-audit';
+const applyDeletions = process.env.APPLY_DELETIONS === 'true';
+const expectedSafeDuplicates = Number(process.env.EXPECTED_SAFE_DUPLICATES || 0);
 
 async function getAccessToken() {
   const response = await fetch(`https://${shop}/admin/oauth/access_token`, {
@@ -71,6 +73,15 @@ const PRODUCTS_QUERY = `
           }
         }
       }
+    }
+  }
+`;
+
+const DELETE_MEDIA_MUTATION = `
+  mutation DeleteDuplicateProductMedia($productId: ID!, $mediaIds: [ID!]!) {
+    productDeleteMedia(productId: $productId, mediaIds: $mediaIds) {
+      deletedMediaIds
+      mediaUserErrors { field message code }
     }
   }
 `;
@@ -256,6 +267,61 @@ for (const [productIndex, product] of products.entries()) {
 }
 
 await fs.mkdir(outputDir, { recursive: true });
+
+const safeDuplicates = [...new Map(
+  report
+    .filter((item) => !item.duplicateLinkedToVariant)
+    .map((item) => [item.duplicateMediaId, item]),
+).values()];
+const deletionResults = [];
+const deletionErrors = [];
+
+if (applyDeletions) {
+  if (!expectedSafeDuplicates || safeDuplicates.length !== expectedSafeDuplicates) {
+    throw new Error(
+      `Trava de segurança: eram esperadas ${expectedSafeDuplicates} duplicatas seguras, ` +
+      `mas a nova auditoria encontrou ${safeDuplicates.length}. Nenhuma imagem foi excluída.`,
+    );
+  }
+
+  const byProduct = new Map();
+  for (const item of safeDuplicates) {
+    if (!byProduct.has(item.productId)) byProduct.set(item.productId, []);
+    byProduct.get(item.productId).push(item);
+  }
+
+  let processedProducts = 0;
+  for (const [productId, items] of byProduct) {
+    for (let offset = 0; offset < items.length; offset += 50) {
+      const batch = items.slice(offset, offset + 50);
+      try {
+        const data = await graphql(token, DELETE_MEDIA_MUTATION, {
+          productId,
+          mediaIds: batch.map((item) => item.duplicateMediaId),
+        });
+        const payload = data.productDeleteMedia;
+        if (payload.mediaUserErrors.length) {
+          deletionErrors.push({ productId, items: batch, errors: payload.mediaUserErrors });
+        }
+        const deleted = new Set(payload.deletedMediaIds || []);
+        for (const item of batch) {
+          if (deleted.has(item.duplicateMediaId)) deletionResults.push(item);
+          else if (!payload.mediaUserErrors.length) {
+            deletionErrors.push({ productId, item, errors: [{ message: 'A Shopify não confirmou a exclusão.' }] });
+          }
+        }
+      } catch (error) {
+        deletionErrors.push({ productId, items: batch, errors: [{ message: error.message }] });
+      }
+      await new Promise((resolve) => setTimeout(resolve, 150));
+    }
+    processedProducts += 1;
+    if (processedProducts % 25 === 0) {
+      console.log(`Produtos limpos: ${processedProducts}/${byProduct.size}`);
+    }
+  }
+}
+
 const summary = {
   generatedAt: new Date().toISOString(),
   shop,
@@ -265,11 +331,16 @@ const summary = {
   confirmedDuplicateImages: report.length,
   variantLinkedDuplicatesFlagged: report.filter((item) => item.duplicateLinkedToVariant).length,
   imageDownloadFailures: failures.length,
-  destructiveChangesMade: false,
+  safeDuplicateImagesApproved: safeDuplicates.length,
+  deletedDuplicateImages: deletionResults.length,
+  deletionErrorGroups: deletionErrors.length,
+  destructiveChangesMade: deletionResults.length > 0,
 };
 await fs.writeFile(`${outputDir}/summary.json`, JSON.stringify(summary, null, 2));
 await fs.writeFile(`${outputDir}/duplicates.json`, JSON.stringify(report, null, 2));
 await fs.writeFile(`${outputDir}/failures.json`, JSON.stringify(failures, null, 2));
+await fs.writeFile(`${outputDir}/deleted.json`, JSON.stringify(deletionResults, null, 2));
+await fs.writeFile(`${outputDir}/deletion-errors.json`, JSON.stringify(deletionErrors, null, 2));
 
 const headers = Object.keys(report[0] || {
   productTitle: '', handle: '', keepPosition: '', duplicatePosition: '', duplicateLinkedToVariant: '',
@@ -289,8 +360,12 @@ if (githubSummary) {
     `- Duplicatas ligadas a variantes (não apagar automaticamente): **${summary.variantLinkedDuplicatesFlagged}**`,
     `- Falhas de download: **${summary.imageDownloadFailures}**`,
     '',
-    '**Nenhuma imagem foi excluída nesta execução.**',
+    applyDeletions
+      ? `- Imagens duplicadas excluídas: **${summary.deletedDuplicateImages}**`
+      : '**Nenhuma imagem foi excluída nesta execução.**',
+    `- Grupos com erro de exclusão: **${summary.deletionErrorGroups}**`,
   ].join('\n'));
 }
 
 console.log(JSON.stringify(summary, null, 2));
+if (deletionErrors.length) process.exitCode = 1;
