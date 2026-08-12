@@ -1,0 +1,40 @@
+name: Auditar fotos duplicadas dos produtos
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar processador de imagens
+        run: npm install --no-save --ignore-scripts=false sharp@0.34.4
+
+      - name: Auditar imagens dos produtos
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          OUTPUT_DIR: duplicate-image-audit
+        run: node scripts/audit-duplicate-product-images.mjs
+
+      - name: Disponibilizar relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-fotos-duplicadas
+          path: duplicate-image-audit/
+          if-no-files-found: warn
+          retention-days: 14
