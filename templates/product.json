@@ -32,21 +32,6 @@
           "type": "payment_terms",
           "settings": {}
         },
-        "product_benefits": {
-          "type": "product_benefits",
-          "settings": {}
-        },
-        "separator_JACxVT": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -116,6 +101,21 @@
             "border_color": ""
           }
         },
+        "product_benefits": {
+          "type": "product_benefits",
+          "settings": {}
+        },
+        "separator_JACxVT": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -132,9 +132,6 @@
         "judge_me_reviews_preview_badge_WMgQJa",
         "price",
         "payment_terms",
-        "product_benefits",
-        "separator_JACxVT",
-        "description",
         "variant_picker",
         "inventory",
         "quantity_selector",
@@ -142,6 +139,9 @@
         "care",
         "shipping_returns",
         "secure_checkout",
+        "product_benefits",
+        "separator_JACxVT",
+        "description",
         "complementary_products"
       ],
       "settings": {
