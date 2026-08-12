@@ -26,7 +26,7 @@
             "section_spacing": 0,
             "item_per_page": 24,
             "item_per_row": 3,
-            "show_vendor": false,
+            "show_vendor": true,
             "show_price_per_unit": false,
             "show_quantity_selector": false,
             "show_rating": "hidden",
