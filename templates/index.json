@@ -71,6 +71,7 @@
           "type": "category",
           "settings": {
             "collection": "aneis",
+            "image": "shopify://shop_images/alianca-lacos.webp",
             "title": "Anéis",
             "link": "/collections/aneis"
           }
@@ -79,6 +80,7 @@
           "type": "category",
           "settings": {
             "collection": "brincos",
+            "image": "shopify://shop_images/pf-ludy-e-tania-e-brinco-ariane-e-marta-dourado-3.webp",
             "title": "Brincos",
             "link": "/collections/brincos"
           }
