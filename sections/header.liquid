@@ -266,22 +266,8 @@
     order: 3;
   }
 
-  #shopify-section-{{ section.id }} .header__wishlist-link {
-    order: 4;
-  }
-
-  #shopify-section-{{ section.id }} .header__wishlist-link > a {
-    display: grid;
-    place-items: center;
-  }
-
-  #shopify-section-{{ section.id }} .header__wishlist-link svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
   #shopify-section-{{ section.id }} .header__cart-link {
-    order: 5;
+    order: 4;
   }
 
   #shopify-section-{{ section.id }} .header-support__trigger {
@@ -500,13 +486,7 @@
       {%- endif -%}
     {%- endcapture -%}
 
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__logo">
-        <a href="{{ routes.root_url }}">{{ logo_content }}</a>
-      </h1>
-    {% else %}
-      <a href="{{ routes.root_url }}" class="header__logo">{{ logo_content }}</a>
-    {% endif %}
+    <a href="{{ routes.root_url }}" class="header__logo">{{ logo_content }}</a>
 
     {%- comment -%}
       --------------------------------------------------------------------------------------------------------------------
@@ -755,28 +735,6 @@
             </details>
           </li>
         {%- endif -%}
-
-        <li class="header__wishlist-link">
-          <a href="{{ routes.root_url }}pages/lista-de-desejos" aria-label="Meus favoritos" data-no-instant>
-            <span class="sr-only">Meus favoritos</span>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="header__nav-icon"
-              width="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
-                stroke="currentColor"
-                stroke-width="{{ settings.icon_stroke_width }}"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </li>
 
         <li class="relative header__cart-link">
           <a
