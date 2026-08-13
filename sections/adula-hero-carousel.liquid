@@ -202,6 +202,49 @@
       animation: none;
     }
   }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro {
+    padding: clamp(28px, 4vw, 48px) max(20px, 5vw);
+    color: #4a3428;
+    background: #fffdfb;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro__inner {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro h1 {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(28px, 3.3vw, 46px);
+    line-height: 1.15;
+  }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro p {
+    max-width: 780px;
+    margin: 16px auto 0;
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.65;
+  }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .adula-home-seo-intro__links a {
+    color: inherit;
+    text-underline-offset: 4px;
+  }
 </style>
 
 <section
@@ -319,6 +362,23 @@
     start();
   })();
 </script>
+
+<section class="adula-home-seo-intro" aria-labelledby="adula-home-title-{{ section.id }}">
+  <div class="adula-home-seo-intro__inner">
+    <h1 id="adula-home-title-{{ section.id }}">Joias e semijoias com design francês</h1>
+    <p>
+      Descubra peças Adüla em Prata 925 legítima e semijoias banhadas a ouro 18K e ródio branco,
+      criadas em Belo Horizonte para contar histórias, celebrar vínculos e acompanhar você todos os dias.
+    </p>
+    <nav class="adula-home-seo-intro__links" aria-label="Principais categorias Adüla">
+      <a href="/collections/aneis">Anéis</a>
+      <a href="/collections/brincos">Brincos</a>
+      <a href="/collections/colares">Colares</a>
+      <a href="/collections/pulseiras">Pulseiras</a>
+      <a href="/collections/prata-925">Prata 925</a>
+    </nav>
+  </div>
+</section>
 
 {% schema %}
 {

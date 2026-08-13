@@ -13,8 +13,29 @@
       <script>window.location.replace({{ routes.root_url | append: '#trocas-devolucoes' | json }});</script>
     {%- endif -%}
 
+    {%- liquid
+      assign seo_description = page_description
+
+      if seo_description == blank
+        case request.page_type
+          when 'index'
+            assign seo_description = 'Joias em Prata 925 legítima e semijoias banhadas a ouro 18K e ródio branco, com design francês e criação em Belo Horizonte.'
+          when 'product'
+            assign seo_description = product.description | strip_html | strip_newlines | truncate: 155
+          when 'collection'
+            assign seo_description = collection.description | strip_html | strip_newlines | truncate: 155
+          when 'article'
+            assign seo_description = article.excerpt_or_content | strip_html | strip_newlines | truncate: 155
+          when 'page'
+            assign seo_description = page.content | strip_html | strip_newlines | truncate: 155
+        endcase
+      endif
+    -%}
+
     <title>
-      {% if page_title == blank -%}
+      {% if request.page_type == 'index' -%}
+        Joias e Semijoias com Design Francês | Adüla Brasil
+      {%- elsif page_title == blank -%}
         {{- shop.name -}}
       {%- else -%}
         {{- page_title -}}
@@ -23,8 +44,12 @@
       {%- endif %}
     </title>
 
-    {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
+    {%- if seo_description != blank -%}
+      <meta name="description" content="{{ seo_description | escape }}">
+    {%- endif -%}
+
+    {%- if request.page_type == 'search' or request.page_type == 'cart' or request.page_type == '404' or request.path contains '/account' -%}
+      <meta name="robots" content="noindex,follow">
     {%- endif -%}
 
     <link rel="canonical" href="{{ canonical_url }}">
@@ -45,7 +70,7 @@
       <link rel="preload" href="{{ settings.text_font | font_url }}" as="font" type="font/woff2" crossorigin>
     {%- endunless -%}
 
-    {%- render 'social-meta-tags' -%}
+    {%- render 'social-meta-tags', seo_description: seo_description -%}
     {%- render 'microdata-schema' -%}
     {%- render 'css-variables' -%}
     {%- render 'js-variables' -%}
@@ -131,7 +156,7 @@
       {%- assign whatsapp_message = 'Olá! Estou no site da Adüla e gostaria de ajuda com uma compra.' | url_encode -%}
       <a
         class="adula-whatsapp-float"
-        href="https://wa.me/5531999174942?text={{ whatsapp_message }}"
+        href="https://wa.me/5531933004900?text={{ whatsapp_message }}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale com uma Adülante pelo WhatsApp"
