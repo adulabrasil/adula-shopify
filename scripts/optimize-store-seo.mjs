@@ -102,7 +102,7 @@ function productSeoTitle(product) {
     [/verde/, 'Verde'], [/rox[ao]/, 'Roxo'], [/azul/, 'Azul'], [/rosa/, 'Rosa'],
     [/lavanda|lil[aá]s/, 'Lilás'], [/bege/, 'Bege'], [/marrom/, 'Marrom'], [/preto/, 'Preto'],
   ].find(([pattern]) => pattern.test(text))?.[1];
-  const suffix = qualifier ? ` | ${qualifier} | Adüla` : ' | Adüla';
+  const suffix = qualifier ? ` | ${qualifier} | Adüla Brasil` : ' | Adüla Brasil';
   return `${truncateKeepingEnding(product.title, 60 - suffix.length)}${suffix}`;
 }
 
