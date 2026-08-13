@@ -35,7 +35,7 @@
           "type": "text",
           "settings": {
             "title": "Atendimento",
-            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5531999174942\">(31) 99917-4942</a><br><a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a><br>Segunda a sexta, das 10h às 19h<br>Sábado, das 10h às 14h</p>",
+            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5531933004900\">(31) 93300-4900</a><br><a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a><br>Segunda a sexta, das 10h às 19h<br>Sábado, das 10h às 14h</p>",
             "enable_follow_on_shop": true
           }
         },
