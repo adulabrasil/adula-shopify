@@ -5,7 +5,7 @@
   @param {object} block - the block containing all the information about the menu to render
 {%- enddoc -%}
 
-<div class="mega-menu {% if block.settings.images_position == 'left' %}mega-menu--reverse{% endif %}" {{ block.shopify_attributes }}>
+<div class="mega-menu mega-menu--{{ block.settings.menu_item | handleize }} {% if block.settings.images_position == 'left' %}mega-menu--reverse{% endif %}" {{ block.shopify_attributes }}>
   {%- if link.levels > 0 -%}
     <ul class="mega-menu__linklist unstyled-list">
       {%- for sub_link in link.links -%}
