@@ -1,0 +1,50 @@
+name: Auditar fotos do catálogo
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - scripts/export-catalog-photo-audit.mjs
+      - .github/workflows/export-catalog-photo-audit.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: export-catalog-photo-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar analisador de imagens
+        run: npm install --no-save sharp@0.34.3
+
+      - name: Exportar catálogo e fotos relevantes
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          OUTPUT_DIR: catalog-photo-audit
+        run: node scripts/export-catalog-photo-audit.mjs
+
+      - name: Salvar auditoria
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-fotos-catalogo
+          path: catalog-photo-audit/
+          if-no-files-found: warn
+          retention-days: 30
