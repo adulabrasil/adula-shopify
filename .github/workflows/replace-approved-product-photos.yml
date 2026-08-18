@@ -1,4 +1,5 @@
 name: Substituir fotos de produtos aprovadas
+# Lote aprovado em 18/08/2026 — segunda execução após validar os handles da Shopify.
 
 on:
   workflow_dispatch:
