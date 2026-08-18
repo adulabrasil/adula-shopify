@@ -173,8 +173,6 @@
                     product: product,
                     variant: product.selected_or_first_available_variant
                   -%}
-
-                  {%- render 'first-purchase-coupon' -%}
                 {%- else -%}
                   {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
                 {%- endif -%}
@@ -415,6 +413,10 @@
             -%}
 
           {%- when 'buy_buttons' -%}
+            {%- if context == 'main_product' -%}
+              {%- render 'first-purchase-coupon' -%}
+            {%- endif -%}
+
             {%- render 'buy-buttons',
                 product: product,
                 form_id: product_form_id,
