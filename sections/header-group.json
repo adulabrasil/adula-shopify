@@ -51,8 +51,8 @@
         "custom_text_color": "#ffffff",
         "enable_sticky": false,
         "scrolling_speed": 0.4,
-        "desktop_font_size": 13,
-        "mobile_font_size": 12
+        "desktop_font_size": 11,
+        "mobile_font_size": 11
       }
     },
     "header": {
