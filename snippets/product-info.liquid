@@ -238,7 +238,9 @@
                   {%- endif -%}
 
                   {%- if normalized_option_value contains 'dourado' or normalized_option_value contains 'dourada' or normalized_option_value contains 'ouro 18' -%}
-                    {%- assign has_ouro_18k = true -%}
+                    {%- unless normalized_option_value contains 'pvd' -%}
+                      {%- assign has_ouro_18k = true -%}
+                    {%- endunless -%}
                   {%- endif -%}
 
                   {%- if normalized_option_value contains 'prateado' or normalized_option_value contains 'prateada' or normalized_option_value contains 'rodio branco' or normalized_option_value contains 'ródio branco' -%}
