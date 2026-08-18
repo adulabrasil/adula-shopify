@@ -1,5 +1,5 @@
 name: Substituir fotos de produtos aprovadas
-# Lote aprovado em 18/08/2026 — segunda execução após validar os handles da Shopify.
+# Lote aprovado em 18/08/2026 — execução com substituição controlada de mídia.
 
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Substituir o conteúdo das fotos sem criar novas mídias
+      - name: Substituir fotos e remover as mídias anteriores
         env:
           SHOPIFY_SHOP: adula-brasil.myshopify.com
           SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
