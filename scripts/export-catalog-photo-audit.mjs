@@ -112,8 +112,21 @@ do {
   after = data.products.pageInfo.hasNextPage ? data.products.pageInfo.endCursor : null;
 } while (after);
 
-const reportProducts = [];
-for (const product of products) {
+async function mapLimit(items, limit, mapper) {
+  const results = new Array(items.length);
+  let next = 0;
+  async function worker() {
+    while (next < items.length) {
+      const index = next;
+      next += 1;
+      results[index] = await mapper(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => worker()));
+  return results;
+}
+
+const reportProducts = await mapLimit(products, 8, async (product) => {
   const targetColor = hasTargetColor(product);
   const images = product.media.nodes.filter((media) => media.mediaContentType === 'IMAGE' && media.image?.url);
   const downloaded = [];
@@ -136,7 +149,7 @@ for (const product of products) {
       ...(index === 0 ? await analyzeWhiteBackground(buffer) : {}),
     });
   }
-  reportProducts.push({
+  return {
     id: product.id,
     handle: product.handle,
     title: product.title,
@@ -151,8 +164,8 @@ for (const product of products) {
       mediaIds: variant.media.nodes.map((media) => media.id),
     })),
     downloadedImages: downloaded,
-  });
-}
+  };
+});
 
 const summary = {
   generatedAt: new Date().toISOString(),
