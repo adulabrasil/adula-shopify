@@ -82,6 +82,42 @@
     }
   }
 
+  /* Adula: compact desktop header for medium-width screens. */
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    #shopify-section-{{ section.id }} .header {
+      padding-inline: 1.25rem;
+      column-gap: 0.65rem;
+    }
+
+    #shopify-section-{{ section.id }} .header__logo-image {
+      max-width: 8.875rem;
+      max-height: 3rem;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link {
+      font-size: 0.6875rem !important;
+      letter-spacing: 0.02em !important;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item + .header__primary-nav-item::before {
+      margin-inline: 0.2rem !important;
+    }
+
+    #shopify-section-{{ section.id }} .header__secondary-nav {
+      column-gap: 0.7rem;
+    }
+
+    #shopify-section-{{ section.id }} .header__nav-icon {
+      width: 1.35rem;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="sale" i],
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="oferta" i],
+    #shopify-section-{{ section.id }} .header__primary-nav-link[data-title*="promo" i] {
+      padding: 0.4rem 0.55rem;
+    }
+  }
+
   @media screen and (min-width: 1000px) {
     #shopify-section-{{ section.id }} .header__primary-nav-item {
       position: relative;
