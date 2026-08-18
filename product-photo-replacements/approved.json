@@ -1,0 +1,22 @@
+{
+  "replacements": [
+    {
+      "handle": "pulseira-lets-canutilho-com-bolinha-em-prata-925",
+      "repositoryPath": "product-photo-replacements/pulseira-lets-dourada.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/adulabrasil/adula-shopify/Adula-Shopify/product-photo-replacements/pulseira-lets-dourada.jpg",
+      "sha256": "5e983957ffc39adf65b7060363d45797e7cdf132010ec43c80cd78cd86dabee6"
+    },
+    {
+      "handle": "pingente-patinha-pet-prata-925",
+      "repositoryPath": "product-photo-replacements/pingente-patinha-prata-925.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/adulabrasil/adula-shopify/Adula-Shopify/product-photo-replacements/pingente-patinha-prata-925.jpg",
+      "sha256": "36234691f07bed05d45f7b4bf67a1ee3c48ce0a7eb3e358ee847e710345d1756"
+    },
+    {
+      "handle": "brinco-earline-aika-boho-chic-pedra-natural-granada-vermelha-dourado",
+      "repositoryPath": "product-photo-replacements/brinco-aika-granada.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/adulabrasil/adula-shopify/Adula-Shopify/product-photo-replacements/brinco-aika-granada.jpg",
+      "sha256": "ccbc823e6a67453c658f31c557506bd97c904fa9fc84592439c74a38bc96077c"
+    }
+  ]
+}
