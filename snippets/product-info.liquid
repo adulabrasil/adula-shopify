@@ -216,10 +216,53 @@
             <hr>
 
           {%- when 'description' -%}
+            {%- assign has_prata_925 = false -%}
+            {%- assign has_ouro_18k = false -%}
+            {%- assign has_rodio_branco = false -%}
+
             {%- if product == blank -%}
               {%- assign product_description = 'general.on_boarding.product_description' | t -%}
             {%- else -%}
               {%- assign product_description = product.description -%}
+
+              {%- comment -%}
+                Identify every material offered by the product. Imported products store this information
+                mainly in their option values, so products with two or three finishes show every material.
+              {%- endcomment -%}
+              {%- for product_option in product.options_with_values -%}
+                {%- for option_value in product_option.values -%}
+                  {%- assign normalized_option_value = option_value | downcase -%}
+
+                  {%- if normalized_option_value contains 'prata 925' -%}
+                    {%- assign has_prata_925 = true -%}
+                  {%- endif -%}
+
+                  {%- if normalized_option_value contains 'dourado' or normalized_option_value contains 'dourada' or normalized_option_value contains 'ouro 18' -%}
+                    {%- assign has_ouro_18k = true -%}
+                  {%- endif -%}
+
+                  {%- if normalized_option_value contains 'prateado' or normalized_option_value contains 'prateada' or normalized_option_value contains 'rodio branco' or normalized_option_value contains 'ródio branco' -%}
+                    {%- assign has_rodio_branco = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endfor -%}
+
+              {%- comment -%}Some imported products have separate pages per finish instead of a material option.{%- endcomment -%}
+              {%- unless has_prata_925 or has_ouro_18k or has_rodio_branco -%}
+                {%- assign normalized_product_title = product.title | downcase -%}
+
+                {%- if normalized_product_title contains 'prata 925' or normalized_product_title contains 'prata-925' -%}
+                  {%- assign has_prata_925 = true -%}
+                {%- elsif normalized_product_title contains 'prata' -%}
+                  {%- unless normalized_product_title contains 'prata 700' -%}
+                    {%- assign has_prata_925 = true -%}
+                  {%- endunless -%}
+                {%- elsif normalized_product_title contains 'dourado' or normalized_product_title contains 'dourada' -%}
+                  {%- assign has_ouro_18k = true -%}
+                {%- elsif normalized_product_title contains 'prateado' or normalized_product_title contains 'prateada' -%}
+                  {%- assign has_rodio_branco = true -%}
+                {%- endif -%}
+              {%- endunless -%}
             {%- endif -%}
 
             {%- comment -%}Remove empty paragraphs left by the Bagy import so they do not create large vertical gaps.{%- endcomment -%}
@@ -232,9 +275,42 @@
               | replace: '<p><br /><br /></p>', ''
             -%}
 
-            {%- if product_description != blank -%}
+            {%- assign material_count = 0 -%}
+            {%- if has_prata_925 -%}
+              {%- assign material_count = material_count | plus: 1 -%}
+            {%- endif -%}
+            {%- if has_ouro_18k -%}
+              {%- assign material_count = material_count | plus: 1 -%}
+            {%- endif -%}
+            {%- if has_rodio_branco -%}
+              {%- assign material_count = material_count | plus: 1 -%}
+            {%- endif -%}
+
+            {%- capture product_materials -%}
+              {%- assign material_separator = '' -%}
+              {%- if has_prata_925 -%}
+                {{- material_separator -}}Prata 925 Legítima
+                {%- assign material_separator = '; ' -%}
+              {%- endif -%}
+              {%- if has_ouro_18k -%}
+                {{- material_separator -}}Latão banhado a ouro 18K
+                {%- assign material_separator = '; ' -%}
+              {%- endif -%}
+              {%- if has_rodio_branco -%}
+                {{- material_separator -}}Latão banhado a ródio branco
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- if product_description != blank or product_materials != blank -%}
+              {%- capture complete_product_description -%}
+                {%- if product_materials != blank -%}
+                  <p><strong>{% if material_count > 1 %}Materiais disponíveis:{% else %}Material:{% endif %}</strong> {{ product_materials | strip }}.</p>
+                {%- endif -%}
+                {{- product_description -}}
+              {%- endcapture -%}
+
               {%- assign accordion_title = 'product.general.description' | t -%}
-              {%- render 'accordion', title: accordion_title, content: product_description, prose_content: true, class: 'product-description', block: block -%}
+              {%- render 'accordion', title: accordion_title, content: complete_product_description, prose_content: true, class: 'product-description', block: block -%}
             {%- endif -%}
 
           {%- when 'variant_picker' -%}
