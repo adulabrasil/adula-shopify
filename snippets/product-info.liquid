@@ -217,6 +217,7 @@
 
           {%- when 'description' -%}
             {%- assign has_prata_925 = false -%}
+            {%- assign has_prata_700 = false -%}
             {%- assign has_ouro_18k = false -%}
             {%- assign has_rodio_branco = false -%}
 
@@ -249,16 +250,22 @@
                 {%- endfor -%}
               {%- endfor -%}
 
+              {%- comment -%}Confirmed legacy products without a material option: all ten use brass plated with 18K gold.{%- endcomment -%}
+              {%- case product.handle -%}
+                {%- when 'brinco-yara', 'brinco-perle', 'brinco-baby-perle', 'argola-laisa', 'anel-rosa-dos-ventos', 'anel-marseille', 'anel-explora', 'anel-essencia', 'anel-celeste', 'anel-carmen' -%}
+                  {%- assign has_ouro_18k = true -%}
+              {%- endcase -%}
+
               {%- comment -%}Some imported products have separate pages per finish instead of a material option.{%- endcomment -%}
-              {%- unless has_prata_925 or has_ouro_18k or has_rodio_branco -%}
+              {%- unless has_prata_925 or has_prata_700 or has_ouro_18k or has_rodio_branco -%}
                 {%- assign normalized_product_title = product.title | downcase -%}
 
-                {%- if normalized_product_title contains 'prata 925' or normalized_product_title contains 'prata-925' -%}
+                {%- if normalized_product_title contains 'prata 700' or normalized_product_title contains 'prata-700' -%}
+                  {%- assign has_prata_700 = true -%}
+                {%- elsif normalized_product_title contains 'prata 925' or normalized_product_title contains 'prata-925' -%}
                   {%- assign has_prata_925 = true -%}
                 {%- elsif normalized_product_title contains 'prata' -%}
-                  {%- unless normalized_product_title contains 'prata 700' -%}
-                    {%- assign has_prata_925 = true -%}
-                  {%- endunless -%}
+                  {%- assign has_prata_925 = true -%}
                 {%- elsif normalized_product_title contains 'dourado' or normalized_product_title contains 'dourada' -%}
                   {%- assign has_ouro_18k = true -%}
                 {%- elsif normalized_product_title contains 'prateado' or normalized_product_title contains 'prateada' -%}
@@ -281,6 +288,9 @@
             {%- if has_prata_925 -%}
               {%- assign material_count = material_count | plus: 1 -%}
             {%- endif -%}
+            {%- if has_prata_700 -%}
+              {%- assign material_count = material_count | plus: 1 -%}
+            {%- endif -%}
             {%- if has_ouro_18k -%}
               {%- assign material_count = material_count | plus: 1 -%}
             {%- endif -%}
@@ -292,6 +302,10 @@
               {%- assign material_separator = '' -%}
               {%- if has_prata_925 -%}
                 {{- material_separator -}}Prata 925 Legítima
+                {%- assign material_separator = '; ' -%}
+              {%- endif -%}
+              {%- if has_prata_700 -%}
+                {{- material_separator -}}Prata 700
                 {%- assign material_separator = '; ' -%}
               {%- endif -%}
               {%- if has_ouro_18k -%}
