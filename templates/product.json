@@ -67,9 +67,28 @@
             "payment_button_text_color": ""
           }
         },
+        "secure_checkout": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "Pagamento seguro",
+            "link": "",
+            "icon": "picto-lock",
+            "icon_width": 16,
+            "background": "#fffdfb",
+            "text_color": "#2d2926",
+            "border_color": ""
+          }
+        },
         "product_benefits": {
           "type": "product_benefits",
           "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
         },
         "care": {
           "type": "accordion",
@@ -93,29 +112,6 @@
             "page": ""
           }
         },
-        "secure_checkout": {
-          "type": "feature_with_icon",
-          "settings": {
-            "text": "Pagamento seguro",
-            "link": "",
-            "icon": "picto-lock",
-            "icon_width": 16,
-            "background": "#fffdfb",
-            "text_color": "#2d2926",
-            "border_color": ""
-          }
-        },
-        "separator_JACxVT": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -136,12 +132,11 @@
         "inventory",
         "quantity_selector",
         "buy_buttons",
+        "secure_checkout",
         "product_benefits",
+        "description",
         "care",
         "shipping_returns",
-        "secure_checkout",
-        "separator_JACxVT",
-        "description",
         "complementary_products"
       ],
       "settings": {
