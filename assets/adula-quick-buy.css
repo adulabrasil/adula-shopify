@@ -1,0 +1,58 @@
+.product-card__figure .adula-product-card__quick-buy {
+  position: absolute;
+  z-index: 3;
+  inset-inline-start: 0;
+  inset-inline-end: 52px;
+  bottom: 0;
+  display: flex;
+  width: auto;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 0;
+  color: #532e1d;
+  background: rgb(241 236 231 / 96%);
+  box-shadow: none;
+  font-family: var(--text-font-family);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  transform: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.product-card__figure .adula-product-card__quick-buy:hover {
+  color: #fff;
+  background: #9a7648;
+}
+
+.product-card__figure .adula-product-card__quick-buy:focus-visible {
+  outline: 2px solid #532e1d;
+  outline-offset: -3px;
+}
+
+.product-card__figure .adula-product-card__quick-buy:disabled {
+  color: #8e8178;
+  background: rgb(235 231 227 / 94%);
+  cursor: not-allowed;
+}
+
+.product-card__figure .adula-product-card__quick-buy svg {
+  display: none;
+}
+
+@media screen and (max-width: 699px) {
+  .product-card__figure .adula-product-card__quick-buy {
+    inset-inline-end: 44px;
+    min-height: 40px;
+    padding-inline: 8px;
+    font-size: 9px;
+    letter-spacing: 0.035em;
+  }
+}
