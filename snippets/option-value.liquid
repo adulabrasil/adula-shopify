@@ -138,7 +138,7 @@
         endif
       -%}
 
-      data-variant-id="{{ variant.id }}" {% if variant_media %}data-variant-media="{{ variant_media | json | escape }}" {% if secondary_variant_media %}data-variant-secondary-media="{{ secondary_variant_media | json | escape }}"{% endif %}{% endif %}
+      data-variant-id="{{ variant.id }}" data-variant-available="{{ variant.available }}" {% if variant_media %}data-variant-media="{{ variant_media | json | escape }}" {% if secondary_variant_media %}data-variant-secondary-media="{{ secondary_variant_media | json | escape }}"{% endif %}{% endif %}
     {%- endif -%}
   {%- endcapture -%}
 
