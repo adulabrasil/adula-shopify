@@ -10,6 +10,7 @@ on:
       - snippets/option-value.liquid
       - snippets/product-card.liquid
       - layout/theme.liquid
+      - sections/main-product.liquid
       - scripts/deploy-quick-buy-theme.mjs
       - .github/workflows/deploy-quick-buy-theme.yml
   workflow_dispatch:
