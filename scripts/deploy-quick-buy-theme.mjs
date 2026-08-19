@@ -10,6 +10,7 @@ const filenames = [
   'snippets/option-value.liquid',
   'snippets/product-card.liquid',
   'layout/theme.liquid',
+  'sections/main-product.liquid',
 ];
 
 if (!shop || !clientId || !clientSecret) {
