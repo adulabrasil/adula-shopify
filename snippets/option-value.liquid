@@ -130,7 +130,11 @@
         endif
 
         if variant_media
-          assign secondary_variant_media = variant.product.media[variant_media.position] | default: variant.product.media[1]
+          # Prefer an explicit model photo configured on the variant. When it is
+          # absent, the media immediately after the white-background variant
+          # image is used. There is deliberately no product-wide fallback: it
+          # could show a gold model photo after the customer selects silver.
+          assign secondary_variant_media = variant.metafields.custom.card_hover_image.value | default: variant.product.media[variant_media.position]
         endif
       -%}
 
