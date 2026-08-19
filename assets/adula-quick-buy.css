@@ -35,9 +35,15 @@
   display: block !important;
   width: 52px;
   height: 44px;
-  --ooo-wl-product-card-button-position-block: 4px !important;
-  --ooo-wl-product-card-button-position-inline: 8px !important;
   background: rgb(241 236 231 / 96%);
+}
+
+.adula-product-card__figure--with-actions > ooo-wl-access-button > ooo-wl-product-card-button {
+  position: relative !important;
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  transform: translate(8px, -12px);
 }
 
 .adula-product-card__figure--with-actions .adula-product-card__quick-buy {
@@ -96,8 +102,10 @@
   .adula-product-card__figure--with-actions > ooo-wl-access-button {
     width: 44px;
     height: 40px;
-    --ooo-wl-product-card-button-position-block: 2px !important;
-    --ooo-wl-product-card-button-position-inline: 4px !important;
+  }
+
+  .adula-product-card__figure--with-actions > ooo-wl-access-button > ooo-wl-product-card-button {
+    transform: translate(12px, -14px);
   }
 
   .adula-product-card__figure--with-actions .adula-product-card__quick-buy {
