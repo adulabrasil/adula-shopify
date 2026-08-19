@@ -180,6 +180,32 @@ const updateCardMedia = async (card, control, variant) => {
   }
 };
 
+const updateQuickBuySelection = (card, control, variant) => {
+  const variantId = control.getAttribute('data-variant-id');
+  const available = variant.available !== false && control.dataset.variantAvailable !== 'false';
+  const directVariantInput = card.querySelector('product-form input[name="id"]');
+  const quickBuyModal = card.querySelector('quick-buy-modal');
+  const quickBuyButton = card.querySelector('[data-adula-quick-buy]');
+  const quickBuyLabel = quickBuyButton?.querySelector('[data-adula-quick-buy-label]');
+
+  if (directVariantInput) {
+    directVariantInput.value = variantId;
+  }
+
+  if (quickBuyModal) {
+    quickBuyModal.setAttribute('handle', `${card.getAttribute('handle')}?variant=${variantId}`);
+  }
+
+  if (quickBuyButton) {
+    quickBuyButton.disabled = !available;
+    quickBuyButton.setAttribute('aria-disabled', String(!available));
+  }
+
+  if (quickBuyLabel) {
+    quickBuyLabel.textContent = available ? 'Adicionar ao carrinho' : 'Esgotado';
+  }
+};
+
 const synchronizeCard = async (card, control) => {
   const variantId = control.getAttribute('data-variant-id');
 
@@ -196,6 +222,7 @@ const synchronizeCard = async (card, control) => {
       return;
     }
 
+    updateQuickBuySelection(card, control, variant);
     updateCardPrice(card, control, variant);
     await updateCardMedia(card, control, variant);
   } catch (error) {
