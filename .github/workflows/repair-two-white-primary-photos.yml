@@ -1,0 +1,47 @@
+name: Corrigir duas fotos principais com fundo branco
+
+on:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - scripts/repair-two-white-primary-photos.mjs
+      - .github/workflows/repair-two-white-primary-photos.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: replace-white-primary-photos
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Corrigir somente as duas fotos pendentes
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          OUTPUT_DIR: repair-two-white-primary-photos-report
+        run: node scripts/repair-two-white-primary-photos.mjs
+
+      - name: Salvar relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-correcao-duas-fotos-principais
+          path: repair-two-white-primary-photos-report/
+          if-no-files-found: warn
+          retention-days: 30
