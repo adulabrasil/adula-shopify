@@ -76,8 +76,10 @@
             assign main_media_loading_strategy = 'lazy'
           endif
 
-          # If the "custom.card_image" metafield exists for this product we use this one, otherwise we default as the featured image
-          assign featured_media = product.metafields.custom.card_image.value | default: product.featured_media
+          # The card must start on the image associated with the selected finish.
+          # The product metafield remains a fallback for products without variant media.
+          assign selected_card_variant = product.selected_or_first_available_variant
+          assign featured_media = selected_card_variant.featured_media | default: product.metafields.custom.card_image.value | default: product.featured_media
         -%}
 
         {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
@@ -94,7 +96,14 @@
 
         {%- liquid
           if show_secondary_image and product.media.size > 1
-            assign next_media = product.metafields.custom.card_hover_image.value | default: product.media[product.featured_media.position] | default: product.media[1]
+            # Prefer the model photo configured for the selected variant. By
+            # convention, the next product media is the fallback model photo.
+            assign next_media = selected_card_variant.metafields.custom.card_hover_image.value | default: product.media[featured_media.position]
+
+            # Product-wide hover is safe only when there is a single variant.
+            if next_media == blank and product.variants.size == 1
+              assign next_media = product.metafields.custom.card_hover_image.value | default: product.media[1]
+            endif
 
             if next_media != blank
               echo next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', aria-hidden: 'true'
@@ -172,7 +181,9 @@
             {%- endif -%}
 
             {%- if show_prices -%}
-              {%- render 'price-list', product: product, context: 'card' -%}
+              <div data-product-card-price aria-live="polite">
+                {%- render 'price-list', variant: product.selected_or_first_available_variant, context: 'card' -%}
+              </div>
             {%- endif -%}
           </div>
         {%- endif -%}
@@ -223,6 +234,18 @@
                 endfor
               -%}
             </fieldset>
+
+            <div hidden>
+              {%- for option_value in matched_product_option.values -%}
+                {%- assign price_variant = option_value.variant -%}
+
+                {%- if price_variant != blank -%}
+                  <template data-product-card-price-template="{{ price_variant.id }}">
+                    {%- render 'price-list', variant: price_variant, context: 'card' -%}
+                  </template>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
         {%- endcase -%}
       {%- endif -%}
     {%- endif -%}
