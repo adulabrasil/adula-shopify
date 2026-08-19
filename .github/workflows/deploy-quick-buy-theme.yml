@@ -5,6 +5,11 @@ on:
     branches:
       - Adula-Shopify
     paths:
+      - assets/adula-product-card-variants-v2.js
+      - assets/adula-quick-buy.css
+      - snippets/option-value.liquid
+      - snippets/product-card.liquid
+      - layout/theme.liquid
       - scripts/deploy-quick-buy-theme.mjs
       - .github/workflows/deploy-quick-buy-theme.yml
   workflow_dispatch:
