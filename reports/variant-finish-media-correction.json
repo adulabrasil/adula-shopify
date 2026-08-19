@@ -1,0 +1,1144 @@
+{
+  "generatedAt": "2026-08-19T16:04:07.832Z",
+  "sourceAuditGeneratedAt": "2026-08-19T15:57:59.034Z",
+  "mode": "safe-apply",
+  "constraints": {
+    "minimumScore": 60,
+    "squareImagesOnly": true,
+    "maximumPosition": 10,
+    "whiteBackgroundRequired": true,
+    "matchingVisualFinishRequired": true,
+    "deletesMedia": false,
+    "uploadsMedia": false,
+    "reordersMedia": false
+  },
+  "summary": {
+    "auditedProducts": 384,
+    "updatedProducts": 140,
+    "updatedVariants": 681,
+    "deferredProducts": 216,
+    "alreadyCorrect": 28
+  },
+  "products": [
+    {
+      "productId": "gid://shopify/Product/9186933604515",
+      "handle": "anel-amelia",
+      "title": "Anel Amelia",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659755298979",
+      "silverMediaId": "gid://shopify/MediaImage/41330988318883"
+    },
+    {
+      "productId": "gid://shopify/Product/9186934522019",
+      "handle": "anel-carol",
+      "title": "Anel Carol",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659761950883",
+      "silverMediaId": "gid://shopify/MediaImage/41330986483875"
+    },
+    {
+      "productId": "gid://shopify/Product/9186934948003",
+      "handle": "anel-cercle",
+      "title": "Anel Cercle",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659764211875",
+      "silverMediaId": "gid://shopify/MediaImage/41330985992355"
+    },
+    {
+      "productId": "gid://shopify/Product/9186935701667",
+      "handle": "anel-clarisse",
+      "title": "Anel Clarisse",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659766505635",
+      "silverMediaId": "gid://shopify/MediaImage/41330985271459"
+    },
+    {
+      "productId": "gid://shopify/Product/9186937471139",
+      "handle": "anel-dafne",
+      "title": "Anel Dafne",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659770831011",
+      "silverMediaId": "gid://shopify/MediaImage/41330982813859"
+    },
+    {
+      "productId": "gid://shopify/Product/9186937864355",
+      "handle": "anel-diana",
+      "title": "Anel Diana",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659771977891",
+      "silverMediaId": "gid://shopify/MediaImage/41330982420643"
+    },
+    {
+      "productId": "gid://shopify/Product/9186938585251",
+      "handle": "anel-emma",
+      "title": "Anel Emma",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659776303267",
+      "silverMediaId": "gid://shopify/MediaImage/41330980946083"
+    },
+    {
+      "productId": "gid://shopify/Product/9186940256419",
+      "handle": "anel-fabi",
+      "title": "Anel Fabi",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659784167587",
+      "silverMediaId": "gid://shopify/MediaImage/41330978652323"
+    },
+    {
+      "productId": "gid://shopify/Product/9186940780707",
+      "handle": "anel-fran-com-zirconias-ovais",
+      "title": "Anel Fran com Zircônias Ovais",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330977374371",
+      "silverMediaId": "gid://shopify/MediaImage/41659786264739"
+    },
+    {
+      "productId": "gid://shopify/Product/9186941141155",
+      "handle": "anel-grazi",
+      "title": "Anel Grazi",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659787313315",
+      "silverMediaId": "gid://shopify/MediaImage/41330977112227"
+    },
+    {
+      "productId": "gid://shopify/Product/9186958311587",
+      "handle": "anel-hanna",
+      "title": "Anel Hanna",
+      "variantsUpdated": 16,
+      "goldMediaId": "gid://shopify/MediaImage/41659788329123",
+      "silverMediaId": "gid://shopify/MediaImage/41330945786019"
+    },
+    {
+      "productId": "gid://shopify/Product/9186941501603",
+      "handle": "anel-heloisa",
+      "title": "Anel Heloisa",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659789639843",
+      "silverMediaId": "gid://shopify/MediaImage/41330976817315"
+    },
+    {
+      "productId": "gid://shopify/Product/9186942451875",
+      "handle": "anel-kelly-com-zirconias",
+      "title": "Anel Kelly com Zircônias",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330975244451",
+      "silverMediaId": "gid://shopify/MediaImage/41659794129059"
+    },
+    {
+      "productId": "gid://shopify/Product/9186942714019",
+      "handle": "anel-kiara",
+      "title": "Anel Kiara",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659794981027",
+      "silverMediaId": "gid://shopify/MediaImage/41330974982307"
+    },
+    {
+      "productId": "gid://shopify/Product/9186943041699",
+      "handle": "anel-lais",
+      "title": "Anel Lais",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659795570851",
+      "silverMediaId": "gid://shopify/MediaImage/41330974458019"
+    },
+    {
+      "productId": "gid://shopify/Product/9186944319651",
+      "handle": "anel-maite",
+      "title": "Anel Maitê",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659801108643",
+      "silverMediaId": "gid://shopify/MediaImage/41330972688547"
+    },
+    {
+      "productId": "gid://shopify/Product/9186944352419",
+      "handle": "anel-mara-com-zirconia-gota",
+      "title": "Anel Mara com Zircônia Gota",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330972557475",
+      "silverMediaId": "gid://shopify/MediaImage/41659801600163"
+    },
+    {
+      "productId": "gid://shopify/Product/9186944712867",
+      "handle": "anel-mariana",
+      "title": "Anel Mariana",
+      "variantsUpdated": 16,
+      "goldMediaId": "gid://shopify/MediaImage/41659802058915",
+      "silverMediaId": "gid://shopify/MediaImage/41330971639971"
+    },
+    {
+      "productId": "gid://shopify/Product/9186946449571",
+      "handle": "anel-minimal",
+      "title": "Anel Minimal",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659811627171",
+      "silverMediaId": "gid://shopify/MediaImage/41330968985763"
+    },
+    {
+      "productId": "gid://shopify/Product/9186946515107",
+      "handle": "anel-miriam-com-zirconias",
+      "title": "Anel Miriam com Zircônias",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330968789155",
+      "silverMediaId": "gid://shopify/MediaImage/41659812741283"
+    },
+    {
+      "productId": "gid://shopify/Product/9186946711715",
+      "handle": "anel-monaco",
+      "title": "Anel Mônaco",
+      "variantsUpdated": 12,
+      "goldMediaId": "gid://shopify/MediaImage/41659813953699",
+      "silverMediaId": "gid://shopify/MediaImage/41330968297635"
+    },
+    {
+      "productId": "gid://shopify/Product/9186947956899",
+      "handle": "anel-no",
+      "title": "Anel Nó",
+      "variantsUpdated": 16,
+      "goldMediaId": "gid://shopify/MediaImage/41659819425955",
+      "silverMediaId": "gid://shopify/MediaImage/41330966888611"
+    },
+    {
+      "productId": "gid://shopify/Product/9186948546723",
+      "handle": "anel-ondinha",
+      "title": "Anel Ondinha",
+      "variantsUpdated": 12,
+      "goldMediaId": "gid://shopify/MediaImage/41659821260963",
+      "silverMediaId": "gid://shopify/MediaImage/41330965905571"
+    },
+    {
+      "productId": "gid://shopify/Product/9186949398691",
+      "handle": "anel-quadrado-com-zirconia",
+      "title": "Anel Quadrado com Zirconia",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659829747875",
+      "silverMediaId": "gid://shopify/MediaImage/41330963382435"
+    },
+    {
+      "productId": "gid://shopify/Product/9186949660835",
+      "handle": "anel-raissa",
+      "title": "Anel Raissa",
+      "variantsUpdated": 12,
+      "goldMediaId": "gid://shopify/MediaImage/41659830960291",
+      "silverMediaId": "gid://shopify/MediaImage/41330963284131"
+    },
+    {
+      "productId": "gid://shopify/Product/9186949890211",
+      "handle": "anel-rayanne",
+      "title": "Anel Rayanne",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659832107171",
+      "silverMediaId": "gid://shopify/MediaImage/41330962923683"
+    },
+    {
+      "productId": "gid://shopify/Product/9186950447267",
+      "handle": "anel-rubia-com-zirconias",
+      "title": "Anel Rubia com Zircônias",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330961842339",
+      "silverMediaId": "gid://shopify/MediaImage/41659835121827"
+    },
+    {
+      "productId": "gid://shopify/Product/9186950643875",
+      "handle": "anel-serena",
+      "title": "Anel Serena",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659836137635",
+      "silverMediaId": "gid://shopify/MediaImage/41330961547427"
+    },
+    {
+      "productId": "gid://shopify/Product/9186950873251",
+      "handle": "anel-shine",
+      "title": "Anel Shine",
+      "variantsUpdated": 13,
+      "goldMediaId": "gid://shopify/MediaImage/41659837186211",
+      "silverMediaId": "gid://shopify/MediaImage/41330961088675"
+    },
+    {
+      "productId": "gid://shopify/Product/9186954477731",
+      "handle": "anel-special",
+      "title": "Anel Special",
+      "variantsUpdated": 12,
+      "goldMediaId": "gid://shopify/MediaImage/41659854454947",
+      "silverMediaId": "gid://shopify/MediaImage/41330949685411"
+    },
+    {
+      "productId": "gid://shopify/Product/9186954543267",
+      "handle": "anel-suzane-com-zirconias",
+      "title": "Anel Suzane com Zirconias",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41330949161123",
+      "silverMediaId": "gid://shopify/MediaImage/41659855667363"
+    },
+    {
+      "productId": "gid://shopify/Product/9186955264163",
+      "handle": "anel-unic",
+      "title": "Anel Unic",
+      "variantsUpdated": 14,
+      "goldMediaId": "gid://shopify/MediaImage/41659859959971",
+      "silverMediaId": "gid://shopify/MediaImage/41330947981475"
+    },
+    {
+      "productId": "gid://shopify/Product/9187142795427",
+      "handle": "argola-estrela",
+      "title": "Argola Estrela",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659892203683",
+      "silverMediaId": "gid://shopify/MediaImage/41330936414371"
+    },
+    {
+      "productId": "gid://shopify/Product/9187142008995",
+      "handle": "argola-fernanda",
+      "title": "Argola Fernanda",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659894595747",
+      "silverMediaId": "gid://shopify/MediaImage/41330940870819"
+    },
+    {
+      "productId": "gid://shopify/Product/9187144106147",
+      "handle": "argola-lua",
+      "title": "Argola Lua",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659914780835",
+      "silverMediaId": "gid://shopify/MediaImage/41330933563555"
+    },
+    {
+      "productId": "gid://shopify/Product/9187144269987",
+      "handle": "argola-monique-com-zirconias",
+      "title": "Argola Monique com Zircônias",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659916746915",
+      "silverMediaId": "gid://shopify/MediaImage/41330933301411"
+    },
+    {
+      "productId": "gid://shopify/Product/9187144630435",
+      "handle": "argola-olho-grego",
+      "title": "Argola Olho Grego",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659922841763",
+      "silverMediaId": "gid://shopify/MediaImage/41330932482211"
+    },
+    {
+      "productId": "gid://shopify/Product/9187144761507",
+      "handle": "argola-ponto-de-luz",
+      "title": "Argola ponto de Luz",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659925528739",
+      "silverMediaId": "gid://shopify/MediaImage/41330931531939"
+    },
+    {
+      "productId": "gid://shopify/Product/9187146399907",
+      "handle": "bracelete-flavia",
+      "title": "Bracelete Flávia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659953643683",
+      "silverMediaId": "gid://shopify/MediaImage/41330926518435"
+    },
+    {
+      "productId": "gid://shopify/Product/9187146793123",
+      "handle": "bracelete-lea",
+      "title": "Bracelete Lea",
+      "variantsUpdated": 8,
+      "goldMediaId": "gid://shopify/MediaImage/41659957903523",
+      "silverMediaId": "gid://shopify/MediaImage/41330922061987"
+    },
+    {
+      "productId": "gid://shopify/Product/9187146956963",
+      "handle": "bracelete-liso",
+      "title": "Bracelete Liso",
+      "variantsUpdated": 4,
+      "goldMediaId": "gid://shopify/MediaImage/41659958919331",
+      "silverMediaId": "gid://shopify/MediaImage/41330921111715"
+    },
+    {
+      "productId": "gid://shopify/Product/9187147055267",
+      "handle": "bracelete-michele",
+      "title": "Bracelete Michele",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659960918179",
+      "silverMediaId": "gid://shopify/MediaImage/41330920423587"
+    },
+    {
+      "productId": "gid://shopify/Product/9187147514019",
+      "handle": "bracelete-vivi",
+      "title": "Bracelete Vivi",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659969667235",
+      "silverMediaId": "gid://shopify/MediaImage/41330917703843"
+    },
+    {
+      "productId": "gid://shopify/Product/9187147645091",
+      "handle": "brinco-adore",
+      "title": "Brinco Adore",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659971141795",
+      "silverMediaId": "gid://shopify/MediaImage/41330917277859"
+    },
+    {
+      "productId": "gid://shopify/Product/9187148431523",
+      "handle": "brinco-areia",
+      "title": "Brinco Areia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41659983069347",
+      "silverMediaId": "gid://shopify/MediaImage/41330915311779"
+    },
+    {
+      "productId": "gid://shopify/Product/9187150397603",
+      "handle": "brinco-clara",
+      "title": "Brinco Clara",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660004040867",
+      "silverMediaId": "gid://shopify/MediaImage/41330911510691"
+    },
+    {
+      "productId": "gid://shopify/Product/9187150495907",
+      "handle": "brinco-clau",
+      "title": "Brinco Clau",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660004499619",
+      "silverMediaId": "gid://shopify/MediaImage/41330911183011"
+    },
+    {
+      "productId": "gid://shopify/Product/9187151773859",
+      "handle": "brinco-de-patinha",
+      "title": "Brinco de Patinha",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330906333347",
+      "silverMediaId": "gid://shopify/MediaImage/41660019703971"
+    },
+    {
+      "productId": "gid://shopify/Product/9187151872163",
+      "handle": "brinco-de-raio",
+      "title": "Brinco de Raio",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660020555939",
+      "silverMediaId": "gid://shopify/MediaImage/41330906235043"
+    },
+    {
+      "productId": "gid://shopify/Product/9187152625827",
+      "handle": "brinco-earcuff-beatriz",
+      "title": "Brinco Earcuff Beatriz",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660029960355",
+      "silverMediaId": "gid://shopify/MediaImage/41330904400035"
+    },
+    {
+      "productId": "gid://shopify/Product/9187152822435",
+      "handle": "brinco-earcuff-cristina",
+      "title": "Brinco Earcuff Cristina",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660031533219",
+      "silverMediaId": "gid://shopify/MediaImage/41330903875747"
+    },
+    {
+      "productId": "gid://shopify/Product/9187154460835",
+      "handle": "brinco-folie",
+      "title": "Brinco Folie",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660056207523",
+      "silverMediaId": "gid://shopify/MediaImage/41330896240803"
+    },
+    {
+      "productId": "gid://shopify/Product/9187154526371",
+      "handle": "brinco-fra",
+      "title": "Brinco Fra",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660056764579",
+      "silverMediaId": "gid://shopify/MediaImage/41330895749283"
+    },
+    {
+      "productId": "gid://shopify/Product/9187154690211",
+      "handle": "brinco-fra-de-zirconia-gg",
+      "title": "Brinco Fra de Zircônia GG",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330895192227",
+      "silverMediaId": "gid://shopify/MediaImage/41660059287715"
+    },
+    {
+      "productId": "gid://shopify/Product/9187155378339",
+      "handle": "brinco-gota-vazada",
+      "title": "Brinco Gota vazada",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660066103459",
+      "silverMediaId": "gid://shopify/MediaImage/41330889687203"
+    },
+    {
+      "productId": "gid://shopify/Product/9187155476643",
+      "handle": "brinco-heart",
+      "title": "Brinco Heart",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330889392291",
+      "silverMediaId": "gid://shopify/MediaImage/41660066988195"
+    },
+    {
+      "productId": "gid://shopify/Product/9187155771555",
+      "handle": "brinco-janaina",
+      "title": "Brinco Janaína",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41330888605859",
+      "silverMediaId": "gid://shopify/MediaImage/41660070232227"
+    },
+    {
+      "productId": "gid://shopify/Product/9187156132003",
+      "handle": "brinco-juliana",
+      "title": "Brinco Juliana",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660074426531",
+      "silverMediaId": "gid://shopify/MediaImage/41330887688355"
+    },
+    {
+      "productId": "gid://shopify/Product/9187156983971",
+      "handle": "brinco-longo-aline",
+      "title": "Brinco Longo Aline",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660086976675",
+      "silverMediaId": "gid://shopify/MediaImage/41330884444323"
+    },
+    {
+      "productId": "gid://shopify/Product/9187157442723",
+      "handle": "brinco-longo-estrela",
+      "title": "Brinco Longo Estrela",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660088484003",
+      "silverMediaId": "gid://shopify/MediaImage/41330883133603"
+    },
+    {
+      "productId": "gid://shopify/Product/9187158327459",
+      "handle": "brinco-lua-de-zirconia",
+      "title": "Brinco Lua de Zircônia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330880610467",
+      "silverMediaId": "gid://shopify/MediaImage/41660095266979"
+    },
+    {
+      "productId": "gid://shopify/Product/9187159867555",
+      "handle": "brinco-mini-coracao",
+      "title": "Brinco mini coração",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660118237347",
+      "silverMediaId": "gid://shopify/MediaImage/41330875760803"
+    },
+    {
+      "productId": "gid://shopify/Product/9187159965859",
+      "handle": "brinco-mini-coracao-ponto-de-luz",
+      "title": "Brinco Mini Coração Ponto de Luz",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660119056547",
+      "silverMediaId": "gid://shopify/MediaImage/41330875367587"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160096931",
+      "handle": "brinco-mini-coracao-vazado",
+      "title": "Brinco Mini Coração Vazado",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330874548387",
+      "silverMediaId": "gid://shopify/MediaImage/41660120596643"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160228003",
+      "handle": "brinco-mini-coracao-vazado-de-zirconia",
+      "title": "Brinco Mini Coração Vazado de Zirconia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660121317539",
+      "silverMediaId": "gid://shopify/MediaImage/41330874253475"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160293539",
+      "handle": "brinco-mini-estrela",
+      "title": "Brinco mini estrela",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660122497187",
+      "silverMediaId": "gid://shopify/MediaImage/41330873270435"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160391843",
+      "handle": "brinco-mini-fra",
+      "title": "Brinco mini Fra",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660123447459",
+      "silverMediaId": "gid://shopify/MediaImage/41330872811683"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160752291",
+      "handle": "brinco-mini-gota-de-zirconia",
+      "title": "Brinco Mini Gota de Zirconia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330871566499",
+      "silverMediaId": "gid://shopify/MediaImage/41660124692643"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160850595",
+      "handle": "brinco-mini-gota-vazada",
+      "title": "Brinco Mini Gota Vazada",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660125511843",
+      "silverMediaId": "gid://shopify/MediaImage/41330871369891"
+    },
+    {
+      "productId": "gid://shopify/Product/9187160916131",
+      "handle": "brinco-mini-infinito-com-zirconia",
+      "title": "Brinco Mini Infinito com Zirconia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660126593187",
+      "silverMediaId": "gid://shopify/MediaImage/41330871271587"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161145507",
+      "handle": "brinco-mini-lua",
+      "title": "Brinco mini Lua",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660128493731",
+      "silverMediaId": "gid://shopify/MediaImage/41330870190243"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161243811",
+      "handle": "brinco-mini-lua-de-zirconia",
+      "title": "Brinco Mini Lua de Zirconia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660129280163",
+      "silverMediaId": "gid://shopify/MediaImage/41330870091939"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161407651",
+      "handle": "brinco-mini-olho-grego",
+      "title": "Brinco mini Olho Grego",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660131606691",
+      "silverMediaId": "gid://shopify/MediaImage/41330869764259"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161571491",
+      "handle": "brinco-mini-quadrado",
+      "title": "Brinco mini Quadrado",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660133933219",
+      "silverMediaId": "gid://shopify/MediaImage/41330869436579"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161669795",
+      "handle": "brinco-mini-quadrado-com-zirconia",
+      "title": "Brinco Mini Quadrado com Zirconia",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660134621347",
+      "silverMediaId": "gid://shopify/MediaImage/41330868846755"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161735331",
+      "handle": "brinco-mini-trevo",
+      "title": "Brinco mini Trevo",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660135112867",
+      "silverMediaId": "gid://shopify/MediaImage/41330868650147"
+    },
+    {
+      "productId": "gid://shopify/Product/9187161800867",
+      "handle": "brinco-mini-triangulo",
+      "title": "Brinco mini Triângulo",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660136226979",
+      "silverMediaId": "gid://shopify/MediaImage/41330868453539"
+    },
+    {
+      "productId": "gid://shopify/Product/9187162259619",
+      "handle": "brinco-moana",
+      "title": "Brinco Moana",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660141437091",
+      "silverMediaId": "gid://shopify/MediaImage/41330867601571"
+    },
+    {
+      "productId": "gid://shopify/Product/9187163013283",
+      "handle": "brinco-paula-com-zirconia-em-gota",
+      "title": "Brinco Paula com Zircônia em Gota",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660149727395",
+      "silverMediaId": "gid://shopify/MediaImage/41330865012899"
+    },
+    {
+      "productId": "gid://shopify/Product/9187163406499",
+      "handle": "brinco-petra",
+      "title": "Brinco Petra",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330863538339",
+      "silverMediaId": "gid://shopify/MediaImage/41660153888931"
+    },
+    {
+      "productId": "gid://shopify/Product/9187163635875",
+      "handle": "brinco-ponto-de-luz-navete",
+      "title": "Brinco Ponto de Luz Navete",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660156280995",
+      "silverMediaId": "gid://shopify/MediaImage/41330862784675"
+    },
+    {
+      "productId": "gid://shopify/Product/9187164061859",
+      "handle": "brinco-rosa-dos-ventos",
+      "title": "Brinco Rosa Dos Ventos",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660158279843",
+      "silverMediaId": "gid://shopify/MediaImage/41330862063779"
+    },
+    {
+      "productId": "gid://shopify/Product/9187164291235",
+      "handle": "brinco-sandra-com-arco-de-zirconias",
+      "title": "Brinco Sandra com Arco de Zircônias",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330861506723",
+      "silverMediaId": "gid://shopify/MediaImage/41660162212003"
+    },
+    {
+      "productId": "gid://shopify/Product/9187164389539",
+      "handle": "brinco-sheila-com-zirconias-navete",
+      "title": "Brinco Sheila com Zircônias Navete",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330861441187",
+      "silverMediaId": "gid://shopify/MediaImage/41660163293347"
+    },
+    {
+      "productId": "gid://shopify/Product/9187165405347",
+      "handle": "brinco-triangulo-vazado",
+      "title": "Brinco Triângulo vazado",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660197240995",
+      "silverMediaId": "gid://shopify/MediaImage/41330851250339"
+    },
+    {
+      "productId": "gid://shopify/Product/9187165634723",
+      "handle": "brinco-v",
+      "title": "Brinco v",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660200616099",
+      "silverMediaId": "gid://shopify/MediaImage/41330850562211"
+    },
+    {
+      "productId": "gid://shopify/Product/9187165733027",
+      "handle": "brinco-vania",
+      "title": "Brinco Vania",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660202123427",
+      "silverMediaId": "gid://shopify/MediaImage/41330850431139"
+    },
+    {
+      "productId": "gid://shopify/Product/9187166027939",
+      "handle": "brinco-x",
+      "title": "Brinco x",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660204023971",
+      "silverMediaId": "gid://shopify/MediaImage/41330850070691"
+    },
+    {
+      "productId": "gid://shopify/Product/9187166355619",
+      "handle": "brinco-yasmine",
+      "title": "Brinco Yasmine",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660206055587",
+      "silverMediaId": "gid://shopify/MediaImage/41330849841315"
+    },
+    {
+      "productId": "gid://shopify/Product/9190373327011",
+      "handle": "choker-bella",
+      "title": "Choker Bella",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660224798883",
+      "silverMediaId": "gid://shopify/MediaImage/41330843353251"
+    },
+    {
+      "productId": "gid://shopify/Product/9190373556387",
+      "handle": "choker-coracao",
+      "title": "Choker Coração",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660227977379",
+      "silverMediaId": "gid://shopify/MediaImage/41330841288867"
+    },
+    {
+      "productId": "gid://shopify/Product/9190373621923",
+      "handle": "choker-cordao-baiano",
+      "title": "Choker Cordão Baiano",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660229124259",
+      "silverMediaId": "gid://shopify/MediaImage/41330840928419"
+    },
+    {
+      "productId": "gid://shopify/Product/9190373720227",
+      "handle": "choker-cris",
+      "title": "Choker Cris",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660230205603",
+      "silverMediaId": "gid://shopify/MediaImage/41330840371363"
+    },
+    {
+      "productId": "gid://shopify/Product/9190374473891",
+      "handle": "choker-greta-boho-chic-perola-natural",
+      "title": "Choker Greta Boho Chic Perola Natural",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330836799651",
+      "silverMediaId": "gid://shopify/MediaImage/41330836930723"
+    },
+    {
+      "productId": "gid://shopify/Product/9190374670499",
+      "handle": "choker-jenni",
+      "title": "Choker Jenni",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330835456163",
+      "silverMediaId": "gid://shopify/MediaImage/41660241215651"
+    },
+    {
+      "productId": "gid://shopify/Product/9190374801571",
+      "handle": "choker-leiyah",
+      "title": "Choker Leiyah",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660243214499",
+      "silverMediaId": "gid://shopify/MediaImage/41330834669731"
+    },
+    {
+      "productId": "gid://shopify/Product/9190375129251",
+      "handle": "choker-lua-e-estrela",
+      "title": "Choker Lua e Estrela",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660248129699",
+      "silverMediaId": "gid://shopify/MediaImage/41330831917219"
+    },
+    {
+      "productId": "gid://shopify/Product/9190375817379",
+      "handle": "choker-perle",
+      "title": "Choker Perle",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660263497891",
+      "silverMediaId": "gid://shopify/MediaImage/41330827624611"
+    },
+    {
+      "productId": "gid://shopify/Product/9190376046755",
+      "handle": "choker-sonho",
+      "title": "Choker Sonho",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660274245795",
+      "silverMediaId": "gid://shopify/MediaImage/41330826182819"
+    },
+    {
+      "productId": "gid://shopify/Product/9190376407203",
+      "handle": "colar-choker-luiza",
+      "title": "Colar / Choker Luiza",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660286238883",
+      "silverMediaId": "gid://shopify/MediaImage/41330824446115"
+    },
+    {
+      "productId": "gid://shopify/Product/9190377029795",
+      "handle": "colar-aventura",
+      "title": "Colar Aventura",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660297478307",
+      "silverMediaId": "gid://shopify/MediaImage/41330821038243"
+    },
+    {
+      "productId": "gid://shopify/Product/9190377128099",
+      "handle": "colar-bel",
+      "title": "Colar Bel",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660298756259",
+      "silverMediaId": "gid://shopify/MediaImage/41330820513955"
+    },
+    {
+      "productId": "gid://shopify/Product/9190378209443",
+      "handle": "colar-debora",
+      "title": "Colar Débora",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660335587491",
+      "silverMediaId": "gid://shopify/MediaImage/41330814812323"
+    },
+    {
+      "productId": "gid://shopify/Product/9190378274979",
+      "handle": "colar-destino",
+      "title": "Colar Destino",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660336472227",
+      "silverMediaId": "gid://shopify/MediaImage/41330814451875"
+    },
+    {
+      "productId": "gid://shopify/Product/9190379126947",
+      "handle": "colar-geanne",
+      "title": "Colar Geanne",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660364062883",
+      "silverMediaId": "gid://shopify/MediaImage/41330810519715"
+    },
+    {
+      "productId": "gid://shopify/Product/9190379225251",
+      "handle": "colar-gravatinha-lua-e-estrela",
+      "title": "Colar Gravatinha Lua e Estrela",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660372058275",
+      "silverMediaId": "gid://shopify/MediaImage/41330809372835"
+    },
+    {
+      "productId": "gid://shopify/Product/9190379454627",
+      "handle": "colar-helen",
+      "title": "Colar Helen",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660381331619",
+      "silverMediaId": "gid://shopify/MediaImage/41330807767203"
+    },
+    {
+      "productId": "gid://shopify/Product/9190379847843",
+      "handle": "colar-longo-perle",
+      "title": "Colar Longo Perle",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660393488547",
+      "silverMediaId": "gid://shopify/MediaImage/41330804064419"
+    },
+    {
+      "productId": "gid://shopify/Product/9190380077219",
+      "handle": "colar-luana",
+      "title": "Colar Luana",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660402958499",
+      "silverMediaId": "gid://shopify/MediaImage/41330802983075"
+    },
+    {
+      "productId": "gid://shopify/Product/9190380142755",
+      "handle": "colar-mae-terra",
+      "title": "Colar Mãe Terra",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660403450019",
+      "silverMediaId": "gid://shopify/MediaImage/41330802458787"
+    },
+    {
+      "productId": "gid://shopify/Product/9190380404899",
+      "handle": "colar-patua-sem-pingentes",
+      "title": "Colar Patuá (sem pingentes)",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660412690595",
+      "silverMediaId": "gid://shopify/MediaImage/41330800885923"
+    },
+    {
+      "productId": "gid://shopify/Product/9190380765347",
+      "handle": "colar-ponto-de-luz",
+      "title": "Colar ponto de Luz",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660424388771",
+      "silverMediaId": "gid://shopify/MediaImage/41330799706275"
+    },
+    {
+      "productId": "gid://shopify/Product/9190380994723",
+      "handle": "colar-rosa-dos-ventos",
+      "title": "Colar Rosa Dos Ventos",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660426616995",
+      "silverMediaId": "gid://shopify/MediaImage/41330798723235"
+    },
+    {
+      "productId": "gid://shopify/Product/9190383943843",
+      "handle": "earcuff-amore",
+      "title": "Earcuff  Amore",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660449489059",
+      "silverMediaId": "gid://shopify/MediaImage/41330781094051"
+    },
+    {
+      "productId": "gid://shopify/Product/9190384042147",
+      "handle": "earcuff-elka-com-zirconias-navete",
+      "title": "Earcuff Elka com Zircônias Navete",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660452405411",
+      "silverMediaId": "gid://shopify/MediaImage/41330780373155"
+    },
+    {
+      "productId": "gid://shopify/Product/9190385090723",
+      "handle": "escapulario-religioso",
+      "title": "Escapulário Religioso",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330777194659",
+      "silverMediaId": "gid://shopify/MediaImage/41660464169123"
+    },
+    {
+      "productId": "gid://shopify/Product/9194285039779",
+      "handle": "piercing-falso-chloe",
+      "title": "Piercing Falso Chloé",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660536488099",
+      "silverMediaId": "gid://shopify/MediaImage/41330763890851"
+    },
+    {
+      "productId": "gid://shopify/Product/9194286547107",
+      "handle": "piercing-falso-jade",
+      "title": "Piercing falso Jade",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660547793059",
+      "silverMediaId": "gid://shopify/MediaImage/41330760384675"
+    },
+    {
+      "productId": "gid://shopify/Product/9194287202467",
+      "handle": "piercing-falso-maria",
+      "title": "Piercing Falso Maria",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660555198627",
+      "silverMediaId": "gid://shopify/MediaImage/41330758615203"
+    },
+    {
+      "productId": "gid://shopify/Product/9194287431843",
+      "handle": "piercing-falso-perle",
+      "title": "Piercing Falso Perle",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660558180515",
+      "silverMediaId": "gid://shopify/MediaImage/41330757927075"
+    },
+    {
+      "productId": "gid://shopify/Product/9194287497379",
+      "handle": "piercing-falso-priscila",
+      "title": "Piercing falso Priscila",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660559261859",
+      "silverMediaId": "gid://shopify/MediaImage/41330757664931"
+    },
+    {
+      "productId": "gid://shopify/Product/9194289692835",
+      "handle": "pingente-alma-gemea",
+      "title": "Pingente Alma Gêmea",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660579905699",
+      "silverMediaId": "gid://shopify/MediaImage/41330752946339"
+    },
+    {
+      "productId": "gid://shopify/Product/9194290446499",
+      "handle": "pingente-charm-buzios-com-zirconias",
+      "title": "Pingente Charm Búzios com Zircônias",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660591145123",
+      "silverMediaId": "gid://shopify/MediaImage/41330749178019"
+    },
+    {
+      "productId": "gid://shopify/Product/9194290643107",
+      "handle": "pingente-charm-estrela-do-mar",
+      "title": "Pingente Charm Estrela do Mar",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660593537187",
+      "silverMediaId": "gid://shopify/MediaImage/41330747474083"
+    },
+    {
+      "productId": "gid://shopify/Product/9194290675875",
+      "handle": "pingente-charm-peixe-cravejado",
+      "title": "Pingente Charm Peixe Cravejado",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660594389155",
+      "silverMediaId": "gid://shopify/MediaImage/41330747048099"
+    },
+    {
+      "productId": "gid://shopify/Product/9197116424355",
+      "handle": "pingente-medalha-de-sao-bento",
+      "title": "Pingente Medalha de São Bento",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660690399395",
+      "silverMediaId": "gid://shopify/MediaImage/41330716934307"
+    },
+    {
+      "productId": "gid://shopify/Product/9197117669539",
+      "handle": "pingente-relicario-de-coracao-eternite",
+      "title": "Pingente Relicario de coração ETERNITE",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660714385571",
+      "silverMediaId": "gid://shopify/MediaImage/41330710315171"
+    },
+    {
+      "productId": "gid://shopify/Product/9197252542627",
+      "handle": "pulseira-alessandra",
+      "title": "Pulseira Alessandra",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660731031715",
+      "silverMediaId": "gid://shopify/MediaImage/41330702778531"
+    },
+    {
+      "productId": "gid://shopify/Product/9197253656739",
+      "handle": "pulseira-bella",
+      "title": "Pulseira Bella",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660741648547",
+      "silverMediaId": "gid://shopify/MediaImage/41330698616995"
+    },
+    {
+      "productId": "gid://shopify/Product/9197253755043",
+      "handle": "pulseira-cartier",
+      "title": "Pulseira Cartier",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41330698158243",
+      "silverMediaId": "gid://shopify/MediaImage/41660742566051"
+    },
+    {
+      "productId": "gid://shopify/Product/9197254082723",
+      "handle": "pulseira-cordao-baiano",
+      "title": "Pulseira Cordão Baiano",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660744204451",
+      "silverMediaId": "gid://shopify/MediaImage/41330697240739"
+    },
+    {
+      "productId": "gid://shopify/Product/9197254475939",
+      "handle": "pulseira-dalia-boho-chic-pedra-natural-ametista",
+      "title": "Pulseira Dalia Boho Chic Pedra Natural Ametista",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330695536803",
+      "silverMediaId": "gid://shopify/MediaImage/41660749742243"
+    },
+    {
+      "productId": "gid://shopify/Product/9197254639779",
+      "handle": "pulseira-dandara",
+      "title": "Pulseira Dandara",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41330695438499",
+      "silverMediaId": "gid://shopify/MediaImage/41660750266531"
+    },
+    {
+      "productId": "gid://shopify/Product/9197256278179",
+      "handle": "pulseira-debora",
+      "title": "Pulseira Débora",
+      "variantsUpdated": 3,
+      "goldMediaId": "gid://shopify/MediaImage/41660760653987",
+      "silverMediaId": "gid://shopify/MediaImage/41330689573027"
+    },
+    {
+      "productId": "gid://shopify/Product/9197257490595",
+      "handle": "pulseira-jaipur",
+      "title": "Pulseira Jaipur",
+      "variantsUpdated": 6,
+      "goldMediaId": "gid://shopify/MediaImage/41660770844835",
+      "silverMediaId": "gid://shopify/MediaImage/41330685116579"
+    },
+    {
+      "productId": "gid://shopify/Product/9197257785507",
+      "handle": "pulseira-jessica",
+      "title": "Pulseira Jessica",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660774547619",
+      "silverMediaId": "gid://shopify/MediaImage/41330684035235"
+    },
+    {
+      "productId": "gid://shopify/Product/9197257949347",
+      "handle": "pulseira-lets-canutilho-com-bolinha",
+      "title": "Pulseira Lets Canutilho com Bolinha",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41658633158819",
+      "silverMediaId": "gid://shopify/MediaImage/41330683281571"
+    },
+    {
+      "productId": "gid://shopify/Product/9197258277027",
+      "handle": "pulseira-lorena",
+      "title": "Pulseira Lorena",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660777693347",
+      "silverMediaId": "gid://shopify/MediaImage/41330682167459"
+    },
+    {
+      "productId": "gid://shopify/Product/9197259325603",
+      "handle": "pulseira-olho-grego",
+      "title": "Pulseira Olho Grego",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660788375715",
+      "silverMediaId": "gid://shopify/MediaImage/41330677153955"
+    },
+    {
+      "productId": "gid://shopify/Product/9197259751587",
+      "handle": "pulseira-perle",
+      "title": "Pulseira Perle",
+      "variantsUpdated": 2,
+      "goldMediaId": "gid://shopify/MediaImage/41660792996003",
+      "silverMediaId": "gid://shopify/MediaImage/41330673975459"
+    }
+  ]
+}
