@@ -1,0 +1,61 @@
+name: Corrigir vínculos seguros de fotos douradas e pratas
+
+on:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - scripts/apply-safe-variant-finish-media.mjs
+      - .github/workflows/apply-safe-variant-finish-media.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-safe-variant-finish-media
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Corrigir somente os vínculos aprovados pelas proteções
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          AUDIT_REPORT: reports/variant-finish-media-audit.json
+          OUTPUT_DIR: variant-finish-media-correction
+          EXPECTED_PRODUCTS: '140'
+        run: node scripts/apply-safe-variant-finish-media.mjs
+
+      - name: Registrar relatório da correção
+        run: |
+          mkdir -p reports
+          cp variant-finish-media-correction/report.json reports/variant-finish-media-correction.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/variant-finish-media-correction.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Registra correção dos vínculos dourados e pratas"
+            git push
+          fi
+
+      - name: Salvar relatório da correção
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-correcao-vinculos-dourados-pratas
+          path: variant-finish-media-correction/
+          if-no-files-found: warn
+          retention-days: 30
