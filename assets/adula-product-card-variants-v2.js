@@ -265,3 +265,165 @@ if ('IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('product-card').forEach(synchronizeVisibleCard);
 }
+
+
+/*
+ * Adula — brindes não cumulativos.
+ * O AppHero continua responsável por oferecer/aplicar o desconto do brinde.
+ * Esta proteção remove do carrinho qualquer brinde que não pertença à faixa atual.
+ */
+(function giftGuard() {
+  const KEYCHAIN_VARIANT_ID = 47876818075811;
+  const TRAY_VARIANT_ID = 47977612837027;
+  const FIRST_THRESHOLD = 19900;
+  const SECOND_THRESHOLD = 39900;
+  const GIFT_VARIANT_IDS = new Set([KEYCHAIN_VARIANT_ID, TRAY_VARIANT_ID]);
+  const shopRoot = window.Shopify?.routes?.root || '/';
+
+  let enforcementPromise = null;
+  let scheduledTimer = null;
+  let checkoutInProgress = false;
+
+  const cartEndpoint = (path) => `${shopRoot}${path}`.replace(/\/{2,}/g, '/');
+
+  const fetchCart = () =>
+    fetch(cartEndpoint('cart.js'), {
+      credentials: 'same-origin',
+      headers: { Accept: 'application/json' },
+    }).then((response) => {
+      if (!response.ok) throw new Error('Não foi possível consultar o carrinho.');
+      return response.json();
+    });
+
+  const eligibleSubtotal = (cart) =>
+    (cart.items || []).reduce((total, item) => {
+      const variantId = Number(item.variant_id || item.id);
+      return GIFT_VARIANT_IDS.has(variantId) ? total : total + Number(item.final_line_price || 0);
+    }, 0);
+
+  const desiredGiftFor = (subtotal) => {
+    if (subtotal < FIRST_THRESHOLD) return null;
+    if (subtotal < SECOND_THRESHOLD) return KEYCHAIN_VARIANT_ID;
+    return TRAY_VARIANT_ID;
+  };
+
+  const wrongGiftUpdates = (cart) => {
+    const desiredGift = desiredGiftFor(eligibleSubtotal(cart));
+    const updates = {};
+
+    for (const item of cart.items || []) {
+      const variantId = Number(item.variant_id || item.id);
+      if (GIFT_VARIANT_IDS.has(variantId) && variantId !== desiredGift) {
+        updates[item.key] = 0;
+      }
+    }
+
+    return updates;
+  };
+
+  const notifyCartRefresh = (cart) => {
+    document.dispatchEvent(new CustomEvent('cart:refresh', {
+      bubbles: true,
+      detail: { cart, source: 'adula-gift-tier-guard' },
+    }));
+  };
+
+  const enforceGiftTier = () => {
+    if (enforcementPromise) return enforcementPromise;
+
+    enforcementPromise = fetchCart()
+      .then(async (cart) => {
+        const updates = wrongGiftUpdates(cart);
+
+        if (Object.keys(updates).length === 0) return cart;
+
+        const response = await fetch(cartEndpoint('cart/update.js'), {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ updates }),
+        });
+
+        if (!response.ok) throw new Error('Não foi possível corrigir os brindes do carrinho.');
+
+        const correctedCart = await response.json();
+        notifyCartRefresh(correctedCart);
+        return correctedCart;
+      })
+      .catch((error) => {
+        console.error('[Adula] Proteção de brindes:', error);
+        return null;
+      })
+      .finally(() => {
+        enforcementPromise = null;
+      });
+
+    return enforcementPromise;
+  };
+
+  const scheduleEnforcement = (delay = 500) => {
+    window.clearTimeout(scheduledTimer);
+    scheduledTimer = window.setTimeout(enforceGiftTier, delay);
+  };
+
+  const isCheckoutControl = (element) => {
+    if (!(element instanceof Element)) return false;
+    return element.closest(
+      'a[href*="/checkout"], button[name="checkout"], input[name="checkout"], [data-checkout]',
+    );
+  };
+
+  document.addEventListener('click', async (event) => {
+    const target = event.target;
+    const checkoutControl = isCheckoutControl(target);
+
+    if (checkoutControl && !checkoutInProgress) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      checkoutInProgress = true;
+
+      await enforceGiftTier();
+
+      const checkoutLink = target.closest('a[href*="/checkout"]');
+      window.location.assign(checkoutLink?.href || cartEndpoint('checkout'));
+      return;
+    }
+
+    if (
+      target instanceof Element &&
+      target.closest(
+        'button[name="add"], product-form button[type="submit"], [aria-controls*="cart"], [href*="/cart"], #ahl_gift_wrapper_315625 button',
+      )
+    ) {
+      scheduleEnforcement(900);
+      window.setTimeout(enforceGiftTier, 2500);
+    }
+  }, true);
+
+  ['cart:change', 'line-item:change', 'cart-drawer:refreshed'].forEach((eventName) => {
+    document.addEventListener(eventName, () => scheduleEnforcement(300));
+  });
+
+  document.addEventListener('cart:refresh', (event) => {
+    if (event.detail?.source !== 'adula-gift-tier-guard') {
+      scheduleEnforcement(300);
+    }
+  });
+
+  const start = () => {
+    scheduleEnforcement(700);
+    window.setTimeout(enforceGiftTier, 2200);
+    window.setTimeout(enforceGiftTier, 5000);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else {
+    start();
+  }
+
+  window.AdulaGiftTierGuard = { enforce: enforceGiftTier };
+})();
