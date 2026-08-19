@@ -84,7 +84,7 @@
   {%- endcomment -%}
 
   {%- if product.media.size > 0 -%}
-    <div class="product-card__figure">
+    <div class="product-card__figure{% if show_quick_buy and product.available %} adula-product-card__figure--with-actions{% endif %}">
       {%- if show_badges -%}
         {%- render 'product-badges', product: product, vertical: true, context: 'card' -%}
       {%- endif -%}
