@@ -37,6 +37,37 @@
     assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
     assign show_swatches = show_swatches | default: true, allow_false: true
   endif
+
+  assign matched_product_option = null
+  assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ','
+
+  for color_label in color_label_list
+    if product.options_by_name[color_label] != blank
+      assign matched_product_option = product.options_by_name[color_label]
+      break
+    endif
+  endfor
+
+  if matched_product_option == blank
+    for product_option in product.options_with_values
+      assign values_with_swatch = product_option.values | where: 'swatch'
+
+      if values_with_swatch.size > 0
+        assign matched_product_option = product_option
+        break
+      endif
+    endfor
+  endif
+
+  assign needs_quick_buy_modal = false
+
+  if product.selling_plan_groups.size > 0
+    assign needs_quick_buy_modal = true
+  elsif product.variants.size > 1
+    if product.options.size > 1 or matched_product_option == blank
+      assign needs_quick_buy_modal = true
+    endif
+  endif
 -%}
 
 <product-card
@@ -113,24 +144,17 @@
       </a>
 
       {%- if show_quick_buy and product.available -%}
-        {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
-          <product-form>
-            {%- form 'product', product -%}
-              <input type="hidden" name="on_success" value="force_open_drawer">
-              <input type="hidden" name="quantity" value="1">
-              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-              <button type="submit" class="product-card__quick-add-button">
-                <span class="sr-only">{{ 'product.general.add_to_cart_button' | t }}</span>
-                {%- render 'icon' with 'plus' -%}
-              </button>
-            {%- endform -%}
-          </product-form>
-        {%- else -%}
-          {%- capture quick_buy_id -%}product-quick-buy-{{ section.id }}-{{ block.id }}-{{ quick_buy_context }}-{{ product.id }}{%- endcapture -%}
+        {%- capture quick_buy_id -%}product-quick-buy-{{ section.id }}-{{ block.id }}-{{ quick_buy_context }}-{{ product.id }}{%- endcapture -%}
 
-          <button type="button" aria-controls="{{ quick_buy_id }}" class="product-card__quick-add-button">
-            <span class="sr-only">{{ 'product.general.choose_options' | t }}</span>
-            {%- render 'icon' with 'plus' -%}
+        {%- if needs_quick_buy_modal -%}
+          <button
+            type="button"
+            aria-controls="{{ quick_buy_id }}"
+            class="product-card__quick-add-button adula-product-card__quick-buy"
+            data-adula-quick-buy
+            data-adula-quick-buy-mode="modal"
+          >
+            <span data-adula-quick-buy-label>{{ 'product.general.add_to_cart_button' | t }}</span>
           </button>
 
           <quick-buy-modal
@@ -140,6 +164,22 @@
             aria-label="{{ 'product.general.choose_options_with_title' | t: title: product.title | escape }}"
           >
           </quick-buy-modal>
+        {%- else -%}
+          <product-form class="adula-card-quick-buy">
+            {%- form 'product', product -%}
+              <input type="hidden" name="on_success" value="force_open_drawer">
+              <input type="hidden" name="quantity" value="1">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button
+                type="submit"
+                class="product-card__quick-add-button adula-product-card__quick-buy"
+                data-adula-quick-buy
+                data-adula-quick-buy-mode="direct"
+              >
+                <span data-adula-quick-buy-label>{{ 'product.general.add_to_cart_button' | t }}</span>
+              </button>
+            {%- endform -%}
+          </product-form>
         {%- endif -%}
       {%- endif -%}
     </div>
