@@ -4,6 +4,7 @@ const priceTemplateFor = (card, variantId) =>
   );
 
 const variantRequests = new Map();
+const productRequests = new Map();
 const moneyFormatter = new Intl.NumberFormat(document.documentElement.lang || 'pt-BR', {
   style: 'currency',
   currency: 'BRL',
@@ -27,6 +28,24 @@ const loadVariant = (variantId) => {
   }
 
   return variantRequests.get(variantId);
+};
+
+const loadProduct = (handle) => {
+  if (!productRequests.has(handle)) {
+    const request = fetch(`${window.location.origin}/products/${encodeURIComponent(handle)}.js`, {
+      headers: { Accept: 'application/json' },
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Não foi possível carregar o produto ${handle}.`);
+      }
+
+      return response.json();
+    });
+
+    productRequests.set(handle, request);
+  }
+
+  return productRequests.get(handle);
 };
 
 const replacePriceText = (element, label, price) => {
@@ -82,7 +101,7 @@ const updateRenderedPrice = (card, variant) => {
   }
 };
 
-const updateCardPrice = async (card, control) => {
+const updateCardPrice = (card, control, variant) => {
   const variantId = control.getAttribute('data-variant-id');
   const priceArea = card.querySelector('[data-product-card-price]');
   const priceTemplate = priceTemplateFor(card, variantId);
@@ -92,18 +111,93 @@ const updateCardPrice = async (card, control) => {
     return;
   }
 
-  // Some Shopify theme synchronizations can keep an older cached card snippet.
-  // In that case, use the public variant endpoint and update the rendered price
-  // directly. The selected ID check prevents a slower request from overwriting
-  // a more recent click.
-  card.dataset.selectedPriceVariant = variantId;
+  updateRenderedPrice(card, variant);
+};
+
+const imageSource = (media) => media?.preview_image?.src || media?.src || null;
+
+const sourceWithWidth = (source, width) => {
+  const separator = source.includes('?') ? '&' : '?';
+  return `${source}${separator}width=${width}`;
+};
+
+const updateImage = (image, media) => {
+  const source = imageSource(media);
+
+  if (!image || !source) {
+    return;
+  }
+
+  const widths = [200, 300, 400, 500, 600, 700, 800, 1000, 1200]
+    .filter((width) => !media.width || width <= media.width);
+  image.src = sourceWithWidth(source, media.width || 1000);
+  image.srcset = widths.map((width) => `${sourceWithWidth(source, width)} ${width}w`).join(', ');
+
+  if (media.width) image.width = media.width;
+  if (media.height) image.height = media.height;
+  if (media.alt) image.alt = media.alt;
+};
+
+const sameMedia = (media, featuredImage) => {
+  if (!media || !featuredImage) return false;
+  if (String(media.id) === String(featuredImage.id)) return true;
+
+  const mediaSrc = imageSource(media)?.split('?')[0];
+  const featuredSrc = (featuredImage.src || '')?.split('?')[0];
+  return Boolean(mediaSrc && featuredSrc && mediaSrc === featuredSrc);
+};
+
+const updateCardMedia = async (card, control, variant) => {
+  const variantId = control.getAttribute('data-variant-id');
+  const featuredImage = variant.featured_image;
+
+  if (!featuredImage) {
+    return;
+  }
+
+  card.dataset.selectedMediaVariant = variantId;
+  const handle = card.getAttribute('handle');
+  const product = handle ? await loadProduct(handle) : null;
+
+  if (card.dataset.selectedMediaVariant !== variantId) {
+    return;
+  }
+
+  const mediaList = Array.isArray(product?.media) ? product.media : [];
+  const primaryIndex = mediaList.findIndex((media) => sameMedia(media, featuredImage));
+  const primaryMedia = primaryIndex >= 0 ? mediaList[primaryIndex] : featuredImage;
+  const secondaryMedia = primaryIndex >= 0 ? mediaList[primaryIndex + 1] : null;
+  const primaryImage = card.querySelector('.product-card__image--primary');
+  const secondaryImage = card.querySelector('.product-card__image--secondary');
+
+  updateImage(primaryImage, primaryMedia);
+
+  if (secondaryImage && secondaryMedia?.media_type === 'image') {
+    updateImage(secondaryImage, secondaryMedia);
+    secondaryImage.removeAttribute('hidden');
+  } else {
+    secondaryImage?.setAttribute('hidden', '');
+  }
+};
+
+const synchronizeCard = async (card, control) => {
+  const variantId = control.getAttribute('data-variant-id');
+
+  if (!variantId) {
+    return;
+  }
+
+  card.dataset.selectedVariant = variantId;
 
   try {
     const variant = await loadVariant(variantId);
 
-    if (card.dataset.selectedPriceVariant === variantId) {
-      updateRenderedPrice(card, variant);
+    if (card.dataset.selectedVariant !== variantId) {
+      return;
     }
+
+    updateCardPrice(card, control, variant);
+    await updateCardMedia(card, control, variant);
   } catch (error) {
     console.error(error);
   }
@@ -118,22 +212,29 @@ document.addEventListener('change', (event) => {
 
   const card = control.closest('product-card');
 
-  if (!card) {
-    return;
+  if (card) {
+    synchronizeCard(card, control);
   }
-
-  updateCardPrice(card, control);
-
-  // Prestige swaps the primary and secondary images in its own change handler.
-  // Wait one frame so we can hide a stale hover image when this finish has no
-  // corresponding model photo, or reveal the newly swapped image when it has.
-  requestAnimationFrame(() => {
-    const secondaryImage = card.querySelector('.product-card__image--secondary');
-
-    if (!secondaryImage) {
-      return;
-    }
-
-    secondaryImage.toggleAttribute('hidden', !control.hasAttribute('data-variant-secondary-media'));
-  });
 });
+
+const synchronizeVisibleCard = (card) => {
+  const selectedControl = card.querySelector('input[type="radio"][data-variant-id]:checked');
+
+  if (selectedControl) {
+    synchronizeCard(card, selectedControl);
+  }
+};
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      synchronizeVisibleCard(entry.target);
+    }
+  }, { rootMargin: '300px' });
+
+  document.querySelectorAll('product-card').forEach((card) => observer.observe(card));
+} else {
+  document.querySelectorAll('product-card').forEach(synchronizeVisibleCard);
+}
