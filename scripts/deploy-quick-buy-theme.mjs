@@ -68,4 +68,4 @@ if (JSON.stringify(published) !== JSON.stringify(expected)) {
   throw new Error(`Publicação incompleta. Esperado ${expected.length}; publicado ${published.length}.`);
 }
 
-console.log(JSON.stringify({ theme: mainTheme.name, published }));
+console.log(JSON.stringify({ theme: mainTheme.name, themeId: mainTheme.id, published }));
