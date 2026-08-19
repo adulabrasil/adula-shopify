@@ -295,3 +295,33 @@
     {%- endif -%}
   </div>
 </product-card>
+
+<script>
+  if (!window.__adulaQuickBuySelectionSync) {
+    window.__adulaQuickBuySelectionSync = true;
+
+    document.addEventListener('change', function (event) {
+      var control = event.target;
+
+      if (!control.matches('product-card input[type="radio"][data-variant-id]')) return;
+
+      var card = control.closest('product-card');
+      var variantId = control.getAttribute('data-variant-id');
+      var available = control.getAttribute('data-variant-available') !== 'false';
+      var directVariantInput = card.querySelector('product-form input[name="id"]');
+      var modal = card.querySelector('quick-buy-modal');
+      var button = card.querySelector('[data-adula-quick-buy]');
+      var label = button && button.querySelector('[data-adula-quick-buy-label]');
+
+      if (directVariantInput) directVariantInput.value = variantId;
+      if (modal) modal.setAttribute('handle', card.getAttribute('handle') + '?variant=' + variantId);
+
+      if (button) {
+        button.disabled = !available;
+        button.setAttribute('aria-disabled', String(!available));
+      }
+
+      if (label) label.textContent = available ? 'Adicionar ao carrinho' : 'Esgotado';
+    });
+  }
+</script>
