@@ -70,6 +70,32 @@
       {%- endif -%}
     }
   }
+  #ahl_gift_wrapper_315625:empty {
+    display: none;
+  }
+
+  #ahl_gift_wrapper_315625:not(:empty) {
+    position: fixed;
+    z-index: 19;
+    inset-inline-start: max(16px, env(safe-area-inset-left));
+    inset-block-end: max(16px, env(safe-area-inset-bottom));
+    width: min(360px, calc(100vw - 32px));
+  }
+
+  #ahl_gift_wrapper_315625 .ahlGiftBnrHld {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: 0 8px 28px rgb(83 46 29 / 18%);
+  }
+
+  @media screen and (max-width: 699px) {
+    #ahl_gift_wrapper_315625:not(:empty) {
+      inset-inline: 12px;
+      inset-block-end: max(12px, env(safe-area-inset-bottom));
+      width: auto;
+    }
+  }
 </style>
 
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -214,6 +240,8 @@
   quick buy information in a template, that will be extracted in JS, which ensures it is not visible in the main product page
 {%- endcomment -%}
 {%- render 'product-quick-buy', product: product -%}
+
+<div id="ahl_gift_wrapper_315625"></div>
 
 <script>
   // We save the product ID in local storage to be eventually used for recently viewed section
