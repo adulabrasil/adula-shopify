@@ -199,12 +199,21 @@
         echo ' '
         echo tag
       endfor
+      for option in product.options_with_values
+        echo ' '
+        echo option.name
+        for value in option.values
+          echo ' '
+          echo value
+        endfor
+      endfor
     endcapture
 
     assign adula_faq_product_data = adula_faq_product_data | downcase
     assign adula_faq_is_moissanite = false
     assign adula_faq_is_silver = false
     assign adula_faq_is_semijewel = false
+    assign adula_faq_is_plated = false
 
     if adula_faq_product_data contains 'moissanite' or adula_faq_product_data contains 'moissanita'
       assign adula_faq_is_moissanite = true
@@ -216,10 +225,10 @@
 
     if adula_faq_product_data contains 'semijoia' or adula_faq_product_data contains 'latão'
       assign adula_faq_is_semijewel = true
-    elsif adula_faq_is_silver == false
-      if adula_faq_product_data contains 'banhado a ouro' or adula_faq_product_data contains 'banhada a ouro' or adula_faq_product_data contains 'ródio branco'
-        assign adula_faq_is_semijewel = true
-      endif
+    endif
+
+    if adula_faq_product_data contains 'dourado' or adula_faq_product_data contains 'ouro 18k' or adula_faq_product_data contains 'banhado a ouro' or adula_faq_product_data contains 'banhada a ouro' or adula_faq_product_data contains 'ródio branco'
+      assign adula_faq_is_plated = true
     endif
   -%}
 
@@ -238,10 +247,14 @@
               <p>Esta joia possui Moissanite certificada. O material da estrutura, o acabamento, as medidas e as demais características estão informados na descrição do produto.</p>
             {%- elsif adula_faq_is_silver and adula_faq_is_semijewel -%}
               <p>Este produto possui opções em Prata 925 legítima e em semijoia de latão com banho de Ouro 18k ou Ródio Branco. Confira a cor selecionada e as especificações da variante antes de adicionar ao carrinho.</p>
+            {%- elsif adula_faq_is_silver and adula_faq_is_plated -%}
+              <p>Este produto possui opções de material ou acabamento. Confira a cor selecionada e as especificações da variante para saber se a peça escolhida é em Prata 925 legítima ou possui acabamento dourado.</p>
             {%- elsif adula_faq_is_silver -%}
               <p>Esta peça é confeccionada em Prata 925 legítima. As medidas, pedras e demais características estão informadas na descrição do produto.</p>
             {%- elsif adula_faq_is_semijewel -%}
               <p>Esta é uma semijoia Adüla. O metal e o acabamento — como banho de Ouro 18k ou Ródio Branco — estão informados na descrição do produto. Quando houver mais de uma opção, confira a cor selecionada antes de adicionar ao carrinho.</p>
+            {%- elsif adula_faq_is_plated -%}
+              <p>Esta peça possui acabamento banhado. Confira na descrição se o acabamento selecionado é em Ouro 18k ou Ródio Branco e confirme a cor escolhida antes de adicionar ao carrinho.</p>
             {%- else -%}
               <p>O material, o acabamento, as medidas e as demais características estão informados na descrição do produto. Quando houver mais de uma opção, confira a variação selecionada antes de adicionar ao carrinho.</p>
             {%- endif -%}
@@ -270,14 +283,14 @@
           </details>
         {%- endif -%}
 
-        {%- if adula_faq_is_semijewel -%}
+        {%- if adula_faq_is_semijewel or adula_faq_is_plated -%}
           <details class="adula-product-faq__item">
             <summary class="adula-product-faq__question">
-              <span>As semijoias da Adüla perdem o banho?</span>
+              <span>O banho da peça pode apresentar desgaste?</span>
               <span class="adula-product-faq__icon" aria-hidden="true"></span>
             </summary>
             <div class="adula-product-faq__answer prose">
-              <p>O banho de Ouro 18k ou Ródio Branco pode apresentar desgaste ao longo do tempo. A duração depende da frequência de uso, do contato com a pele e dos cuidados com a peça. Esse desgaste gradual é uma característica natural das semijoias e não um defeito de fabricação.</p>
+              <p>O banho de Ouro 18k ou Ródio Branco pode apresentar desgaste ao longo do tempo. A duração depende da frequência de uso, do contato com a pele e dos cuidados com a peça. Esse desgaste gradual é uma característica natural das peças banhadas e não um defeito de fabricação.</p>
             </div>
           </details>
         {%- endif -%}
