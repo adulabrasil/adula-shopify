@@ -230,9 +230,31 @@
     if adula_faq_product_data contains 'dourado' or adula_faq_product_data contains 'ouro 18k' or adula_faq_product_data contains 'banhado a ouro' or adula_faq_product_data contains 'banhada a ouro' or adula_faq_product_data contains 'ródio branco'
       assign adula_faq_is_plated = true
     endif
+
+    assign adula_faq_selected_options = product.selected_or_first_available_variant.options | join: ' ' | downcase
+    assign adula_faq_initial_material = 'default'
+
+    if adula_faq_selected_options contains 'prata 925'
+      assign adula_faq_initial_material = 'silver'
+    elsif adula_faq_selected_options contains 'dourado' or adula_faq_selected_options contains 'ouro 18k' or adula_faq_selected_options contains 'ródio' or adula_faq_selected_options contains 'rodio'
+      assign adula_faq_initial_material = 'plated'
+    elsif adula_faq_is_silver and adula_faq_is_plated == false
+      assign adula_faq_initial_material = 'silver'
+    elsif adula_faq_is_plated and adula_faq_is_silver == false
+      assign adula_faq_initial_material = 'plated'
+    endif
   -%}
 
-  <section class="adula-product-faq" aria-labelledby="adula-product-faq-title-{{ section.id }}">
+  <section
+    class="adula-product-faq"
+    aria-labelledby="adula-product-faq-title-{{ section.id }}"
+    data-adula-product-faq
+    data-product-form-id="{{ product_form_id }}"
+    data-initial-material="{{ adula_faq_initial_material }}"
+    data-has-silver="{{ adula_faq_is_silver }}"
+    data-has-plated="{{ adula_faq_is_plated }}"
+    data-has-moissanite="{{ adula_faq_is_moissanite }}"
+  >
     <div class="adula-product-faq__inner">
       <h2 id="adula-product-faq-title-{{ section.id }}" class="adula-product-faq__title">Perguntas frequentes</h2>
 
@@ -244,25 +266,25 @@
           </summary>
           <div class="adula-product-faq__answer prose">
             {%- if adula_faq_is_moissanite -%}
-              <p>Esta joia possui Moissanite certificada. O material da estrutura, o acabamento, as medidas e as demais características estão informados na descrição do produto.</p>
-            {%- elsif adula_faq_is_silver and adula_faq_is_semijewel -%}
-              <p>Este produto possui opções em Prata 925 legítima e em semijoia de latão com banho de Ouro 18k ou Ródio Branco. Confira a cor selecionada e as especificações da variante antes de adicionar ao carrinho.</p>
-            {%- elsif adula_faq_is_silver and adula_faq_is_plated -%}
-              <p>Este produto possui opções de material ou acabamento. Confira a cor selecionada e as especificações da variante para saber se a peça escolhida é em Prata 925 legítima ou possui acabamento dourado.</p>
-            {%- elsif adula_faq_is_silver -%}
-              <p>Esta peça é confeccionada em Prata 925 legítima. As medidas, pedras e demais características estão informadas na descrição do produto.</p>
-            {%- elsif adula_faq_is_semijewel -%}
-              <p>Esta é uma semijoia Adüla. O metal e o acabamento — como banho de Ouro 18k ou Ródio Branco — estão informados na descrição do produto. Quando houver mais de uma opção, confira a cor selecionada antes de adicionar ao carrinho.</p>
-            {%- elsif adula_faq_is_plated -%}
-              <p>Esta peça possui acabamento banhado. Confira na descrição se o acabamento selecionado é em Ouro 18k ou Ródio Branco e confirme a cor escolhida antes de adicionar ao carrinho.</p>
-            {%- else -%}
-              <p>O material, o acabamento, as medidas e as demais características estão informados na descrição do produto. Quando houver mais de uma opção, confira a variação selecionada antes de adicionar ao carrinho.</p>
+              <p data-adula-faq-material-copy="moissanite">Esta joia possui Moissanite certificada. O material da estrutura, o acabamento, as medidas e as demais características estão informados na descrição do produto.</p>
             {%- endif -%}
+
+            {%- if adula_faq_is_silver -%}
+              <p data-adula-faq-material-copy="silver" {% unless adula_faq_initial_material == 'silver' or adula_faq_is_moissanite %}hidden{% endunless %}>A opção selecionada é confeccionada em Prata 925 legítima. As medidas, pedras e demais características estão informadas na descrição do produto.</p>
+            {%- endif -%}
+
+            {%- if adula_faq_is_plated -%}
+              <p data-adula-faq-material-copy="plated" {% unless adula_faq_initial_material == 'plated' %}hidden{% endunless %}>A opção selecionada é confeccionada em latão banhado a Ouro 18k ou Ródio Branco, conforme a cor indicada no produto. Ela não é Prata 925.</p>
+            {%- endif -%}
+
+            {%- unless adula_faq_is_moissanite or adula_faq_is_silver or adula_faq_is_plated -%}
+              <p data-adula-faq-material-copy="default">O material, o acabamento, as medidas e as demais características estão informados na descrição do produto. Quando houver mais de uma opção, confira a variação selecionada antes de adicionar ao carrinho.</p>
+            {%- endunless -%}
           </div>
         </details>
 
         {%- if adula_faq_is_silver -%}
-          <details class="adula-product-faq__item">
+          <details class="adula-product-faq__item" data-adula-faq-material="silver" {% unless adula_faq_initial_material == 'silver' %}hidden{% endunless %}>
             <summary class="adula-product-faq__question">
               <span>A Prata 925 da Adüla é legítima?</span>
               <span class="adula-product-faq__icon" aria-hidden="true"></span>
@@ -272,7 +294,7 @@
             </div>
           </details>
 
-          <details class="adula-product-faq__item">
+          <details class="adula-product-faq__item" data-adula-faq-material="silver" {% unless adula_faq_initial_material == 'silver' %}hidden{% endunless %}>
             <summary class="adula-product-faq__question">
               <span>Por que a Prata 925 pode escurecer?</span>
               <span class="adula-product-faq__icon" aria-hidden="true"></span>
@@ -284,7 +306,7 @@
         {%- endif -%}
 
         {%- if adula_faq_is_semijewel or adula_faq_is_plated -%}
-          <details class="adula-product-faq__item">
+          <details class="adula-product-faq__item" data-adula-faq-material="plated" {% unless adula_faq_initial_material == 'plated' %}hidden{% endunless %}>
             <summary class="adula-product-faq__question">
               <span>O banho da peça pode apresentar desgaste?</span>
               <span class="adula-product-faq__icon" aria-hidden="true"></span>
@@ -363,7 +385,7 @@
             <span class="adula-product-faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="adula-product-faq__answer prose">
-            <p>A Garantia Adüla é válida por 6 meses para defeitos técnicos de fabricação ou dos materiais utilizados.{% if adula_faq_is_silver %} As joias identificadas como Prata 925 também possuem garantia vitalícia da autenticidade da prata.{% endif %}</p>
+            <p>A Garantia Adüla é válida por 6 meses para defeitos técnicos de fabricação ou dos materiais utilizados.{% if adula_faq_is_silver %} <span data-adula-faq-material="silver" {% unless adula_faq_initial_material == 'silver' %}hidden{% endunless %}>A opção em Prata 925 também possui garantia vitalícia da autenticidade da prata.</span>{% endif %}</p>
             <p>A garantia não cobre danos provocados por mau uso, quedas, acidentes, contato com produtos químicos, peças amassadas, raspadas ou quebradas por uso inadequado. Cada caso poderá ser encaminhado ao setor técnico da Adüla para avaliação.</p>
           </div>
         </details>
@@ -410,6 +432,10 @@
 
   #shopify-section-{{ section.id }} .adula-product-faq__item {
     border-block-end: 1px solid rgb(83 46 29 / 18%);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq [hidden] {
+    display: none !important;
   }
 
   #shopify-section-{{ section.id }} .adula-product-faq__question {
@@ -494,6 +520,85 @@
     }
   }
 </style>
+
+<script>
+  (() => {
+    const faq = document.querySelector('#shopify-section-{{ section.id }} [data-adula-product-faq]');
+
+    if (!faq) return;
+
+    const formId = faq.dataset.productFormId;
+    const hasSilver = faq.dataset.hasSilver === 'true';
+    const hasPlated = faq.dataset.hasPlated === 'true';
+    const hasMoissanite = faq.dataset.hasMoissanite === 'true';
+
+    const normalize = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+
+    const selectedOptionText = () => {
+      const selected = [];
+
+      document
+        .querySelectorAll(`input[form="${CSS.escape(formId)}"][data-option-position]:checked`)
+        .forEach((input) => {
+          const label = input.labels?.[0] || document.querySelector(`label[for="${CSS.escape(input.id)}"]`);
+          selected.push(label?.textContent || '');
+        });
+
+      document
+        .querySelectorAll(`select[form="${CSS.escape(formId)}"]`)
+        .forEach((select) => selected.push(select.selectedOptions?.[0]?.textContent || ''));
+
+      return normalize(selected.join(' '));
+    };
+
+    const detectMaterial = () => {
+      const selected = selectedOptionText();
+
+      if (/prata\s*925/.test(selected)) return 'silver';
+      if (/dourad|ouro\s*18|rodio/.test(selected)) return 'plated';
+      if (faq.dataset.initialMaterial !== 'default') return faq.dataset.initialMaterial;
+      if (hasSilver && !hasPlated) return 'silver';
+      if (hasPlated && !hasSilver) return 'plated';
+
+      return 'default';
+    };
+
+    const updateFaq = () => {
+      const material = detectMaterial();
+
+      faq.querySelectorAll('[data-adula-faq-material]').forEach((element) => {
+        const visible = element.dataset.adulaFaqMaterial === material;
+        element.hidden = !visible;
+
+        if (!visible && element instanceof HTMLDetailsElement) {
+          element.open = false;
+        }
+      });
+
+      faq.querySelectorAll('[data-adula-faq-material-copy]').forEach((element) => {
+        const copyType = element.dataset.adulaFaqMaterialCopy;
+        element.hidden = copyType === 'moissanite' ? !hasMoissanite : copyType !== material;
+      });
+
+      faq.dataset.selectedMaterial = material;
+    };
+
+    document.addEventListener('change', (event) => {
+      const control = event.target;
+
+      if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement)) return;
+      if (control.getAttribute('form') !== formId && control.form?.id !== formId) return;
+
+      window.requestAnimationFrame(updateFaq);
+    });
+
+    updateFaq();
+  })();
+</script>
 
 {%- if section.settings.show_sticky_add_to_cart and product.available -%}
   <product-rerender id="{{ product_form_id }}-sticky-bar" observe-form="{{ product_form_id }}">
