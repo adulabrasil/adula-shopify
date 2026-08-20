@@ -183,7 +183,300 @@
       </div>
     </product-rerender>
   </div>
+
+  {%- liquid
+    capture adula_faq_product_data
+      echo product.title
+      echo ' '
+      echo product.handle
+      echo ' '
+      echo product.type
+      echo ' '
+      echo product.vendor
+      echo ' '
+      echo product.description
+      for tag in product.tags
+        echo ' '
+        echo tag
+      endfor
+    endcapture
+
+    assign adula_faq_product_data = adula_faq_product_data | downcase
+    assign adula_faq_is_moissanite = false
+    assign adula_faq_is_silver = false
+    assign adula_faq_is_semijewel = false
+
+    if adula_faq_product_data contains 'moissanite' or adula_faq_product_data contains 'moissanita'
+      assign adula_faq_is_moissanite = true
+    endif
+
+    if adula_faq_product_data contains 'prata 925' or adula_faq_product_data contains 'prata de lei'
+      assign adula_faq_is_silver = true
+    endif
+
+    unless adula_faq_is_silver
+      if adula_faq_product_data contains 'semijoia' or adula_faq_product_data contains 'latão' or adula_faq_product_data contains 'banhado a ouro' or adula_faq_product_data contains 'banhada a ouro' or adula_faq_product_data contains 'ródio branco'
+        assign adula_faq_is_semijewel = true
+      endif
+    endunless
+  -%}
+
+  <section class="adula-product-faq" aria-labelledby="adula-product-faq-title-{{ section.id }}">
+    <div class="adula-product-faq__inner">
+      <h2 id="adula-product-faq-title-{{ section.id }}" class="adula-product-faq__title">Perguntas frequentes</h2>
+
+      <div class="adula-product-faq__items">
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>Como sei qual é o material desta peça?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            {%- if adula_faq_is_moissanite -%}
+              <p>Esta joia possui Moissanite certificada. O material da estrutura, o acabamento, as medidas e as demais características estão informados na descrição do produto.</p>
+            {%- elsif adula_faq_is_silver -%}
+              <p>Esta peça é confeccionada em Prata 925 legítima. As medidas, pedras e demais características estão informadas na descrição do produto.</p>
+            {%- elsif adula_faq_is_semijewel -%}
+              <p>Esta é uma semijoia Adüla. O metal e o acabamento — como banho de Ouro 18k ou Ródio Branco — estão informados na descrição do produto. Quando houver mais de uma opção, confira a cor selecionada antes de adicionar ao carrinho.</p>
+            {%- else -%}
+              <p>O material, o acabamento, as medidas e as demais características estão informados na descrição do produto. Quando houver mais de uma opção, confira a variação selecionada antes de adicionar ao carrinho.</p>
+            {%- endif -%}
+          </div>
+        </details>
+
+        {%- if adula_faq_is_silver -%}
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>A Prata 925 da Adüla é legítima?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>Sim. Todos os produtos identificados como Prata 925 são confeccionados em prata de lei e acompanham a garantia Adüla de autenticidade da matéria-prima. Essa garantia de autenticidade é vitalícia.</p>
+            </div>
+          </details>
+
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>Por que a Prata 925 pode escurecer?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>O escurecimento é uma reação natural da prata ao contato com o ar, o suor, a umidade e outras substâncias. Isso não significa que a peça seja falsa nem representa defeito de fabricação. A limpeza adequada ajuda a devolver o brilho à joia.</p>
+            </div>
+          </details>
+        {%- endif -%}
+
+        {%- if adula_faq_is_semijewel -%}
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>As semijoias da Adüla perdem o banho?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>O banho de Ouro 18k ou Ródio Branco pode apresentar desgaste ao longo do tempo. A duração depende da frequência de uso, do contato com a pele e dos cuidados com a peça. Esse desgaste gradual é uma característica natural das semijoias e não um defeito de fabricação.</p>
+            </div>
+          </details>
+        {%- endif -%}
+
+        {%- if adula_faq_is_moissanite -%}
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>O que é Moissanite?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>A Moissanite é uma gema criada em laboratório, conhecida pelo brilho intenso, pela resistência e pelos reflexos coloridos. Ela não é um diamante, mas é uma alternativa sofisticada para quem procura beleza, durabilidade e excelente brilho.</p>
+            </div>
+          </details>
+
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>A Moissanite acompanha certificado?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>Sim. Todas as joias com Moissanite da Adüla acompanham o Certificado GRA, que apresenta as características e a identificação da gema. O certificado é enviado junto com a peça.</p>
+            </div>
+          </details>
+
+          <details class="adula-product-faq__item">
+            <summary class="adula-product-faq__question">
+              <span>A Moissanite é resistente?</span>
+              <span class="adula-product-faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="adula-product-faq__answer prose">
+              <p>Sim. A Moissanite possui dureza aproximada de 9,25 na escala de Mohs e está entre as gemas mais resistentes usadas em joalheria. Mesmo assim, recomendamos evitar impactos, produtos químicos e o contato direto com superfícies abrasivas.</p>
+            </div>
+          </details>
+        {%- endif -%}
+
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>Posso molhar minhas peças?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            <p>Para preservar o acabamento e o brilho por mais tempo, recomendamos retirar as peças antes do banho, da piscina, do mar e de atividades físicas. Evite também o contato direto com perfumes, cremes, maquiagens, produtos de limpeza e outras substâncias químicas.</p>
+          </div>
+        </details>
+
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>Como devo limpar e guardar minhas peças?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            <p>Utilize água morna e sabão líquido neutro. Depois da limpeza, seque completamente com uma toalha macia e, se necessário, com secador em temperatura suave. Guarde a peça separadamente, em local seco, limpo e protegido da luz e da umidade.</p>
+          </div>
+        </details>
+
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>As peças da Adüla possuem níquel?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            <p>As peças da Adüla não possuem níquel em sua composição. O níquel é um dos metais frequentemente associados a irritações na pele. Entretanto, sensibilidades podem variar de pessoa para pessoa.</p>
+          </div>
+        </details>
+
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>Qual é a garantia das peças?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            <p>A Garantia Adüla é válida por 6 meses para defeitos técnicos de fabricação ou dos materiais utilizados.{% if adula_faq_is_silver %} As joias identificadas como Prata 925 também possuem garantia vitalícia da autenticidade da prata.{% endif %}</p>
+            <p>A garantia não cobre danos provocados por mau uso, quedas, acidentes, contato com produtos químicos, peças amassadas, raspadas ou quebradas por uso inadequado. Cada caso poderá ser encaminhado ao setor técnico da Adüla para avaliação.</p>
+          </div>
+        </details>
+
+        <details class="adula-product-faq__item">
+          <summary class="adula-product-faq__question">
+            <span>Posso trocar ou devolver minha compra?</span>
+            <span class="adula-product-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="adula-product-faq__answer prose">
+            <p>A solicitação de troca ou devolução deve ser feita em até 7 dias corridos após o recebimento, respeitando as condições da Política de Trocas e Devoluções da Adüla. A peça deve estar sem sinais de uso, com etiqueta, embalagem original e Certificado de Garantia.</p>
+            <p>Por questões de higiene e segurança, brincos e piercings possuem condições específicas. Consulte a política completa antes da compra.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 </div>
+
+<style>
+  #shopify-section-{{ section.id }} .adula-product-faq {
+    margin-block-start: clamp(48px, 7vw, 96px);
+    padding-inline: var(--container-gutter);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__inner {
+    width: min(100%, 960px);
+    margin-inline: auto;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__title {
+    margin: 0 0 clamp(24px, 4vw, 42px);
+    color: #2f211b;
+    font-family: var(--heading-font-family);
+    font-size: clamp(28px, 3.2vw, 46px);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__items {
+    border-block-start: 1px solid rgb(83 46 29 / 18%);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__item {
+    border-block-end: 1px solid rgb(83 46 29 / 18%);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__question {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 24px;
+    gap: 20px;
+    align-items: center;
+    padding-block: 22px;
+    color: #532e1d;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.45;
+    list-style: none;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__question::-webkit-details-marker {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__icon {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    justify-self: center;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__icon::before,
+  #shopify-section-{{ section.id }} .adula-product-faq__icon::after {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 12px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: translate(-50%, -50%);
+    transition: transform 180ms ease;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__item[open] .adula-product-faq__icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__answer {
+    max-width: 820px;
+    padding: 0 44px 24px 0;
+    color: rgb(47 33 27 / 78%);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  #shopify-section-{{ section.id }} .adula-product-faq__answer p {
+    margin-block: 0 10px;
+  }
+
+  @media screen and (max-width: 699px) {
+    #shopify-section-{{ section.id }} .adula-product-faq {
+      margin-block-start: 44px;
+      padding-inline: 18px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-product-faq__title {
+      margin-block-end: 22px;
+      font-size: 30px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-product-faq__question {
+      gap: 14px;
+      padding-block: 18px;
+      font-size: 14px;
+    }
+
+    #shopify-section-{{ section.id }} .adula-product-faq__answer {
+      padding: 0 30px 20px 0;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+  }
+</style>
 
 {%- if section.settings.show_sticky_add_to_cart and product.available -%}
   <product-rerender id="{{ product_form_id }}-sticky-bar" observe-form="{{ product_form_id }}">
