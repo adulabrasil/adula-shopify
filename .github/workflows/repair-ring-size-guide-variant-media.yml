@@ -1,0 +1,47 @@
+name: Corrigir guia de medidas nas fotos principais dos anéis
+
+on:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - scripts/repair-ring-size-guide-variant-media.mjs
+      - .github/workflows/repair-ring-size-guide-variant-media.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repair-ring-size-guide-variant-media
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Corrigir os vínculos dos cinco anéis afetados
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          OUTPUT_DIR: ring-size-guide-variant-media-repair
+        run: node scripts/repair-ring-size-guide-variant-media.mjs
+
+      - name: Salvar relatório da correção
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-correcao-guia-medidas-aneis
+          path: ring-size-guide-variant-media-repair/
+          if-no-files-found: warn
+          retention-days: 30
