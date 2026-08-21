@@ -241,6 +241,111 @@
         {%- render 'social-media', layout: 'list' -%}
       {%- endif -%}
 
+      <div class="adula-google-footer-badge" aria-label="Excelente: 5 estrelas e 6.456 avaliações das lojas Adüla no Google">
+        <div class="adula-google-footer-line">
+          <strong>EXCELENTE</strong>
+          <span class="adula-google-footer-stars" aria-label="5 estrelas">★★★★★</span>
+        </div>
+        <div class="adula-google-footer-line">
+          <strong data-google-footer-count>6.456 avaliações</strong>
+          <span class="adula-google-footer-wordmark" aria-label="Google"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <style>
+        #shopify-section-{{ section.id }} .adula-google-footer-badge {
+          width: max-content;
+          max-width: 100%;
+          margin-top: 18px;
+          padding: 15px 22px 16px;
+          border-radius: 13px;
+          background: #fff;
+          color: #111;
+          font-family: Arial, Helvetica, sans-serif;
+          box-sizing: border-box;
+        }
+
+        #shopify-section-{{ section.id }} .adula-google-footer-line {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          white-space: nowrap;
+          line-height: 1.2;
+        }
+
+        #shopify-section-{{ section.id }} .adula-google-footer-line + .adula-google-footer-line {
+          margin-top: 2px;
+        }
+
+        #shopify-section-{{ section.id }} .adula-google-footer-line strong {
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 0;
+        }
+
+        #shopify-section-{{ section.id }} .adula-google-footer-stars {
+          color: #ffc107;
+          font-size: 21px;
+          letter-spacing: 0;
+          line-height: 1;
+        }
+
+        #shopify-section-{{ section.id }} .adula-google-footer-wordmark {
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: -1px;
+          line-height: 1;
+        }
+
+        #shopify-section-{{ section.id }} .g-blue { color: #4285f4; }
+        #shopify-section-{{ section.id }} .g-red { color: #ea4335; }
+        #shopify-section-{{ section.id }} .g-yellow { color: #fbbc05; }
+        #shopify-section-{{ section.id }} .g-green { color: #34a853; }
+
+        @media screen and (max-width: 699px) {
+          #shopify-section-{{ section.id }} .adula-google-footer-badge {
+            padding: 14px 18px 15px;
+          }
+
+          #shopify-section-{{ section.id }} .adula-google-footer-line strong {
+            font-size: 14px;
+          }
+
+          #shopify-section-{{ section.id }} .adula-google-footer-stars {
+            font-size: 19px;
+          }
+
+          #shopify-section-{{ section.id }} .adula-google-footer-wordmark {
+            font-size: 21px;
+          }
+        }
+      </style>
+
+      <script>
+        (() => {
+          const minimumCount = 6456;
+          const countNode = document.querySelector('#shopify-section-{{ section.id }} [data-google-footer-count]');
+          if (!countNode) return;
+
+          const formatNumber = (value) => new Intl.NumberFormat('pt-BR').format(value);
+          const renderCount = (value) => {
+            const parsed = Number.parseInt(value, 10);
+            const count = Number.isFinite(parsed) ? Math.max(minimumCount, parsed) : minimumCount;
+            countNode.textContent = formatNumber(count) + ' avaliações';
+          };
+
+          try {
+            renderCount(window.localStorage.getItem('adulaGoogleReviewCount'));
+          } catch (error) {
+            renderCount(minimumCount);
+          }
+
+          window.addEventListener('adula:google-review-count', (event) => {
+            renderCount(event.detail && event.detail.count);
+          });
+        })();
+      </script>
+
       {%- comment -%}
         ------------------------------------------------------------------------------------------------------------------
         FOOTER ASIDE (COPYRIGHT + LOCALIZATION SELECTORS + PAYMENT METHODS)
