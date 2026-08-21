@@ -245,6 +245,46 @@
     endif
   -%}
 
+  <script>
+    (() => {
+      const productSection = document.getElementById('shopify-section-{{ section.id }}');
+      const pageMain = document.getElementById('main');
+
+      if (!productSection || !pageMain) {
+        return;
+      }
+
+      const positionFrequentlyBoughtTogether = () => {
+        const faq = productSection.querySelector('.adula-product-faq');
+        const frequentlyBought = document.querySelector('.cbb-frequently-bought-container');
+
+        if (!faq || !frequentlyBought || !faq.parentElement) {
+          return false;
+        }
+
+        if (frequentlyBought.parentElement !== faq.parentElement || frequentlyBought.nextElementSibling !== faq) {
+          faq.parentElement.insertBefore(frequentlyBought, faq);
+        }
+
+        frequentlyBought.setAttribute('data-adula-positioned-before-faq', 'true');
+        return true;
+      };
+
+      if (positionFrequentlyBoughtTogether()) {
+        return;
+      }
+
+      const observer = new MutationObserver(() => {
+        if (positionFrequentlyBoughtTogether()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(pageMain, { childList: true, subtree: true });
+      window.setTimeout(() => observer.disconnect(), 15000);
+    })();
+  </script>
+
   <section
     class="adula-product-faq"
     aria-labelledby="adula-product-faq-title-{{ section.id }}"
