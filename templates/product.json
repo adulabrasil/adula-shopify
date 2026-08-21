@@ -117,7 +117,7 @@
           "settings": {
             "title": "Combine com",
             "products_count": 3,
-            "show_below_gallery": true,
+            "show_below_gallery": false,
             "stack_products": false,
             "show_quick_buy": true
           }
