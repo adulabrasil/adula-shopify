@@ -237,26 +237,38 @@
         ------------------------------------------------------------------------------------------------------------------
       {%- endcomment -%}
 
-      {%- if section.settings.show_social_media -%}
-        {%- render 'social-media', layout: 'list' -%}
-      {%- endif -%}
+      <div class="adula-footer-social-proof">
+        {%- if section.settings.show_social_media -%}
+          {%- render 'social-media', layout: 'list' -%}
+        {%- endif -%}
 
-      <div class="adula-google-footer-badge" aria-label="Excelente: 5 estrelas e 6.456 avaliações das lojas Adüla no Google">
-        <div class="adula-google-footer-line">
-          <strong>EXCELENTE</strong>
-          <span class="adula-google-footer-stars" aria-label="5 estrelas">★★★★★</span>
-        </div>
-        <div class="adula-google-footer-line">
-          <strong data-google-footer-count>6.456 avaliações</strong>
-          <span class="adula-google-footer-wordmark" aria-label="Google"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        <div class="adula-google-footer-badge" aria-label="Excelente: 5 estrelas e 6.456 avaliações das lojas Adüla no Google">
+          <div class="adula-google-footer-line">
+            <strong>EXCELENTE</strong>
+            <span class="adula-google-footer-stars" aria-label="5 estrelas">★★★★★</span>
+          </div>
+          <div class="adula-google-footer-line">
+            <strong data-google-footer-count>6.456 avaliações</strong>
+            <span class="adula-google-footer-wordmark" aria-label="Google"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+          </div>
         </div>
       </div>
 
       <style>
+        #shopify-section-{{ section.id }} .footer__inner {
+          row-gap: 24px;
+        }
+
+        #shopify-section-{{ section.id }} .adula-footer-social-proof {
+          display: grid;
+          justify-items: start;
+          gap: 12px;
+        }
+
         #shopify-section-{{ section.id }} .adula-google-footer-badge {
           width: max-content;
           max-width: 100%;
-          margin-top: 18px;
+          margin-top: 0;
           padding: 15px 22px 16px;
           border-radius: 13px;
           background: #fff;
