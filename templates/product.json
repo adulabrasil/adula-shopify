@@ -169,7 +169,7 @@
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
         "subheading": "",
-        "title": "Vistos Recentemente",
+        "title": "Produtos recomendados",
         "heading_style": "h2",
         "content": ""
       }
@@ -218,6 +218,7 @@
   },
   "order": [
     "main",
+    "related-products",
     "recently-viewed",
     "17863900215222df89"
   ]
