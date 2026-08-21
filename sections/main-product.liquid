@@ -245,7 +245,54 @@
     endif
   -%}
 
-  <div id="cbb-frequently-bought-box"></div>
+  <div id="adula-frequently-bought-anchor-{{ section.id }}" aria-hidden="true"></div>
+
+  <script>
+    (() => {
+      const anchor = document.getElementById('adula-frequently-bought-anchor-{{ section.id }}');
+
+      if (!anchor || !document.body) {
+        return;
+      }
+
+      let observer;
+
+      const positionFrequentlyBoughtTogether = () => {
+        const frequentlyBought = document.querySelector('.cbb-frequently-bought-container');
+
+        if (!frequentlyBought || !anchor.parentElement) {
+          return false;
+        }
+
+        const hasProductImage = Boolean(frequentlyBought.querySelector('img'));
+        const hasPurchaseControl = Boolean(frequentlyBought.querySelector('button, input, select'));
+        const hasLoadedContent = frequentlyBought.textContent.trim().length > 30;
+
+        if (!hasProductImage || !hasPurchaseControl || !hasLoadedContent) {
+          return false;
+        }
+
+        observer?.disconnect();
+
+        window.setTimeout(() => {
+          if (anchor.parentElement && frequentlyBought.isConnected) {
+            anchor.parentElement.insertBefore(frequentlyBought, anchor);
+            frequentlyBought.setAttribute('data-adula-positioned-before-faq', 'true');
+          }
+        }, 100);
+
+        return true;
+      };
+
+      if (positionFrequentlyBoughtTogether()) {
+        return;
+      }
+
+      observer = new MutationObserver(positionFrequentlyBoughtTogether);
+      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+      window.setTimeout(() => observer.disconnect(), 30000);
+    })();
+  </script>
 
   <section
     class="adula-product-faq"
