@@ -1,0 +1,113 @@
+name: Publicar alterações do tema na Shopify
+
+on:
+  push:
+    branches:
+      - Adula-Shopify
+    paths:
+      - 'assets/**'
+      - 'blocks/**'
+      - 'config/**'
+      - 'layout/**'
+      - 'locales/**'
+      - 'sections/**'
+      - 'snippets/**'
+      - 'templates/**'
+  workflow_dispatch:
+    inputs:
+      files:
+        description: 'Arquivos do tema separados por vírgula'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-shopify-theme
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publicar arquivos alterados no tema ativo
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Identificar arquivos de tema alterados
+        id: files
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          MANUAL_FILES: ${{ inputs.files }}
+        run: |
+          set -euo pipefail
+          THEME_PATHS=(assets blocks config layout locales sections snippets templates)
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            printf '%s' "$MANUAL_FILES" |
+              tr ',' '\n' |
+              sed '/^[[:space:]]*$/d' |
+              sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > /tmp/theme-files.txt
+          else
+            base="$BEFORE_SHA"
+            if printf '%s' "$base" | grep -Eq '^0+$'; then
+              base="$(git rev-parse "$CURRENT_SHA^")"
+            fi
+
+            git diff --name-status "$base" "$CURRENT_SHA" -- "${THEME_PATHS[@]}" > /tmp/theme-status.txt
+
+            if awk '$1 ~ /^D/ { found=1 } END { exit !found }' /tmp/theme-status.txt; then
+              echo "::error::A publicação automática não remove arquivos do tema. Revise as exclusões separadamente."
+              awk '$1 ~ /^D/ { print $2 }' /tmp/theme-status.txt
+              exit 1
+            fi
+
+            awk '$1 ~ /^[ACMRT]/ { print $NF }' /tmp/theme-status.txt > /tmp/theme-files.txt
+          fi
+
+          if [ ! -s /tmp/theme-files.txt ]; then
+            echo "::notice::Nenhum arquivo de tema para publicar."
+            echo 'files=[]' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          while IFS= read -r file; do
+            case "$file" in
+              assets/*|blocks/*|config/*|layout/*|locales/*|sections/*|snippets/*|templates/*) ;;
+              *)
+                echo "::error::Caminho fora das pastas permitidas: $file"
+                exit 1
+                ;;
+            esac
+            if [ ! -f "$file" ]; then
+              echo "::error::Arquivo não encontrado no checkout: $file"
+              exit 1
+            fi
+          done < /tmp/theme-files.txt
+
+          files_json="$(jq -Rsc 'split("\n") | map(select(length > 0))' /tmp/theme-files.txt)"
+          echo "files=$files_json" >> "$GITHUB_OUTPUT"
+          echo "Arquivos selecionados:"
+          jq -r '.[]' <<< "$files_json"
+
+      - name: Publicar no tema Prestige ativo
+        if: steps.files.outputs.files != '[]'
+        env:
+          SHOPIFY_SHOP: adula-brasil.myshopify.com
+          SHOPIFY_CLIENT_ID: 6175b96f9fd42bda41dd25b1adc49757
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          THEME_FILES_JSON: ${{ steps.files.outputs.files }}
+        run: node scripts/publish-changed-theme-files.mjs
