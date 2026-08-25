@@ -1,18 +1,6 @@
-name: Publicar compra rápida no tema
+name: Publicar compra rápida no tema (manual)
 
 on:
-  push:
-    branches:
-      - Adula-Shopify
-    paths:
-      - assets/adula-product-card-variants-v2.js
-      - assets/adula-quick-buy.css
-      - snippets/option-value.liquid
-      - snippets/product-card.liquid
-      - layout/theme.liquid
-      - sections/main-product.liquid
-      - scripts/deploy-quick-buy-theme.mjs
-      - .github/workflows/deploy-quick-buy-theme.yml
   workflow_dispatch:
 
 permissions:
