@@ -44,8 +44,19 @@
     <div class="header-sidebar__scroller">
       <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
         {%- for link in menu.links -%}
+          {%- assign link_title_downcase = link.title | strip | downcase -%}
           <li>
-            {%- if link.links.size > 0 -%}
+            {%- if link_title_downcase == 'nossas lojas' -%}
+              <button
+                type="button"
+                class="header-sidebar__linklist-button header-sidebar__linklist-button--stores {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}"
+                aria-controls="header-panel-{{ forloop.index }}"
+                aria-expanded="false"
+              >
+                {{- link.title -}}
+                {%- render 'icon' with 'chevron-right', width: 12, direction_aware: true -%}
+              </button>
+            {%- elsif link.links.size > 0 -%}
               <button
                 type="button"
                 class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}"
@@ -62,12 +73,6 @@
             {%- endif -%}
           </li>
         {%- endfor -%}
-        <li>
-          <button type="button" class="header-sidebar__linklist-button header-sidebar__linklist-button--stores {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" aria-controls="header-panel-adula-stores" aria-expanded="false">
-            Nossas Lojas
-            {%- render 'icon' with 'chevron-right', width: 12, direction_aware: true -%}
-          </button>
-        </li>
       </ul>
     </div>
 
@@ -124,6 +129,7 @@
     <header-sidebar-collapsible-panel class="header-sidebar__collapsible-panel" slot="collapsible-panel">
       <div class="header-sidebar__scroller">
         {%- for link in menu.links -%}
+          {%- assign link_title_downcase = link.title | strip | downcase -%}
           {%- if link.links.size > 0 -%}
             <div id="header-panel-{{ forloop.index }}" class="header-sidebar__sub-panel" hidden>
               <button
@@ -136,7 +142,13 @@
               </button>
 
               <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
-                {%- for sub_link in link.links -%}
+                {%- if link_title_downcase == 'nossas lojas' -%}
+                  <li><a href="https://share.google/m7BM2MVvmyE2MbYBo" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Shopping Pátio Savassi</a></li>
+                  <li><a href="https://share.google/pOVPtcPYHvqPQVGMC" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">BH Shopping</a></li>
+                  <li><a href="https://share.google/ibfnR9eQu5ugm2KDQ" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Boulevard Shopping</a></li>
+                  <li><a href="https://share.google/zhYzg7FKzzkfVMHNy" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Loja Conceito Savassi</a></li>
+                {%- else -%}
+                  {%- for sub_link in link.links -%}
                   <li>
                     {%- if sub_link.links.size > 0 -%}
                       <accordion-disclosure>
@@ -164,7 +176,8 @@
                       </a>
                     {%- endif -%}
                   </li>
-                {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
               </ul>
 
               {%- liquid
@@ -193,18 +206,6 @@
             </div>
           {%- endif -%}
         {%- endfor -%}
-        <div id="header-panel-adula-stores" class="header-sidebar__sub-panel" hidden>
-          <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
-            {%- render 'icon' with 'chevron-left', width: 12, direction_aware: true -%}
-            Nossas Lojas
-          </button>
-          <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
-            <li><a href="https://share.google/m7BM2MVvmyE2MbYBo" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Shopping Pátio Savassi</a></li>
-            <li><a href="https://share.google/pOVPtcPYHvqPQVGMC" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">BH Shopping</a></li>
-            <li><a href="https://share.google/ibfnR9eQu5ugm2KDQ" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Boulevard Shopping</a></li>
-            <li><a href="https://share.google/zhYzg7FKzzkfVMHNy" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Loja Conceito Savassi</a></li>
-          </ul>
-        </div>
       </div>
     </header-sidebar-collapsible-panel>
   {%- endif -%}
