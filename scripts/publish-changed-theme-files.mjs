@@ -6,7 +6,7 @@ const clientId = process.env.SHOPIFY_CLIENT_ID?.trim();
 const clientSecret = process.env.SHOPIFY_CLIENT_SECRET?.trim();
 const apiVersion = '2026-07';
 const allowedRoots = new Set(['assets', 'blocks', 'config', 'layout', 'locales', 'sections', 'snippets', 'templates']);
-const textExtensions = new Set(['.css', '.gif', '.html', '.js', '.json', '.liquid', '.md', '.scss', '.svg', '.txt', '.xml']);
+const textExtensions = new Set(['.css', '.html', '.js', '.json', '.liquid', '.md', '.scss', '.svg', '.txt', '.xml']);
 
 if (!shop || !clientId || !clientSecret) {
   throw new Error('SHOPIFY_SHOP, SHOPIFY_CLIENT_ID e SHOPIFY_CLIENT_SECRET são obrigatórios.');
