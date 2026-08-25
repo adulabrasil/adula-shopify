@@ -543,6 +543,30 @@
     }
   }
 
+
+  /* Adula: highlighted store locations menu (desktop and drawer). */
+  #shopify-section-{{ section.id }} .header__primary-nav-link--stores {
+    padding: 0.42rem 0.68rem;
+    border-radius: 0.35rem;
+    background: #532e1d;
+    color: #fff8f1;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+  }
+  #shopify-section-{{ section.id }} .header__primary-nav-link--stores:hover,
+  #shopify-section-{{ section.id }} .header__primary-nav-link--stores:focus-visible {
+    background: #b79051;
+    color: #2f1d16;
+  }
+  #shopify-section-{{ section.id }} .header-sidebar__linklist-button--stores {
+    margin-block: 0.25rem;
+    padding: 0.9rem 1rem;
+    border-radius: 0.35rem;
+    background: #532e1d;
+    color: #fff8f1;
+    font-weight: 700;
+  }
+
 </style>
 
 <height-observer variable="header">
@@ -685,6 +709,21 @@
                 {%- endif -%}
               </li>
             {%- endfor -%}
+            <li class="header__primary-nav-item header__primary-nav-item--stores">
+              <dropdown-menu-disclosure trigger="{{ section.settings.menu_open_trigger }}">
+                <details class="header__menu-disclosure">
+                  <summary class="header__primary-nav-link header__primary-nav-link--stores {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" data-title="Nossas Lojas" aria-label="Abrir submenu Nossas Lojas">
+                    Nossas Lojas
+                  </summary>
+                  <ul class="header__dropdown-menu header__dropdown-menu--restrictable unstyled-list" role="list">
+                    <li><a href="https://share.google/m7BM2MVvmyE2MbYBo" class="link-faded-reverse" target="_blank" rel="noopener">Shopping Pátio Savassi</a></li>
+                    <li><a href="https://share.google/pOVPtcPYHvqPQVGMC" class="link-faded-reverse" target="_blank" rel="noopener">BH Shopping</a></li>
+                    <li><a href="https://share.google/ibfnR9eQu5ugm2KDQ" class="link-faded-reverse" target="_blank" rel="noopener">Boulevard Shopping</a></li>
+                    <li><a href="https://share.google/zhYzg7FKzzkfVMHNy" class="link-faded-reverse" target="_blank" rel="noopener">Loja Conceito Savassi</a></li>
+                  </ul>
+                </details>
+              </dropdown-menu-disclosure>
+            </li>
           </ul>
         {%- endif -%}
       </nav>

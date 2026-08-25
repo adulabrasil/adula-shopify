@@ -28,7 +28,7 @@
       <div part="panel-list">
         <slot name="main-panel"></slot>
 
-        {%- if menu.levels > 0 -%}
+        {%- if menu.links.size > 0 -%}
           <slot name="collapsible-panel"></slot>
         {%- endif -%}
       </div>
@@ -62,6 +62,12 @@
             {%- endif -%}
           </li>
         {%- endfor -%}
+        <li>
+          <button type="button" class="header-sidebar__linklist-button header-sidebar__linklist-button--stores {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" aria-controls="header-panel-adula-stores" aria-expanded="false">
+            Nossas Lojas
+            {%- render 'icon' with 'chevron-right', width: 12, direction_aware: true -%}
+          </button>
+        </li>
       </ul>
     </div>
 
@@ -114,7 +120,7 @@
   </div>
 
   {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}
-  {%- if menu.levels > 0 -%}
+  {%- if menu.links.size > 0 -%}
     <header-sidebar-collapsible-panel class="header-sidebar__collapsible-panel" slot="collapsible-panel">
       <div class="header-sidebar__scroller">
         {%- for link in menu.links -%}
@@ -187,6 +193,18 @@
             </div>
           {%- endif -%}
         {%- endfor -%}
+        <div id="header-panel-adula-stores" class="header-sidebar__sub-panel" hidden>
+          <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+            {%- render 'icon' with 'chevron-left', width: 12, direction_aware: true -%}
+            Nossas Lojas
+          </button>
+          <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+            <li><a href="https://share.google/m7BM2MVvmyE2MbYBo" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Shopping Pátio Savassi</a></li>
+            <li><a href="https://share.google/pOVPtcPYHvqPQVGMC" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">BH Shopping</a></li>
+            <li><a href="https://share.google/ibfnR9eQu5ugm2KDQ" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Boulevard Shopping</a></li>
+            <li><a href="https://share.google/zhYzg7FKzzkfVMHNy" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" target="_blank" rel="noopener">Loja Conceito Savassi</a></li>
+          </ul>
+        </div>
       </div>
     </header-sidebar-collapsible-panel>
   {%- endif -%}
