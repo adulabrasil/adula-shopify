@@ -13,6 +13,8 @@ on:
       - 'sections/**'
       - 'snippets/**'
       - 'templates/**'
+      - 'scripts/publish-changed-theme-files.mjs'
+      - '.github/workflows/publish-shopify-theme.yml'
   workflow_dispatch:
     inputs:
       files:
