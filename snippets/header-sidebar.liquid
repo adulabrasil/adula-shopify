@@ -130,7 +130,7 @@
       <div class="header-sidebar__scroller">
         {%- for link in menu.links -%}
           {%- assign link_title_downcase = link.title | strip | downcase -%}
-          {%- if link.links.size > 0 -%}
+          {%- if link.links.size > 0 or link_title_downcase == 'nossas lojas' -%}
             <div id="header-panel-{{ forloop.index }}" class="header-sidebar__sub-panel" hidden>
               <button
                 type="button"
