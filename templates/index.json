@@ -313,8 +313,8 @@
             "text_size": "small",
             "stars_size": "medium",
             "arrows_position": "bottom",
-            "max_width": 1200,
-            "corner_styling": "rounded",
+            "max_width": 1100,
+            "corner_styling": "round",
             "quote_marks_style": "serif",
             "card_color": "#fff9f2",
             "stars_and_quote_marks_color": "#ffc107",
@@ -324,7 +324,7 @@
             "border_color": "#e8d9cc",
             "show_drop_shadow": true,
             "transition_speed": 4,
-            "header_text": "",
+            "header_text": "O Que Nossas Adülinhas dizem:",
             "show_average_rating": false,
             "rating_display": "default"
           }
