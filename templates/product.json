@@ -70,6 +70,19 @@
         "secure_checkout": {
           "type": "feature_with_icon",
           "settings": {
+            "text": "Troca Fácil Online ou em qualquer uma de nossas Lojas Físicas em Belo Horizonte",
+            "link": "",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/troca-f-cil.png",
+            "icon_width": 32,
+            "background": "#fffdfb",
+            "text_color": "#2d2926",
+            "border_color": ""
+          }
+        },
+        "feature_with_icon_37VrXT": {
+          "type": "feature_with_icon",
+          "settings": {
             "text": "Pagamento seguro",
             "link": "",
             "icon": "picto-lock",
@@ -133,6 +146,7 @@
         "quantity_selector",
         "buy_buttons",
         "secure_checkout",
+        "feature_with_icon_37VrXT",
         "product_benefits",
         "description",
         "care",
