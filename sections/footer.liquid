@@ -82,11 +82,7 @@
 
                 {%- when 'text' -%}
                   {%- if block.settings.title != blank or block.settings.content != blank or shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
-                    <div class="v-stack gap-4 sm:gap-5">
-                      {%- if block.settings.title != blank -%}
-                        <p class="h6">{{ block.settings.title }}</p>
-                      {%- endif -%}
-
+                    {%- capture text_block_content -%}
                       {%- if block.settings.content != blank -%}
                         <div class="prose text-subdued">
                           {{- block.settings.content -}}
@@ -98,7 +94,19 @@
                           {{- shop | login_button: action: 'follow' -}}
                         </div>
                       {%- endif -%}
+                    {%- endcapture -%}
+
+                    <div class="v-stack gap-4 sm:gap-5 {% if block.settings.collapse_on_mobile %}sm-max:hidden{% endif %}">
+                      {%- if block.settings.title != blank -%}
+                        <p class="h6">{{ block.settings.title }}</p>
+                      {%- endif -%}
+
+                      {{- text_block_content -}}
                     </div>
+
+                    {%- if block.settings.collapse_on_mobile and block.settings.title != blank -%}
+                      {%- render 'accordion', title: block.settings.title, content: text_block_content, class: 'sm:hidden' -%}
+                    {%- endif -%}
                   {%- endif -%}
 
                 {%- when 'links' -%}
@@ -198,6 +206,10 @@
                 assign collapse_block = false
 
                 if block.type == 'links' and block.settings.collapse_on_mobile
+                  assign collapse_block = true
+                endif
+
+                if block.type == 'text' and block.settings.collapse_on_mobile and block.settings.title != blank
                   assign collapse_block = true
                 endif
               -%}
@@ -644,6 +656,12 @@
           "label": "t:sections.footer.blocks.text.show_follow_on_shop",
           "info": "t:sections.footer.blocks.text.show_follow_on_shop_info",
           "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "collapse_on_mobile",
+          "label": "Recolher conteúdo no celular",
+          "default": false
         }
       ]
     },
