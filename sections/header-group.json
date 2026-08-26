@@ -14,6 +14,12 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_3h7cBf": {
+          "type": "message",
+          "settings": {
+            "text": "LOJAS FÍSICAS NOS MAIORES SHOPPINGS DE BH"
+          }
+        },
         "message_CeEnQa": {
           "type": "message",
           "settings": {
@@ -40,6 +46,7 @@
         }
       },
       "block_order": [
+        "message_3h7cBf",
         "message_CeEnQa",
         "pix",
         "parcelamento",
