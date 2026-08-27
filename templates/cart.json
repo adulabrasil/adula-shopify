@@ -23,15 +23,6 @@
     },
     "17878457433f03f872": {
       "type": "apps",
-      "blocks": {
-        "progressify_multi_bar_upsells_block_DzPbBJ": {
-          "type": "shopify://apps/progressify-multi-bar-upsells/blocks/block/82c18c6a-85d2-42a6-aa30-f91433549659",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "progressify_multi_bar_upsells_block_DzPbBJ"
-      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
