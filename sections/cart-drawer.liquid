@@ -10,6 +10,18 @@
   {%- if cart.empty? -%}
     <p class="h5 text-center">{{ 'cart.general.empty' | t }}</p>
   {%- else -%}
+    {%- assign has_cart_app_block = false -%}
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == '@app' -%}
+        {%- assign has_cart_app_block = true -%}
+        <div class="cart-drawer__app-block" {{ block.shopify_attributes }}>
+          {%- render block -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- unless has_cart_app_block -%}
     {%- liquid
       assign adula_shipping_total = cart.total_price
       assign adula_southeast_threshold = 19900
@@ -100,6 +112,7 @@
         margin-top: .45rem;
       }
     </style>
+    {%- endunless -%}
 
     <div class="cart-drawer__items">
       {%- for line_item in cart.items -%}
@@ -243,6 +256,11 @@
   "name": "t:sections.cart_drawer.name",
   "class": "shopify-section--cart-drawer",
   "tag": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
   "settings": [
     {
       "type": "paragraph",
