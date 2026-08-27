@@ -13,6 +13,15 @@
   "sections": {
     "cart-drawer": {
       "type": "cart-drawer",
+      "blocks": {
+        "progressify_multi_bar_upsells_block_zWpHh9": {
+          "type": "shopify://apps/progressify-multi-bar-upsells/blocks/block/82c18c6a-85d2-42a6-aa30-f91433549659",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "progressify_multi_bar_upsells_block_zWpHh9"
+      ],
       "settings": {
         "color_scheme": "",
         "show_cart_note": false,
