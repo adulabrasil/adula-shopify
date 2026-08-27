@@ -37,18 +37,32 @@
     return TRAY_VARIANT_ID;
   };
 
-  const wrongGiftUpdates = (cart) => {
+  const giftReconciliation = (cart) => {
     const desiredGift = desiredGiftFor(eligibleSubtotal(cart));
     const updates = {};
+    let hasDesiredGift = false;
 
     for (const item of cart.items || []) {
       const variantId = Number(item.variant_id || item.id);
-      if (GIFT_VARIANT_IDS.has(variantId) && variantId !== desiredGift) {
+
+      if (!GIFT_VARIANT_IDS.has(variantId)) continue;
+
+      if (variantId !== desiredGift) {
         updates[item.key] = 0;
+      } else if (hasDesiredGift) {
+        updates[item.key] = 0;
+      } else {
+        hasDesiredGift = true;
+
+        if (Number(item.quantity) !== 1) updates[item.key] = 1;
       }
     }
 
-    return updates;
+    return {
+      desiredGift,
+      updates,
+      shouldAddGift: desiredGift !== null && !hasDesiredGift,
+    };
   };
 
   const notifyCartRefresh = (cart) => {
@@ -63,23 +77,42 @@
 
     enforcementPromise = fetchCart()
       .then(async (cart) => {
-        const updates = wrongGiftUpdates(cart);
-        if (Object.keys(updates).length === 0) return cart;
+        const reconciliation = giftReconciliation(cart);
+        let correctedCart = cart;
 
-        const response = await fetch(cartEndpoint('cart/update.js'), {
-          method: 'POST',
-          credentials: 'same-origin',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ updates }),
-        });
+        if (reconciliation.shouldAddGift) {
+          const response = await fetch(cartEndpoint('cart/add.js'), {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              items: [{ id: reconciliation.desiredGift, quantity: 1 }],
+            }),
+          });
 
-        if (!response.ok) throw new Error('Não foi possível corrigir os brindes do carrinho.');
+          if (!response.ok) throw new Error('Não foi possível adicionar o brinde da faixa atual.');
+          correctedCart = await fetchCart();
+        }
 
-        const correctedCart = await response.json();
-        notifyCartRefresh(correctedCart);
+        if (Object.keys(reconciliation.updates).length > 0) {
+          const response = await fetch(cartEndpoint('cart/update.js'), {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ updates: reconciliation.updates }),
+          });
+
+          if (!response.ok) throw new Error('Não foi possível remover o brinde da faixa anterior.');
+          correctedCart = await response.json();
+        }
+
+        if (correctedCart !== cart) notifyCartRefresh(correctedCart);
         return correctedCart;
       })
       .catch((error) => {

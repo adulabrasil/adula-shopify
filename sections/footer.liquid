@@ -82,11 +82,7 @@
 
                 {%- when 'text' -%}
                   {%- if block.settings.title != blank or block.settings.content != blank or shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
-                    <div class="v-stack gap-4 sm:gap-5">
-                      {%- if block.settings.title != blank -%}
-                        <p class="h6">{{ block.settings.title }}</p>
-                      {%- endif -%}
-
+                    {%- capture text_block_content -%}
                       {%- if block.settings.content != blank -%}
                         <div class="prose text-subdued">
                           {{- block.settings.content -}}
@@ -98,7 +94,19 @@
                           {{- shop | login_button: action: 'follow' -}}
                         </div>
                       {%- endif -%}
+                    {%- endcapture -%}
+
+                    <div class="v-stack gap-4 sm:gap-5 {% if block.settings.collapse_on_mobile %}sm-max:hidden{% endif %}">
+                      {%- if block.settings.title != blank -%}
+                        <p class="h6">{{ block.settings.title }}</p>
+                      {%- endif -%}
+
+                      {{- text_block_content -}}
                     </div>
+
+                    {%- if block.settings.collapse_on_mobile and block.settings.title != blank -%}
+                      {%- render 'accordion', title: block.settings.title, content: text_block_content, class: 'sm:hidden' -%}
+                    {%- endif -%}
                   {%- endif -%}
 
                 {%- when 'links' -%}
@@ -200,6 +208,10 @@
                 if block.type == 'links' and block.settings.collapse_on_mobile
                   assign collapse_block = true
                 endif
+
+                if block.type == 'text' and block.settings.collapse_on_mobile and block.settings.title != blank
+                  assign collapse_block = true
+                endif
               -%}
 
               {%- capture current_block -%}
@@ -269,8 +281,8 @@
           width: max-content;
           max-width: 100%;
           margin-top: 0;
-          padding: 15px 22px 16px;
-          border-radius: 13px;
+          padding: 20px 28px 21px;
+          border-radius: 16px;
           background: #fff;
           color: #111;
           font-family: Arial, Helvetica, sans-serif;
@@ -280,30 +292,30 @@
         #shopify-section-{{ section.id }} .adula-google-footer-line {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
           white-space: nowrap;
           line-height: 1.2;
         }
 
         #shopify-section-{{ section.id }} .adula-google-footer-line + .adula-google-footer-line {
-          margin-top: 2px;
+          margin-top: 4px;
         }
 
         #shopify-section-{{ section.id }} .adula-google-footer-line strong {
-          font-size: 15px;
+          font-size: 21px;
           font-weight: 700;
           letter-spacing: 0;
         }
 
         #shopify-section-{{ section.id }} .adula-google-footer-stars {
           color: #ffc107;
-          font-size: 21px;
+          font-size: 30px;
           letter-spacing: 0;
           line-height: 1;
         }
 
         #shopify-section-{{ section.id }} .adula-google-footer-wordmark {
-          font-size: 22px;
+          font-size: 31px;
           font-weight: 500;
           letter-spacing: -1px;
           line-height: 1;
@@ -316,19 +328,20 @@
 
         @media screen and (max-width: 699px) {
           #shopify-section-{{ section.id }} .adula-google-footer-badge {
-            padding: 14px 18px 15px;
+            padding: 17px 20px 18px;
+            border-radius: 14px;
           }
 
           #shopify-section-{{ section.id }} .adula-google-footer-line strong {
-            font-size: 14px;
+            font-size: 17px;
           }
 
           #shopify-section-{{ section.id }} .adula-google-footer-stars {
-            font-size: 19px;
+            font-size: 25px;
           }
 
           #shopify-section-{{ section.id }} .adula-google-footer-wordmark {
-            font-size: 21px;
+            font-size: 26px;
           }
         }
       </style>
@@ -644,6 +657,12 @@
           "label": "t:sections.footer.blocks.text.show_follow_on_shop",
           "info": "t:sections.footer.blocks.text.show_follow_on_shop_info",
           "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "collapse_on_mobile",
+          "label": "Recolher conteúdo no celular",
+          "default": false
         }
       ]
     },
