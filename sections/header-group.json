@@ -57,7 +57,7 @@
         "custom_background": "#532e1d",
         "custom_text_color": "#ffffff",
         "enable_sticky": false,
-        "scrolling_speed": 0.3,
+        "scrolling_speed": 0.2,
         "desktop_font_size": 10,
         "mobile_font_size": 11
       }
