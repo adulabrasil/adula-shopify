@@ -1,339 +1,395 @@
 {%- liquid
-  assign slide_count = section.blocks.size
+  assign has_custom_video = false
+  for block in section.blocks
+    if block.settings.video != blank
+      assign has_custom_video = true
+      break
+    endif
+  endfor
 -%}
 
 <style>
-  #shopify-section-{{ section.id }} .adula-hero-carousel {
+  #shopify-section-{{ section.id }} .adula-video-hero {
+    --adula-brown: #532e1d;
+    --adula-gold: #b08d57;
+    --adula-cream: #fbf8f4;
     position: relative;
     overflow: hidden;
-    color: #4a3428;
-    background: #f3ece7;
+    background: var(--adula-cream);
+    padding: clamp(24px, 3vw, 42px) 0 clamp(28px, 3.6vw, 52px);
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__slide {
-    position: relative;
-    display: none;
-    width: 100%;
-    aspect-ratio: 1920 / 500;
-    min-height: 0;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-    display: block;
-    animation: adula-hero-fade-{{ section.id }} .55s ease both;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__content {
-    position: absolute;
-    z-index: 2;
-    inset: 0 auto 0 0;
+  #shopify-section-{{ section.id }} .adula-video-hero__header {
     display: flex;
-    width: min(44%, 680px);
-    align-items: center;
-    padding: clamp(20px, 3.2vw, 58px);
-    background: linear-gradient(90deg, rgba(243, 236, 231, .94) 0%, rgba(243, 236, 231, .82) 72%, rgba(243, 236, 231, 0) 100%);
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    width: min(100% - 40px, 1440px);
+    margin: 0 auto clamp(18px, 2vw, 28px);
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__copy {
-    max-width: 500px;
-    text-align: left;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__eyebrow {
-    margin: 0 0 10px;
-    font-size: 12px;
-    letter-spacing: .2em;
+  #shopify-section-{{ section.id }} .adula-video-hero__eyebrow {
+    margin: 0 0 6px;
+    color: var(--adula-gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
     text-transform: uppercase;
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__title {
+  #shopify-section-{{ section.id }} .adula-video-hero__title {
     margin: 0;
-    color: inherit;
-    font-size: clamp(30px, 3.5vw, 56px);
-    line-height: 1;
+    color: var(--adula-brown);
+    font-size: clamp(25px, 2.4vw, 38px);
+    line-height: 1.05;
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__text {
-    margin: 18px 0 26px;
-    max-width: 410px;
-    font-size: clamp(15px, 1.4vw, 19px);
-    line-height: 1.55;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__button {
-    display: inline-flex;
-    min-height: 46px;
-    align-items: center;
-    padding: 0 24px;
-    color: #fffdfb;
-    background: #4a3428;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media picture,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media {
-    position: absolute;
-    inset: 0;
-    min-height: 0;
-    overflow: hidden;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media img {
-    object-fit: contain;
-    object-position: center;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
-    position: absolute;
-    z-index: 3;
-    right: clamp(18px, 2.5vw, 40px);
-    bottom: 22px;
+  #shopify-section-{{ section.id }} .adula-video-hero__nav {
     display: flex;
-    align-items: center;
     gap: 9px;
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__dot {
-    border: 0;
-    cursor: pointer;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow {
+  #shopify-section-{{ section.id }} .adula-video-hero__arrow {
     display: grid;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     place-items: center;
-    border-radius: 50%;
-    color: #4a3428;
-    background: rgba(255, 253, 251, .88);
-    font-size: 22px;
-    line-height: 1;
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__dots {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 9px 11px;
-    border-radius: 20px;
-    background: rgba(255, 253, 251, .88);
-  }
-
-  #shopify-section-{{ section.id }} .adula-hero-carousel__dot {
-    width: 8px;
-    height: 8px;
     padding: 0;
+    border: 1px solid rgba(83, 46, 29, .22);
     border-radius: 50%;
-    background: rgba(74, 52, 40, .35);
+    color: var(--adula-brown);
+    background: rgba(255, 255, 255, .78);
+    cursor: pointer;
+    font-size: 21px;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__dot[aria-current="true"] {
-    width: 24px;
-    border-radius: 8px;
-    background: #4a3428;
+  #shopify-section-{{ section.id }} .adula-video-hero__arrow:hover {
+    color: #fff;
+    background: var(--adula-brown);
+    transform: translateY(-1px);
   }
 
-  #shopify-section-{{ section.id }} .adula-hero-carousel__arrow:focus-visible,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__dot:focus-visible,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__button:focus-visible,
-  #shopify-section-{{ section.id }} .adula-hero-carousel__media:focus-visible {
-    outline: 3px solid #ad924f;
-    outline-offset: 2px;
+  #shopify-section-{{ section.id }} .adula-video-hero__viewport {
+    overflow: hidden;
   }
 
-  @keyframes adula-hero-fade-{{ section.id }} {
-    from { opacity: .2; }
-    to { opacity: 1; }
+  #shopify-section-{{ section.id }} .adula-video-hero__track {
+    display: grid;
+    grid-auto-columns: minmax(190px, 1fr);
+    grid-auto-flow: column;
+    gap: clamp(12px, 1.25vw, 20px);
+    width: min(100% - 40px, 1440px);
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 2px 0 12px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-hero__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    aspect-ratio: 9 / 14;
+    border-radius: 16px;
+    background: #e8e0d9;
+    box-shadow: 0 7px 24px rgba(68, 44, 31, .08);
+    scroll-snap-align: start;
+    transform: translateZ(0);
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 30%;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, rgba(32, 21, 15, .42));
+    content: '';
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card:hover video {
+    transform: scale(1.018);
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card__label {
+    position: absolute;
+    z-index: 2;
+    left: 16px;
+    right: 48px;
+    bottom: 15px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(12px, 1vw, 15px);
+    font-weight: 500;
+    letter-spacing: .035em;
+    line-height: 1.25;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .2);
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card__sound {
+    position: absolute;
+    z-index: 3;
+    right: 12px;
+    bottom: 12px;
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(50, 34, 24, .38);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-card__sound svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-hero__dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 5px;
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-hero__dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(83, 46, 29, .28);
+  }
+
+  #shopify-section-{{ section.id }} .adula-video-hero__dot.is-active {
+    background: var(--adula-brown);
+  }
+
+  @media (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .adula-video-hero__track {
+      grid-auto-columns: calc((100% - (4 * clamp(12px, 1.25vw, 20px))) / 5);
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 999px) {
+    #shopify-section-{{ section.id }} .adula-video-hero__track {
+      grid-auto-columns: calc((100% - 24px) / 3);
+    }
   }
 
   @media (max-width: 699px) {
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide {
-      aspect-ratio: 4 / 5;
+    #shopify-section-{{ section.id }} .adula-video-hero {
+      padding-block: 22px 30px;
     }
 
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-      display: block;
+    #shopify-section-{{ section.id }} .adula-video-hero__header {
+      width: min(100% - 32px, 1440px);
+      margin-bottom: 16px;
     }
 
-    #shopify-section-{{ section.id }} .adula-hero-carousel__content {
-      inset: auto 0 0;
+    #shopify-section-{{ section.id }} .adula-video-hero__nav {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .adula-video-hero__track {
+      grid-auto-columns: 72vw;
       width: 100%;
-      align-items: flex-end;
-      padding: 42px 20px 58px;
-      background: linear-gradient(0deg, rgba(243, 236, 231, .96) 0%, rgba(243, 236, 231, .82) 68%, rgba(243, 236, 231, 0) 100%);
+      padding-inline: 16px;
+      scroll-padding-inline: 16px;
     }
 
-    #shopify-section-{{ section.id }} .adula-hero-carousel__media {
-      position: absolute;
-      inset: 0;
-      min-height: 0;
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__title {
-      font-size: clamp(36px, 11vw, 48px);
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__text {
-      margin: 12px 0 20px;
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__controls {
-      right: 16px;
-      bottom: 14px;
-    }
-
-    #shopify-section-{{ section.id }} .adula-hero-carousel__arrow {
-      width: 36px;
-      height: 36px;
+    #shopify-section-{{ section.id }} .adula-video-card {
+      border-radius: 14px;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    #shopify-section-{{ section.id }} .adula-hero-carousel__slide.is-active {
-      animation: none;
+    #shopify-section-{{ section.id }} .adula-video-hero__track {
+      scroll-behavior: auto;
+    }
+
+    #shopify-section-{{ section.id }} .adula-video-card video {
+      transition: none;
     }
   }
-
 </style>
 
-<section
-  class="adula-hero-carousel"
-  data-adula-hero-carousel
-  data-autoplay="{{ section.settings.autoplay }}"
-  data-interval="{{ section.settings.change_slides_speed | times: 1000 }}"
-  aria-roledescription="carrossel"
-  aria-label="Destaques Adüla"
->
-  <h1 class="sr-only">Joias e semijoias com design francês</h1>
+<section class="adula-video-hero" data-adula-video-hero aria-label="Vídeos Adüla">
+  <div class="adula-video-hero__header">
+    <div>
+      <p class="adula-video-hero__eyebrow">{{ section.settings.eyebrow | default: 'Chic sans effort' }}</p>
+      <h1 class="adula-video-hero__title">{{ section.settings.heading | default: 'Adüla em movimento' }}</h1>
+    </div>
 
-  <div class="adula-hero-carousel__slides" aria-live="polite">
-    {%- for block in section.blocks -%}
-      {%- liquid
-        assign hero_loading = 'lazy'
-        assign hero_fetchpriority = 'low'
-        if forloop.first
-          assign hero_loading = 'eager'
-          assign hero_fetchpriority = 'high'
-        endif
-      -%}
-      <article
-        class="adula-hero-carousel__slide{% if forloop.first %} is-active{% endif %}"
-        data-adula-hero-slide
-        aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}"
-        aria-label="{{ forloop.index }} de {{ slide_count }}"
-        {{ block.shopify_attributes }}
-      >
-        <a class="adula-hero-carousel__media" href="{{ block.settings.link | default: '#' }}" tabindex="{% if block.settings.link == blank %}-1{% else %}0{% endif %}" aria-label="{{ block.settings.heading | escape }}">
-          {%- if block.settings.image != blank or block.settings.image_mobile != blank -%}
-            <picture>
-              {%- if block.settings.image_mobile != blank -%}
-                <source
-                  media="(max-width: 699px)"
-                  srcset="{{ block.settings.image_mobile | image_url: width: 500 }} 500w, {{ block.settings.image_mobile | image_url: width: 700 }} 700w, {{ block.settings.image_mobile | image_url: width: 1000 }} 1000w, {{ block.settings.image_mobile | image_url: width: 1400 }} 1400w"
-                  sizes="100vw"
-                >
-              {%- endif -%}
-              {%- if block.settings.image != blank -%}
-                {{- block.settings.image | image_url: width: 2200 | image_tag: widths: '700, 1000, 1400, 1800, 2200', sizes: '100vw', loading: hero_loading, fetchpriority: hero_fetchpriority, alt: block.settings.image.alt -}}
-              {%- else -%}
-                {{- block.settings.image_mobile | image_url: width: 1400 | image_tag: widths: '500, 700, 1000, 1400', sizes: '100vw', loading: hero_loading, fetchpriority: hero_fetchpriority, alt: block.settings.image_mobile.alt -}}
-              {%- endif -%}
-            </picture>
-          {%- elsif forloop.index == 1 -%}
-            <img src="{{ 'adula-personalize-familia.webp' | asset_url }}" alt="Criança tocando pulseiras personalizadas no pulso da mãe" width="1362" height="2048" fetchpriority="high" decoding="async">
-          {%- elsif forloop.index == 2 -%}
-            <img src="{{ 'adula-fio-de-luz.webp' | asset_url }}" alt="Coleção Fios de Luz da Adüla" width="1920" height="500" loading="lazy" decoding="async">
-          {%- else -%}
-            <img src="{{ 'adula-love-paris.webp' | asset_url }}" alt="Coleção Amuletos de Paris da Adüla" width="1920" height="500" loading="lazy" decoding="async">
-          {%- endif -%}
-        </a>
-      </article>
-    {%- endfor -%}
+    <div class="adula-video-hero__nav" aria-label="Navegação do carrossel">
+      <button class="adula-video-hero__arrow" type="button" data-adula-video-prev aria-label="Vídeos anteriores">&#8249;</button>
+      <button class="adula-video-hero__arrow" type="button" data-adula-video-next aria-label="Próximos vídeos">&#8250;</button>
+    </div>
   </div>
 
-  {%- if slide_count > 1 -%}
-    <div class="adula-hero-carousel__controls" aria-label="Controles do carrossel">
-      <button class="adula-hero-carousel__arrow" type="button" data-adula-hero-prev aria-label="Imagem anterior">&#8249;</button>
-      <div class="adula-hero-carousel__dots">
+  <div class="adula-video-hero__viewport">
+    <div class="adula-video-hero__track" data-adula-video-track>
+      {%- if has_custom_video -%}
         {%- for block in section.blocks -%}
-          <button class="adula-hero-carousel__dot" type="button" data-adula-hero-dot="{{ forloop.index0 }}" aria-label="Mostrar imagem {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+          {%- if block.settings.video != blank -%}
+            <article class="adula-video-card" data-adula-video-card {{ block.shopify_attributes }}>
+              {{- block.settings.video | video_tag: autoplay: false, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', image_size: '700x' -}}
+              {%- if block.settings.title != blank -%}<p class="adula-video-card__label">{{ block.settings.title }}</p>{%- endif -%}
+              <button class="adula-video-card__sound" type="button" data-adula-video-sound aria-label="Ativar som">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m17 9 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </button>
+            </article>
+          {%- endif -%}
         {%- endfor -%}
-      </div>
-      <button class="adula-hero-carousel__arrow" type="button" data-adula-hero-next aria-label="Próxima imagem">&#8250;</button>
+      {%- else -%}
+        {%- assign fallback_titles = 'Conheça a Adüla|Design Francês, feito no Brasil|Chic Sans Effort|Joias com alma francesa|Pontos físicos' | split: '|' -%}
+        {%- assign fallback_files = 'IMG_1017_HOME_ADULA.mp4|Adula_Stories_Bastidores_Legenda_Corrigida.mp4|Adula_Sobre_Compactado.mp4|Adula_Stories_IMG_1020.mp4|Patrocinado03_Rosto_Desfocado_Reforcado.mp4' | split: '|' -%}
+        {%- for file_name in fallback_files -%}
+          <article class="adula-video-card" data-adula-video-card>
+            <video muted loop playsinline preload="metadata" {% if forloop.first %}autoplay{% endif %}>
+              <source src="{{ file_name | file_url }}" type="video/mp4">
+            </video>
+            <p class="adula-video-card__label">{{ fallback_titles[forloop.index0] }}</p>
+            <button class="adula-video-card__sound" type="button" data-adula-video-sound aria-label="Ativar som">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m17 9 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </button>
+          </article>
+        {%- endfor -%}
+      {%- endif -%}
     </div>
-  {%- endif -%}
+  </div>
+
+  <div class="adula-video-hero__dots" data-adula-video-dots aria-hidden="true"></div>
 </section>
 
 <script>
   (() => {
-    const root = document.currentScript.previousElementSibling;
-    if (!root || !root.matches('[data-adula-hero-carousel]')) return;
+    const sectionRoot = document.currentScript.previousElementSibling;
+    if (!sectionRoot?.matches('[data-adula-video-hero]')) return;
 
-    const slides = [...root.querySelectorAll('[data-adula-hero-slide]')];
-    const dots = [...root.querySelectorAll('[data-adula-hero-dot]')];
-    const previous = root.querySelector('[data-adula-hero-prev]');
-    const next = root.querySelector('[data-adula-hero-next]');
+    const track = sectionRoot.querySelector('[data-adula-video-track]');
+    const cards = [...sectionRoot.querySelectorAll('[data-adula-video-card]')];
+    const prev = sectionRoot.querySelector('[data-adula-video-prev]');
+    const next = sectionRoot.querySelector('[data-adula-video-next]');
+    const dotsRoot = sectionRoot.querySelector('[data-adula-video-dots]');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let activeIndex = 0;
-    let timer;
-    let touchStartX = 0;
 
-    const show = (index) => {
-      activeIndex = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        const active = slideIndex === activeIndex;
-        slide.classList.toggle('is-active', active);
-        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+    if (!track || !cards.length) return;
+
+    const videos = cards.map((card) => card.querySelector('video')).filter(Boolean);
+
+    cards.forEach((card, index) => {
+      const dot = document.createElement('span');
+      dot.className = `adula-video-hero__dot${index === 0 ? ' is-active' : ''}`;
+      dotsRoot?.appendChild(dot);
+
+      const sound = card.querySelector('[data-adula-video-sound]');
+      const video = card.querySelector('video');
+      sound?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (!video) return;
+        const nextMuted = !video.muted;
+        videos.forEach((item) => { item.muted = true; });
+        video.muted = nextMuted;
+        sound.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
       });
-      dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false'));
+    });
+
+    const dots = [...dotsRoot?.children || []];
+
+    const playMostVisible = () => {
+      const trackBox = track.getBoundingClientRect();
+      const center = trackBox.left + trackBox.width / 2;
+      let bestIndex = 0;
+      let bestDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const box = card.getBoundingClientRect();
+        const distance = Math.abs((box.left + box.width / 2) - center);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestIndex = index;
+        }
+      });
+
+      videos.forEach((video) => {
+        if (!video) return;
+        video.pause();
+      });
+
+      const activeVideo = cards[bestIndex]?.querySelector('video');
+      if (activeVideo && !reduceMotion) activeVideo.play().catch(() => {});
+      dots.forEach((dot, index) => dot.classList.toggle('is-active', index === bestIndex));
     };
 
-    const stop = () => window.clearInterval(timer);
-    const start = () => {
-      stop();
-      if (root.dataset.autoplay !== 'true' || reduceMotion || slides.length < 2) return;
-      timer = window.setInterval(() => show(activeIndex + 1), Number(root.dataset.interval) || 4000);
+    const scrollByCard = (direction) => {
+      const card = cards[0];
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(track).columnGap || 0);
+      track.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: reduceMotion ? 'auto' : 'smooth' });
     };
 
-    previous?.addEventListener('click', () => { show(activeIndex - 1); start(); });
-    next?.addEventListener('click', () => { show(activeIndex + 1); start(); });
-    dots.forEach((dot) => dot.addEventListener('click', () => { show(Number(dot.dataset.adulaHeroDot)); start(); }));
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-    root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', start);
-    root.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
-    root.addEventListener('touchend', (event) => {
-      const distance = event.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(distance) < 45) return;
-      show(activeIndex + (distance < 0 ? 1 : -1));
-      start();
+    prev?.addEventListener('click', () => scrollByCard(-1));
+    next?.addEventListener('click', () => scrollByCard(1));
+
+    let raf = null;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(playMostVisible);
     }, { passive: true });
 
-    start();
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      const visible = entries.some((entry) => entry.isIntersecting);
+      if (visible) playMostVisible();
+      else videos.forEach((video) => video?.pause());
+    }, { threshold: .15 });
+    visibilityObserver.observe(sectionRoot);
+
+    playMostVisible();
   })();
 </script>
 
 {% schema %}
 {
-  "name": "Carrossel Adüla",
+  "name": "Carrossel de vídeos Adüla",
   "tag": "section",
-  "class": "shopify-section--adula-hero-carousel",
-  "max_blocks": 5,
+  "class": "shopify-section--adula-video-hero",
+  "max_blocks": 8,
   "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto pequeno",
+      "default": "Chic sans effort"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Adüla em movimento"
+    },
     {
       "type": "checkbox",
       "id": "autoplay",
-      "label": "Trocar imagens automaticamente",
+      "label": "Reproduzir vídeo em destaque automaticamente",
       "default": true
     },
     {
@@ -343,59 +399,60 @@
       "max": 8,
       "step": 1,
       "unit": "s",
-      "label": "Tempo entre imagens",
+      "label": "Compatibilidade com configuração anterior",
       "default": 4
     }
   ],
   "blocks": [
     {
       "type": "slide",
-      "name": "Imagem",
+      "name": "Vídeo",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Imagem desktop"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_mobile",
-          "label": "Imagem mobile"
+          "type": "video",
+          "id": "video",
+          "label": "Vídeo"
         },
         {
           "type": "text",
-          "id": "eyebrow",
-          "label": "Texto pequeno"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Título",
-          "default": "Destaque Adüla"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Descrição"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Texto do botão",
-          "default": "Conheça"
+          "id": "title",
+          "label": "Legenda",
+          "default": "Adüla"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Link"
+          "label": "Link opcional"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Compatibilidade: texto pequeno"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Compatibilidade: título"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Compatibilidade: texto"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Compatibilidade: botão"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Carrossel Adüla",
+      "name": "Carrossel de vídeos Adüla",
       "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
         { "type": "slide" },
         { "type": "slide" },
         { "type": "slide" }
