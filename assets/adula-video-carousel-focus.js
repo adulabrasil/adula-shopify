@@ -11,6 +11,7 @@
 
     const videos = cards.map((card) => card.querySelector('video'));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let activeIndex = Math.floor(cards.length / 2);
 
     const style = document.createElement('style');
     style.textContent = `
@@ -34,54 +35,68 @@
       .adula-home-video-card.is-active .adula-home-video-card__sound {
         opacity: 1;
       }
-      @media (prefers-reduced-motion: reduce) {
-        .adula-home-video-card { transition: none; }
-      }
     `;
     document.head.appendChild(style);
 
-    const safePlay = (video) => {
-      if (!video || reduceMotion) return;
+    const prepareVideo = (video) => {
+      if (!video) return;
+      video.defaultMuted = true;
       video.muted = true;
+      video.loop = true;
       video.playsInline = true;
+      video.setAttribute('playsinline', '');
+      video.setAttribute('muted', '');
+      video.preload = 'auto';
+    };
 
-      const tryPlay = () => {
-        const result = video.play();
-        if (result && typeof result.catch === 'function') result.catch(() => {});
+    videos.forEach((video) => {
+      prepareVideo(video);
+      try { video.load(); } catch (_) {}
+    });
+
+    const playVideo = (video) => {
+      if (!video || reduceMotion) return;
+      prepareVideo(video);
+      video.autoplay = true;
+
+      const attempt = () => {
+        const promise = video.play();
+        if (promise && typeof promise.catch === 'function') {
+          promise.catch(() => {
+            window.setTimeout(() => video.play().catch(() => {}), 180);
+          });
+        }
       };
 
       if (video.readyState >= 2) {
-        tryPlay();
+        attempt();
       } else {
-        video.addEventListener('canplay', tryPlay, { once: true });
-        video.addEventListener('loadeddata', tryPlay, { once: true });
+        video.addEventListener('canplay', attempt, { once: true });
+        video.addEventListener('loadeddata', attempt, { once: true });
+        try { video.load(); } catch (_) {}
       }
     };
 
-    const activate = (index, { center = true } = {}) => {
-      const safeIndex = Math.max(0, Math.min(cards.length - 1, index));
+    const pauseVideo = (video) => {
+      if (!video) return;
+      video.autoplay = false;
+      video.pause();
+      video.muted = true;
+    };
+
+    const activate = (index, center = true) => {
+      activeIndex = Math.max(0, Math.min(cards.length - 1, index));
 
       cards.forEach((card, cardIndex) => {
-        const active = cardIndex === safeIndex;
-        card.classList.toggle('is-active', active);
-        card.setAttribute('aria-current', active ? 'true' : 'false');
-
-        const video = videos[cardIndex];
-        if (!video) return;
-
-        if (active) {
-          safePlay(video);
-        } else {
-          video.pause();
-          video.muted = true;
-          try {
-            if (video.readyState > 0) video.currentTime = 0;
-          } catch (_) {}
-        }
+        const isActive = cardIndex === activeIndex;
+        card.classList.toggle('is-active', isActive);
+        card.setAttribute('aria-current', isActive ? 'true' : 'false');
+        if (isActive) playVideo(videos[cardIndex]);
+        else pauseVideo(videos[cardIndex]);
       });
 
       if (center) {
-        const card = cards[safeIndex];
+        const card = cards[activeIndex];
         const targetLeft = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
         track.scrollTo({ left: Math.max(0, targetLeft), behavior: reduceMotion ? 'auto' : 'smooth' });
       }
@@ -90,22 +105,16 @@
     cards.forEach((card, index) => {
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
-      card.setAttribute('aria-label', `${card.querySelector('.adula-home-video-card__label')?.textContent?.trim() || 'Vídeo Adüla'} — reproduzir`);
 
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-        activate(index, { center: true });
-        const video = videos[index];
-        if (video && !reduceMotion) {
-          video.muted = true;
-          video.play().catch(() => {});
-        }
+        activate(index, true);
       });
 
       card.addEventListener('keydown', (event) => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();
-        activate(index, { center: true });
+        activate(index, true);
       });
     });
 
@@ -113,58 +122,55 @@
       button.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
+
+        if (activeIndex !== index) activate(index, true);
         const video = videos[index];
         if (!video) return;
 
-        if (!cards[index].classList.contains('is-active')) {
-          activate(index, { center: true });
-        }
-
         video.muted = !video.muted;
-        if (video.paused && !reduceMotion) video.play().catch(() => {});
+        if (video.paused) video.play().catch(() => {});
         button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
       }, true);
     });
 
-    const activeFromCenter = () => {
-      const trackRect = track.getBoundingClientRect();
-      const centerX = trackRect.left + trackRect.width / 2;
-      let bestIndex = 0;
-      let bestDistance = Infinity;
+    const getClosestToCenter = () => {
+      const rect = track.getBoundingClientRect();
+      const center = rect.left + rect.width / 2;
+      let winner = 0;
+      let distance = Infinity;
 
       cards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        const distance = Math.abs((rect.left + rect.width / 2) - centerX);
-        if (distance < bestDistance) {
-          bestDistance = distance;
-          bestIndex = index;
+        const box = card.getBoundingClientRect();
+        const delta = Math.abs((box.left + box.width / 2) - center);
+        if (delta < distance) {
+          distance = delta;
+          winner = index;
         }
       });
-
-      return bestIndex;
+      return winner;
     };
 
     let scrollTimer;
     track.addEventListener('scroll', () => {
-      window.clearTimeout(scrollTimer);
-      scrollTimer = window.setTimeout(() => activate(activeFromCenter(), { center: false }), 140);
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const index = getClosestToCenter();
+        if (index !== activeIndex) activate(index, false);
+      }, 160);
     }, { passive: true });
 
-    const preferredInitial = Math.floor(cards.length / 2);
-    videos.forEach((video) => {
-      if (!video) return;
-      video.pause();
-      video.muted = true;
-      video.playsInline = true;
-      video.removeAttribute('autoplay');
-    });
+    const visibility = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) playVideo(videos[activeIndex]);
+        else videos.forEach(pauseVideo);
+      });
+    }, { threshold: 0.2 });
+    visibility.observe(carousel);
 
-    activate(preferredInitial, { center: false });
-    const initialVideo = videos[preferredInitial];
-    if (initialVideo) {
-      window.setTimeout(() => safePlay(initialVideo), 250);
-      window.setTimeout(() => safePlay(initialVideo), 900);
-    }
+    activate(activeIndex, false);
+    requestAnimationFrame(() => playVideo(videos[activeIndex]));
+    setTimeout(() => playVideo(videos[activeIndex]), 500);
+    setTimeout(() => playVideo(videos[activeIndex]), 1500);
   };
 
   const scan = () => document.querySelectorAll(SELECTOR).forEach(enhance);
