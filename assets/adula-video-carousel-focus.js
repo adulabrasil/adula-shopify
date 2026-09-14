@@ -40,7 +40,25 @@
     `;
     document.head.appendChild(style);
 
-    const activate = (index, { center = true, keepMuted = true } = {}) => {
+    const safePlay = (video) => {
+      if (!video || reduceMotion) return;
+      video.muted = true;
+      video.playsInline = true;
+
+      const tryPlay = () => {
+        const result = video.play();
+        if (result && typeof result.catch === 'function') result.catch(() => {});
+      };
+
+      if (video.readyState >= 2) {
+        tryPlay();
+      } else {
+        video.addEventListener('canplay', tryPlay, { once: true });
+        video.addEventListener('loadeddata', tryPlay, { once: true });
+      }
+    };
+
+    const activate = (index, { center = true } = {}) => {
       const safeIndex = Math.max(0, Math.min(cards.length - 1, index));
 
       cards.forEach((card, cardIndex) => {
@@ -52,12 +70,13 @@
         if (!video) return;
 
         if (active) {
-          if (keepMuted) video.muted = true;
-          if (!reduceMotion) video.play().catch(() => {});
+          safePlay(video);
         } else {
           video.pause();
-          video.currentTime = 0;
           video.muted = true;
+          try {
+            if (video.readyState > 0) video.currentTime = 0;
+          } catch (_) {}
         }
       });
 
@@ -75,24 +94,30 @@
 
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-        activate(index, { center: true, keepMuted: true });
+        activate(index, { center: true });
+        const video = videos[index];
+        if (video && !reduceMotion) {
+          video.muted = true;
+          video.play().catch(() => {});
+        }
       });
 
       card.addEventListener('keydown', (event) => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();
-        activate(index, { center: true, keepMuted: true });
+        activate(index, { center: true });
       });
     });
 
     carousel.querySelectorAll('[data-home-video-sound]').forEach((button, index) => {
       button.addEventListener('click', (event) => {
-        event.stopImmediatePropagation();
+        event.preventDefault();
+        event.stopPropagation();
         const video = videos[index];
         if (!video) return;
 
         if (!cards[index].classList.contains('is-active')) {
-          activate(index, { center: true, keepMuted: false });
+          activate(index, { center: true });
         }
 
         video.muted = !video.muted;
@@ -122,21 +147,24 @@
     let scrollTimer;
     track.addEventListener('scroll', () => {
       window.clearTimeout(scrollTimer);
-      scrollTimer = window.setTimeout(() => {
-        const index = activeFromCenter();
-        activate(index, { center: false, keepMuted: true });
-      }, 120);
+      scrollTimer = window.setTimeout(() => activate(activeFromCenter(), { center: false }), 140);
     }, { passive: true });
 
     const preferredInitial = Math.floor(cards.length / 2);
     videos.forEach((video) => {
       if (!video) return;
       video.pause();
-      video.currentTime = 0;
       video.muted = true;
+      video.playsInline = true;
       video.removeAttribute('autoplay');
     });
-    activate(preferredInitial, { center: false, keepMuted: true });
+
+    activate(preferredInitial, { center: false });
+    const initialVideo = videos[preferredInitial];
+    if (initialVideo) {
+      window.setTimeout(() => safePlay(initialVideo), 250);
+      window.setTimeout(() => safePlay(initialVideo), 900);
+    }
   };
 
   const scan = () => document.querySelectorAll(SELECTOR).forEach(enhance);
