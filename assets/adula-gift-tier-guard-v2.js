@@ -211,3 +211,90 @@
     resolveGifts: resolveGiftVariants,
   };
 })();
+
+(() => {
+  const BLOCK_ID = 'shopify-block-progressify_multi_bar_upsells_block_zWpHh9';
+  const FALLBACK_DELAY = 7000;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #${BLOCK_ID}.adula-progressify-loading {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      background: transparent !important;
+    }
+
+    #${BLOCK_ID}.adula-progressify-ready {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: opacity 180ms ease !important;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const hasRenderedBars = (block) => {
+    if (!block) return false;
+
+    const text = (block.innerText || block.textContent || '').replace(/\s+/g, ' ').trim();
+    const semanticProgress = block.querySelector(
+      '[role="progressbar"], progress, [class*="progress"], [class*="milestone"], [class*="goal"], [class*="reward"], [class*="shipping"]',
+    );
+    const visibleSvg = Array.from(block.querySelectorAll('svg')).some((svg) => {
+      const box = svg.getBoundingClientRect();
+      return box.width > 8 && box.height > 8;
+    });
+    const loadedIframe = Array.from(block.querySelectorAll('iframe')).some((iframe) => {
+      try {
+        return Boolean(iframe.src && iframe.contentDocument?.readyState === 'complete');
+      } catch (_) {
+        return Boolean(iframe.src);
+      }
+    });
+
+    return Boolean(semanticProgress || visibleSvg || loadedIframe || text.length > 35);
+  };
+
+  const reveal = (block) => {
+    block.classList.remove('adula-progressify-loading');
+    block.classList.add('adula-progressify-ready');
+  };
+
+  const prepare = () => {
+    const block = document.getElementById(BLOCK_ID);
+    if (!block || block.dataset.adulaProgressifyGuard === '1') return;
+
+    block.dataset.adulaProgressifyGuard = '1';
+    block.classList.add('adula-progressify-loading');
+
+    const check = () => {
+      if (hasRenderedBars(block)) reveal(block);
+    };
+
+    const observer = new MutationObserver(check);
+    observer.observe(block, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+      attributes: true,
+    });
+
+    block.querySelectorAll('iframe').forEach((iframe) => {
+      iframe.addEventListener('load', check, { once: true });
+    });
+
+    check();
+    window.setTimeout(() => reveal(block), FALLBACK_DELAY);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', prepare, { once: true });
+  } else {
+    prepare();
+  }
+
+  new MutationObserver(prepare).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+})();
