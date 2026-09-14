@@ -104,6 +104,26 @@
         --ooo-wl-product-card-button-position-inline: 5px !important;
       }
 
+      /* Keep the cart responsive while Progressify initializes. The app stays
+         enabled; only its unfinished placeholder is collapsed until real
+         progress-bar content is available. */
+      #cart-drawer .cart-drawer__app-block[data-adula-progressify-state="loading"] {
+        max-height: 0 !important;
+        min-height: 0 !important;
+        margin-block: 0 !important;
+        padding-block: 0 !important;
+        overflow: hidden !important;
+        opacity: 0;
+        pointer-events: none;
+        background: transparent !important;
+      }
+
+      #cart-drawer .cart-drawer__app-block[data-adula-progressify-state="ready"] {
+        max-height: 600px;
+        opacity: 1;
+        transition: opacity 160ms ease, max-height 220ms ease;
+      }
+
       @media screen and (max-width: 699px) {
         .adula-product-card__figure--with-actions > ooo-wl-access-button > ooo-wl-product-card-button {
           --ooo-wl-product-card-button-position-block: 3px !important;
@@ -111,6 +131,56 @@
         }
       }
     </style>
+
+    <script>
+      (() => {
+        const selector = '#cart-drawer .cart-drawer__app-block';
+        let scheduled = false;
+
+        const hasMeaningfulProgressifyContent = (block) => {
+          const copy = block.cloneNode(true);
+          copy.querySelectorAll('script, style, template, noscript').forEach((node) => node.remove());
+
+          const text = (copy.textContent || '').replace(/\s+/g, ' ').trim();
+          const interactiveContent = copy.querySelector('[role="progressbar"], progress, button, a, img, svg');
+          const structuredContent = copy.querySelector('[class*="progress"], [class*="offer"], [class*="gift"], [class*="shipping"]');
+
+          return Boolean(interactiveContent || structuredContent || text.length > 12);
+        };
+
+        const refreshProgressifyState = () => {
+          scheduled = false;
+
+          document.querySelectorAll(selector).forEach((block) => {
+            if (!block.dataset.adulaProgressifyState) {
+              block.dataset.adulaProgressifyState = 'loading';
+            }
+
+            if (hasMeaningfulProgressifyContent(block)) {
+              block.dataset.adulaProgressifyState = 'ready';
+            }
+          });
+        };
+
+        const scheduleRefresh = () => {
+          if (scheduled) return;
+          scheduled = true;
+          requestAnimationFrame(refreshProgressifyState);
+        };
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', scheduleRefresh, { once: true });
+        } else {
+          scheduleRefresh();
+        }
+
+        new MutationObserver(scheduleRefresh).observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+          characterData: true
+        });
+      })();
+    </script>
   </head>
 
   {% liquid
