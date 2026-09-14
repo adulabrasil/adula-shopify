@@ -10,82 +10,134 @@
   {%- if cart.empty? -%}
     <p class="h5 text-center">{{ 'cart.general.empty' | t }}</p>
   {%- else -%}
-    {%- assign has_cart_app_block = false -%}
-
     {%- for block in section.blocks -%}
       {%- if block.type == '@app' -%}
-        {%- assign has_cart_app_block = true -%}
         <div class="cart-drawer__app-block" {{ block.shopify_attributes }}>
           {%- render block -%}
         </div>
       {%- endif -%}
     {%- endfor -%}
 
-    {%- unless has_cart_app_block -%}
     {%- liquid
-      assign adula_shipping_total = cart.total_price
+      assign adula_benefit_total = cart.total_price
       assign adula_southeast_threshold = 19900
       assign adula_brazil_threshold = 29900
-      assign adula_progress = adula_shipping_total | times: 100.0 | divided_by: adula_brazil_threshold
+      assign adula_keychain_threshold = 19900
+      assign adula_tray_threshold = 39900
 
-      if adula_progress > 100
-        assign adula_progress = 100
+      assign adula_shipping_progress = adula_benefit_total | times: 100.0 | divided_by: adula_brazil_threshold
+      if adula_shipping_progress > 100
+        assign adula_shipping_progress = 100
       endif
 
-      assign adula_remaining_southeast = adula_southeast_threshold | minus: adula_shipping_total
-      assign adula_remaining_brazil = adula_brazil_threshold | minus: adula_shipping_total
+      assign adula_gift_progress = adula_benefit_total | times: 100.0 | divided_by: adula_tray_threshold
+      if adula_gift_progress > 100
+        assign adula_gift_progress = 100
+      endif
+
+      assign adula_remaining_southeast = adula_southeast_threshold | minus: adula_benefit_total
+      assign adula_remaining_brazil = adula_brazil_threshold | minus: adula_benefit_total
+      assign adula_remaining_keychain = adula_keychain_threshold | minus: adula_benefit_total
+      assign adula_remaining_tray = adula_tray_threshold | minus: adula_benefit_total
     -%}
 
-    <div class="adula-free-shipping" aria-live="polite">
-      <p class="adula-free-shipping__message text-sm">
-        {%- if adula_shipping_total >= adula_brazil_threshold -%}
-          Frete grátis conquistado ✓
-        {%- elsif adula_shipping_total >= adula_southeast_threshold -%}
-          Frete grátis no Sudeste ✓ · Faltam {{ adula_remaining_brazil | money }} para demais regiões
-        {%- else -%}
-          Faltam {{ adula_remaining_southeast | money }} para frete grátis no Sudeste · {{ adula_remaining_brazil | money }} para demais regiões
-        {%- endif -%}
-      </p>
+    <div class="adula-cart-benefits" aria-live="polite">
+      <div class="adula-cart-benefit">
+        <div class="adula-cart-benefit__topline">
+          <span class="adula-cart-benefit__eyebrow">FRETE GRÁTIS</span>
+          <span class="adula-cart-benefit__status text-sm">
+            {%- if adula_benefit_total >= adula_brazil_threshold -%}
+              Para todo o Brasil ✓
+            {%- elsif adula_benefit_total >= adula_southeast_threshold -%}
+              Sudeste conquistado ✓ · faltam {{ adula_remaining_brazil | money }}
+            {%- else -%}
+              Faltam {{ adula_remaining_southeast | money }} para o Sudeste
+            {%- endif -%}
+          </span>
+        </div>
 
-      <div
-        class="adula-free-shipping__track"
-        role="progressbar"
-        aria-label="Progresso para frete grátis"
-        aria-valuemin="0"
-        aria-valuemax="299"
-        aria-valuenow="{{ adula_shipping_total | divided_by: 100 }}"
-      >
-        <span class="adula-free-shipping__fill" style="width: {{ adula_progress }}%;"></span>
-        <span class="adula-free-shipping__southeast-mark" aria-hidden="true"></span>
+        <div class="adula-cart-benefit__track" role="progressbar" aria-label="Progresso para frete grátis" aria-valuemin="0" aria-valuemax="299" aria-valuenow="{{ adula_benefit_total | divided_by: 100 }}">
+          <span class="adula-cart-benefit__fill" style="width: {{ adula_shipping_progress }}%;"></span>
+          <span class="adula-cart-benefit__mark" style="left: 66.56%;" aria-hidden="true"></span>
+        </div>
+
+        <div class="adula-cart-benefit__labels text-xs text-subdued">
+          <span>Sudeste · R$ 199</span>
+          <span>Brasil · R$ 299</span>
+        </div>
       </div>
 
-      <div class="adula-free-shipping__labels text-xs text-subdued">
-        <span>Sudeste · R$ 199</span>
-        <span>Demais regiões · R$ 299</span>
+      <div class="adula-cart-benefit">
+        <div class="adula-cart-benefit__topline">
+          <span class="adula-cart-benefit__eyebrow">SEUS BRINDES</span>
+          <span class="adula-cart-benefit__status text-sm">
+            {%- if adula_benefit_total >= adula_tray_threshold -%}
+              Bandeja conquistada ✓
+            {%- elsif adula_benefit_total >= adula_keychain_threshold -%}
+              Chaveiro conquistado ✓ · faltam {{ adula_remaining_tray | money }}
+            {%- else -%}
+              Faltam {{ adula_remaining_keychain | money }} para o Chaveiro
+            {%- endif -%}
+          </span>
+        </div>
+
+        <div class="adula-cart-benefit__track" role="progressbar" aria-label="Progresso para brindes" aria-valuemin="0" aria-valuemax="399" aria-valuenow="{{ adula_benefit_total | divided_by: 100 }}">
+          <span class="adula-cart-benefit__fill" style="width: {{ adula_gift_progress }}%;"></span>
+          <span class="adula-cart-benefit__mark" style="left: 49.87%;" aria-hidden="true"></span>
+        </div>
+
+        <div class="adula-cart-benefit__labels text-xs text-subdued">
+          <span>Chaveiro · R$ 199</span>
+          <span>Bandeja · R$ 399</span>
+        </div>
       </div>
     </div>
 
     <style>
-      #shopify-section-{{ section.id }} .adula-free-shipping {
+      #shopify-section-{{ section.id }} .adula-cart-benefits {
         border-block-end: 1px solid rgb(var(--border-color));
+        display: grid;
+        gap: 1rem;
         margin-inline: calc(-1 * var(--drawer-body-padding-inline));
-        padding: .9rem var(--drawer-body-padding-inline) .85rem;
+        padding: 1rem var(--drawer-body-padding-inline) 1.05rem;
       }
 
-      #shopify-section-{{ section.id }} .adula-free-shipping__message {
-        margin: 0 0 .65rem;
-        line-height: 1.4;
+      #shopify-section-{{ section.id }} .adula-cart-benefit {
+        display: grid;
+        gap: .52rem;
       }
 
-      #shopify-section-{{ section.id }} .adula-free-shipping__track {
-        background: rgb(var(--text-color) / .12);
+      #shopify-section-{{ section.id }} .adula-cart-benefit__topline {
+        align-items: baseline;
+        display: flex;
+        gap: .7rem;
+        justify-content: space-between;
+      }
+
+      #shopify-section-{{ section.id }} .adula-cart-benefit__eyebrow {
+        color: #532e1d;
+        flex: 0 0 auto;
+        font-size: .67rem;
+        font-weight: 600;
+        letter-spacing: .14em;
+      }
+
+      #shopify-section-{{ section.id }} .adula-cart-benefit__status {
+        color: rgb(var(--text-color));
+        line-height: 1.35;
+        margin: 0;
+        text-align: right;
+      }
+
+      #shopify-section-{{ section.id }} .adula-cart-benefit__track {
+        background: rgb(var(--text-color) / .10);
         border-radius: 999px;
-        height: 5px;
+        height: 6px;
         overflow: visible;
         position: relative;
       }
 
-      #shopify-section-{{ section.id }} .adula-free-shipping__fill {
+      #shopify-section-{{ section.id }} .adula-cart-benefit__fill {
         background: #b08d57;
         border-radius: inherit;
         display: block;
@@ -94,25 +146,33 @@
         transition: width .25s ease;
       }
 
-      #shopify-section-{{ section.id }} .adula-free-shipping__southeast-mark {
+      #shopify-section-{{ section.id }} .adula-cart-benefit__mark {
         background: rgb(var(--background));
         border: 1px solid #b08d57;
         border-radius: 50%;
-        height: 9px;
-        left: 66.56%;
+        height: 10px;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 9px;
+        width: 10px;
       }
 
-      #shopify-section-{{ section.id }} .adula-free-shipping__labels {
+      #shopify-section-{{ section.id }} .adula-cart-benefit__labels {
         display: flex;
         justify-content: space-between;
-        margin-top: .45rem;
+        line-height: 1.25;
+      }
+
+      @media screen and (max-width: 699px) {
+        #shopify-section-{{ section.id }} .adula-cart-benefit__topline {
+          align-items: flex-start;
+        }
+
+        #shopify-section-{{ section.id }} .adula-cart-benefit__status {
+          font-size: .78rem;
+        }
       }
     </style>
-    {%- endunless -%}
 
     <div class="cart-drawer__items">
       {%- for line_item in cart.items -%}
