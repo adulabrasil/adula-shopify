@@ -264,3 +264,43 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint, { once: true }); else paint();
   new MutationObserver(() => { if (document.querySelector('#cart-drawer .adula-free-shipping:not(:has(.adula-benefits-native))')) paint(); }).observe(document.documentElement, { childList: true, subtree: true });
 })();
+
+(() => {
+  const relocateVideoHero = () => {
+    const heroSection = document.querySelector('.shopify-section--adula-video-hero')?.closest('.shopify-section') || document.querySelector('.shopify-section--adula-video-hero');
+    const oldBanner = document.querySelector('.adula-editorial-banner');
+    const oldBannerSection = oldBanner?.closest('.shopify-section');
+
+    if (!heroSection || !oldBannerSection || heroSection === oldBannerSection) return false;
+
+    oldBannerSection.replaceWith(heroSection);
+    heroSection.style.removeProperty('display');
+    heroSection.dataset.adulaRelocated = 'true';
+    return true;
+  };
+
+  const hideHeroUntilRelocated = () => {
+    const heroSection = document.querySelector('.shopify-section--adula-video-hero')?.closest('.shopify-section') || document.querySelector('.shopify-section--adula-video-hero');
+    if (heroSection && heroSection.dataset.adulaRelocated !== 'true') {
+      heroSection.style.display = 'none';
+    }
+  };
+
+  const run = () => {
+    hideHeroUntilRelocated();
+    if (relocateVideoHero()) return;
+
+    const observer = new MutationObserver(() => {
+      hideHeroUntilRelocated();
+      if (relocateVideoHero()) observer.disconnect();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(() => observer.disconnect(), 5000);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run, { once: true });
+  } else {
+    run();
+  }
+})();
