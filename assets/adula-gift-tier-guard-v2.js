@@ -211,3 +211,56 @@
     resolveGifts: resolveGiftVariants,
   };
 })();
+
+(() => {
+  const money = (cents) => (cents / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  let painting = false;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #cart-drawer .adula-benefits-native { padding: .85rem 0 .1rem; }
+    #cart-drawer .adula-benefits-native__row { margin: 0 0 .85rem; }
+    #cart-drawer .adula-benefits-native__message { font-size: 12px; line-height: 1.35; margin: 0 0 .38rem; }
+    #cart-drawer .adula-benefits-native__track { height: 5px; border-radius: 999px; overflow: hidden; background: rgb(var(--text-color) / .12); }
+    #cart-drawer .adula-benefits-native__fill { display: block; height: 100%; border-radius: inherit; background: #b08d57; transition: width .25s ease; }
+    #cart-drawer .adula-benefits-native__label { display: flex; justify-content: space-between; gap: 10px; margin-top: .3rem; font-size: 10px; opacity: .68; }
+  `;
+  document.head.appendChild(style);
+
+  const row = (message, subtotal, threshold, label) => {
+    const progress = Math.max(0, Math.min(100, (subtotal / threshold) * 100));
+    return `<div class="adula-benefits-native__row"><p class="adula-benefits-native__message">${message}</p><div class="adula-benefits-native__track"><span class="adula-benefits-native__fill" style="width:${progress}%"></span></div><div class="adula-benefits-native__label"><span>${label}</span><span>${progress >= 100 ? 'Conquistado ✓' : `${Math.round(progress)}%`}</span></div></div>`;
+  };
+
+  const paint = async () => {
+    if (painting) return;
+    const shipping = document.querySelector('#cart-drawer .adula-free-shipping');
+    if (!shipping) return;
+
+    painting = true;
+    try {
+      const gifts = await window.AdulaGiftTierGuardV2?.resolveGifts?.();
+      if (!gifts) return;
+      const response = await fetch(`${window.Shopify?.routes?.root || '/'}cart.js`, { headers: { Accept: 'application/json' } });
+      const cart = await response.json();
+      const subtotal = (cart.items || []).reduce((total, item) => gifts.giftIds.has(Number(item.variant_id || item.id)) ? total : total + Number(item.final_line_price || 0), 0);
+      const keychainMessage = subtotal >= 19900 ? 'Chaveiro Torre Eiffel conquistado ✓' : `Faltam ${money(19900 - subtotal)} para ganhar o Chaveiro Torre Eiffel`;
+      const trayMessage = subtotal >= 39900 ? 'Bandeja de Joias em Veludo conquistada ✓' : `Faltam ${money(39900 - subtotal)} para ganhar a Bandeja de Joias em Veludo`;
+      let box = shipping.querySelector('.adula-benefits-native');
+      if (!box) {
+        box = document.createElement('div');
+        box.className = 'adula-benefits-native';
+        shipping.appendChild(box);
+      }
+      box.innerHTML = row(keychainMessage, subtotal, 19900, 'Brinde · R$ 199') + row(trayMessage, subtotal, 39900, 'Brinde · R$ 399');
+    } catch (error) {
+      console.warn('[Adula benefits] Could not refresh native bars.', error);
+    } finally {
+      painting = false;
+    }
+  };
+
+  ['cart:refresh', 'cart:change', 'line-item:change', 'cart-drawer:refreshed'].forEach((eventName) => document.addEventListener(eventName, () => window.setTimeout(paint, 100)));
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint, { once: true }); else paint();
+  new MutationObserver(() => { if (document.querySelector('#cart-drawer .adula-free-shipping:not(:has(.adula-benefits-native))')) paint(); }).observe(document.documentElement, { childList: true, subtree: true });
+})();
