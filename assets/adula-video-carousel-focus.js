@@ -1,29 +1,44 @@
 (() => {
   const heroStyle = document.createElement('style');
   heroStyle.textContent = `
-    /* Immersive Adüla homepage hero: fills the customer's first viewport
-       without stretching the campaign photography. */
+    /* Hero follows the actual uploaded artwork ratio automatically.
+       Recommended: desktop 1920x900 and mobile 1080x1350/1440. */
     .shopify-section--adula-hero-carousel .adula-hero-carousel__slide {
       aspect-ratio: auto !important;
-      height: clamp(540px, calc(100svh - 150px), 820px);
-      min-height: 540px !important;
+      height: auto !important;
+      min-height: 0 !important;
+    }
+    .shopify-section--adula-hero-carousel .adula-hero-carousel__media {
+      position: relative !important;
+      inset: auto !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+    .shopify-section--adula-hero-carousel .adula-hero-carousel__media picture {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
     }
     .shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
+      display: block !important;
       width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      object-position: center center !important;
+      height: auto !important;
+      max-width: none !important;
+      object-fit: contain !important;
+      object-position: center !important;
     }
     @media (max-width: 699px) {
       .shopify-section--adula-hero-carousel .adula-hero-carousel__slide {
         aspect-ratio: auto !important;
-        height: calc(100svh - 112px);
-        min-height: 560px !important;
-        max-height: 780px;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
       }
+      .shopify-section--adula-hero-carousel .adula-hero-carousel__media,
+      .shopify-section--adula-hero-carousel .adula-hero-carousel__media picture,
       .shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
-        object-fit: cover !important;
-        object-position: center center !important;
+        width: 100% !important;
+        height: auto !important;
       }
     }
   `;
@@ -79,26 +94,11 @@
 
     const style = document.createElement('style');
     style.textContent = `
-      .adula-home-video-card {
-        cursor: pointer;
-        transition: transform .28s ease, opacity .28s ease, box-shadow .28s ease;
-      }
-      .adula-home-video-card:not(.is-active) {
-        opacity: .82;
-        transform: scale(.96);
-      }
-      .adula-home-video-card.is-active {
-        opacity: 1;
-        transform: scale(1);
-        box-shadow: 0 12px 30px rgba(68,44,31,.16);
-      }
-      .adula-home-video-card:not(.is-active) .adula-home-video-card__sound {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .adula-home-video-card.is-active .adula-home-video-card__sound {
-        opacity: 1;
-      }
+      .adula-home-video-card { cursor: pointer; transition: transform .28s ease, opacity .28s ease, box-shadow .28s ease; }
+      .adula-home-video-card:not(.is-active) { opacity: .82; transform: scale(.96); }
+      .adula-home-video-card.is-active { opacity: 1; transform: scale(1); box-shadow: 0 12px 30px rgba(68,44,31,.16); }
+      .adula-home-video-card:not(.is-active) .adula-home-video-card__sound { opacity: 0; pointer-events: none; }
+      .adula-home-video-card.is-active .adula-home-video-card__sound { opacity: 1; }
     `;
     document.head.appendChild(style);
 
@@ -118,14 +118,12 @@
       prepare(video);
       video.autoplay = true;
       video.setAttribute('autoplay', '');
-
       const run = () => {
         try {
           const promise = video.play();
           if (promise && typeof promise.catch === 'function') promise.catch(() => {});
         } catch (_) {}
       };
-
       if (video.readyState >= 2) run();
       else {
         video.addEventListener('loadeddata', run, { once: true });
@@ -184,14 +182,10 @@
       const video = videos[index];
       card.tabIndex = 0;
       card.setAttribute('role', 'button');
-
       card.addEventListener('pointerenter', () => {
         prepare(video);
-        if (video.readyState < 2) {
-          try { video.load(); } catch (_) {}
-        }
+        if (video.readyState < 2) { try { video.load(); } catch (_) {} }
       }, { passive: true });
-
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
         setActive(index);
@@ -199,12 +193,9 @@
         try {
           const promise = video.play();
           if (promise && typeof promise.catch === 'function') promise.catch(() => play(video));
-        } catch (_) {
-          play(video);
-        }
+        } catch (_) { play(video); }
         center(index);
       });
-
       card.addEventListener('keydown', (event) => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();
@@ -225,9 +216,7 @@
           play(video);
         }
         video.muted = !video.muted;
-        if (video.paused) {
-          try { video.play().catch(() => {}); } catch (_) {}
-        }
+        if (video.paused) { try { video.play().catch(() => {}); } catch (_) {} }
         button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
       });
     });
@@ -240,10 +229,7 @@
       cards.forEach((card, index) => {
         const box = card.getBoundingClientRect();
         const delta = Math.abs((box.left + box.width / 2) - centerX);
-        if (delta < distance) {
-          distance = delta;
-          winner = index;
-        }
+        if (delta < distance) { distance = delta; winner = index; }
       });
       return winner;
     };
@@ -291,12 +277,7 @@
   };
 
   const scan = () => document.querySelectorAll(SELECTOR).forEach(enhance);
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', scan, { once: true });
-  } else {
-    scan();
-  }
-
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan, { once: true });
+  else scan();
   new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
 })();
