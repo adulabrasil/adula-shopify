@@ -52,16 +52,24 @@
       video.preload = 'auto';
     };
 
+    const directPlay = (video) => {
+      if (!video || reduceMotion) return;
+      prepareVideo(video);
+      video.autoplay = true;
+      video.setAttribute('autoplay', '');
+      try {
+        const promise = video.play();
+        if (promise && typeof promise.catch === 'function') promise.catch(() => {});
+      } catch (_) {}
+    };
+
     const tryPlay = (video) => {
       if (!video || reduceMotion) return;
       prepareVideo(video);
       video.autoplay = true;
       video.setAttribute('autoplay', '');
 
-      const attempt = () => {
-        const promise = video.play();
-        if (promise && typeof promise.catch === 'function') promise.catch(() => {});
-      };
+      const attempt = () => directPlay(video);
 
       if (video.readyState >= 2) attempt();
       else {
@@ -86,7 +94,6 @@
 
     const setActiveState = (index) => {
       activeIndex = Math.max(0, Math.min(cards.length - 1, index));
-
       cards.forEach((card, cardIndex) => {
         const active = cardIndex === activeIndex;
         card.classList.toggle('is-active', active);
@@ -98,12 +105,10 @@
     const centerCard = (index) => {
       const card = cards[index];
       if (!card) return;
-
       clearTimeout(programmaticScrollTimer);
       programmaticScroll = true;
       const targetLeft = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
       track.scrollTo({ left: Math.max(0, targetLeft), behavior: reduceMotion ? 'auto' : 'smooth' });
-
       programmaticScrollTimer = window.setTimeout(() => {
         programmaticScroll = false;
         tryPlay(videos[activeIndex]);
@@ -120,21 +125,25 @@
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
 
+      card.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('[data-home-video-sound]')) return;
+        const video = videos[index];
+        if (!video) return;
+
+        // Run play() in the earliest trusted user gesture on desktop.
+        setActiveState(index);
+        directPlay(video);
+      }, { capture: true });
+
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-
-        // Start playback directly inside the user's click event. This is the
-        // most reliable path for desktop autoplay policies.
         const video = videos[index];
-        setActiveState(index);
-        if (video && !reduceMotion) {
-          prepareVideo(video);
-          video.autoplay = true;
-          video.setAttribute('autoplay', '');
-          const promise = video.play();
-          if (promise && typeof promise.catch === 'function') promise.catch(() => tryPlay(video));
-        }
+        if (!video) return;
+
+        directPlay(video);
         centerCard(index);
+        window.setTimeout(() => directPlay(video), 120);
+        window.setTimeout(() => directPlay(video), 420);
       });
 
       card.addEventListener('keydown', (event) => {
@@ -156,9 +165,8 @@
 
         const video = videos[index];
         if (!video) return;
-
         video.muted = !video.muted;
-        if (video.paused) video.play().catch(() => {});
+        if (video.paused) directPlay(video);
         button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
       }, true);
     });
@@ -218,7 +226,6 @@
         centralVideo.autoplay = true;
         centralVideo.setAttribute('autoplay', '');
         try { centralVideo.load(); } catch (_) {}
-
         [0, 250, 700, 1500, 3000].forEach((delay) => {
           window.setTimeout(() => {
             if (activeIndex === Math.floor(cards.length / 2) && centralVideo.paused) tryPlay(centralVideo);
