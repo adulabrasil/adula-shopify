@@ -1,4 +1,34 @@
 (() => {
+  const heroStyle = document.createElement('style');
+  heroStyle.textContent = `
+    /* Immersive Adüla homepage hero: fills the customer's first viewport
+       without stretching the campaign photography. */
+    .shopify-section--adula-hero-carousel .adula-hero-carousel__slide {
+      aspect-ratio: auto !important;
+      height: clamp(540px, calc(100svh - 150px), 820px);
+      min-height: 540px !important;
+    }
+    .shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+    }
+    @media (max-width: 699px) {
+      .shopify-section--adula-hero-carousel .adula-hero-carousel__slide {
+        aspect-ratio: auto !important;
+        height: calc(100svh - 112px);
+        min-height: 560px !important;
+        max-height: 780px;
+      }
+      .shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
+        object-fit: cover !important;
+        object-position: center center !important;
+      }
+    }
+  `;
+  document.head.appendChild(heroStyle);
+
   const SELECTOR = '.adula-home-video-carousel';
 
   const enhance = (carousel) => {
@@ -11,9 +41,6 @@
     const originalCards = [...track.querySelectorAll('.adula-home-video-card')];
     const preferredInitial = Math.floor(originalCards.length / 2);
 
-    // Replace the cards with clean clones. The original section adds its own
-    // sound listeners before this controller mounts; cloning removes those
-    // listeners so all video behaviour is owned by this single controller.
     originalCards.forEach((card, index) => {
       const clone = card.cloneNode(true);
       const video = clone.querySelector('video');
@@ -28,9 +55,6 @@
         video.preload = 'auto';
         video.setAttribute('preload', 'auto');
 
-        // Give the center video autoplay semantics before it enters the live
-        // DOM. Desktop browsers are more reliable when these attributes exist
-        // at insertion time instead of being added afterwards by JavaScript.
         if (index === preferredInitial) {
           video.autoplay = true;
           video.setAttribute('autoplay', '');
@@ -170,19 +194,14 @@
 
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-
         setActive(index);
         prepare(video);
-
         try {
           const promise = video.play();
-          if (promise && typeof promise.catch === 'function') {
-            promise.catch(() => play(video));
-          }
+          if (promise && typeof promise.catch === 'function') promise.catch(() => play(video));
         } catch (_) {
           play(video);
         }
-
         center(index);
       });
 
@@ -197,17 +216,14 @@
       const button = card.querySelector('[data-home-video-sound]');
       const video = videos[index];
       if (!button) return;
-
       button.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
-
         if (activeIndex !== index) {
           setActive(index);
           center(index);
           play(video);
         }
-
         video.muted = !video.muted;
         if (video.paused) {
           try { video.play().catch(() => {}); } catch (_) {}
@@ -221,7 +237,6 @@
       const centerX = rect.left + rect.width / 2;
       let winner = 0;
       let distance = Infinity;
-
       cards.forEach((card, index) => {
         const box = card.getBoundingClientRect();
         const delta = Math.abs((box.left + box.width / 2) - centerX);
