@@ -6,10 +6,19 @@
     carousel.dataset.adulaFocusReady = 'true';
 
     const track = carousel.querySelector('[data-home-video-track]');
-    const cards = [...carousel.querySelectorAll('.adula-home-video-card')];
-    if (!track || !cards.length) return;
+    if (!track) return;
 
+    // Replace the cards with clean clones. The original section adds its own
+    // sound listeners before this controller mounts; cloning removes those
+    // listeners so all video behaviour is owned by this single controller.
+    [...track.querySelectorAll('.adula-home-video-card')].forEach((card) => {
+      card.replaceWith(card.cloneNode(true));
+    });
+
+    const cards = [...track.querySelectorAll('.adula-home-video-card')];
     const videos = cards.map((card) => card.querySelector('video'));
+    if (!cards.length || videos.some((video) => !video)) return;
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const desktop = window.matchMedia('(min-width: 1000px)').matches;
     let activeIndex = Math.floor(cards.length / 2);
@@ -41,45 +50,39 @@
     `;
     document.head.appendChild(style);
 
-    const prepareVideo = (video) => {
-      if (!video) return;
+    const prepare = (video) => {
       video.defaultMuted = true;
       video.muted = true;
       video.loop = true;
       video.playsInline = true;
-      video.setAttribute('playsinline', '');
       video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '');
       video.preload = 'auto';
       video.setAttribute('preload', 'auto');
     };
 
-    const directPlay = (video) => {
+    const play = (video) => {
       if (!video || reduceMotion) return;
-      prepareVideo(video);
+      prepare(video);
       video.autoplay = true;
       video.setAttribute('autoplay', '');
-      try {
-        const promise = video.play();
-        if (promise && typeof promise.catch === 'function') promise.catch(() => {});
-      } catch (_) {}
-    };
 
-    const ensureReadyThenPlay = (video) => {
-      if (!video || reduceMotion) return;
-      prepareVideo(video);
+      const run = () => {
+        try {
+          const promise = video.play();
+          if (promise && typeof promise.catch === 'function') promise.catch(() => {});
+        } catch (_) {}
+      };
 
-      if (video.readyState >= 2) {
-        directPlay(video);
-        return;
+      if (video.readyState >= 2) run();
+      else {
+        video.addEventListener('loadeddata', run, { once: true });
+        video.addEventListener('canplay', run, { once: true });
+        try { video.load(); } catch (_) {}
       }
-
-      const playWhenReady = () => directPlay(video);
-      video.addEventListener('loadeddata', playWhenReady, { once: true });
-      video.addEventListener('canplay', playWhenReady, { once: true });
-      try { video.load(); } catch (_) {}
     };
 
-    const pauseVideo = (video) => {
+    const pause = (video) => {
       if (!video) return;
       video.pause();
       video.autoplay = false;
@@ -87,76 +90,70 @@
       video.muted = true;
     };
 
-    // The template originally ships side videos as preload="metadata". On
-    // desktop that leaves them without enough buffered data at selection time.
-    // Promote every card to preload=auto as soon as the carousel mounts.
     videos.forEach((video) => {
-      prepareVideo(video);
+      prepare(video);
       try { video.load(); } catch (_) {}
     });
 
-    const setActiveState = (index) => {
+    const setActive = (index) => {
       activeIndex = Math.max(0, Math.min(cards.length - 1, index));
-      cards.forEach((card, cardIndex) => {
-        const active = cardIndex === activeIndex;
+      cards.forEach((card, i) => {
+        const active = i === activeIndex;
         card.classList.toggle('is-active', active);
         card.setAttribute('aria-current', active ? 'true' : 'false');
-        if (!active) pauseVideo(videos[cardIndex]);
+        if (!active) pause(videos[i]);
       });
     };
 
-    const centerCard = (index) => {
+    const center = (index) => {
       const card = cards[index];
       if (!card) return;
       clearTimeout(programmaticScrollTimer);
       programmaticScroll = true;
-      const targetLeft = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
-      track.scrollTo({ left: Math.max(0, targetLeft), behavior: reduceMotion ? 'auto' : 'smooth' });
-      programmaticScrollTimer = window.setTimeout(() => {
+      const left = card.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
+      track.scrollTo({ left: Math.max(0, left), behavior: reduceMotion ? 'auto' : 'smooth' });
+      programmaticScrollTimer = setTimeout(() => {
         programmaticScroll = false;
-        ensureReadyThenPlay(videos[activeIndex]);
-      }, reduceMotion ? 50 : 550);
+        play(videos[activeIndex]);
+      }, reduceMotion ? 50 : 520);
     };
 
-    const activate = (index, center = true) => {
-      setActiveState(index);
-      ensureReadyThenPlay(videos[activeIndex]);
-      if (center) centerCard(activeIndex);
+    const activate = (index, shouldCenter = true) => {
+      setActive(index);
+      play(videos[activeIndex]);
+      if (shouldCenter) center(activeIndex);
     };
 
     cards.forEach((card, index) => {
       const video = videos[index];
-      card.setAttribute('tabindex', '0');
+      card.tabIndex = 0;
       card.setAttribute('role', 'button');
 
-      // Desktop users hover before clicking. Start buffering here so the
-      // selected video is already decodable when the click arrives.
       card.addEventListener('pointerenter', () => {
-        if (!video) return;
-        prepareVideo(video);
+        prepare(video);
         if (video.readyState < 2) {
           try { video.load(); } catch (_) {}
         }
       }, { passive: true });
 
-      card.addEventListener('pointerdown', (event) => {
-        if (event.target.closest('[data-home-video-sound]')) return;
-        if (!video) return;
-        setActiveState(index);
-        prepareVideo(video);
-        ensureReadyThenPlay(video);
-      }, { capture: true });
-
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-        if (!video) return;
-        ensureReadyThenPlay(video);
-        centerCard(index);
-        [100, 350, 800].forEach((delay) => {
-          window.setTimeout(() => {
-            if (activeIndex === index && video.paused) ensureReadyThenPlay(video);
-          }, delay);
-        });
+
+        setActive(index);
+        prepare(video);
+
+        // Because this call happens synchronously inside a trusted click,
+        // desktop browsers allow the selected muted video to start at once.
+        try {
+          const promise = video.play();
+          if (promise && typeof promise.catch === 'function') {
+            promise.catch(() => play(video));
+          }
+        } catch (_) {
+          play(video);
+        }
+
+        center(index);
       });
 
       card.addEventListener('keydown', (event) => {
@@ -166,35 +163,40 @@
       });
     });
 
-    carousel.querySelectorAll('[data-home-video-sound]').forEach((button, index) => {
+    cards.forEach((card, index) => {
+      const button = card.querySelector('[data-home-video-sound]');
+      const video = videos[index];
+      if (!button) return;
+
       button.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
 
         if (activeIndex !== index) {
-          setActiveState(index);
-          centerCard(index);
+          setActive(index);
+          center(index);
+          play(video);
         }
 
-        const video = videos[index];
-        if (!video) return;
         video.muted = !video.muted;
-        if (video.paused) ensureReadyThenPlay(video);
+        if (video.paused) {
+          try { video.play().catch(() => {}); } catch (_) {}
+        }
         button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
-      }, true);
+      });
     });
 
-    const getClosestToCenter = () => {
+    const closestToCenter = () => {
       const rect = track.getBoundingClientRect();
-      const center = rect.left + rect.width / 2;
+      const centerX = rect.left + rect.width / 2;
       let winner = 0;
-      let bestDistance = Infinity;
+      let distance = Infinity;
 
       cards.forEach((card, index) => {
         const box = card.getBoundingClientRect();
-        const distance = Math.abs((box.left + box.width / 2) - center);
-        if (distance < bestDistance) {
-          bestDistance = distance;
+        const delta = Math.abs((box.left + box.width / 2) - centerX);
+        if (delta < distance) {
+          distance = delta;
           winner = index;
         }
       });
@@ -206,41 +208,28 @@
       if (programmaticScroll) return;
       clearTimeout(scrollTimer);
       scrollTimer = setTimeout(() => {
-        const index = getClosestToCenter();
+        const index = closestToCenter();
         if (index !== activeIndex) activate(index, false);
       }, 160);
     }, { passive: true });
 
-    const resumeActive = () => {
-      if (document.visibilityState !== 'visible') return;
-      const video = videos[activeIndex];
-      if (video?.paused) ensureReadyThenPlay(video);
-    };
-
-    const visibility = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) resumeActive();
-        else videos.forEach(pauseVideo);
+        if (entry.isIntersecting) play(videos[activeIndex]);
+        else videos.forEach(pause);
       });
-    }, { threshold: 0.2 });
-    visibility.observe(carousel);
+    }, { threshold: .2 });
+    observer.observe(carousel);
 
-    document.addEventListener('visibilitychange', resumeActive);
-    window.addEventListener('focus', resumeActive);
-    window.addEventListener('pageshow', resumeActive);
-    window.addEventListener('load', resumeActive, { once: true });
-
-    activate(activeIndex, false);
+    setActive(activeIndex);
+    play(videos[activeIndex]);
 
     if (desktop) {
-      const centralVideo = videos[activeIndex];
-      if (centralVideo) {
-        [0, 250, 700, 1500].forEach((delay) => {
-          window.setTimeout(() => {
-            if (activeIndex === Math.floor(cards.length / 2) && centralVideo.paused) ensureReadyThenPlay(centralVideo);
-          }, delay);
-        });
-      }
+      [250, 800, 1600].forEach((delay) => {
+        setTimeout(() => {
+          if (videos[activeIndex]?.paused) play(videos[activeIndex]);
+        }, delay);
+      });
     }
   };
 
