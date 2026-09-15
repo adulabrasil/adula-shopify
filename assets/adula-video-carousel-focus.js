@@ -50,6 +50,7 @@
       video.setAttribute('playsinline', '');
       video.setAttribute('muted', '');
       video.preload = 'auto';
+      video.setAttribute('preload', 'auto');
     };
 
     const directPlay = (video) => {
@@ -63,20 +64,19 @@
       } catch (_) {}
     };
 
-    const tryPlay = (video) => {
+    const ensureReadyThenPlay = (video) => {
       if (!video || reduceMotion) return;
       prepareVideo(video);
-      video.autoplay = true;
-      video.setAttribute('autoplay', '');
 
-      const attempt = () => directPlay(video);
-
-      if (video.readyState >= 2) attempt();
-      else {
-        video.addEventListener('canplay', attempt, { once: true });
-        video.addEventListener('loadeddata', attempt, { once: true });
-        try { video.load(); } catch (_) {}
+      if (video.readyState >= 2) {
+        directPlay(video);
+        return;
       }
+
+      const playWhenReady = () => directPlay(video);
+      video.addEventListener('loadeddata', playWhenReady, { once: true });
+      video.addEventListener('canplay', playWhenReady, { once: true });
+      try { video.load(); } catch (_) {}
     };
 
     const pauseVideo = (video) => {
@@ -87,6 +87,9 @@
       video.muted = true;
     };
 
+    // The template originally ships side videos as preload="metadata". On
+    // desktop that leaves them without enough buffered data at selection time.
+    // Promote every card to preload=auto as soon as the carousel mounts.
     videos.forEach((video) => {
       prepareVideo(video);
       try { video.load(); } catch (_) {}
@@ -111,39 +114,49 @@
       track.scrollTo({ left: Math.max(0, targetLeft), behavior: reduceMotion ? 'auto' : 'smooth' });
       programmaticScrollTimer = window.setTimeout(() => {
         programmaticScroll = false;
-        tryPlay(videos[activeIndex]);
+        ensureReadyThenPlay(videos[activeIndex]);
       }, reduceMotion ? 50 : 550);
     };
 
     const activate = (index, center = true) => {
       setActiveState(index);
-      tryPlay(videos[activeIndex]);
+      ensureReadyThenPlay(videos[activeIndex]);
       if (center) centerCard(activeIndex);
     };
 
     cards.forEach((card, index) => {
+      const video = videos[index];
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
 
+      // Desktop users hover before clicking. Start buffering here so the
+      // selected video is already decodable when the click arrives.
+      card.addEventListener('pointerenter', () => {
+        if (!video) return;
+        prepareVideo(video);
+        if (video.readyState < 2) {
+          try { video.load(); } catch (_) {}
+        }
+      }, { passive: true });
+
       card.addEventListener('pointerdown', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-        const video = videos[index];
         if (!video) return;
-
-        // Run play() in the earliest trusted user gesture on desktop.
         setActiveState(index);
-        directPlay(video);
+        prepareVideo(video);
+        ensureReadyThenPlay(video);
       }, { capture: true });
 
       card.addEventListener('click', (event) => {
         if (event.target.closest('[data-home-video-sound]')) return;
-        const video = videos[index];
         if (!video) return;
-
-        directPlay(video);
+        ensureReadyThenPlay(video);
         centerCard(index);
-        window.setTimeout(() => directPlay(video), 120);
-        window.setTimeout(() => directPlay(video), 420);
+        [100, 350, 800].forEach((delay) => {
+          window.setTimeout(() => {
+            if (activeIndex === index && video.paused) ensureReadyThenPlay(video);
+          }, delay);
+        });
       });
 
       card.addEventListener('keydown', (event) => {
@@ -166,7 +179,7 @@
         const video = videos[index];
         if (!video) return;
         video.muted = !video.muted;
-        if (video.paused) directPlay(video);
+        if (video.paused) ensureReadyThenPlay(video);
         button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
       }, true);
     });
@@ -201,7 +214,7 @@
     const resumeActive = () => {
       if (document.visibilityState !== 'visible') return;
       const video = videos[activeIndex];
-      if (video?.paused) tryPlay(video);
+      if (video?.paused) ensureReadyThenPlay(video);
     };
 
     const visibility = new IntersectionObserver((entries) => {
@@ -222,13 +235,9 @@
     if (desktop) {
       const centralVideo = videos[activeIndex];
       if (centralVideo) {
-        prepareVideo(centralVideo);
-        centralVideo.autoplay = true;
-        centralVideo.setAttribute('autoplay', '');
-        try { centralVideo.load(); } catch (_) {}
-        [0, 250, 700, 1500, 3000].forEach((delay) => {
+        [0, 250, 700, 1500].forEach((delay) => {
           window.setTimeout(() => {
-            if (activeIndex === Math.floor(cards.length / 2) && centralVideo.paused) tryPlay(centralVideo);
+            if (activeIndex === Math.floor(cards.length / 2) && centralVideo.paused) ensureReadyThenPlay(centralVideo);
           }, delay);
         });
       }
