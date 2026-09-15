@@ -1,0 +1,47 @@
+/* Adüla homepage hero
+   The uploaded artwork defines the banner height automatically.
+   Desktop and mobile can use different source images and proportions. */
+.shopify-section--adula-hero-carousel .adula-hero-carousel__slide {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+.shopify-section--adula-hero-carousel .adula-hero-carousel__media {
+  position: relative !important;
+  inset: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.shopify-section--adula-hero-carousel .adula-hero-carousel__media picture {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+@media screen and (max-width: 699px) {
+  .shopify-section--adula-hero-carousel .adula-hero-carousel__slide,
+  .shopify-section--adula-hero-carousel .adula-hero-carousel__media,
+  .shopify-section--adula-hero-carousel .adula-hero-carousel__media picture,
+  .shopify-section--adula-hero-carousel .adula-hero-carousel__media img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+  }
+}
