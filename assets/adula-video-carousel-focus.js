@@ -8,11 +8,39 @@
     const track = carousel.querySelector('[data-home-video-track]');
     if (!track) return;
 
+    const originalCards = [...track.querySelectorAll('.adula-home-video-card')];
+    const preferredInitial = Math.floor(originalCards.length / 2);
+
     // Replace the cards with clean clones. The original section adds its own
     // sound listeners before this controller mounts; cloning removes those
     // listeners so all video behaviour is owned by this single controller.
-    [...track.querySelectorAll('.adula-home-video-card')].forEach((card) => {
-      card.replaceWith(card.cloneNode(true));
+    originalCards.forEach((card, index) => {
+      const clone = card.cloneNode(true);
+      const video = clone.querySelector('video');
+
+      if (video) {
+        video.defaultMuted = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+        video.preload = 'auto';
+        video.setAttribute('preload', 'auto');
+
+        // Give the center video autoplay semantics before it enters the live
+        // DOM. Desktop browsers are more reliable when these attributes exist
+        // at insertion time instead of being added afterwards by JavaScript.
+        if (index === preferredInitial) {
+          video.autoplay = true;
+          video.setAttribute('autoplay', '');
+        } else {
+          video.autoplay = false;
+          video.removeAttribute('autoplay');
+        }
+      }
+
+      card.replaceWith(clone);
     });
 
     const cards = [...track.querySelectorAll('.adula-home-video-card')];
@@ -21,7 +49,7 @@
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const desktop = window.matchMedia('(min-width: 1000px)').matches;
-    let activeIndex = Math.floor(cards.length / 2);
+    let activeIndex = preferredInitial;
     let programmaticScroll = false;
     let programmaticScrollTimer;
 
@@ -90,8 +118,12 @@
       video.muted = true;
     };
 
-    videos.forEach((video) => {
+    videos.forEach((video, index) => {
       prepare(video);
+      if (index !== activeIndex) {
+        video.autoplay = false;
+        video.removeAttribute('autoplay');
+      }
       try { video.load(); } catch (_) {}
     });
 
@@ -142,8 +174,6 @@
         setActive(index);
         prepare(video);
 
-        // Because this call happens synchronously inside a trusted click,
-        // desktop browsers allow the selected muted video to start at once.
         try {
           const promise = video.play();
           if (promise && typeof promise.catch === 'function') {
@@ -213,21 +243,33 @@
       }, 160);
     }, { passive: true });
 
+    const resumeActive = () => {
+      if (document.visibilityState !== 'visible') return;
+      const activeVideo = videos[activeIndex];
+      if (activeVideo?.paused) play(activeVideo);
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) play(videos[activeIndex]);
+        if (entry.isIntersecting) resumeActive();
         else videos.forEach(pause);
       });
     }, { threshold: .2 });
     observer.observe(carousel);
 
+    document.addEventListener('visibilitychange', resumeActive);
+    window.addEventListener('focus', resumeActive);
+    window.addEventListener('pageshow', resumeActive);
+    window.addEventListener('load', resumeActive, { once: true });
+
     setActive(activeIndex);
     play(videos[activeIndex]);
 
     if (desktop) {
-      [250, 800, 1600].forEach((delay) => {
+      [0, 150, 450, 900, 1600].forEach((delay) => {
         setTimeout(() => {
-          if (videos[activeIndex]?.paused) play(videos[activeIndex]);
+          const activeVideo = videos[activeIndex];
+          if (activeIndex === preferredInitial && activeVideo?.paused) play(activeVideo);
         }, delay);
       });
     }
