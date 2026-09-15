@@ -12,16 +12,6 @@
     "hero": {
       "type": "adula-hero-carousel",
       "blocks": {
-        "personalize": {
-          "type": "slide",
-          "settings": {
-            "eyebrow": "Afeto em cada detalhe",
-            "heading": "Personalize sua peça",
-            "text": "<p>Escolha símbolos que representam quem você ama e transforme memórias em uma joia única.</p>",
-            "button_label": "Personalizar agora",
-            "link": "/collections/all"
-          }
-        },
         "fios-de-luz": {
           "type": "slide",
           "settings": {
@@ -44,7 +34,6 @@
         }
       },
       "block_order": [
-        "personalize",
         "fios-de-luz",
         "amuletos-paris"
       ],
