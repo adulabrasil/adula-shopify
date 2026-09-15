@@ -12,16 +12,6 @@
     "hero": {
       "type": "adula-hero-carousel",
       "blocks": {
-        "fios-de-luz": {
-          "type": "slide",
-          "settings": {
-            "eyebrow": "Cool e minimalista",
-            "heading": "Fios de Luz",
-            "text": "<p>Escolha seu fio, combine seus pingentes e crie uma composição que tenha a sua cara.</p>",
-            "button_label": "Conheça a coleção",
-            "link": "/collections/fio-de-luz"
-          }
-        },
         "amuletos-paris": {
           "type": "slide",
           "settings": {
@@ -34,7 +24,6 @@
         }
       },
       "block_order": [
-        "fios-de-luz",
         "amuletos-paris"
       ],
       "settings": {
