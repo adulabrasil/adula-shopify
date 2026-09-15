@@ -15,6 +15,8 @@
         "amuletos-paris": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/colar-granada-4-pfenq.webp",
+            "image_mobile": "shopify://shop_images/colar-granada-3-x0usn.webp",
             "eyebrow": "Símbolos que contam histórias",
             "heading": "Amuletos de Paris",
             "text": "<p>Charms inspirados em Paris para levar afeto, sorte e memórias sempre com você.</p>",
