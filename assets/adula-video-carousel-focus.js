@@ -11,6 +11,7 @@
 
     const videos = cards.map((card) => card.querySelector('video'));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const desktop = window.matchMedia('(min-width: 1000px)').matches;
     let activeIndex = Math.floor(cards.length / 2);
 
     const style = document.createElement('style');
@@ -49,28 +50,21 @@
       video.preload = 'auto';
     };
 
-    videos.forEach((video) => {
-      prepareVideo(video);
-      try { video.load(); } catch (_) {}
-    });
-
-    const playVideo = (video) => {
+    const tryPlay = (video) => {
       if (!video || reduceMotion) return;
       prepareVideo(video);
       video.autoplay = true;
+      video.setAttribute('autoplay', '');
 
       const attempt = () => {
         const promise = video.play();
         if (promise && typeof promise.catch === 'function') {
-          promise.catch(() => {
-            window.setTimeout(() => video.play().catch(() => {}), 180);
-          });
+          promise.catch(() => {});
         }
       };
 
-      if (video.readyState >= 2) {
-        attempt();
-      } else {
+      if (video.readyState >= 2) attempt();
+      else {
         video.addEventListener('canplay', attempt, { once: true });
         video.addEventListener('loadeddata', attempt, { once: true });
         try { video.load(); } catch (_) {}
@@ -79,19 +73,25 @@
 
     const pauseVideo = (video) => {
       if (!video) return;
-      video.autoplay = false;
       video.pause();
+      video.autoplay = false;
+      video.removeAttribute('autoplay');
       video.muted = true;
     };
+
+    videos.forEach((video) => {
+      prepareVideo(video);
+      try { video.load(); } catch (_) {}
+    });
 
     const activate = (index, center = true) => {
       activeIndex = Math.max(0, Math.min(cards.length - 1, index));
 
       cards.forEach((card, cardIndex) => {
-        const isActive = cardIndex === activeIndex;
-        card.classList.toggle('is-active', isActive);
-        card.setAttribute('aria-current', isActive ? 'true' : 'false');
-        if (isActive) playVideo(videos[cardIndex]);
+        const active = cardIndex === activeIndex;
+        card.classList.toggle('is-active', active);
+        card.setAttribute('aria-current', active ? 'true' : 'false');
+        if (active) tryPlay(videos[cardIndex]);
         else pauseVideo(videos[cardIndex]);
       });
 
@@ -137,13 +137,13 @@
       const rect = track.getBoundingClientRect();
       const center = rect.left + rect.width / 2;
       let winner = 0;
-      let distance = Infinity;
+      let bestDistance = Infinity;
 
       cards.forEach((card, index) => {
         const box = card.getBoundingClientRect();
-        const delta = Math.abs((box.left + box.width / 2) - center);
-        if (delta < distance) {
-          distance = delta;
+        const distance = Math.abs((box.left + box.width / 2) - center);
+        if (distance < bestDistance) {
+          bestDistance = distance;
           winner = index;
         }
       });
@@ -159,18 +159,42 @@
       }, 160);
     }, { passive: true });
 
+    const resumeActive = () => {
+      if (document.visibilityState !== 'visible') return;
+      const video = videos[activeIndex];
+      if (video?.paused) tryPlay(video);
+    };
+
     const visibility = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) playVideo(videos[activeIndex]);
+        if (entry.isIntersecting) resumeActive();
         else videos.forEach(pauseVideo);
       });
     }, { threshold: 0.2 });
     visibility.observe(carousel);
 
+    document.addEventListener('visibilitychange', resumeActive);
+    window.addEventListener('focus', resumeActive);
+    window.addEventListener('pageshow', resumeActive);
+    window.addEventListener('load', resumeActive, { once: true });
+
     activate(activeIndex, false);
-    requestAnimationFrame(() => playVideo(videos[activeIndex]));
-    setTimeout(() => playVideo(videos[activeIndex]), 500);
-    setTimeout(() => playVideo(videos[activeIndex]), 1500);
+
+    if (desktop) {
+      const centralVideo = videos[activeIndex];
+      if (centralVideo) {
+        prepareVideo(centralVideo);
+        centralVideo.autoplay = true;
+        centralVideo.setAttribute('autoplay', '');
+        try { centralVideo.load(); } catch (_) {}
+
+        [0, 250, 700, 1500, 3000].forEach((delay) => {
+          window.setTimeout(() => {
+            if (activeIndex === Math.floor(cards.length / 2) && centralVideo.paused) tryPlay(centralVideo);
+          }, delay);
+        });
+      }
+    }
   };
 
   const scan = () => document.querySelectorAll(SELECTOR).forEach(enhance);
