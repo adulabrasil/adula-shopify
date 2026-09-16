@@ -124,6 +124,59 @@
         "heading": "Navegue por Categorias"
       }
     },
+    "adula_shop_the_look_FcKF7b": {
+      "type": "adula-shop-the-look",
+      "blocks": {
+        "hotspot_6zMM7C": {
+          "type": "hotspot",
+          "settings": {
+            "product": "labret-topo-flor-5-navete-titanio",
+            "x": 62,
+            "y": 16
+          }
+        },
+        "hotspot_k3QKty": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
+            "x": 55,
+            "y": 73
+          }
+        },
+        "hotspot_KFDPLN": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-andy",
+            "x": 48,
+            "y": 82
+          }
+        },
+        "hotspot_YGiLm6": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-yoko",
+            "x": 45,
+            "y": 91
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_6zMM7C",
+        "hotspot_k3QKty",
+        "hotspot_KFDPLN",
+        "hotspot_YGiLm6"
+      ],
+      "name": "Shop the Look Adüla",
+      "settings": {
+        "eyebrow": "Chic sans effort",
+        "heading": "Shop the Look",
+        "text": "<p>Um mix, infinitas formas de adular-se.</p>",
+        "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
+        "background": "#fbf8f4",
+        "button_label": "Explorar o Lookbook",
+        "button_link": ""
+      }
+    },
     "adula-stories": {
       "type": "adula-stories",
       "blocks": {
@@ -409,6 +462,7 @@
     "hero",
     "benefits",
     "category-navigation",
+    "adula_shop_the_look_FcKF7b",
     "adula-stories",
     "best-sellers",
     "campaign-banners",
