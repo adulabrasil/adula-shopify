@@ -131,7 +131,7 @@
           "type": "hotspot",
           "settings": {
             "product": "labret-topo-flor-5-navete-titanio",
-            "x": 62,
+            "x": 70,
             "y": 16
           }
         },
@@ -139,7 +139,7 @@
           "type": "hotspot",
           "settings": {
             "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
-            "x": 55,
+            "x": 59,
             "y": 73
           }
         },
@@ -147,7 +147,7 @@
           "type": "hotspot",
           "settings": {
             "product": "brinco-andy",
-            "x": 48,
+            "x": 57,
             "y": 82
           }
         },
@@ -155,7 +155,7 @@
           "type": "hotspot",
           "settings": {
             "product": "brinco-yoko",
-            "x": 45,
+            "x": 46,
             "y": 91
           }
         }
