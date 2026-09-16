@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "look_1": {
+      "type": "adula-shop-the-look",
+      "blocks": {
+        "hotspot_1": { "type": "hotspot", "settings": { "x": 62, "y": 16 } },
+        "hotspot_2": { "type": "hotspot", "settings": { "x": 55, "y": 73 } },
+        "hotspot_3": { "type": "hotspot", "settings": { "x": 48, "y": 82 } },
+        "hotspot_4": { "type": "hotspot", "settings": { "x": 45, "y": 91 } }
+      },
+      "block_order": ["hotspot_1", "hotspot_2", "hotspot_3", "hotspot_4"],
+      "settings": {
+        "eyebrow": "LOOKBOOK ADÜLA",
+        "heading": "Ear Party",
+        "text": "<p>Combinações autorais para misturar, combinar e adular-se.</p>",
+        "background": "#fbf8f4",
+        "button_label": "",
+        "button_link": ""
+      }
+    }
+  },
+  "order": ["main", "look_1"]
+}
