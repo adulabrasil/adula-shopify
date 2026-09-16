@@ -1,124 +1,38 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .adula-look {
-    --look-brown: #4a3428;
-    --look-gold: #b6925e;
-    background: {{ section.settings.background }};
-    color: var(--look-brown);
-    padding: clamp(38px, 5vw, 72px) 0;
-  }
-  #shopify-section-{{ section.id }} .adula-look__inner { width: min(1240px, calc(100% - 40px)); margin: 0 auto; }
-  #shopify-section-{{ section.id }} .adula-look__head { text-align:center; max-width:680px; margin:0 auto 24px; }
-  #shopify-section-{{ section.id }} .adula-look__eyebrow { margin:0 0 7px; text-transform:uppercase; letter-spacing:.18em; font-size:10px; }
-  #shopify-section-{{ section.id }} .adula-look__title { margin:0; font-size:clamp(30px,3.6vw,46px); line-height:1.05; font-weight:400; }
-  #shopify-section-{{ section.id }} .adula-look__text { margin:11px auto 0; max-width:520px; opacity:.76; }
-  #shopify-section-{{ section.id }} .adula-look__grid { display:grid; grid-template-columns:minmax(0, 2fr) minmax(250px, .85fr); gap:clamp(30px,5vw,64px); align-items:center; }
-  #shopify-section-{{ section.id }} .adula-look__visual { position:relative; overflow:hidden; background:#eee7e1; }
+  #shopify-section-{{ section.id }} .adula-look { --look-brown:#4a3428; --look-gold:#b6925e; background:{{ section.settings.background }}; color:var(--look-brown); padding:clamp(34px,4vw,58px) 0; }
+  #shopify-section-{{ section.id }} .adula-look__inner { width:min(1080px,calc(100% - 48px)); margin:0 auto; }
+  #shopify-section-{{ section.id }} .adula-look__head { text-align:center; max-width:640px; margin:0 auto 20px; }
+  #shopify-section-{{ section.id }} .adula-look__eyebrow { margin:0 0 6px; text-transform:uppercase; letter-spacing:.18em; font-size:10px; }
+  #shopify-section-{{ section.id }} .adula-look__title { margin:0; font-size:clamp(29px,3.2vw,42px); line-height:1.05; font-weight:400; }
+  #shopify-section-{{ section.id }} .adula-look__text { margin:9px auto 0; max-width:500px; opacity:.76; }
+  #shopify-section-{{ section.id }} .adula-look__grid { display:grid; grid-template-columns:minmax(0,640px) minmax(230px,300px); justify-content:center; gap:clamp(30px,4vw,54px); align-items:center; }
+  #shopify-section-{{ section.id }} .adula-look__visual { position:relative; width:100%; max-width:640px; margin:0 auto; overflow:hidden; background:#eee7e1; }
   #shopify-section-{{ section.id }} .adula-look__visual img { display:block; width:100%; height:auto; }
   #shopify-section-{{ section.id }} .adula-look__placeholder { aspect-ratio:1/1; display:grid; place-items:center; padding:40px; text-align:center; }
-  #shopify-section-{{ section.id }} .adula-look__hotspot { position:absolute; left:var(--x); top:var(--y); transform:translate(-50%,-50%); width:28px; height:28px; padding:0; border:1px solid rgba(255,255,255,.98); border-radius:50%; background:rgba(255,255,255,.9); box-shadow:0 2px 11px rgba(54,36,25,.2); cursor:pointer; z-index:2; transition:transform .2s ease,background .2s ease; }
+  #shopify-section-{{ section.id }} .adula-look__hotspot { position:absolute; left:var(--x); top:var(--y); transform:translate(-50%,-50%); width:27px; height:27px; padding:0; border:1px solid rgba(255,255,255,.98); border-radius:50%; background:rgba(255,255,255,.9); box-shadow:0 2px 11px rgba(54,36,25,.2); cursor:pointer; z-index:2; transition:transform .2s ease,background .2s ease; }
   #shopify-section-{{ section.id }} .adula-look__hotspot::after { content:''; position:absolute; inset:9px; border-radius:50%; background:var(--look-gold); }
   #shopify-section-{{ section.id }} .adula-look__hotspot:hover, #shopify-section-{{ section.id }} .adula-look__hotspot.is-active { transform:translate(-50%,-50%) scale(1.13); background:#fff; }
   #shopify-section-{{ section.id }} .adula-look__details { text-align:center; }
   #shopify-section-{{ section.id }} .adula-look__product { display:none; animation:adulaLookFade .22s ease; }
   #shopify-section-{{ section.id }} .adula-look__product.is-active { display:block; }
-  #shopify-section-{{ section.id }} .adula-look__product-image { display:block; width:min(100%,240px); aspect-ratio:1/1; object-fit:contain; margin:0 auto 18px; background:#f7f4f1; }
-  #shopify-section-{{ section.id }} .adula-look__product-title { font-size:clamp(18px,1.65vw,23px); line-height:1.25; margin:0 auto 7px; max-width:320px; font-weight:400; }
-  #shopify-section-{{ section.id }} .adula-look__price { margin:0 0 17px; font-size:14px; }
-  #shopify-section-{{ section.id }} .adula-look__link { display:inline-block; padding:7px 1px 5px; border-bottom:1px solid currentColor; text-decoration:none; color:var(--look-brown); font-size:13px; letter-spacing:.04em; }
-  #shopify-section-{{ section.id }} .adula-look__all { display:inline-flex; align-items:center; justify-content:center; min-height:43px; padding:0 22px; border:1px solid var(--look-brown); text-decoration:none; color:var(--look-brown); transition:.2s ease; }
+  #shopify-section-{{ section.id }} .adula-look__product-image { display:block; width:min(100%,205px); aspect-ratio:1/1; object-fit:contain; margin:0 auto 14px; background:#f7f4f1; }
+  #shopify-section-{{ section.id }} .adula-look__product-title { font-size:clamp(17px,1.45vw,21px); line-height:1.25; margin:0 auto 6px; max-width:285px; font-weight:400; }
+  #shopify-section-{{ section.id }} .adula-look__price { margin:0 0 13px; font-size:14px; }
+  #shopify-section-{{ section.id }} .adula-look__link { display:inline-block; padding:6px 1px 4px; border-bottom:1px solid currentColor; text-decoration:none; color:var(--look-brown); font-size:13px; letter-spacing:.04em; }
+  #shopify-section-{{ section.id }} .adula-look__all { display:inline-flex; align-items:center; justify-content:center; min-height:41px; padding:0 21px; border:1px solid var(--look-brown); text-decoration:none; color:var(--look-brown); transition:.2s ease; }
   #shopify-section-{{ section.id }} .adula-look__all:hover { background:var(--look-brown); color:#fff; }
-  #shopify-section-{{ section.id }} .adula-look__all-wrap { text-align:center; margin-top:28px; }
+  #shopify-section-{{ section.id }} .adula-look__all-wrap { text-align:center; margin-top:23px; }
   @keyframes adulaLookFade { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
   @media (max-width:749px) {
     #shopify-section-{{ section.id }} .adula-look { padding:38px 0 46px; }
     #shopify-section-{{ section.id }} .adula-look__inner { width:min(100% - 28px,620px); }
     #shopify-section-{{ section.id }} .adula-look__head { margin-bottom:20px; }
     #shopify-section-{{ section.id }} .adula-look__grid { grid-template-columns:1fr; gap:20px; }
+    #shopify-section-{{ section.id }} .adula-look__visual { max-width:none; }
     #shopify-section-{{ section.id }} .adula-look__product-image { width:min(58vw,220px); margin-bottom:14px; }
     #shopify-section-{{ section.id }} .adula-look__hotspot { width:27px; height:27px; }
   }
 {%- endstyle -%}
-
-<section class="adula-look" data-adula-look>
-  <div class="adula-look__inner">
-    <header class="adula-look__head">
-      {%- if section.settings.eyebrow != blank -%}<p class="adula-look__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
-      <h2 class="adula-look__title">{{ section.settings.heading | escape }}</h2>
-      {%- if section.settings.text != blank -%}<div class="adula-look__text">{{ section.settings.text }}</div>{%- endif -%}
-    </header>
-    <div class="adula-look__grid">
-      <div class="adula-look__visual">
-        {%- if section.settings.image != blank -%}
-          <picture>
-            {%- if section.settings.image_mobile != blank -%}<source media="(max-width:749px)" srcset="{{ section.settings.image_mobile | image_url: width: 1000 }}">{%- endif -%}
-            {{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '600,900,1200,1600', sizes: '(max-width:749px) calc(100vw - 28px), 68vw', alt: section.settings.heading }}
-          </picture>
-        {%- else -%}<div class="adula-look__placeholder">Escolha a foto do mix no editor do tema.</div>{%- endif -%}
-        {%- for block in section.blocks -%}
-          {%- if block.settings.product != blank -%}<button class="adula-look__hotspot{% if forloop.first %} is-active{% endif %}" type="button" style="--x:{{ block.settings.x }}%;--y:{{ block.settings.y }}%;" data-look-hotspot="{{ block.id }}" aria-label="Ver {{ block.settings.product.title | escape }}" {{ block.shopify_attributes }}></button>{%- endif -%}
-        {%- endfor -%}
-      </div>
-      <div class="adula-look__details" aria-live="polite">
-        {%- for block in section.blocks -%}
-          {%- assign look_product = block.settings.product -%}
-          {%- if look_product != blank -%}
-            <article class="adula-look__product{% if forloop.first %} is-active{% endif %}" data-look-product="{{ block.id }}">
-              {%- if look_product.featured_image -%}{{ look_product.featured_image | image_url: width: 600 | image_tag: class: 'adula-look__product-image', loading: 'lazy', widths: '240,400,600', sizes: '(max-width:749px) 58vw, 240px' }}{%- endif -%}
-              <h3 class="adula-look__product-title">{{ look_product.title }}</h3>
-              <p class="adula-look__price">{{ look_product.price | money }}</p>
-              <a class="adula-look__link" href="{{ look_product.url }}">Ver peça →</a>
-            </article>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-    </div>
-    {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<div class="adula-look__all-wrap"><a class="adula-look__all" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }} →</a></div>{%- endif -%}
-  </div>
-</section>
-
-<script>
-(() => {
-  const script = document.currentScript;
-  const root = script && script.previousElementSibling;
-  if (!root || !root.matches('[data-adula-look]')) return;
-  const activate = (id) => {
-    root.querySelectorAll('[data-look-hotspot]').forEach((el) => el.classList.toggle('is-active', el.dataset.lookHotspot === id));
-    root.querySelectorAll('[data-look-product]').forEach((el) => el.classList.toggle('is-active', el.dataset.lookProduct === id));
-  };
-  root.querySelectorAll('[data-look-hotspot]').forEach((hotspot) => hotspot.addEventListener('click', () => activate(hotspot.dataset.lookHotspot)));
-  if (window.Shopify && Shopify.designMode) {
-    document.addEventListener('shopify:block:select', (event) => {
-      if (!root.contains(event.target)) return;
-      const id = event.detail && event.detail.blockId;
-      if (id) activate(id);
-    });
-  }
-})();
-</script>
-
-{% schema %}
-{
-  "name":"Shop the Look Adüla","tag":"section","class":"shopify-section--adula-shop-the-look","max_blocks":8,
-  "settings":[
-    {"type":"text","id":"eyebrow","label":"Texto superior","default":"Chic sans effort"},
-    {"type":"text","id":"heading","label":"Título","default":"Shop the Look"},
-    {"type":"richtext","id":"text","label":"Texto","default":"<p>Um mix, infinitas formas de adular-se.</p>"},
-    {"type":"image_picker","id":"image","label":"Foto do look — desktop"},
-    {"type":"image_picker","id":"image_mobile","label":"Foto do look — mobile (opcional)"},
-    {"type":"color","id":"background","label":"Fundo","default":"#fbf8f4"},
-    {"type":"text","id":"button_label","label":"Texto do botão final","default":"Explorar o Lookbook"},
-    {"type":"url","id":"button_link","label":"Link do Lookbook"}
-  ],
-  "blocks":[{"type":"hotspot","name":"Produto / hotspot","settings":[
-    {"type":"product","id":"product","label":"Produto"},
-    {"type":"range","id":"x","label":"Posição horizontal","min":0,"max":100,"step":1,"unit":"%","default":50},
-    {"type":"range","id":"y","label":"Posição vertical","min":0,"max":100,"step":1,"unit":"%","default":50}
-  ]}],
-  "presets":[{"name":"Shop the Look Adüla","blocks":[
-    {"type":"hotspot","settings":{"x":62,"y":16}},
-    {"type":"hotspot","settings":{"x":55,"y":73}},
-    {"type":"hotspot","settings":{"x":48,"y":82}},
-    {"type":"hotspot","settings":{"x":45,"y":91}}
-  ]}]
-}
-{% endschema %}
+<section class="adula-look" data-adula-look><div class="adula-look__inner"><header class="adula-look__head">{%- if section.settings.eyebrow != blank -%}<p class="adula-look__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}<h2 class="adula-look__title">{{ section.settings.heading | escape }}</h2>{%- if section.settings.text != blank -%}<div class="adula-look__text">{{ section.settings.text }}</div>{%- endif -%}</header><div class="adula-look__grid"><div class="adula-look__visual">{%- if section.settings.image != blank -%}<picture>{%- if section.settings.image_mobile != blank -%}<source media="(max-width:749px)" srcset="{{ section.settings.image_mobile | image_url: width:1000 }}">{%- endif -%}{{ section.settings.image | image_url: width:1400 | image_tag: loading:'lazy', widths:'600,900,1200,1400', sizes:'(max-width:749px) calc(100vw - 28px), 640px', alt:section.settings.heading }}</picture>{%- else -%}<div class="adula-look__placeholder">Escolha a foto do mix no editor do tema.</div>{%- endif -%}{%- for block in section.blocks -%}{%- if block.settings.product != blank -%}<button class="adula-look__hotspot{% if forloop.first %} is-active{% endif %}" type="button" style="--x:{{ block.settings.x }}%;--y:{{ block.settings.y }}%;" data-look-hotspot="{{ block.id }}" aria-label="Ver {{ block.settings.product.title | escape }}" {{ block.shopify_attributes }}></button>{%- endif -%}{%- endfor -%}</div><div class="adula-look__details" aria-live="polite">{%- for block in section.blocks -%}{%- assign look_product=block.settings.product -%}{%- if look_product != blank -%}<article class="adula-look__product{% if forloop.first %} is-active{% endif %}" data-look-product="{{ block.id }}">{%- if look_product.featured_image -%}{{ look_product.featured_image | image_url: width:500 | image_tag: class:'adula-look__product-image', loading:'lazy', widths:'205,350,500', sizes:'(max-width:749px) 58vw, 205px' }}{%- endif -%}<h3 class="adula-look__product-title">{{ look_product.title }}</h3><p class="adula-look__price">{{ look_product.price | money }}</p><a class="adula-look__link" href="{{ look_product.url }}">Ver peça →</a></article>{%- endif -%}{%- endfor -%}</div></div>{%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<div class="adula-look__all-wrap"><a class="adula-look__all" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }} →</a></div>{%- endif -%}</div></section>
+<script>(()=>{const script=document.currentScript;const root=script&&script.previousElementSibling;if(!root||!root.matches('[data-adula-look]'))return;const activate=id=>{root.querySelectorAll('[data-look-hotspot]').forEach(el=>el.classList.toggle('is-active',el.dataset.lookHotspot===id));root.querySelectorAll('[data-look-product]').forEach(el=>el.classList.toggle('is-active',el.dataset.lookProduct===id));};root.querySelectorAll('[data-look-hotspot]').forEach(hotspot=>hotspot.addEventListener('click',()=>activate(hotspot.dataset.lookHotspot)));if(window.Shopify&&Shopify.designMode){document.addEventListener('shopify:block:select',event=>{if(!root.contains(event.target))return;const id=event.detail&&event.detail.blockId;if(id)activate(id);});}})();</script>
+{% schema %}{"name":"Shop the Look Adüla","tag":"section","class":"shopify-section--adula-shop-the-look","max_blocks":8,"settings":[{"type":"text","id":"eyebrow","label":"Texto superior","default":"Chic sans effort"},{"type":"text","id":"heading","label":"Título","default":"Shop the Look"},{"type":"richtext","id":"text","label":"Texto","default":"<p>Um mix, infinitas formas de adular-se.</p>"},{"type":"image_picker","id":"image","label":"Foto do look — desktop"},{"type":"image_picker","id":"image_mobile","label":"Foto do look — mobile (opcional)"},{"type":"color","id":"background","label":"Fundo","default":"#fbf8f4"},{"type":"text","id":"button_label","label":"Texto do botão final","default":"Explorar o Lookbook"},{"type":"url","id":"button_link","label":"Link do Lookbook"}],"blocks":[{"type":"hotspot","name":"Produto / hotspot","settings":[{"type":"product","id":"product","label":"Produto"},{"type":"range","id":"x","label":"Posição horizontal","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"range","id":"y","label":"Posição vertical","min":0,"max":100,"step":1,"unit":"%","default":50}]}],"presets":[{"name":"Shop the Look Adüla","blocks":[{"type":"hotspot","settings":{"x":62,"y":16}},{"type":"hotspot","settings":{"x":55,"y":73}},{"type":"hotspot","settings":{"x":48,"y":82}},{"type":"hotspot","settings":{"x":45,"y":91}}]}]}{% endschema %}
