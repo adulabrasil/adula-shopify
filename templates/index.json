@@ -174,7 +174,7 @@
         "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
         "background": "#fbf8f4",
         "button_label": "Explorar o Lookbook",
-        "button_link": ""
+        "button_link": "shopify://pages/lookbook-adula"
       }
     },
     "adula-stories": {
