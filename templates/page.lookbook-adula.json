@@ -20,93 +20,43 @@
     "look_1": {
       "type": "adula-shop-the-look",
       "blocks": {
-        "hotspot_1": {
-          "type": "hotspot",
-          "settings": {
-            "product": "labret-topo-flor-5-navete-titanio",
-            "x": 70,
-            "y": 16
-          }
-        },
-        "hotspot_2": {
-          "type": "hotspot",
-          "settings": {
-            "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
-            "x": 59,
-            "y": 73
-          }
-        },
-        "hotspot_3": {
-          "type": "hotspot",
-          "settings": {
-            "product": "brinco-andy",
-            "x": 57,
-            "y": 82
-          }
-        },
-        "hotspot_4": {
-          "type": "hotspot",
-          "settings": {
-            "product": "brinco-yoko",
-            "x": 46,
-            "y": 91
-          }
-        }
+        "hotspot_1": {"type":"hotspot","settings":{"product":"labret-topo-flor-5-navete-titanio","x":70,"y":16}},
+        "hotspot_2": {"type":"hotspot","settings":{"product":"brinco-mila-ponto-de-luz-quadrado-com-zirconia","x":59,"y":73}},
+        "hotspot_3": {"type":"hotspot","settings":{"product":"brinco-andy","x":57,"y":82}},
+        "hotspot_4": {"type":"hotspot","settings":{"product":"brinco-yoko","x":46,"y":91}}
       },
-      "block_order": [
-        "hotspot_1",
-        "hotspot_2",
-        "hotspot_3",
-        "hotspot_4"
-      ],
-      "settings": {
-        "eyebrow": "LOOKBOOK ADÜLA",
-        "heading": "Ear Party",
-        "text": "<p>Combinações autorais para misturar, combinar e adular-se.</p>",
-        "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
-        "background": "#fbf8f4",
-        "button_label": "",
-        "button_link": ""
-      }
+      "block_order":["hotspot_1","hotspot_2","hotspot_3","hotspot_4"],
+      "settings":{"eyebrow":"LOOKBOOK ADÜLA","heading":"Ear Party","text":"<p>Combinações autorais para misturar, combinar e adular-se.</p>","image":"shopify://shop_images/produtos-site-quadrado-2-21.webp","background":"#fbf8f4","button_label":"","button_link":""}
     },
     "look_2": {
-      "type": "adula-shop-the-look",
-      "blocks": {
-        "maisahotspot": {
-          "type": "hotspot",
-          "settings": {
-            "product": "colar-maisa",
-            "x": 54,
-            "y": 55
-          }
-        },
-        "margaritahotspot": {
-          "type": "hotspot",
-          "settings": {
-            "product": "colar-margarita",
-            "x": 58,
-            "y": 93
-          }
-        }
+      "type":"adula-shop-the-look",
+      "blocks":{
+        "maisahotspot":{"type":"hotspot","settings":{"product":"colar-maisa","x":54,"y":55}},
+        "margaritahotspot":{"type":"hotspot","settings":{"product":"colar-margarita","x":58,"y":93}}
       },
-      "block_order": [
-        "maisahotspot",
-        "margaritahotspot"
-      ],
-      "settings": {
-        "eyebrow": "LOOKBOOK ADÜLA",
-        "heading": "Layering à la Adüla",
-        "text": "<p>Pérolas naturais em camadas. Delicadeza que ganha personalidade no mix.</p>",
-        "image": "shopify://shop_images/swpsbn0nwcjwqterdamxmyt0tvcjnbv5djgf.webp",
-        "background": "#ffffff",
-        "button_label": "",
-        "button_link": ""
-      }
+      "block_order":["maisahotspot","margaritahotspot"],
+      "settings":{"eyebrow":"LOOKBOOK ADÜLA","heading":"Layering à la Adüla","text":"<p>Pérolas naturais em camadas. Delicadeza que ganha personalidade no mix.</p>","image":"shopify://shop_images/swpsbn0nwcjwqterdamxmyt0tvcjnbv5djgf.webp","background":"#ffffff","button_label":"","button_link":""}
+    },
+    "look_3": {
+      "type":"adula-shop-the-look",
+      "blocks":{
+        "ringhotspot1":{"type":"hotspot","settings":{"x":40,"y":55}},
+        "ringhotspot2":{"type":"hotspot","settings":{"x":55,"y":60}},
+        "ringhotspot3":{"type":"hotspot","settings":{"x":68,"y":50}}
+      },
+      "block_order":["ringhotspot1","ringhotspot2","ringhotspot3"],
+      "settings":{"eyebrow":"LOOKBOOK ADÜLA","heading":"Ring Stacking","text":"<p>Anéis que não precisam combinar. Precisam conversar entre si.</p>","background":"#fbf8f4","button_label":"","button_link":""}
+    },
+    "look_4": {
+      "type":"adula-shop-the-look",
+      "blocks":{
+        "wristhotspot1":{"type":"hotspot","settings":{"x":38,"y":48}},
+        "wristhotspot2":{"type":"hotspot","settings":{"x":53,"y":58}},
+        "wristhotspot3":{"type":"hotspot","settings":{"x":67,"y":68}}
+      },
+      "block_order":["wristhotspot1","wristhotspot2","wristhotspot3"],
+      "settings":{"eyebrow":"LOOKBOOK ADÜLA","heading":"Wrist Stack","text":"<p>Texturas, brilhos e significados para usar juntos.</p>","background":"#ffffff","button_label":"","button_link":""}
     }
   },
-  "order": [
-    "main",
-    "look_1",
-    "look_2"
-  ]
+  "order":["main","look_1","look_2","look_3","look_4"]
 }
