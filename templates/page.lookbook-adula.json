@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "color_scheme": "",
-        "show_title": true,
+        "show_title": false,
         "page_width": "xs"
       }
     },
@@ -53,12 +53,7 @@
           }
         }
       },
-      "block_order": [
-        "hotspot_1",
-        "hotspot_2",
-        "hotspot_3",
-        "hotspot_4"
-      ],
+      "block_order": ["hotspot_1", "hotspot_2", "hotspot_3", "hotspot_4"],
       "settings": {
         "eyebrow": "LOOKBOOK ADÜLA",
         "heading": "Ear Party",
@@ -70,8 +65,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "look_1"
-  ]
+  "order": ["main", "look_1"]
 }
