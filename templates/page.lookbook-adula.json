@@ -20,12 +20,45 @@
     "look_1": {
       "type": "adula-shop-the-look",
       "blocks": {
-        "hotspot_1": { "type": "hotspot", "settings": { "product": "labret-topo-flor-5-navete-titanio", "x": 70, "y": 16 } },
-        "hotspot_2": { "type": "hotspot", "settings": { "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia", "x": 59, "y": 73 } },
-        "hotspot_3": { "type": "hotspot", "settings": { "product": "brinco-andy", "x": 57, "y": 82 } },
-        "hotspot_4": { "type": "hotspot", "settings": { "product": "brinco-yoko", "x": 46, "y": 91 } }
+        "hotspot_1": {
+          "type": "hotspot",
+          "settings": {
+            "product": "labret-topo-flor-5-navete-titanio",
+            "x": 70,
+            "y": 16
+          }
+        },
+        "hotspot_2": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
+            "x": 59,
+            "y": 73
+          }
+        },
+        "hotspot_3": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-andy",
+            "x": 57,
+            "y": 82
+          }
+        },
+        "hotspot_4": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-yoko",
+            "x": 46,
+            "y": 91
+          }
+        }
       },
-      "block_order": ["hotspot_1", "hotspot_2", "hotspot_3", "hotspot_4"],
+      "block_order": [
+        "hotspot_1",
+        "hotspot_2",
+        "hotspot_3",
+        "hotspot_4"
+      ],
       "settings": {
         "eyebrow": "LOOKBOOK ADÜLA",
         "heading": "Ear Party",
@@ -39,19 +72,41 @@
     "look_2": {
       "type": "adula-shop-the-look",
       "blocks": {
-        "maisahotspot": { "type": "hotspot", "settings": { "x": 54, "y": 42 } },
-        "margaritahotspot": { "type": "hotspot", "settings": { "x": 58, "y": 70 } }
+        "maisahotspot": {
+          "type": "hotspot",
+          "settings": {
+            "product": "colar-maisa",
+            "x": 54,
+            "y": 55
+          }
+        },
+        "margaritahotspot": {
+          "type": "hotspot",
+          "settings": {
+            "product": "colar-margarita",
+            "x": 58,
+            "y": 93
+          }
+        }
       },
-      "block_order": ["maisahotspot", "margaritahotspot"],
+      "block_order": [
+        "maisahotspot",
+        "margaritahotspot"
+      ],
       "settings": {
         "eyebrow": "LOOKBOOK ADÜLA",
         "heading": "Layering à la Adüla",
         "text": "<p>Pérolas naturais em camadas. Delicadeza que ganha personalidade no mix.</p>",
+        "image": "shopify://shop_images/swpsbn0nwcjwqterdamxmyt0tvcjnbv5djgf.webp",
         "background": "#ffffff",
         "button_label": "",
         "button_link": ""
       }
     }
   },
-  "order": ["main", "look_1", "look_2"]
+  "order": [
+    "main",
+    "look_1",
+    "look_2"
+  ]
 }
