@@ -1,0 +1,124 @@
+{%- if product.type == 'Mix Adüla' -%}
+  {%- assign mix_count = 0 -%}
+  {%- capture mix_items -%}
+    {%- case product.handle -%}
+      {%- when 'mix-de-orelha', 'mix-ear-party-adula' -%}
+        {%- assign mix_count = 4 -%}
+        <li>Labret Topo Flor 5 Navete em Titânio Dourado PVD</li>
+        <li>Brinco Mila Ponto de Luz Quadrado com Zircônia — tamanho P</li>
+        <li>Brinco Andy</li>
+        <li>Brinco Yoko Dourado (Banho Ouro 18k)</li>
+    {%- endcase -%}
+  {%- endcapture -%}
+
+  <style>
+    #shopify-section-{{ section.id }} .adula-mix-details {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 8px 0 42px;
+      color: #4a3428;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 27px 30px;
+      border: 1px solid rgba(74,52,40,.16);
+      background: #fbf8f4;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__eyebrow {
+      margin: 0 0 8px;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__title {
+      margin: 0 0 8px;
+      font-size: clamp(22px,2.3vw,30px);
+      line-height: 1.15;
+      font-weight: 400;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__intro {
+      margin: 0 0 17px;
+      opacity: .74;
+      font-size: 13px;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid rgba(74,52,40,.13);
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__list li {
+      position: relative;
+      padding: 10px 0 10px 19px;
+      border-bottom: 1px solid rgba(74,52,40,.1);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    #shopify-section-{{ section.id }} .adula-mix-details__list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: #b6925e;
+      font-size: 9px;
+    }
+    .adula-mix-off-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin: 7px 0 2px;
+      padding: 5px 9px;
+      border: 1px solid #b6925e;
+      border-radius: 999px;
+      color: #4a3428;
+      background: #fbf8f4;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    @media (max-width: 749px) {
+      #shopify-section-{{ section.id }} .adula-mix-details { width: calc(100% - 28px); padding-bottom: 30px; }
+      #shopify-section-{{ section.id }} .adula-mix-details__card { padding: 22px 19px; }
+    }
+  </style>
+
+  {%- if mix_count > 0 -%}
+    <div class="adula-mix-details">
+      <div class="adula-mix-details__card">
+        <p class="adula-mix-details__eyebrow">Mix Adüla</p>
+        <h2 class="adula-mix-details__title">Este mix inclui {{ mix_count }} peças</h2>
+        <p class="adula-mix-details__intro">A composição completa da foto, pronta para usar.</p>
+        <ul class="adula-mix-details__list">{{ mix_items }}</ul>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <script>
+    (() => {
+      const productRoot = document.getElementById('product-info-{{ product.id }}-{{ section.id }}') || document.querySelector('product-rerender');
+      const insertBadge = () => {
+        if (document.querySelector('.adula-mix-off-badge')) return true;
+        const priceArea = productRoot?.querySelector('[data-block-type="price"], .price-list, sale-price') || document.querySelector('product-rerender .price-list, product-rerender sale-price');
+        if (!priceArea) return false;
+        const badge = document.createElement('span');
+        badge.className = 'adula-mix-off-badge';
+        badge.textContent = 'MIX • 10% OFF';
+        const target = priceArea.closest('[data-block-type="price"]') || priceArea;
+        target.insertAdjacentElement('afterend', badge);
+        return true;
+      };
+      if (!insertBadge()) {
+        const observer = new MutationObserver(() => { if (insertBadge()) observer.disconnect(); });
+        observer.observe(document.body, { childList: true, subtree: true });
+        setTimeout(() => observer.disconnect(), 8000);
+      }
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{"name":"Detalhes Mix Adüla","tag":"section","class":"shopify-section--adula-mix-details","settings":[],"presets":[{"name":"Detalhes Mix Adüla"}]}
+{% endschema %}
