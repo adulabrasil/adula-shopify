@@ -12,228 +12,29 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading_tag": "h1"
-          }
-        },
-        "judge_me_reviews_preview_badge_WMgQJa": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "variant_image_show_underline": false,
-            "size_chart_page": "guia-de-medidas"
-          }
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "show_in_stock_quantity": false,
-            "low_inventory_threshold": 3,
-            "show_progress_bar": false,
-            "progress_bar_max_value": 50
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "secure_checkout": {
-          "type": "feature_with_icon",
-          "settings": {
-            "text": "Troca Fácil Online ou em qualquer uma de nossas Lojas Físicas em Belo Horizonte",
-            "link": "",
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/troca-f-cil.png",
-            "icon_width": 32,
-            "background": "#fffdfb",
-            "text_color": "#2d2926",
-            "border_color": ""
-          }
-        },
-        "feature_with_icon_37VrXT": {
-          "type": "feature_with_icon",
-          "settings": {
-            "text": "Pagamento seguro",
-            "link": "",
-            "icon": "picto-lock",
-            "icon_width": 16,
-            "background": "#fffdfb",
-            "text_color": "#2d2926",
-            "border_color": ""
-          }
-        },
-        "product_benefits": {
-          "type": "product_benefits",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
-        "care": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": false,
-            "icon": "picto-jewelry",
-            "title": "Cuidados com sua joia",
-            "content": "<p>Guarde sua joia separadamente, em local seco, e evite contato direto com perfumes, cremes e produtos químicos. Após o uso, limpe delicadamente com um pano macio.</p>",
-            "liquid": "",
-            "page": ""
-          }
-        },
-        "shipping_returns": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": false,
-            "icon": "picto-return",
-            "title": "Envios e trocas",
-            "content": "<p><strong>Envios:</strong> o valor do frete e o prazo de entrega são calculados de acordo com o CEP e informados antes da finalização da compra.</p><p><strong>Trocas e devoluções:</strong> podem ser solicitadas em até 7 dias corridos após o recebimento. A peça deve estar na embalagem original, com a etiqueta intacta, em perfeito estado, sem vestígios de uso e acompanhada do Certificado de Garantia Adüla.</p><p>Por questões de higiene, brincos e piercings possuem condições específicas. Para solicitar atendimento, entre em contato pelo e-mail <a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a>.</p><p><a href=\"/#trocas-devolucoes\"><strong>Ver política completa de trocas e devoluções</strong></a></p>",
-            "liquid": "",
-            "page": ""
-          }
-        },
-        "complementary_products": {
-          "type": "complementary_products",
-          "settings": {
-            "title": "Combine com",
-            "products_count": 3,
-            "show_below_gallery": false,
-            "stack_products": false,
-            "show_quick_buy": true
-          }
-        }
+        "title": {"type":"title","settings":{"heading_tag":"h1"}},
+        "judge_me_reviews_preview_badge_WMgQJa": {"type":"shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},
+        "price": {"type":"price","settings":{"show_taxes_notice":false}},
+        "payment_terms": {"type":"payment_terms","settings":{}},
+        "variant_picker": {"type":"variant_picker","settings":{"hide_sold_out_variants":true,"selector_style":"block","swatch_selector_style":"swatch","variant_image_options":"","variant_image_show_underline":false,"size_chart_page":"guia-de-medidas"}},
+        "inventory": {"type":"inventory","settings":{"show_in_stock_quantity":false,"low_inventory_threshold":3,"show_progress_bar":false,"progress_bar_max_value":50}},
+        "quantity_selector": {"type":"quantity_selector","settings":{}},
+        "buy_buttons": {"type":"buy_buttons","settings":{"show_payment_button":true,"show_gift_card_recipient":true,"atc_button_background":"","atc_button_text_color":"","payment_button_background":"","payment_button_text_color":""}},
+        "secure_checkout": {"type":"feature_with_icon","settings":{"text":"Troca Fácil Online ou em qualquer uma de nossas Lojas Físicas em Belo Horizonte","link":"","icon":"none","custom_icon":"shopify://shop_images/troca-f-cil.png","icon_width":32,"background":"#fffdfb","text_color":"#2d2926","border_color":""}},
+        "feature_with_icon_37VrXT": {"type":"feature_with_icon","settings":{"text":"Pagamento seguro","link":"","icon":"picto-lock","icon_width":16,"background":"#fffdfb","text_color":"#2d2926","border_color":""}},
+        "product_benefits": {"type":"product_benefits","settings":{}},
+        "description": {"type":"description","settings":{"collapse_content":false,"show_below_gallery":false}},
+        "care": {"type":"accordion","settings":{"show_below_gallery":false,"icon":"picto-jewelry","title":"Cuidados com sua joia","content":"<p>Guarde sua joia separadamente, em local seco, e evite contato direto com perfumes, cremes e produtos químicos. Após o uso, limpe delicadamente com um pano macio.</p>","liquid":"","page":""}},
+        "shipping_returns": {"type":"accordion","settings":{"show_below_gallery":false,"icon":"picto-return","title":"Envios e trocas","content":"<p><strong>Envios:</strong> o valor do frete e o prazo de entrega são calculados de acordo com o CEP e informados antes da finalização da compra.</p><p><strong>Trocas e devoluções:</strong> podem ser solicitadas em até 7 dias corridos após o recebimento. A peça deve estar na embalagem original, com a etiqueta intacta, em perfeito estado, sem vestígios de uso e acompanhada do Certificado de Garantia Adüla.</p><p>Por questões de higiene, brincos e piercings possuem condições específicas. Para solicitar atendimento, entre em contato pelo e-mail <a href=\"mailto:atendimento@adulabrasil.com\">atendimento@adulabrasil.com</a>.</p><p><a href=\"/#trocas-devolucoes\"><strong>Ver política completa de trocas e devoluções</strong></a></p>","liquid":"","page":""}},
+        "complementary_products": {"type":"complementary_products","settings":{"title":"Combine com","products_count":3,"show_below_gallery":false,"stack_products":false,"show_quick_buy":true}}
       },
-      "block_order": [
-        "title",
-        "judge_me_reviews_preview_badge_WMgQJa",
-        "price",
-        "payment_terms",
-        "variant_picker",
-        "inventory",
-        "quantity_selector",
-        "buy_buttons",
-        "secure_checkout",
-        "feature_with_icon_37VrXT",
-        "product_benefits",
-        "description",
-        "care",
-        "shipping_returns",
-        "complementary_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "allow_transparent_header": false,
-        "transparent_header_use_primary_colors": false,
-        "container_size": "xl",
-        "product_info_size": 38,
-        "show_sticky_add_to_cart": true,
-        "center_basic_info": false,
-        "desktop_media_layout": "carousel_thumbnails_left",
-        "desktop_media_grid_gap": 20,
-        "mobile_controls": "thumbnails",
-        "enable_media_autoplay": true,
-        "enable_video_looping": true,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3
-      }
+      "block_order":["title","judge_me_reviews_preview_badge_WMgQJa","price","payment_terms","variant_picker","inventory","quantity_selector","buy_buttons","secure_checkout","feature_with_icon_37VrXT","product_benefits","description","care","shipping_returns","complementary_products"],
+      "settings":{"color_scheme":"scheme-1","allow_transparent_header":false,"transparent_header_use_primary_colors":false,"container_size":"xl","product_info_size":38,"show_sticky_add_to_cart":true,"center_basic_info":false,"desktop_media_layout":"carousel_thumbnails_left","desktop_media_grid_gap":20,"mobile_controls":"thumbnails","enable_media_autoplay":true,"enable_video_looping":true,"enable_image_zoom":true,"max_image_zoom_level":3}
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "recommendations_count": 10,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "",
-        "title": "Produtos recomendados",
-        "heading_style": "h2",
-        "content": ""
-      }
-    },
-    "recently-viewed": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "separate_section_with_border": true,
-        "color_scheme": "",
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_count": 6,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "",
-        "title": "Vistos recentemente",
-        "heading_style": "h2",
-        "content": ""
-      }
-    },
-    "17863900215222df89": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_Pzxemg": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_Pzxemg"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
-    }
+    "adula_mix_details": {"type":"adula-mix-product-details","settings":{}},
+    "related-products": {"type":"related-products","settings":{"color_scheme":"","separate_section_with_border":true,"hide_product_information":false,"stack_products":false,"recommendations_count":10,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":"","title":"Produtos recomendados","heading_style":"h2","content":""}},
+    "recently-viewed": {"type":"recently-viewed-products","settings":{"separate_section_with_border":true,"color_scheme":"","hide_product_information":false,"stack_products":false,"products_count":6,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":"","title":"Vistos recentemente","heading_style":"h2","content":""}},
+    "17863900215222df89": {"type":"apps","blocks":{"judge_me_reviews_review_widget_Pzxemg":{"type":"shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"review_data":"sample_data","max_width":1200,"show_shop_reviews":false,"empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_review_widget_Pzxemg"],"settings":{"color_scheme":"","separate_section_with_border":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false}}
   },
-  "order": [
-    "main",
-    "related-products",
-    "recently-viewed",
-    "17863900215222df89"
-  ]
+  "order":["main","adula_mix_details","related-products","recently-viewed","17863900215222df89"]
 }
