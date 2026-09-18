@@ -83,7 +83,9 @@
   };
 
   const dispatchRefresh = (cart) => {
-    document.dispatchEvent(new CustomEvent('cart:refresh', {
+    // Do not rebuild the drawer when gift enforcement did not change the cart.
+    // Re-rendering here was replacing focused form fields (notably the discount input).
+    document.dispatchEvent(new CustomEvent('adula:gifts:checked', {
       bubbles: true,
       detail: { cart, source: 'adula-gift-tier-guard-v2' },
     }));
@@ -98,6 +100,7 @@
       const desiredGift = desiredGiftFor(eligibleSubtotal(cart, gifts.giftIds), gifts);
       const updates = {};
       let hasDesiredGift = false;
+      let cartChanged = false;
 
       for (const item of cart.items || []) {
         const variantId = Number(item.variant_id || item.id);
@@ -112,6 +115,7 @@
       }
 
       if (desiredGift !== null && !hasDesiredGift) {
+        cartChanged = true;
         await requestJson(endpoint('cart/add.js'), {
           method: 'POST',
           credentials: 'same-origin',
@@ -125,6 +129,7 @@
       }
 
       if (Object.keys(updates).length > 0) {
+        cartChanged = true;
         cart = await requestJson(endpoint('cart/update.js'), {
           method: 'POST',
           credentials: 'same-origin',
@@ -136,7 +141,14 @@
         });
       }
 
-      dispatchRefresh(cart);
+      if (cartChanged) {
+        document.dispatchEvent(new CustomEvent('cart:refresh', {
+          bubbles: true,
+          detail: { cart, source: 'adula-gift-tier-guard-v2' },
+        }));
+      } else {
+        dispatchRefresh(cart);
+      }
       return cart;
     })()
       .catch((error) => {
