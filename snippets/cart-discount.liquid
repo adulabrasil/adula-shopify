@@ -1,31 +1,87 @@
 {%- doc -%}
-  ----------------------------------------------------------------------------------------------------------------------
-  CART DISCOUNT
-  ----------------------------------------------------------------------------------------------------------------------
-
-  Renders the cart discount component on the cart page and in the cart drawer, providing an input for applying discount codes.
-
-  @param {object} section - The optional section to use
+  Adüla cart discount field.
+  Applies the code only when the customer submits it, avoiding drawer refreshes while typing.
 {%- enddoc -%}
 
-<div class="cart-discount w-full v-stack gap-4">
-  <cart-discount-field class="cart-discount-field relative">
-    {%- liquid
-      assign label = 'cart.discount.label' | t
-      assign id = section.id | append: '-cart-discount-field'
-
-      # The hidden input acts as an accumulator
-      assign applied_codes = cart.discount_applications | where: 'type', 'discount_code' | map: 'title' | join: ','
-      render 'input', type: 'hidden', name: 'discount', value: applied_codes
-      render 'input', label: label, id: id
-    -%}
-
-    <div class="cart-discount-field__loader">
-      {%- render 'icon' with 'loader' -%}
+<div class="cart-discount w-full v-stack gap-3" data-adula-discount>
+  <div class="adula-discount-row">
+    <div class="form-control">
+      <input
+        class="input"
+        type="text"
+        inputmode="text"
+        autocomplete="off"
+        autocapitalize="characters"
+        spellcheck="false"
+        placeholder="{{ 'cart.discount.label' | t | escape }}"
+        aria-label="{{ 'cart.discount.label' | t | escape }}"
+        data-adula-discount-input
+      >
     </div>
-  </cart-discount-field>
-
-  <cart-discount-banner hidden>
-    <p class="text-error">{{ 'cart.discount.error' | t }}</p>
-  </cart-discount-banner>
+    <button type="button" class="button adula-discount-apply" data-adula-discount-apply>Aplicar</button>
+  </div>
+  <p class="text-error text-sm" hidden data-adula-discount-error>Não foi possível aplicar este código.</p>
 </div>
+
+<style>
+  .adula-discount-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.55rem;align-items:stretch}
+  .adula-discount-row .form-control{min-width:0}
+  .adula-discount-row .input{color:#4a3428!important;-webkit-text-fill-color:#4a3428!important;caret-color:#4a3428!important;opacity:1!important}
+  .adula-discount-row .input::placeholder{color:rgba(74,52,40,.62)!important;-webkit-text-fill-color:rgba(74,52,40,.62)!important;opacity:1!important}
+  .adula-discount-apply{min-width:88px;padding-inline:1rem}
+  @media(max-width:420px){.adula-discount-row{grid-template-columns:1fr}.adula-discount-apply{width:100%}}
+</style>
+
+<script>
+(() => {
+  const script = document.currentScript;
+  const root = script && script.previousElementSibling && script.previousElementSibling.previousElementSibling;
+  if (!root || !root.matches('[data-adula-discount]') || root.dataset.ready === 'true') return;
+  root.dataset.ready = 'true';
+
+  const input = root.querySelector('[data-adula-discount-input]');
+  const button = root.querySelector('[data-adula-discount-apply]');
+  const error = root.querySelector('[data-adula-discount-error]');
+
+  const apply = async () => {
+    const code = (input.value || '').trim();
+    if (!code || button.disabled) return;
+    button.disabled = true;
+    button.setAttribute('aria-busy', 'true');
+    error.hidden = true;
+
+    try {
+      const cartResponse = await fetch(window.Shopify.routes.root + 'cart.js', {headers:{Accept:'application/json'}});
+      const cart = await cartResponse.json();
+      const current = (cart.discount_codes || []).filter(d => d.applicable).map(d => d.code);
+      const codes = [...new Set([...current, code])];
+
+      const response = await fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({discount: codes.join(',')})
+      });
+      const updated = await response.json();
+      if (!response.ok || (updated.discount_codes || []).some(d => d.code.toLowerCase() === code.toLowerCase() && !d.applicable)) {
+        throw new Error('discount');
+      }
+      input.value = '';
+      document.dispatchEvent(new CustomEvent('cart:refresh', {bubbles:true}));
+    } catch (e) {
+      error.hidden = false;
+    } finally {
+      button.disabled = false;
+      button.removeAttribute('aria-busy');
+    }
+  };
+
+  button.addEventListener('click', apply);
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      apply();
+    }
+  });
+})();
+</script>
