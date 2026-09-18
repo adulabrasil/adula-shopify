@@ -163,6 +163,20 @@
         line-height: 1.25;
       }
 
+      /* Keep typed discount codes visible inside the cart drawer. */
+      #shopify-section-{{ section.id }} .cart-discount-field .input {
+        color: #4a3428 !important;
+        -webkit-text-fill-color: #4a3428 !important;
+        caret-color: #4a3428 !important;
+        opacity: 1 !important;
+      }
+
+      #shopify-section-{{ section.id }} .cart-discount-field .input::placeholder {
+        color: rgba(74, 52, 40, .62) !important;
+        -webkit-text-fill-color: rgba(74, 52, 40, .62) !important;
+        opacity: 1 !important;
+      }
+
       @media screen and (max-width: 699px) {
         #shopify-section-{{ section.id }} .adula-cart-benefit__topline {
           align-items: flex-start;
