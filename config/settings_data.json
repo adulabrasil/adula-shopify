@@ -38,11 +38,6 @@
     "cart_show_free_shipping_bar": false,
     "content_for_index": [],
     "blocks": {
-      "1987381849243170004": {
-        "type": "shopify://apps/apphero-free-gift/blocks/app-embed/775538df-2a18-473b-ada3-d731b074c1a3",
-        "disabled": false,
-        "settings": {}
-      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
@@ -90,6 +85,11 @@
       },
       "11724500921838622758": {
         "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "disabled": false,
+        "settings": {}
+      },
+      "16160716078332068383": {
+        "type": "shopify://apps/rubik-variant-images/blocks/rubik-variant-images/e684282e-1343-4a60-8fa2-6393aded15f6",
         "disabled": false,
         "settings": {}
       }
