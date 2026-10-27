@@ -107,6 +107,23 @@
     }
   }
 
+  /* Adula: give desktop collection labels more breathing room without changing
+     the existing two-row layout, links or mega-menu behavior. */
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .header__primary-nav-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.035em;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item + .header__primary-nav-item::before {
+      margin-inline: clamp(0.32rem, 0.55vw, 0.55rem);
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav {
+      row-gap: 0.6rem;
+    }
+  }
+
   /* Adula: compact desktop header for medium-width screens. */
   @media screen and (min-width: 1200px) and (max-width: 1399px) {
     #shopify-section-{{ section.id }} .header {
@@ -120,12 +137,12 @@
     }
 
     #shopify-section-{{ section.id }} .header__primary-nav-link {
-      font-size: 0.6875rem !important;
-      letter-spacing: 0.02em !important;
+      font-size: 0.75rem !important;
+      letter-spacing: 0.025em !important;
     }
 
     #shopify-section-{{ section.id }} .header__primary-nav-item + .header__primary-nav-item::before {
-      margin-inline: 0.2rem !important;
+      margin-inline: 0.3rem !important;
     }
 
     #shopify-section-{{ section.id }} .header__secondary-nav {
