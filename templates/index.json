@@ -173,6 +173,7 @@
         "text": "<p>Um mix, infinitas formas de adular-se.</p>",
         "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
         "background": "#fbf8f4",
+        "enable_buy_look": true,
         "button_label": "Explorar o Lookbook",
         "button_link": "shopify://pages/lookbook-adula"
       }
@@ -456,6 +457,43 @@
         "liquid": "<style>\n  .adula-locations { padding: clamp(38px, 5vw, 64px) max(20px, 4vw); background: #f8f6f3; color: #4a3428; }\n  .adula-locations__inner { max-width: 1400px; margin: 0 auto; }\n  .adula-locations__heading { margin: 0 0 clamp(26px, 3vw, 38px); color: #8a674f; font-size: clamp(20px, 2vw, 28px); font-weight: 600; letter-spacing: .16em; line-height: 1.2; text-align: center; text-transform: uppercase; }\n  .adula-locations__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(28px, 3.5vw, 56px); }\n  .adula-locations__card { display: flex; min-width: 0; flex-direction: column; align-items: center; padding: 24px 12px 28px; color: #4a3428; text-align: center; text-decoration: none; transition: color .25s ease, transform .25s ease; }\n  .adula-locations__name { margin: 0 0 9px; color: #6a3f2d; font-size: 20px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }\n  .adula-locations__address { margin: 0; color: #6d625d; font-size: 16px; line-height: 1.65; }\n  .adula-locations__card:focus-visible { outline: 2px solid #ad924f; outline-offset: 4px; }\n  @media (hover: hover) {\n    .adula-locations__card:hover { color: #ad924f; transform: translateY(-3px); }\n    .adula-locations__card:hover .adula-locations__name { color: #ad924f; }\n  }\n  @media (max-width: 699px) {\n    .adula-locations { padding: 52px 18px 58px; }\n    .adula-locations__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 16px; }\n    .adula-locations__card { padding: 20px 6px 24px; }\n  }\n  @media (prefers-reduced-motion: reduce) { .adula-locations__card { transition: none; } }\n</style>\n<section class=\"adula-locations\" aria-labelledby=\"adula-locations-title\">\n  <div class=\"adula-locations__inner\">\n    <h2 class=\"adula-locations__heading\" id=\"adula-locations-title\">Onde Estamos</h2>\n    <div class=\"adula-locations__grid\">\n      <a class=\"adula-locations__card\" href=\"https://share.google/zhYzg7FKzzkfVMHNy\" target=\"_blank\" rel=\"noopener\" aria-label=\"Abrir Adüla Loja Conceito Savassi no Google Maps\">\n        <span class=\"adula-locations__name\">Loja Conceito Savassi</span>\n        <span class=\"adula-locations__address\">Loja Conceito<br>Belo Horizonte - MG</span>\n      </a>\n      <a class=\"adula-locations__card\" href=\"https://share.google/ibfnR9eQu5ugm2KDQ\" target=\"_blank\" rel=\"noopener\" aria-label=\"Abrir Adüla Boulevard Shopping no Google Maps\">\n        <span class=\"adula-locations__name\">Boulevard Shopping</span>\n        <span class=\"adula-locations__address\">Shopping Boulevard<br>Belo Horizonte - MG</span>\n      </a>\n      <a class=\"adula-locations__card\" href=\"https://share.google/m7BM2MVvmyE2MbYBo\" target=\"_blank\" rel=\"noopener\" aria-label=\"Abrir Adüla Pátio Savassi no Google Maps\">\n        <span class=\"adula-locations__name\">Shopping Pátio Savassi</span>\n        <span class=\"adula-locations__address\">Pátio Savassi<br>Belo Horizonte - MG</span>\n      </a>\n      <a class=\"adula-locations__card\" href=\"https://share.google/pOVPtcPYHvqPQVGMC\" target=\"_blank\" rel=\"noopener\" aria-label=\"Abrir Adüla BH Shopping no Google Maps\">\n        <span class=\"adula-locations__name\">BH Shopping</span>\n        <span class=\"adula-locations__address\">BH Shopping<br>Belo Horizonte - MG</span>\n      </a>\n    </div>\n  </div>\n</section>",
         "text_alignment": "center"
       }
+    },
+    "adula_mixes_wFbMnN": {
+      "type": "adula-mixes",
+      "blocks": {
+        "mix_P4GPPQ": {
+          "type": "mix",
+          "settings": {
+            "product": ""
+          }
+        },
+        "mix_KXWHmP": {
+          "type": "mix",
+          "settings": {
+            "product": ""
+          }
+        },
+        "mix_yn4wGG": {
+          "type": "mix",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "mix_P4GPPQ",
+        "mix_KXWHmP",
+        "mix_yn4wGG"
+      ],
+      "name": "Misturas Adüla",
+      "settings": {
+        "eyebrow": "Curadoria Adüla",
+        "heading": "Kits Adüla",
+        "description": "<p>Combinações pensadas para você. Chic sans effort.</p>",
+        "background": "#fbf8f4",
+        "button_label": "Descubra nossos Mixes",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -476,6 +514,7 @@
     "sobre-adula",
     "guia-garantia",
     "trocas-devolucoes",
-    "onde-estamos"
+    "onde-estamos",
+    "adula_mixes_wFbMnN"
   ]
 }
