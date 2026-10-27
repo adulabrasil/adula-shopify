@@ -82,6 +82,31 @@
     }
   }
 
+  /* Adula: move only three secondary navigation links to a centered second row.
+     Keep the existing logo, actions, menu links and mega-menu markup intact. */
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .header__primary-nav {
+      flex-wrap: wrap;
+      align-content: center;
+      row-gap: 0.45rem;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav::before {
+      content: "";
+      flex-basis: 100%;
+      height: 0;
+      order: 1;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item--second-row {
+      order: 2;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav-item--second-row:first-of-type::before {
+      display: none;
+    }
+  }
+
   /* Adula: compact desktop header for medium-width screens. */
   @media screen and (min-width: 1200px) and (max-width: 1399px) {
     #shopify-section-{{ section.id }} .header {
@@ -633,6 +658,11 @@
                 assign link_title_downcase = link.title | strip | downcase
                 assign mega_menu_block = ''
                 assign is_adula_stores = false
+                assign is_adula_second_row = false
+
+                if link_title_downcase == 'lookbook' or link_title_downcase == 'porta joias e estojos' or link_title_downcase == 'porta joias e outros' or link_title_downcase == 'personalize sua peça'
+                  assign is_adula_second_row = true
+                endif
 
                 if link_title_downcase == 'nossas lojas'
                   assign is_adula_stores = true
@@ -648,7 +678,7 @@
                 endfor
               %}
 
-              <li class="header__primary-nav-item{% if is_adula_stores %} header__primary-nav-item--stores{% endif %}">
+              <li class="header__primary-nav-item{% if is_adula_stores %} header__primary-nav-item--stores{% endif %}{% if is_adula_second_row %} header__primary-nav-item--second-row{% endif %}">
                 {%- if is_adula_stores -%}
                   <dropdown-menu-disclosure trigger="{{ section.settings.menu_open_trigger }}">
                     <details class="header__menu-disclosure">
