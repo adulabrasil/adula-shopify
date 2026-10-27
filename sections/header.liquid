@@ -660,7 +660,7 @@
                 assign is_adula_stores = false
                 assign is_adula_second_row = false
 
-                if link_title_downcase == 'lookbook' or link_title_downcase == 'porta joias e estojos' or link_title_downcase == 'porta joias e outros' or link_title_downcase == 'personalize sua peça'
+                if link_title_downcase == 'lookbook' or link_title_downcase contains 'porta joias' or link_title_downcase contains 'porta jóias' or link_title_downcase == 'personalize sua peça'
                   assign is_adula_second_row = true
                 endif
 
