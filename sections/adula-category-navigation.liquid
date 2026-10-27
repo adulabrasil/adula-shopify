@@ -142,7 +142,9 @@
 
   @media screen and (min-width: 1000px) {
     #shopify-section-{{ section.id }} .adula-category-nav__list {
-      justify-content: center;
+      /* Safe centering falls back to start alignment when items overflow,
+         keeping the first categories reachable with the previous arrow. */
+      justify-content: safe center;
     }
   }
 
