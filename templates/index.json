@@ -262,14 +262,46 @@
       }
     },
     "campaign-banners": {
-      "type": "custom-liquid",
+      "type": "adula-special-collections",
+      "blocks": {
+        "love_paris": {
+          "type": "collection_tile",
+          "settings": {
+            "collection": "love-paris",
+            "title": "Love Paris"
+          }
+        },
+        "boho_chic": {
+          "type": "collection_tile",
+          "settings": {
+            "collection": "boho-chic",
+            "title": "Boho Chic"
+          }
+        },
+        "santuario": {
+          "type": "collection_tile",
+          "settings": {
+            "collection": "santuario-de-paris",
+            "title": "Santuário de Paris"
+          }
+        },
+        "moissanite": {
+          "type": "collection_tile",
+          "settings": {
+            "collection": "moissanite",
+            "title": "Moissanite"
+          }
+        }
+      },
+      "block_order": [
+        "love_paris",
+        "boho_chic",
+        "santuario",
+        "moissanite"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  .adula-trio-banners {\n    padding: clamp(38px, 4vw, 58px) max(20px, 5vw);\n    background: #fffdfb;\n  }\n  .adula-trio-banners__grid {\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: clamp(14px, 1.35vw, 22px);\n    width: 100%;\n    max-width: 1180px;\n    margin: 0 auto;\n  }\n  .adula-trio-banners__item {\n    display: block;\n    min-width: 0;\n    overflow: hidden;\n    background: #f2ece8;\n    text-decoration: none;\n  }\n  .adula-trio-banners__image {\n    display: block;\n    width: 100%;\n    height: auto;\n    aspect-ratio: 1 / 1;\n    object-fit: cover;\n    transition: transform .45s ease;\n  }\n  .adula-trio-banners__item:focus-visible {\n    outline: 3px solid #ad924f;\n    outline-offset: 4px;\n  }\n  @media (hover: hover) {\n    .adula-trio-banners__item:hover .adula-trio-banners__image {\n      transform: scale(1.018);\n    }\n  }\n  @media (max-width: 699px) {\n    .adula-trio-banners {\n      padding: 34px 0 42px;\n      overflow: hidden;\n    }\n    .adula-trio-banners__grid {\n      grid-template-columns: none;\n      grid-auto-columns: minmax(278px, 84vw);\n      grid-auto-flow: column;\n      gap: 14px;\n      max-width: none;\n      padding: 0 18px 10px;\n      overflow-x: auto;\n      scroll-snap-type: inline mandatory;\n      scrollbar-width: none;\n    }\n    .adula-trio-banners__grid::-webkit-scrollbar { display: none; }\n    .adula-trio-banners__item { scroll-snap-align: center; }\n  }\n  @media (prefers-reduced-motion: reduce) {\n    .adula-trio-banners__image { transition: none; }\n  }\n</style>\n<section class=\"adula-trio-banners\" aria-label=\"Destaques Adüla\">\n  <div class=\"adula-trio-banners__grid\">\n    <a class=\"adula-trio-banners__item\" href=\"/collections/love-paris\" aria-label=\"Conheça a coleção Love Paris\">\n      <img class=\"adula-trio-banners__image\" src=\"{{ 'adula-banner-love-paris.svg' | asset_url }}\" alt=\"Coleção Love Paris\" width=\"760\" height=\"760\" loading=\"lazy\">\n    </a>\n    <a class=\"adula-trio-banners__item\" href=\"/collections/dia-dos-pais\" aria-label=\"Conheça a seleção Pai e Filho\">\n      <img class=\"adula-trio-banners__image\" src=\"{{ 'adula-banner-pai-filho.svg' | asset_url }}\" alt=\"Herança de pai para filho\" width=\"760\" height=\"760\" loading=\"lazy\">\n    </a>\n    <a class=\"adula-trio-banners__item\" href=\"/collections/boho-chic-2\" aria-label=\"Conheça a coleção Boho Chic\">\n      <img class=\"adula-trio-banners__image\" src=\"{{ 'adula-banner-boho-chic.svg' | asset_url }}\" alt=\"Coleção Boho Chic\" width=\"760\" height=\"760\" loading=\"lazy\">\n    </a>\n  </div>\n</section>",
-        "text_alignment": "center"
+        "heading": "Coleções especiais",
+        "background": "#fffdfb"
       }
     },
     "new-arrivals": {
