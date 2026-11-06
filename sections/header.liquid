@@ -82,6 +82,66 @@
     }
   }
 
+  /* Adüla stores: four image cards, preserving existing Google Business links. */
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .header__primary-nav-item--stores,
+    #shopify-section-{{ section.id }} .header__primary-nav-item--stores > dropdown-menu-disclosure,
+    #shopify-section-{{ section.id }} .header__primary-nav-item--stores .header__menu-disclosure {
+      position: static !important;
+    }
+    #shopify-section-{{ section.id }} .header__primary-nav-item--stores .adula-stores__menu {
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 100%;
+      transform: translateX(-50%);
+      width: min(900px, calc(100vw - 40px));
+      max-width: none;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      background: rgb(var(--background));
+      border: 1px solid rgb(var(--border-color));
+      box-shadow: 0 12px 30px rgb(0 0 0 / .12);
+      z-index: 20;
+    }
+    #shopify-section-{{ section.id }} .header__primary-nav-item--stores .adula-stores__menu::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+  }
+  #shopify-section-{{ section.id }} .adula-stores__item { min-width: 0; }
+  #shopify-section-{{ section.id }} .adula-stores__card {
+    display: block;
+    text-decoration: none;
+    color: rgb(var(--text-color));
+    white-space: normal;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .adula-stores__image,
+  #shopify-section-{{ section.id }} .adula-stores__placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #eee8e1;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .adula-stores__placeholder svg { width: 100%; height: 100%; }
+  #shopify-section-{{ section.id }} .adula-stores__name {
+    display: block;
+    padding-top: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  #shopify-section-{{ section.id }} .adula-stores__card:hover .adula-stores__name { text-decoration: underline; text-underline-offset: 3px; }
+  #shopify-section-{{ section.id }} .adula-stores__card:focus-visible { outline: 2px solid #a47a48; outline-offset: 3px; }
+
   /* Adula: move only three secondary navigation links to a centered second row.
      Keep the existing logo, actions, menu links and mega-menu markup intact. */
   @media screen and (min-width: 1000px) {
@@ -702,11 +762,47 @@
                       <summary class="header__primary-nav-link header__primary-nav-link--stores {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" data-title="{{ link.title | escape }}" aria-label="Abrir submenu {{ link.title | escape }}">
                         {{- link.title -}}
                       </summary>
-                      <ul class="header__dropdown-menu header__dropdown-menu--restrictable unstyled-list" role="list">
-                        <li><a href="https://share.google/m7BM2MVvmyE2MbYBo" class="link-faded-reverse" target="_blank" rel="noopener">Shopping Pátio Savassi</a></li>
-                        <li><a href="https://share.google/pOVPtcPYHvqPQVGMC" class="link-faded-reverse" target="_blank" rel="noopener">BH Shopping</a></li>
-                        <li><a href="https://share.google/ibfnR9eQu5ugm2KDQ" class="link-faded-reverse" target="_blank" rel="noopener">Boulevard Shopping</a></li>
-                        <li><a href="https://share.google/zhYzg7FKzzkfVMHNy" class="link-faded-reverse" target="_blank" rel="noopener">Loja Conceito Savassi</a></li>
+                      <ul class="header__dropdown-menu adula-stores__menu unstyled-list" role="list">
+                        <li class="adula-stores__item">
+                          <a class="adula-stores__card" href="https://share.google/m7BM2MVvmyE2MbYBo" target="_blank" rel="noopener noreferrer" aria-label="Shopping Pátio Savassi - Google Maps">
+                            {%- if section.settings.store_image_patio != blank -%}
+                              {{ section.settings.store_image_patio | image_url: width: 640 | image_tag: class: 'adula-stores__image', widths: '240,360,480,640', sizes: '(min-width: 1000px) 185px, 45vw', loading: 'lazy', alt: 'Shopping Pátio Savassi' }}
+                            {%- else -%}
+                              <span class="adula-stores__placeholder" aria-hidden="true">{{ 'image' | placeholder_svg_tag }}</span>
+                            {%- endif -%}
+                            <span class="adula-stores__name">Shopping Pátio Savassi</span>
+                          </a>
+                        </li>
+                        <li class="adula-stores__item">
+                          <a class="adula-stores__card" href="https://share.google/pOVPtcPYHvqPQVGMC" target="_blank" rel="noopener noreferrer" aria-label="BH Shopping - Google Maps">
+                            {%- if section.settings.store_image_bh != blank -%}
+                              {{ section.settings.store_image_bh | image_url: width: 640 | image_tag: class: 'adula-stores__image', widths: '240,360,480,640', sizes: '(min-width: 1000px) 185px, 45vw', loading: 'lazy', alt: 'BH Shopping' }}
+                            {%- else -%}
+                              <span class="adula-stores__placeholder" aria-hidden="true">{{ 'image' | placeholder_svg_tag }}</span>
+                            {%- endif -%}
+                            <span class="adula-stores__name">BH Shopping</span>
+                          </a>
+                        </li>
+                        <li class="adula-stores__item">
+                          <a class="adula-stores__card" href="https://share.google/ibfnR9eQu5ugm2KDQ" target="_blank" rel="noopener noreferrer" aria-label="Boulevard Shopping - Google Maps">
+                            {%- if section.settings.store_image_boulevard != blank -%}
+                              {{ section.settings.store_image_boulevard | image_url: width: 640 | image_tag: class: 'adula-stores__image', widths: '240,360,480,640', sizes: '(min-width: 1000px) 185px, 45vw', loading: 'lazy', alt: 'Boulevard Shopping' }}
+                            {%- else -%}
+                              <span class="adula-stores__placeholder" aria-hidden="true">{{ 'image' | placeholder_svg_tag }}</span>
+                            {%- endif -%}
+                            <span class="adula-stores__name">Boulevard Shopping</span>
+                          </a>
+                        </li>
+                        <li class="adula-stores__item">
+                          <a class="adula-stores__card" href="https://share.google/zhYzg7FKzzkfVMHNy" target="_blank" rel="noopener noreferrer" aria-label="Loja Conceito Savassi - Google Maps">
+                            {%- if section.settings.store_image_conceito != blank -%}
+                              {{ section.settings.store_image_conceito | image_url: width: 640 | image_tag: class: 'adula-stores__image', widths: '240,360,480,640', sizes: '(min-width: 1000px) 185px, 45vw', loading: 'lazy', alt: 'Loja Conceito Savassi' }}
+                            {%- else -%}
+                              <span class="adula-stores__placeholder" aria-hidden="true">{{ 'image' | placeholder_svg_tag }}</span>
+                            {%- endif -%}
+                            <span class="adula-stores__name">Loja Conceito Savassi</span>
+                          </a>
+                        </li>
                       </ul>
                     </details>
                   </dropdown-menu-disclosure>
@@ -1143,6 +1239,30 @@
       "id": "enable_search",
       "label": "t:sections.header.enable_search",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Fotos do menu Nossas Lojas"
+    },
+    {
+      "type": "image_picker",
+      "id": "store_image_patio",
+      "label": "Shopping Pátio Savassi"
+    },
+    {
+      "type": "image_picker",
+      "id": "store_image_bh",
+      "label": "BH Shopping"
+    },
+    {
+      "type": "image_picker",
+      "id": "store_image_boulevard",
+      "label": "Boulevard Shopping"
+    },
+    {
+      "type": "image_picker",
+      "id": "store_image_conceito",
+      "label": "Loja Conceito Savassi"
     },
     {
       "type": "header",
