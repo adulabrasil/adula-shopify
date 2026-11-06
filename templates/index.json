@@ -262,46 +262,13 @@
       }
     },
     "campaign-banners": {
-      "type": "adula-special-collections",
-      "blocks": {
-        "love_paris": {
-          "type": "collection_tile",
-          "settings": {
-            "collection": "love-paris",
-            "title": "Love Paris"
-          }
-        },
-        "boho_chic": {
-          "type": "collection_tile",
-          "settings": {
-            "collection": "boho-chic",
-            "title": "Boho Chic"
-          }
-        },
-        "santuario": {
-          "type": "collection_tile",
-          "settings": {
-            "collection": "santuario-de-paris",
-            "title": "Santuário de Paris"
-          }
-        },
-        "moissanite": {
-          "type": "collection_tile",
-          "settings": {
-            "collection": "moissanite",
-            "title": "Moissanite"
-          }
-        }
-      },
-      "block_order": [
-        "love_paris",
-        "boho_chic",
-        "santuario",
-        "moissanite"
-      ],
+      "type": "custom-liquid",
       "settings": {
-        "heading": "Coleções especiais",
-        "background": "#fffdfb"
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n  .adula-special-collections { background:#fffdfb; padding:clamp(30px,4vw,55px) max(16px,3vw); }\n  .adula-special-collections__inner { max-width:1440px; margin:0 auto; }\n  .adula-special-collections__heading { text-align:center; color:#4a3428; font-size:clamp(24px,2.5vw,34px); margin:0 0 25px; }\n  .adula-special-collections__grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(10px,1.4vw,20px); }\n  .adula-special-collections__tile { display:block; position:relative; aspect-ratio:1; overflow:hidden; background:#eae2db; text-decoration:none; color:white; }\n  .adula-special-collections__tile img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .3s ease; }\n  .adula-special-collections__tile:hover img { transform:scale(1.035); }\n  .adula-special-collections__tile:after { content:''; position:absolute; inset:45% 0 0; background:linear-gradient(transparent,rgba(0,0,0,.45)); pointer-events:none; }\n  .adula-special-collections__label { position:absolute; z-index:1; bottom:clamp(12px,1.8vw,24px); left:clamp(12px,1.8vw,24px); right:12px; font-size:clamp(16px,1.6vw,25px); line-height:1.2; text-shadow:0 1px 6px rgba(0,0,0,.3); }\n  @media(max-width:699px) { .adula-special-collections__grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .adula-special-collections__label { font-size:clamp(15px,4vw,20px); } }\n</style>\n<section class=\"adula-special-collections\" aria-label=\"Coleções especiais\">\n  <div class=\"adula-special-collections__inner\">\n    <h2 class=\"adula-special-collections__heading\">Coleções especiais</h2>\n    <div class=\"adula-special-collections__grid\">\n      {%- assign adula_special_handles = 'love-paris|boho-chic|santuario-de-paris|moissanite' | split: '|' -%}\n      {%- assign adula_special_titles = 'Love Paris|Boho Chic|Santuário de Paris|Moissanite' | split: '|' -%}\n      {%- for handle in adula_special_handles -%}\n        {%- assign special_collection = collections[handle] -%}\n        {%- assign special_title = adula_special_titles[forloop.index0] -%}\n        <a class=\"adula-special-collections__tile\" href=\"{{ special_collection.url | default: '#' }}\" aria-label=\"{{ special_title | escape }}\">\n          {%- if special_collection.image != blank -%}\n            {{ special_collection.image | image_url: width: 1100 | image_tag: widths: '300,500,750,1100', sizes: '(max-width: 699px) 50vw, 25vw', loading: 'lazy', alt: special_title }}\n          {%- elsif special_collection.products.first.featured_image != blank -%}\n            {{ special_collection.products.first.featured_image | image_url: width: 1100 | image_tag: widths: '300,500,750,1100', sizes: '(max-width: 699px) 50vw, 25vw', loading: 'lazy', alt: special_title }}\n          {%- else -%}\n            {{ 'collection-1' | placeholder_svg_tag }}\n          {%- endif -%}\n          <span class=\"adula-special-collections__label\">{{ special_title }}</span>\n        </a>\n      {%- endfor -%}\n    </div>\n  </div>\n</section>"
       }
     },
     "new-arrivals": {
@@ -551,4 +518,3 @@
     "adula_mixes_wFbMnN"
   ]
 }
-
