@@ -12,16 +12,16 @@
     "hero": {
       "type": "adula-hero-carousel",
       "blocks": {
-        "slide_WNWzHK": {
+        "slide_Fqq6fr": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1desktop.png",
-            "image_mobile": "shopify://shop_images/6.png",
-            "eyebrow": "Joiais em Prata 925 e Moissanite",
-            "heading": "Moissanite",
-            "text": "<p>Desenvolvemos verdadeiras joias na Prata 925 e Moissanite</p>",
-            "button_label": "Conheça",
-            "link": "shopify://collections/moissanite"
+            "image": "shopify://shop_images/4desktop.png",
+            "image_mobile": "shopify://shop_images/4.png",
+            "eyebrow": "Fios De Luz uma coleção delicada e colorida",
+            "heading": "Fios De Luz",
+            "text": "",
+            "button_label": "Uma coleção de fios de cetim coloridos e de pedras de vidro de alta qualidade. Uma coleção para as Fashionistas.",
+            "link": "shopify://collections/fios-de-luz"
           }
         },
         "slide_LB4tim": {
@@ -34,6 +34,18 @@
             "text": "",
             "button_label": "Conheça",
             "link": "shopify://collections/santuario-de-paris"
+          }
+        },
+        "slide_WNWzHK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1desktop.png",
+            "image_mobile": "shopify://shop_images/6.png",
+            "eyebrow": "Joiais em Prata 925 e Moissanite",
+            "heading": "Moissanite",
+            "text": "<p>Desenvolvemos verdadeiras joias na Prata 925 e Moissanite</p>",
+            "button_label": "Conheça",
+            "link": "shopify://collections/moissanite"
           }
         },
         "amuletos-paris": {
@@ -50,8 +62,9 @@
         }
       },
       "block_order": [
-        "slide_WNWzHK",
+        "slide_Fqq6fr",
         "slide_LB4tim",
+        "slide_WNWzHK",
         "amuletos-paris"
       ],
       "settings": {
