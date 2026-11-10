@@ -328,8 +328,9 @@
         "boho_chic": {
           "type": "collection_tile",
           "settings": {
-            "collection": "love-paris",
-            "title": "Boho Chic",
+            "collection": "noivas",
+            "image": "shopify://shop_images/BOHO_CHIC_1_c122dfa0-bab0-461b-bd44-8c6e7121ba1f.png",
+            "title": "Noivas",
             "link": ""
           }
         },
