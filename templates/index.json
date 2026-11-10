@@ -237,6 +237,7 @@
           "type": "story",
           "settings": {
             "video": "shopify://files/videos/IMG_1017_HOME_ADULA.mp4",
+            "cover": "shopify://shop_images/IMG_7250.jpg",
             "title": "Conheça a Adüla"
           }
         },
@@ -244,6 +245,7 @@
           "type": "story",
           "settings": {
             "video": "shopify://files/videos/Adula_Stories_Bastidores_Legenda_Corrigida.mp4",
+            "cover": "shopify://shop_images/adula_producao-17.jpg",
             "title": "Design Francês-Feito no Brasil"
           }
         },
