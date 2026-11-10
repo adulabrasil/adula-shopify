@@ -15,18 +15,29 @@
         "amuletos-paris": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Design_sem_nome.png",
-            "image_mobile": "shopify://shop_images/Design_sem_nome_1.png",
+            "image": "shopify://shop_images/Banner_versao_Desktop_Shopify_34cm_de_largura_x_12_5cm_de_altura.png",
+            "image_mobile": "shopify://shop_images/Banner_versao_mobile_Shopify_-_12cm_altura_x_8cm_de_largura.png",
             "eyebrow": "Símbolos que contam histórias",
             "heading": "Amuletos de Paris",
             "text": "<p>Charms inspirados em Paris para levar afeto, sorte e memórias sempre com você.</p>",
             "button_label": "Descobrir a coleção",
             "link": "/collections/love-paris"
           }
+        },
+        "slide_LB4tim": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "",
+            "heading": "Destaque Adüla",
+            "text": "",
+            "button_label": "Conheça",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "amuletos-paris"
+        "amuletos-paris",
+        "slide_LB4tim"
       ],
       "settings": {
         "autoplay": true,
@@ -268,28 +279,32 @@
           "type": "collection_tile",
           "settings": {
             "collection": "love-paris",
-            "title": "Love Paris"
+            "title": "Love Paris",
+            "link": ""
           }
         },
         "boho_chic": {
           "type": "collection_tile",
           "settings": {
             "collection": "boho-chic",
-            "title": "Boho Chic"
+            "title": "Boho Chic",
+            "link": ""
           }
         },
         "santuario": {
           "type": "collection_tile",
           "settings": {
             "collection": "santuario-de-paris",
-            "title": "Santuário de Paris"
+            "title": "Santuário de Paris",
+            "link": ""
           }
         },
         "moissanite": {
           "type": "collection_tile",
           "settings": {
             "collection": "moissanite",
-            "title": "Moissanite"
+            "title": "Moissanite",
+            "link": ""
           }
         }
       },
