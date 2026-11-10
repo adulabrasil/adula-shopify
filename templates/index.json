@@ -27,11 +27,13 @@
         "slide_LB4tim": {
           "type": "slide",
           "settings": {
-            "eyebrow": "",
-            "heading": "Destaque Adüla",
+            "image": "shopify://shop_images/Banner_versao_Desktop_Shopify_34cm_de_largura_x_12_5cm_de_altura_2.webp",
+            "image_mobile": "shopify://shop_images/Banner_versao_mobile_Shopify_-_12cm_altura_x_8cm_de_largura.webp",
+            "eyebrow": "Uma coleção idealizada em Paris por Nadia esse ano, trazendo um toque boêmio e sofisticado para acompanhar suas histórias e composições. As peças são unicas, trazendo peças com pedras naturais com cada uma de uma cor diferente. As quantidades também são limitadas.",
+            "heading": "Coleção Santuário de Paris",
             "text": "",
             "button_label": "Conheça",
-            "link": ""
+            "link": "shopify://collections/santuario-de-paris"
           }
         }
       },
