@@ -12,16 +12,16 @@
     "hero": {
       "type": "adula-hero-carousel",
       "blocks": {
-        "slide_Fqq6fr": {
+        "slide_Eb3Rzk": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/4desktop.png",
-            "image_mobile": "shopify://shop_images/4.png",
-            "eyebrow": "Fios De Luz uma coleção delicada e colorida",
-            "heading": "Fios De Luz",
-            "text": "",
-            "button_label": "Uma coleção de fios de cetim coloridos e de pedras de vidro de alta qualidade. Uma coleção para as Fashionistas.",
-            "link": "shopify://collections/fios-de-luz"
+            "image": "shopify://shop_images/3desktop.png",
+            "image_mobile": "shopify://shop_images/5.png",
+            "eyebrow": "Boho Chic uma coleção Boho de pedras naturais",
+            "heading": "Boho Chic",
+            "text": "<p>Uma coleção muito especial de pedras naturais</p>",
+            "button_label": "Conheça",
+            "link": "shopify://collections/boho-minimalista"
           }
         },
         "slide_LB4tim": {
@@ -59,13 +59,26 @@
             "button_label": "Descobrir a coleção",
             "link": "/collections/love-paris"
           }
+        },
+        "slide_Fqq6fr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/4desktop.png",
+            "image_mobile": "shopify://shop_images/4.png",
+            "eyebrow": "Fios De Luz uma coleção delicada e colorida",
+            "heading": "Fios De Luz",
+            "text": "",
+            "button_label": "Uma coleção de fios de cetim coloridos e de pedras de vidro de alta qualidade. Uma coleção para as Fashionistas.",
+            "link": "shopify://collections/fios-de-luz"
+          }
         }
       },
       "block_order": [
-        "slide_Fqq6fr",
+        "slide_Eb3Rzk",
         "slide_LB4tim",
         "slide_WNWzHK",
-        "amuletos-paris"
+        "amuletos-paris",
+        "slide_Fqq6fr"
       ],
       "settings": {
         "autoplay": true,
