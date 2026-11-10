@@ -12,16 +12,16 @@
     "hero": {
       "type": "adula-hero-carousel",
       "blocks": {
-        "amuletos-paris": {
+        "slide_WNWzHK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Banner_versao_Desktop_Shopify_34cm_de_largura_x_12_5cm_de_altura_562de8e1-b0d8-4f22-a310-c759c37202fc.png",
-            "image_mobile": "shopify://shop_images/Banner_versao_mobile_Shopify_-_12cm_altura_x_8cm_de_largura.png",
-            "eyebrow": "Símbolos que contam histórias",
-            "heading": "Amuletos de Paris",
-            "text": "<p>Charms inspirados em Paris para levar afeto, sorte e memórias sempre com você.</p>",
-            "button_label": "Descobrir a coleção",
-            "link": "/collections/love-paris"
+            "image": "shopify://shop_images/Banner_versao_Desktop_Shopify_34cm_de_largura_x_12_5cm_de_altura_1.png",
+            "image_mobile": "shopify://shop_images/Banner_versao_mobile_Shopify_-_12cm_altura_x_8cm_de_largura_2.png",
+            "eyebrow": "Joiais em Prata 925 e Moissanite",
+            "heading": "Moissanite",
+            "text": "<p>Desenvolvemos verdadeiras joias na Prata 925 e Moissanite</p>",
+            "button_label": "Conheça",
+            "link": "shopify://collections/moissanite"
           }
         },
         "slide_LB4tim": {
@@ -35,11 +35,24 @@
             "button_label": "Conheça",
             "link": "shopify://collections/santuario-de-paris"
           }
+        },
+        "amuletos-paris": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_versao_Desktop_Shopify_34cm_de_largura_x_12_5cm_de_altura_562de8e1-b0d8-4f22-a310-c759c37202fc.png",
+            "image_mobile": "shopify://shop_images/Banner_versao_mobile_Shopify_-_12cm_altura_x_8cm_de_largura.png",
+            "eyebrow": "Símbolos que contam histórias",
+            "heading": "Amuletos de Paris",
+            "text": "<p>Charms inspirados em Paris para levar afeto, sorte e memórias sempre com você.</p>",
+            "button_label": "Descobrir a coleção",
+            "link": "/collections/love-paris"
+          }
         }
       },
       "block_order": [
-        "amuletos-paris",
-        "slide_LB4tim"
+        "slide_WNWzHK",
+        "slide_LB4tim",
+        "amuletos-paris"
       ],
       "settings": {
         "autoplay": true,
