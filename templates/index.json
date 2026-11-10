@@ -319,7 +319,8 @@
         "love_paris": {
           "type": "collection_tile",
           "settings": {
-            "collection": "love-paris",
+            "collection": "presente-ate-r-150",
+            "image": "shopify://shop_images/1bis.png",
             "title": "Love Paris",
             "link": ""
           }
@@ -327,7 +328,7 @@
         "boho_chic": {
           "type": "collection_tile",
           "settings": {
-            "collection": "boho-chic",
+            "collection": "love-paris",
             "title": "Boho Chic",
             "link": ""
           }
