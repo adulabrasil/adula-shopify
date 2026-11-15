@@ -367,10 +367,10 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "all",
+            "collection": "santuario-de-paris",
             "products_count": 8,
             "title": "Novidades",
-            "link_url": "shopify://collections/santuario-de-paris",
+            "link_url": "shopify://collections/novidades",
             "link_text": "Ver novidades"
           }
         }
