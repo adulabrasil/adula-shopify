@@ -402,14 +402,54 @@
       }
     },
     "love-paris": {
-      "type": "custom-liquid",
+      "type": "adula-movimento",
+      "blocks": {
+        "video_1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/0758e59fc73b44019dbfc5c57b6b2e42.mp4",
+            "label": "Conheça a Adüla"
+          }
+        },
+        "video_2": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/9a4a75795f4f4f54a45eaf8ee82c7a30.mp4",
+            "label": "Design Francês, feito no Brasil"
+          }
+        },
+        "video_3": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/a8b0fd3763ed4f178a39cb4f3f751f3e.mp4",
+            "label": "Chic Sans Effort"
+          }
+        },
+        "video_4": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/0f787bf3e9834cc58fa71dd01168a2a9.mp4",
+            "label": "Joias com alma francesa"
+          }
+        },
+        "video_5": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/039f0b84688b4c77bff94fd0de299626.mp4",
+            "label": "Pontos físicos"
+          }
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3",
+        "video_4",
+        "video_5"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "<a href=\"/collections/love-paris\" class=\"adula-editorial-banner\" aria-label=\"Conheça a coleção Love Paris\">\n  <img src=\"{{ 'adula-love-paris.webp' | asset_url }}\" alt=\"Coleção Love Paris da Adüla inspirada nos encantos de Paris\" width=\"1920\" height=\"500\" loading=\"lazy\" decoding=\"async\">\n</a>",
-        "text_alignment": "center"
+        "eyebrow": "CHIC SANS EFFORT",
+        "title": "Adüla em movimento"
       }
     },
     "google-reviews-summary": {
