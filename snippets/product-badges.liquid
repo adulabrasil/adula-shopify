@@ -11,6 +11,20 @@
 {%- liquid
   assign badge_types = types | default: 'custom, sold_out, discount' | split: ','
   assign variant = variant | default: product.selected_or_first_available_variant
+  assign chic_friday_eligible = false
+  assign chic_friday_tagged = false
+  assign sanctuary_tagged = false
+  for product_tag in product.tags
+    assign normalized_tag = product_tag | strip | downcase
+    if normalized_tag == 'chic friday'
+      assign chic_friday_tagged = true
+    elsif normalized_tag == 'santuário de paris' or normalized_tag == 'santuario de paris'
+      assign sanctuary_tagged = true
+    endif
+  endfor
+  if chic_friday_tagged and sanctuary_tagged == false and variant.compare_at_price > variant.price
+    assign chic_friday_eligible = true
+  endif
 -%}
 
 {%- capture badges -%}
@@ -56,7 +70,10 @@
             {%- endif -%}
 
             {%- if show_on_sale_badge -%}
-              <on-sale-badge class="badge badge--on-sale">
+              <on-sale-badge class="badge badge--on-sale{% if chic_friday_eligible %} badge--chic-friday{% endif %}">
+                {%- if chic_friday_eligible -%}
+                  <span class="badge--chic-friday__text">CHIC FRIDAY</span>
+                {%- else -%}
                 {%- liquid
                   if context == 'product'
                     echo 'product.general.discount_badge_html' | t: savings: savings
@@ -68,6 +85,7 @@
                     endif
                   endif
                 -%}
+                {%- endif -%}
               </on-sale-badge>
             {%- endif -%}
           {%- endif -%}
