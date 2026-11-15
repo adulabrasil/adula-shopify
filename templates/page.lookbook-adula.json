@@ -140,8 +140,8 @@
         "image_mobile": "shopify://shop_images/1080_x_1080_SHOP_THE_LOOK_MOBILE_SHOPIFY_1.webp",
         "background": "#fbf8f4",
         "enable_buy_look": true,
-        "button_label": "",
-        "button_link": ""
+        "button_label": "Explorar o Lookbook",
+        "button_link": "shopify://pages/lookbook-adula"
       }
     },
     "look_4": {
