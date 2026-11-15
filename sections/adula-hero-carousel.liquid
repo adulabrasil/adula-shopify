@@ -359,12 +359,12 @@
       </div>
     </div>
     <div class="adula-home-video-carousel__track" data-home-video-track>
-      {%- assign adula_video_files = 'IMG_1017_HOME_ADULA.mp4|Adula_Stories_Bastidores_Legenda_Corrigida.mp4|Adula_Sobre_Compactado.mp4|Adula_Stories_IMG_1020.mp4|Patrocinado03_Rosto_Desfocado_Reforcado.mp4' | split: '|' -%}
+      {%- assign adula_video_urls = 'https://cdn.shopify.com/videos/c/o/v/d43e9e397825456bbaf0460f3f1858aa.mov|https://cdn.shopify.com/videos/c/o/v/9a4a75795f4f4f54a45eaf8ee82c7a30.mp4|https://cdn.shopify.com/videos/c/o/v/a8b0fd3763ed4f178a39cb4f3f751f3e.mp4|https://cdn.shopify.com/videos/c/o/v/0f787bf3e9834cc58fa71dd01168a2a9.mp4|https://cdn.shopify.com/videos/c/o/v/039f0b84688b4c77bff94fd0de299626.mp4' | split: '|' -%}
       {%- assign adula_video_titles = 'Conheça a Adüla|Design Francês, feito no Brasil|Chic Sans Effort|Joias com alma francesa|Pontos físicos' | split: '|' -%}
-      {%- for video_file in adula_video_files -%}
+      {%- for video_url in adula_video_urls -%}
         <article class="adula-home-video-card">
           <video muted loop playsinline preload="metadata" {% if forloop.first %}autoplay{% endif %}>
-            <source src="{{ video_file | file_url }}" type="video/mp4">
+            <source src="{{ video_url }}" type="{% if video_url contains '.mov' %}video/quicktime{% else %}video/mp4{% endif %}">
           </video>
           <p class="adula-home-video-card__label">{{ adula_video_titles[forloop.index0] }}</p>
           <button class="adula-home-video-card__sound" type="button" data-home-video-sound aria-label="Ativar som">
