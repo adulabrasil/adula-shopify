@@ -1,0 +1,89 @@
+<style>
+#shopify-section-{{ section.id }} .adula-movimento{background:#fbf8f4;padding:clamp(26px,3vw,42px) 0 clamp(30px,3.5vw,48px)}
+#shopify-section-{{ section.id }} .adula-movimento__header{display:flex;justify-content:space-between;align-items:end;gap:20px;width:min(100% - 40px,1440px);margin:0 auto 20px}
+#shopify-section-{{ section.id }} .adula-movimento__eyebrow{margin:0 0 5px;color:#b08d57;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+#shopify-section-{{ section.id }} .adula-movimento__title{margin:0;color:#532e1d;font-size:clamp(25px,2.4vw,38px);line-height:1.05}
+#shopify-section-{{ section.id }} .adula-movimento__nav{display:flex;gap:9px}
+#shopify-section-{{ section.id }} .adula-movimento__arrow{width:40px;height:40px;border:1px solid rgba(83,46,29,.22);border-radius:50%;background:#fff;color:#532e1d;font-size:21px;cursor:pointer}
+#shopify-section-{{ section.id }} .adula-movimento__track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 80px)/5);gap:20px;width:min(100% - 40px,1440px);margin:auto;overflow-x:auto;padding:2px 0 10px;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none}
+#shopify-section-{{ section.id }} .adula-movimento__track::-webkit-scrollbar{display:none}
+#shopify-section-{{ section.id }} .adula-movimento__card{position:relative;aspect-ratio:9/14;overflow:hidden;border-radius:16px;background:#e8e0d9;scroll-snap-align:start}
+#shopify-section-{{ section.id }} .adula-movimento__card video{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+#shopify-section-{{ section.id }} .adula-movimento__card:after{content:"";position:absolute;inset:auto 0 0;height:28%;background:linear-gradient(180deg,transparent,rgba(32,21,15,.42));pointer-events:none}
+#shopify-section-{{ section.id }} .adula-movimento__tap{position:absolute;z-index:2;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer}
+#shopify-section-{{ section.id }} .adula-movimento__tap:focus-visible{outline:3px solid #b88c52;outline-offset:-3px}
+#shopify-section-{{ section.id }} .adula-movimento__label{position:absolute;z-index:3;pointer-events:none;left:15px;right:44px;bottom:14px;margin:0;color:#fff;font-size:14px;font-weight:500;line-height:1.25}
+#shopify-section-{{ section.id }} .adula-movimento__sound{position:absolute;z-index:4;right:11px;bottom:11px;display:grid;place-items:center;width:31px;height:31px;padding:0;border:1px solid rgba(255,255,255,.65);border-radius:50%;color:#fff;background:rgba(50,34,24,.38);cursor:pointer;font-size:16px}
+@media(max-width:999px) and (min-width:700px){#shopify-section-{{ section.id }} .adula-movimento__track{grid-auto-columns:calc((100% - 36px)/3);gap:18px}}
+@media(max-width:699px){#shopify-section-{{ section.id }} .adula-movimento__header{width:calc(100% - 32px)}#shopify-section-{{ section.id }} .adula-movimento__nav{display:none}#shopify-section-{{ section.id }} .adula-movimento__track{grid-auto-columns:72vw;gap:14px;width:100%;padding-inline:16px;scroll-padding-inline:16px}#shopify-section-{{ section.id }} .adula-movimento__card{border-radius:14px}}
+</style>
+<section class="adula-movimento" data-adula-movimento aria-label="{{ section.settings.title | escape }}">
+  <div class="adula-movimento__header"><div><p class="adula-movimento__eyebrow">{{ section.settings.eyebrow | escape }}</p><h2 class="adula-movimento__title">{{ section.settings.title | escape }}</h2></div>
+  <div class="adula-movimento__nav"><button class="adula-movimento__arrow" type="button" data-prev aria-label="Vídeos anteriores">&#8249;</button><button class="adula-movimento__arrow" type="button" data-next aria-label="Próximos vídeos">&#8250;</button></div></div>
+  <div class="adula-movimento__track" data-track>
+    {% for block in section.blocks %}
+      {% assign video_src = block.settings.video.sources | where: 'mime_type', 'video/mp4' | first %}
+      {% assign video_url = video_src.url | default: block.settings.video_url %}
+      {% if video_url != blank %}
+        <article class="adula-movimento__card" {{ block.shopify_attributes }}>
+          <video muted loop playsinline preload="metadata" {% if forloop.first %}autoplay{% endif %}><source src="{{ video_url | escape }}" type="video/mp4"></video>
+          <button type="button" class="adula-movimento__tap" data-toggle aria-label="Ativar ou desativar som: {{ block.settings.label | escape }}"></button>
+          <p class="adula-movimento__label">{{ block.settings.label | escape }}</p>
+          <button type="button" class="adula-movimento__sound" data-toggle aria-label="Ativar som" aria-pressed="false">⌁</button>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+<script>
+(() => {
+  const root = document.getElementById('shopify-section-{{ section.id }}');
+  if (!root || root.dataset.adulaMovimentoReady === 'true') return;
+  root.dataset.adulaMovimentoReady = 'true';
+  const section = root.querySelector('[data-adula-movimento]');
+  if (!section) return;
+  const cards = [...section.querySelectorAll('.adula-movimento__card')];
+  const track = section.querySelector('[data-track]');
+  const setSound = (card) => {
+    const video = card.querySelector('video');
+    if (!video) return;
+    const enable = video.muted;
+    cards.forEach((item) => {
+      const other = item.querySelector('video');
+      if (other) other.muted = true;
+      const btn = item.querySelector('.adula-movimento__sound');
+      if (btn) { btn.setAttribute('aria-pressed','false'); btn.setAttribute('aria-label','Ativar som'); btn.textContent='⌁'; }
+    });
+    video.muted = !enable;
+    const button = card.querySelector('.adula-movimento__sound');
+    if (button) { button.setAttribute('aria-pressed',String(enable)); button.setAttribute('aria-label',enable?'Desativar som':'Ativar som'); button.textContent=enable?'♪':'⌁'; }
+    if (enable) video.play().catch(() => {});
+  };
+  // Native button events are handled directly, without overlapping listeners.
+  section.querySelectorAll('[data-toggle]').forEach((button) => {
+    button.addEventListener('click', () => setSound(button.closest('.adula-movimento__card')));
+  });
+  const scroll = (direction) => {
+    const first = cards[0]; if (!first || !track) return;
+    track.scrollBy({left:direction*(first.offsetWidth+20),behavior:'smooth'});
+  };
+  section.querySelector('[data-prev]')?.addEventListener('click',()=>scroll(-1));
+  section.querySelector('[data-next]')?.addEventListener('click',()=>scroll(1));
+})();
+</script>
+{% schema %}
+{
+  "name":"Adüla em movimento",
+  "settings":[
+    {"type":"text","id":"eyebrow","label":"Texto pequeno","default":"CHIC SANS EFFORT"},
+    {"type":"text","id":"title","label":"Título","default":"Adüla em movimento"}
+  ],
+  "blocks":[{"type":"video","name":"Vídeo","settings":[
+    {"type":"video","id":"video","label":"Vídeo da biblioteca Shopify"},
+    {"type":"url","id":"video_url","label":"Ou URL de vídeo MP4"},
+    {"type":"text","id":"label","label":"Legenda","default":"Chic Sans Effort"}
+  ]}],
+  "max_blocks":12,
+  "presets":[{"name":"Adüla em movimento"}]
+}
+{% endschema %}
