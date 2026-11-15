@@ -55,6 +55,7 @@
         "heading": "Ear Party",
         "text": "<p>Combinações autorais para misturar, combinar e adular-se.</p>",
         "image": "shopify://shop_images/Design_sem_nome_2.png",
+        "image_mobile": "shopify://shop_images/Design_sem_nome.webp",
         "background": "#fbf8f4",
         "enable_buy_look": true,
         "button_label": "",
