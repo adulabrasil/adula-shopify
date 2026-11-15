@@ -453,27 +453,22 @@
         const card = cards[0]; if (!card || !track) return;
         track.scrollBy({ left: card.offsetWidth + 20, behavior: reduceMotion ? 'auto' : 'smooth' });
       });
-      // Delegated click handler: works even when Shopify replaces carousel nodes.
-      if (!window.adulaHomeVideoClickBound) {
-        window.adulaHomeVideoClickBound = true;
-        document.addEventListener('click', (event) => {
-          const card = event.target.closest('.adula-home-video-card');
-          if (!card || !card.closest('.adula-home-video-carousel')) return;
+      // One handler per card, including the transparent overlay and sound button.
+      // Do not attach a second handler to child buttons: that would toggle twice.
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
           const video = card.querySelector('video');
           if (!video) return;
-          event.preventDefault();
-          const unmute = video.muted;
-          document.querySelectorAll('.adula-home-video-carousel video').forEach((item) => {
-            item.muted = true;
-          });
-          document.querySelectorAll('.adula-home-video-carousel [data-home-video-sound]').forEach((button) => {
+          const enableSound = video.muted;
+          videos.forEach((item) => { item.muted = true; });
+          carousel.querySelectorAll('[data-home-video-sound]').forEach((button) => {
             button.setAttribute('aria-label', 'Ativar som');
           });
-          video.muted = !unmute;
+          video.muted = !enableSound;
           card.querySelector('[data-home-video-sound]')?.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
-          if (unmute) video.play().catch(() => {});
-        }, true);
-      }
+          if (enableSound) video.play().catch(() => {});
+        });
+      });
       return true;
     };
 
