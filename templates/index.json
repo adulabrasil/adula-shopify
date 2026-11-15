@@ -179,55 +179,47 @@
     "adula_shop_the_look_FcKF7b": {
       "type": "adula-shop-the-look",
       "blocks": {
-        "hotspot_6zMM7C": {
+        "hotspot_1": {
           "type": "hotspot",
           "settings": {
-            "product": "labret-topo-flor-5-navete-titanio",
-            "x": 70,
-            "y": 16
+            "product": "piercing-falso-thea-dourado",
+            "x": 68,
+            "y": 45
           }
         },
-        "hotspot_k3QKty": {
+        "hotspot_3": {
           "type": "hotspot",
           "settings": {
-            "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
-            "x": 59,
-            "y": 73
+            "product": "piercing-falso-perle",
+            "x": 65,
+            "y": 51
           }
         },
-        "hotspot_KFDPLN": {
+        "hotspot_4": {
           "type": "hotspot",
           "settings": {
-            "product": "brinco-andy",
-            "x": 57,
-            "y": 82
-          }
-        },
-        "hotspot_YGiLm6": {
-          "type": "hotspot",
-          "settings": {
-            "product": "brinco-yoko",
-            "x": 46,
-            "y": 91
+            "product": "argola-perle",
+            "x": 54,
+            "y": 90
           }
         }
       },
       "block_order": [
-        "hotspot_6zMM7C",
-        "hotspot_k3QKty",
-        "hotspot_KFDPLN",
-        "hotspot_YGiLm6"
+        "hotspot_1",
+        "hotspot_3",
+        "hotspot_4"
       ],
       "name": "Shop the Look Adüla",
       "settings": {
         "eyebrow": "Chic sans effort",
         "heading": "Shop the Look",
         "text": "<p>Um mix, infinitas formas de adular-se.</p>",
-        "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
+        "image": "shopify://shop_images/Design_sem_nome_2.png",
         "background": "#fbf8f4",
         "enable_buy_look": true,
         "button_label": "Explorar o Lookbook",
-        "button_link": "shopify://pages/lookbook-adula"
+        "button_link": "shopify://pages/lookbook-adula",
+        "image_mobile": "shopify://shop_images/Design_sem_nome.webp"
       }
     },
     "adula-stories": {
