@@ -133,13 +133,22 @@
             "x": 47,
             "y": 66
           }
+        },
+        "hotspot_LiXQrh": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x": 50,
+            "y": 50
+          }
         }
       },
       "block_order": [
         "hotspot_FRtYTk",
         "ringhotspot1",
         "ringhotspot2",
-        "ringhotspot3"
+        "ringhotspot3",
+        "hotspot_LiXQrh"
       ],
       "settings": {
         "eyebrow": "LOOKBOOK ADÜLA",
@@ -159,24 +168,24 @@
         "wristhotspot1": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 38,
+            "product": "pulseira-glamour-riviera-1-75-mm-4-garras-prata-925",
+            "x": 66,
             "y": 48
           }
         },
         "wristhotspot2": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 53,
+            "product": "pulseira-aura-riviera-quadrada-4-garras-de-1-75-mm",
+            "x": 54,
             "y": 58
           }
         },
         "wristhotspot3": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 67,
+            "product": "pulseira-espirito-santo",
+            "x": 46,
             "y": 68
           }
         }
