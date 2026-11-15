@@ -8761,3 +8761,17 @@ ul {
 :is(.product-description.prose, .product-description .prose) :is(ul, ol) {
   margin-block: .25rem 0 !important;
 }
+
+/* Adula Chic Friday: only tagged sale products receive this badge. */
+.badge--chic-friday {
+  background: #a72222 !important;
+  color: #fff !important;
+  border-radius: 999px;
+  padding: .4em .85em;
+  font-weight: 700;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.badge--chic-friday__text { display: inline-block; animation: adula-chic-friday-pulse 2.4s ease-in-out infinite; }
+@keyframes adula-chic-friday-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) { .badge--chic-friday__text { animation: none; } }
