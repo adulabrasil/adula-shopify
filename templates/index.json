@@ -370,7 +370,7 @@
             "collection": "all",
             "products_count": 8,
             "title": "Novidades",
-            "link_url": "/collections/all?sort_by=created-descending",
+            "link_url": "shopify://collections/santuario-de-paris",
             "link_text": "Ver novidades"
           }
         }
