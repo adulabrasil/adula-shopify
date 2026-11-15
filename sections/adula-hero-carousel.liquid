@@ -445,15 +445,24 @@
         const card = cards[0]; if (!card || !track) return;
         track.scrollBy({ left: card.offsetWidth + 20, behavior: reduceMotion ? 'auto' : 'smooth' });
       });
-      carousel?.querySelectorAll('[data-home-video-sound]').forEach((button) => {
-        button.addEventListener('click', () => {
-          const video = button.closest('.adula-home-video-card')?.querySelector('video');
-          if (!video) return;
-          const shouldUnmute = video.muted;
-          videos.forEach((item) => { item.muted = true; });
-          video.muted = !shouldUnmute;
-          button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
+      const toggleCardSound = (card) => {
+        const video = card?.querySelector('video');
+        if (!video) return;
+        const shouldUnmute = video.muted;
+        videos.forEach((item) => { item.muted = true; });
+        carousel.querySelectorAll('[data-home-video-sound]').forEach((button) => {
+          button.setAttribute('aria-label', 'Ativar som');
         });
+        video.muted = !shouldUnmute;
+        card.querySelector('[data-home-video-sound]')?.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
+        if (shouldUnmute) video.play().catch(() => {});
+      };
+      cards.forEach((card) => {
+        card.addEventListener('click', (event) => {
+          if (event.target.closest('[data-home-video-sound]')) return;
+          toggleCardSound(card);
+        });
+        card.querySelector('[data-home-video-sound]')?.addEventListener('click', () => toggleCardSound(card));
       });
       return true;
     };
