@@ -8772,6 +8772,16 @@ ul {
   letter-spacing: .08em;
   white-space: nowrap;
 }
-.badge--chic-friday__text { display: inline-block; animation: adula-chic-friday-pulse 2.4s ease-in-out infinite; }
-@keyframes adula-chic-friday-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
-@media (prefers-reduced-motion: reduce) { .badge--chic-friday__text { animation: none; } }
+.badge--chic-friday .badge--chic-friday__text {
+  display: inline-block;
+  color: #fff !important;
+  animation: adula-chic-friday-blink 1.15s steps(1, end) infinite !important;
+}
+@keyframes adula-chic-friday-blink {
+  0%, 49% { opacity: 1; }
+  50%, 74% { opacity: .15; }
+  75%, 100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge--chic-friday .badge--chic-friday__text { animation: none !important; }
+}
