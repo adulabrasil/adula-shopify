@@ -453,22 +453,27 @@
         const card = cards[0]; if (!card || !track) return;
         track.scrollBy({ left: card.offsetWidth + 20, behavior: reduceMotion ? 'auto' : 'smooth' });
       });
-      const toggleCardSound = (card) => {
-        const video = card?.querySelector('video');
-        if (!video) return;
-        const shouldUnmute = video.muted;
-        videos.forEach((item) => { item.muted = true; });
-        carousel.querySelectorAll('[data-home-video-sound]').forEach((button) => {
-          button.setAttribute('aria-label', 'Ativar som');
-        });
-        video.muted = !shouldUnmute;
-        card.querySelector('[data-home-video-sound]')?.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
-        if (shouldUnmute) video.play().catch(() => {});
-      };
-      cards.forEach((card) => {
-        card.querySelector('[data-home-video-tap]')?.addEventListener('click', () => toggleCardSound(card));
-        card.querySelector('[data-home-video-sound]')?.addEventListener('click', () => toggleCardSound(card));
-      });
+      // Delegated click handler: works even when Shopify replaces carousel nodes.
+      if (!window.adulaHomeVideoClickBound) {
+        window.adulaHomeVideoClickBound = true;
+        document.addEventListener('click', (event) => {
+          const card = event.target.closest('.adula-home-video-card');
+          if (!card || !card.closest('.adula-home-video-carousel')) return;
+          const video = card.querySelector('video');
+          if (!video) return;
+          event.preventDefault();
+          const unmute = video.muted;
+          document.querySelectorAll('.adula-home-video-carousel video').forEach((item) => {
+            item.muted = true;
+          });
+          document.querySelectorAll('.adula-home-video-carousel [data-home-video-sound]').forEach((button) => {
+            button.setAttribute('aria-label', 'Ativar som');
+          });
+          video.muted = !unmute;
+          card.querySelector('[data-home-video-sound]')?.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
+          if (unmute) video.play().catch(() => {});
+        }, true);
+      }
       return true;
     };
 
