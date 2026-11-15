@@ -364,7 +364,7 @@
       {%- for video_url in adula_video_urls -%}
         <article class="adula-home-video-card">
           <video muted loop playsinline preload="metadata" {% if forloop.first %}autoplay{% endif %}>
-            <source src="{{ video_url }}" {% unless video_url contains '.mov' %}type="video/mp4"{% endunless %}>
+            <source src="{{ video_url }}" type="{% if video_url contains '.mov' %}video/quicktime{% else %}video/mp4{% endif %}">
           </video>
           <p class="adula-home-video-card__label">{{ adula_video_titles[forloop.index0] }}</p>
           <button class="adula-home-video-card__sound" type="button" data-home-video-sound aria-label="Ativar som">
@@ -451,12 +451,7 @@
           if (!video) return;
           const shouldUnmute = video.muted;
           videos.forEach((item) => { item.muted = true; });
-          carousel.querySelectorAll('[data-home-video-sound]').forEach((item) => item.setAttribute('aria-label', 'Ativar som'));
           video.muted = !shouldUnmute;
-          if (shouldUnmute) {
-            videos.forEach((item) => { if (item !== video) item.pause(); });
-            video.play().catch(() => {});
-          }
           button.setAttribute('aria-label', video.muted ? 'Ativar som' : 'Desativar som');
         });
       });
