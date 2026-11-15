@@ -60,7 +60,7 @@
         "background": "#fbf8f4",
         "enable_buy_look": true,
         "button_label": "Explorar o Lookbook",
-        "button_link": ""
+        "button_link": "shopify://pages/lookbook-adula"
       }
     },
     "look_2": {
