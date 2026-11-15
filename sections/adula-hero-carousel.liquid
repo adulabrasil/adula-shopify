@@ -248,10 +248,17 @@
     content: '';
     pointer-events: none;
   }
-  .adula-home-video-card video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .adula-home-video-card video { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+  .adula-home-video-card__tap {
+    position: absolute; z-index: 2; inset: 0; display: block;
+    width: 100%; height: 100%; padding: 0; border: 0;
+    background: transparent; cursor: pointer;
+  }
+  .adula-home-video-card__tap:focus-visible { outline: 3px solid #b88c52; outline-offset: -3px; }
   .adula-home-video-card__label {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
+    pointer-events: none;
     left: 15px;
     right: 44px;
     bottom: 14px;
@@ -263,7 +270,7 @@
   }
   .adula-home-video-card__sound {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     right: 11px;
     bottom: 11px;
     display: grid;
@@ -366,6 +373,7 @@
           <video muted loop playsinline preload="metadata" {% if forloop.first %}autoplay{% endif %}>
             <source src="{{ video_url }}" type="{% if video_url contains '.mov' %}video/quicktime{% else %}video/mp4{% endif %}">
           </video>
+          <button class="adula-home-video-card__tap" type="button" data-home-video-tap aria-label="Ativar ou desativar som do vídeo {{ adula_video_titles[forloop.index0] | escape }}"></button>
           <p class="adula-home-video-card__label">{{ adula_video_titles[forloop.index0] }}</p>
           <button class="adula-home-video-card__sound" type="button" data-home-video-sound aria-label="Ativar som">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m17 9 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
@@ -458,10 +466,7 @@
         if (shouldUnmute) video.play().catch(() => {});
       };
       cards.forEach((card) => {
-        card.addEventListener('click', (event) => {
-          if (event.target.closest('[data-home-video-sound]')) return;
-          toggleCardSound(card);
-        });
+        card.querySelector('[data-home-video-tap]')?.addEventListener('click', () => toggleCardSound(card));
         card.querySelector('[data-home-video-sound]')?.addEventListener('click', () => toggleCardSound(card));
       });
       return true;
