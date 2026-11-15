@@ -1,6 +1,6 @@
 {%- comment -%}
   Cupom de primeira compra exibido somente no produto principal.
-  O desconto precisa existir no admin da Shopify com o código PRIMEIRADULA.
+  O desconto precisa existir no admin da Shopify com o código PRIMEIRAADULA.
 {%- endcomment -%}
 
 <div class="adula-first-purchase" aria-label="Cupom de primeira compra">
@@ -13,10 +13,10 @@
     type="button"
     class="adula-first-purchase__button"
     data-first-purchase-copy
-    data-coupon-code="PRIMEIRADULA"
-    aria-label="Copiar cupom PRIMEIRADULA"
+    data-coupon-code="PRIMEIRAADULA"
+    aria-label="Copiar cupom PRIMEIRAADULA"
   >
-    <span data-first-purchase-label>PRIMEIRADULA</span>
+    <span data-first-purchase-label>PRIMEIRAADULA</span>
     <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
       <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
       <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.5"/>
@@ -154,8 +154,8 @@
       if (!copied) return;
 
       label.textContent = 'COPIADO!';
-      status.textContent = 'Cupom PRIMEIRADULA copiado.';
-      button.setAttribute('aria-label', 'Cupom PRIMEIRADULA copiado');
+      status.textContent = 'Cupom PRIMEIRAADULA copiado.';
+      button.setAttribute('aria-label', 'Cupom PRIMEIRAADULA copiado');
 
       window.setTimeout(() => {
         label.textContent = code;
