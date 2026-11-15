@@ -206,6 +206,60 @@
         "button_label": "Explorar o Lookbook",
         "button_link": "shopify://pages/lookbook-adula"
       }
+    },
+    "look_5": {
+      "type": "adula-shop-the-look",
+      "blocks": {
+        "hotspot_6zMM7C": {
+          "type": "hotspot",
+          "settings": {
+            "product": "labret-topo-flor-5-navete-titanio",
+            "x": 70,
+            "y": 16
+          }
+        },
+        "hotspot_k3QKty": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-mila-ponto-de-luz-quadrado-com-zirconia",
+            "x": 59,
+            "y": 73
+          }
+        },
+        "hotspot_KFDPLN": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-andy",
+            "x": 57,
+            "y": 82
+          }
+        },
+        "hotspot_YGiLm6": {
+          "type": "hotspot",
+          "settings": {
+            "product": "brinco-yoko",
+            "x": 46,
+            "y": 91
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_6zMM7C",
+        "hotspot_k3QKty",
+        "hotspot_KFDPLN",
+        "hotspot_YGiLm6"
+      ],
+      "name": "Shop the Look Adüla",
+      "settings": {
+        "eyebrow": "LOOKBOOK ADÜLA",
+        "heading": "Ear Party Floral",
+        "text": "<p>Um mix, infinitas formas de adular-se.</p>",
+        "image": "shopify://shop_images/produtos-site-quadrado-2-21.webp",
+        "background": "#fbf8f4",
+        "enable_buy_look": true,
+        "button_label": "Explorar o Lookbook",
+        "button_link": "shopify://pages/lookbook-adula"
+      }
     }
   },
   "order": [
@@ -213,6 +267,7 @@
     "look_1",
     "look_2",
     "look_3",
-    "look_4"
+    "look_4",
+    "look_5"
   ]
 }
