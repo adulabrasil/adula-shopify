@@ -102,32 +102,41 @@
     "look_3": {
       "type": "adula-shop-the-look",
       "blocks": {
+        "hotspot_FRtYTk": {
+          "type": "hotspot",
+          "settings": {
+            "product": "anel-shine",
+            "x": 31,
+            "y": 67
+          }
+        },
         "ringhotspot1": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 40,
-            "y": 55
+            "product": "anel-fran-com-zirconias-ovais",
+            "x": 61,
+            "y": 48
           }
         },
         "ringhotspot2": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 55,
-            "y": 60
+            "product": "anel-miriam-com-zirconias",
+            "x": 72,
+            "y": 30
           }
         },
         "ringhotspot3": {
           "type": "hotspot",
           "settings": {
-            "product": "",
-            "x": 68,
-            "y": 50
+            "product": "anel-kelly-com-zirconias",
+            "x": 47,
+            "y": 66
           }
         }
       },
       "block_order": [
+        "hotspot_FRtYTk",
         "ringhotspot1",
         "ringhotspot2",
         "ringhotspot3"
