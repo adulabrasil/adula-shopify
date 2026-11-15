@@ -84,6 +84,10 @@
         assign swatch_style = '--swatch-background: linear-gradient(135deg, #f7f7f7 0%, #b8b8b8 48%, #ededed 100%)'
       elsif downcase_label contains 'dourad' or downcase_label contains 'ouro'
         assign swatch_style = '--swatch-background: linear-gradient(135deg, #e3c77b 0%, #b08d57 48%, #d8b968 100%)'
+      elsif downcase_label == 'roxo' or downcase_label == 'roxa' or downcase_label == 'violeta' or downcase_label == 'lilás' or downcase_label == 'lilas'
+        assign swatch_style = '--swatch-background: #8451a4'
+      elsif downcase_label == 'verde' or downcase_label == 'verde musgo'
+        assign swatch_style = '--swatch-background: #65816b'
       endif
 
       for swatch_item in swatch_config
