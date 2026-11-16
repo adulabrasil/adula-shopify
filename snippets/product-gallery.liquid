@@ -106,7 +106,31 @@
     </open-lightbox-button>
   {%- endif -%}
 
-  <div class="product-gallery__image-list">
+  {%- liquid
+    assign adula_chic_friday_tagged = false
+    assign adula_sanctuary_tagged = false
+    assign adula_chic_friday_has_discount = false
+    for adula_tag in product.tags
+      assign adula_normalized_tag = adula_tag | strip | downcase
+      if adula_normalized_tag == 'chic friday'
+        assign adula_chic_friday_tagged = true
+      elsif adula_normalized_tag == 'santuário de paris' or adula_normalized_tag == 'santuario de paris'
+        assign adula_sanctuary_tagged = true
+      endif
+    endfor
+    for adula_variant in product.variants
+      if adula_variant.compare_at_price > adula_variant.price
+        assign adula_chic_friday_has_discount = true
+        break
+      endif
+    endfor
+  -%}
+  <div class="product-gallery__image-list{% if adula_chic_friday_tagged and adula_sanctuary_tagged == false and adula_chic_friday_has_discount %} product-gallery__image-list--chic-friday{% endif %}">
+    {%- if adula_chic_friday_tagged and adula_sanctuary_tagged == false and adula_chic_friday_has_discount -%}
+      <span class="badge badge--on-sale badge--chic-friday adula-chic-friday-gallery-badge" aria-label="Chic Friday">
+        <span class="badge--chic-friday__text">CHIC FRIDAY</span>
+      </span>
+    {%- endif -%}
     {%- comment -%}
       ----------------------------------------------------------------------------------------------------------------------
       CAROUSEL
