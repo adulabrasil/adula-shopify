@@ -62,7 +62,7 @@
   assign adula_chic_friday_variant = variant | default: product.selected_or_first_available_variant
   assign adula_chic_friday_show = false
   if context != 'line_item' and adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and adula_chic_friday_variant != blank
-    if adula_chic_friday_variant.compare_at_price <= adula_chic_friday_variant.price and adula_chic_friday_variant.price > 0
+    if adula_chic_friday_variant.price > 0 and (adula_chic_friday_variant.compare_at_price == blank or adula_chic_friday_variant.compare_at_price <= adula_chic_friday_variant.price)
       assign adula_chic_friday_show = true
       assign adula_chic_friday_price = adula_chic_friday_variant.price | times: 0.8 | round
     endif
