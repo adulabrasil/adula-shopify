@@ -11,18 +11,39 @@
 {%- liquid
   assign badge_types = types | default: 'custom, sold_out, discount' | split: ','
   assign variant = variant | default: product.selected_or_first_available_variant
+  assign adula_chic_friday_active = false
+  assign adula_chic_friday_time = 'now' | date: '%s' | plus: 0
+  assign adula_chic_friday_start = '2026-11-16 00:00:00 -0300' | date: '%s' | plus: 0
+  assign adula_chic_friday_end = '2026-11-30 23:59:59 -0300' | date: '%s' | plus: 0
+  if adula_chic_friday_time >= adula_chic_friday_start and adula_chic_friday_time <= adula_chic_friday_end
+    assign adula_chic_friday_active = true
+  endif
+  assign adula_chic_friday_in_collection = false
+  if product != blank
+    for adula_collection in product.collections
+      if adula_collection.id == 514558328995
+        assign adula_chic_friday_in_collection = true
+        break
+      endif
+    endfor
+  endif
+  assign adula_chic_friday_excluded = false
+  if product != blank
+    for adula_tag in product.tags
+      assign adula_tag_normalized = adula_tag | strip | downcase
+      if adula_tag_normalized == 'santuário de paris' or adula_tag_normalized == 'santuario de paris' or adula_tag_normalized == 'brinde'
+        assign adula_chic_friday_excluded = true
+      endif
+    endfor
+  endif
+  if product != blank and product.handle contains 'chaveiro-de-torre-eiffel'
+    assign adula_chic_friday_excluded = true
+  endif
+  if product != blank and product.handle contains 'bandeja'
+    assign adula_chic_friday_excluded = true
+  endif
   assign chic_friday_eligible = false
-  assign chic_friday_tagged = false
-  assign sanctuary_tagged = false
-  for product_tag in product.tags
-    assign normalized_tag = product_tag | strip | downcase
-    if normalized_tag == 'chic friday'
-      assign chic_friday_tagged = true
-    elsif normalized_tag == 'santuário de paris' or normalized_tag == 'santuario de paris'
-      assign sanctuary_tagged = true
-    endif
-  endfor
-  if chic_friday_tagged and sanctuary_tagged == false and variant.compare_at_price > variant.price
+  if adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and variant.compare_at_price <= variant.price
     assign chic_friday_eligible = true
   endif
 -%}
@@ -52,19 +73,22 @@
             assign show_on_sale_badge = false
 
             if context == 'product'
-              if variant.compare_at_price > variant.price
+              if chic_friday_eligible or variant.compare_at_price > variant.price
                 assign show_on_sale_badge = true
               endif
             elsif context == 'card'
-              if product.compare_at_price > product.price
+              if chic_friday_eligible or product.compare_at_price > product.price
                 assign show_on_sale_badge = true
               endif
             endif
           -%}
 
-          {%- if product.compare_at_price > product.price -%}
+          {%- if chic_friday_eligible or product.compare_at_price > product.price -%}
             {%- if settings.discount_mode == 'percentage' -%}
-              {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
+              {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
+              if chic_friday_eligible
+                assign savings = '20%'
+              endif -%}
             {%- else -%}
               {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
             {%- endif -%}
