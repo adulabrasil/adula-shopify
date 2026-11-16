@@ -43,7 +43,7 @@
     assign adula_chic_friday_excluded = true
   endif
   assign chic_friday_eligible = false
-  if adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and variant.compare_at_price <= variant.price
+  if adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and (variant.compare_at_price == blank or variant.compare_at_price <= variant.price)
     assign chic_friday_eligible = true
   endif
 -%}
