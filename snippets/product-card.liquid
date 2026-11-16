@@ -222,7 +222,7 @@
 
             {%- if show_prices -%}
               <div data-product-card-price aria-live="polite">
-                {%- render 'price-list', variant: product.selected_or_first_available_variant, context: 'card' -%}
+                {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'card' -%}
               </div>
             {%- endif -%}
           </div>
