@@ -87,12 +87,12 @@
             endif
           -%}
 
-          {%- if chic_friday_eligible or product.compare_at_price > product.price -%}
+          {%- if show_on_sale_badge -%}
             {%- if settings.discount_mode == 'percentage' -%}
               {%- liquid
-                assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
-                if chic_friday_eligible
-                  assign savings = '20%'
+                assign savings = '20%'
+                if chic_friday_eligible == false and variant.compare_at_price > 0
+                  assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
                 endif
               -%}
             {%- else -%}
