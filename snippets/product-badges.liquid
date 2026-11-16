@@ -43,7 +43,11 @@
     assign adula_chic_friday_excluded = true
   endif
   assign chic_friday_eligible = false
-  if adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and (variant.compare_at_price == blank or variant.compare_at_price <= variant.price)
+  assign adula_variant_has_prior_sale = false
+  if variant.compare_at_price > variant.price
+    assign adula_variant_has_prior_sale = true
+  endif
+  if adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and adula_variant_has_prior_sale == false and variant.price > 0
     assign chic_friday_eligible = true
   endif
 -%}
@@ -85,10 +89,12 @@
 
           {%- if chic_friday_eligible or product.compare_at_price > product.price -%}
             {%- if settings.discount_mode == 'percentage' -%}
-              {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
-              if chic_friday_eligible
-                assign savings = '20%'
-              endif -%}
+              {%- liquid
+                assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
+                if chic_friday_eligible
+                  assign savings = '20%'
+                endif
+              -%}
             {%- else -%}
               {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
             {%- endif -%}
