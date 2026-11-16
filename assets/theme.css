@@ -8785,3 +8785,21 @@ ul {
 @media (prefers-reduced-motion: reduce) {
   .badge--chic-friday .badge--chic-friday__text { animation: none !important; }
 }
+
+/* Adula: show the campaign badge over the product gallery on mobile and desktop. */
+.product-gallery__image-list--chic-friday { position: relative; }
+.adula-chic-friday-gallery-badge {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  font-size: 11px;
+  line-height: 1.3;
+}
+@media (min-width: 700px) {
+  .adula-chic-friday-gallery-badge { top: 16px; left: 16px; }
+}
+@media (max-width: 699px) {
+  .adula-chic-friday-gallery-badge { font-size: 10px; padding: .35em .65em; }
+}
