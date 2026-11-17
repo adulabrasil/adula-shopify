@@ -1,0 +1,34 @@
+{
+  "presentation-results.json": {
+    "passed": 14,
+    "failed": 0,
+    "scope": "LiquidJS mocked Shopify filters and JSDOM; not Shopify remote rendering"
+  },
+  "gift-results.json": {
+    "passed": 10,
+    "failed": 0,
+    "scope": "VM mocked cart, no requests to Shopify"
+  },
+  "publication-results.json": {
+    "passed": 4,
+    "failed": 0,
+    "scope": "Mock Admin GraphQL; pagination, 12 channels, 2 products, fail-closed permission checks"
+  },
+  "python_url_tests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "theme_check": {
+    "errors": 0,
+    "warnings": 152
+  },
+  "public_catalog_snapshot_sha256": "3b0bdf9634a7b3c316d2823b15d28c0cfd5473de80b59a93415d15872306e6a4",
+  "sources": {
+    "official": "0472f65395eac2d3e1c47fb0f8844fd082d7f4ef",
+    "pr45": "2649e7b6df56a054602bb1d7cb008914dae75815",
+    "public_catalog": "https://adula-brasil.myshopify.com/products.json?limit=250&page=N",
+    "prior_url_audit": "PR #45 reports/migration-2026-11-17/auditoria-909-urls.csv"
+  },
+  "remote_tests_of_new_branch": false,
+  "shopify_writes": false
+}

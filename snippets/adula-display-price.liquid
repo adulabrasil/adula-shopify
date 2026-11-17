@@ -1,0 +1,8 @@
+{%- doc -%}
+  Returns the selected variant's catalog price in integer minor currency units.
+  Normal theme implementation; integrations must use this contract rather than invent discounts.
+  @param {product} product
+  @param {variant} [variant]
+{%- enddoc -%}
+{%- assign display_variant = variant | default: product.selected_or_first_available_variant -%}
+{{- display_variant.price -}}

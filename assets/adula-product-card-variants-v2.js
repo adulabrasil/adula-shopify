@@ -3,6 +3,8 @@
  * Mantém apenas o brinde correspondente à faixa atual do carrinho.
  */
 (function giftGuardTop() {
+  // Retained for reference only. The resolving v2 engine owns normal cart reconciliation.
+  if (window.AdulaLegacyAutoGiftsEnabled !== true) return;
   const KEYCHAIN_VARIANT_ID = 47876818075811;
   const TRAY_VARIANT_ID = 47977612837027;
   const FIRST_THRESHOLD = 19900;

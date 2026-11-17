@@ -1,0 +1,851 @@
+﻿produto_id,handle,titulo,published_at_publico,variantes,variantes_disponiveis,status_admin,outros_canais
+9227915657379,anel-solitario-marie-antoinette-brilhante-cravejado-moissanite-5mm-prata-925,Anel Solitário Marie Antoinette Brilhante Cravejado Moissanite 5mm Prata 925,2026-11-17T15:40:11-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9227915690147,colar-marie-antoinette-ponto-de-luz-moissanite-6mm-prata-925,Colar Marie Antoinette Ponto de Luz Moissanite 6mm Prata 925,2026-11-17T15:39:48-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9235562365091,colar-sacre-coeur-coracao-sagrado-santuario-de-paris,Colar Sacré Coeur (Coração Sagrado) de Pedra Natural e placa resinada cor Amexa - Santuario de Paris,2026-11-15T19:21:58-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9235562332323,colar-regard-sacre-olhar-sagrado-santuario-de-paris,Colar Regard Sacré (Olhar Sagrado) de Pedra Natural e Placa resinada cor amarela - Santuario de Paris,2026-11-15T19:21:58-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9235562299555,colar-chuva-de-bencaos-santuario-de-paris,Colar chuva de bênçãos de Pedra Natural - Santuario de Paris,2026-11-15T19:21:57-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+15520487145635,pulseira-sacre-coeur-de-tecido-com-placa-resinada-santuario-de-paris,Pulseira Sacré Coeur de Tecido com placa Resinada - Santuario de Paris,2026-11-15T16:24:16-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+15520487112867,pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris,Pulseira Renda Sagrada de Pedra Natural  - Santuario de Paris,2026-11-15T16:24:16-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+15520487080099,pulseira-rosario-de-pedra-natural-santuario-de-paris,Pulseira Rosario De Pedra Natural - Santuario de Paris,2026-11-15T16:24:15-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+15520487047331,pulseira-vitral-de-pedra-natural-santuario-de-paris,Pulseira Vitral de Pedra Natural - Santuario de Paris,2026-11-15T16:24:15-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+15520487014563,brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris,Brinco Prisma Curvado de Pedra Natural Turmalina - Santuario de Paris,2026-11-15T16:24:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+15520486981795,brinco-devocao-de-cruz-de-pedra-natural-turmalina-santuario-de-paris,Brinco Devoção de Cruz de Pedra Natural Turmalina - Santuario de Paris,2026-11-15T16:24:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9263400321187,mix-de-orelha,Mix Ear Party Adüla,2026-09-18T16:30:02-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9238163816611,pingente-love-yourself,Pingente Love Yourself,2026-09-01T09:37:47-03:00,52,24,NAO_CONFERIDO,NAO_CONFERIDOS
+9227915755683,brinco-marie-antoinette-ponto-de-luz-moissanite-prata-925,Brinco Marie Antoinette Ponto de Luz Moissanite Prata 925,2026-08-20T16:50:13-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9223476445347,limpa-joias-de-60ml,Limpa Joias de 60ml,2026-08-14T14:14:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9220153835683,bandeja-de-joias-em-veludo,Bandeja de Joias em Veludo,2026-08-10T15:27:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257228451,pulseira-helen,Pulseira Helen,2026-07-17T16:28:57-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257162915,pulseira-greta-boho-chic-perola-natural,Pulseira Greta Boho Chic Perola Natural,2026-07-17T16:28:57-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257031843,pulseira-glamour-riviera-1-75-mm-4-garras-prata-925,"Pulseira Glamour Riviera 1,75 mm 4 Garras Prata 925",2026-07-17T16:28:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256966307,pulseira-gaia,Pulseira GAIA,2026-07-17T16:28:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256900771,pulseira-folie,Pulseira Folie,2026-07-17T16:28:56-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256802467,pulseira-eva,Pulseira Eva,2026-07-17T16:28:55-03:00,6,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256638627,pulseira-esplendor-riviera-baguette-de-3-mm,Pulseira Esplendor Riviera Baguette de 3 mm,2026-07-17T16:28:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256540323,pulseira-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Pulseira Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:28:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256474787,pulseira-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Pulseira Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:28:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256442019,pulseira-espirito-santo,Pulseira Espirito Santo,2026-07-17T16:28:54-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256343715,pulseira-duda,Pulseira Duda,2026-07-17T16:28:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256278179,pulseira-debora,Pulseira Débora,2026-07-17T16:28:53-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256179875,pulseira-de-cetim-para-pingentes-de-click-prata-925-fios-de-luz,Pulseira de Cetim para Pingentes de Click Prata 925 - Fios de Luz,2026-07-17T16:28:53-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197256048803,pulseira-de-cetim-para-pingentes-de-click-dourado-fios-de-luz,Pulseira de Cetim para Pingentes de Click Dourado - Fios de Luz,2026-07-17T16:28:53-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255917731,pulseira-de-cetim-com-zirconia-verde-edna-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Verde Edna Dourado - Fios de Luz,2026-07-17T16:28:52-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255753891,pulseira-de-cetim-com-zirconia-verde-akira-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Verde Akira Dourado - Fios de Luz,2026-07-17T16:28:52-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255590051,pulseira-de-cetim-com-zirconia-rosa-edna-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Rosa Edna Dourado - Fios de Luz,2026-07-17T16:28:52-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255426211,pulseira-de-cetim-com-zirconia-rosa-akira-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Rosa Akira Dourado - Fios de Luz,2026-07-17T16:28:52-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255295139,pulseira-de-cetim-com-zirconia-lavanda-edna-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Lavanda Edna Dourado - Fios de Luz,2026-07-17T16:28:51-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197255131299,pulseira-de-cetim-com-zirconia-lavanda-akira-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Lavanda Akira Dourado - Fios de Luz,2026-07-17T16:28:51-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254934691,pulseira-de-cetim-com-zirconia-azul-edna-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Azul Edna Dourado - Fios de Luz,2026-07-17T16:28:51-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254803619,pulseira-de-cetim-com-zirconia-azul-akira-dourado-fios-de-luz,Pulseira de Cetim com Zircônia Azul Akira Dourado - Fios de Luz,2026-07-17T16:28:50-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254639779,pulseira-dandara,Pulseira Dandara,2026-07-17T16:28:50-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254475939,pulseira-dalia-boho-chic-pedra-natural-ametista,Pulseira Dalia Boho Chic Pedra Natural Ametista,2026-07-17T16:28:50-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254410403,pulseira-cristo-redentor-fio-verde,Pulseira Cristo Redentor Fio Verde,2026-07-17T16:28:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254344867,pulseira-cristo-redentor-fio-branco-e-dourado,Pulseira Cristo Redentor Fio Branco e Dourado,2026-07-17T16:28:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254246563,pulseira-cristo-redentor-fio-azul,Pulseira Cristo Redentor Fio Azul,2026-07-17T16:28:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254181027,pulseira-cris,Pulseira Cris,2026-07-17T16:28:48-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197254082723,pulseira-cordao-baiano,Pulseira Cordão Baiano,2026-07-17T16:28:48-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253984419,pulseira-coeur,Pulseira Coeur,2026-07-17T16:28:48-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253820579,pulseira-clea-boho-chic-pedra-natural-angelita,Pulseira Clea Boho Chic Pedra Natural Angelita,2026-07-17T16:28:47-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253755043,pulseira-cartier,Pulseira Cartier,2026-07-17T16:28:47-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253656739,pulseira-bella,Pulseira Bella,2026-07-17T16:28:47-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253525667,pulseira-bege-de-cetim-com-pedras-de-vidro-prata-925-fios-de-luz,Pulseira Bege de Cetim com Pedras de Vidro Prata 925 - Fios de Luz,2026-07-17T16:28:46-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253361827,pulseira-bege-de-cetim-com-pedras-de-vidro-dourado-fios-de-luz,Pulseira Bege de Cetim com Pedras de Vidro Dourado - Fios de Luz,2026-07-17T16:28:46-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253230755,pulseira-bandeira-do-brasil-fio-verde,Pulseira Bandeira Do Brasil Fio Verde,2026-07-17T16:28:46-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253165219,pulseira-bandeira-do-brasil-fio-branco-e-dourado,Pulseira Bandeira Do Brasil Fio Branco e Dourado,2026-07-17T16:28:46-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253066915,pulseira-bandeira-do-brasil-fio-azul,Pulseira Bandeira Do Brasil Fio Azul,2026-07-17T16:28:45-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197253001379,pulseira-azul-de-cetim-com-pedra-de-vidro-azul-topazio-prata-925-fios-de-luz,Pulseira Azul de Cetim com Pedra de Vidro Azul Topázio Prata 925 - Fios de Luz,2026-07-17T16:28:45-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252903075,pulseira-azul-de-cetim-com-pedra-de-vidro-azul-topazio-dourado-fios-de-luz,Pulseira Azul de Cetim com Pedra de Vidro Azul Topázio Dourado - Fios de Luz,2026-07-17T16:28:45-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252870307,pulseira-avulsa,Pulseira avulsa,2026-07-17T16:28:44-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252804771,pulseira-aura-riviera-quadrada-4-garras-de-1-75-mm,"Pulseira Aura Riviera Quadrada 4 garras de 1,75 mm",2026-07-17T16:28:44-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252706467,pulseira-aria-boho-chic-pedra-natural-rodocrosita,Pulseira Aria Boho Chic Pedra Natural Rodocrosita,2026-07-17T16:28:44-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252673699,pulseira-apolonia,Pulseira Apolonia,2026-07-17T16:28:43-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252542627,pulseira-alessandra,Pulseira Alessandra,2026-07-17T16:28:43-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252411555,pulseira-agra,Pulseira Agra,2026-07-17T16:28:43-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252247715,porta-joias-pequeno,Porta Joias Pequeno,2026-07-17T16:28:42-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197252149411,porta-joias-grande,Porta Joias Grande,2026-07-17T16:28:42-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197118816419,pingentes-de-signos-do-zodiaco,Pingentes de Signos do Zodíaco,2026-07-17T16:28:41-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197118455971,pingente-zirconia-redonda-prata-925,Pingente Zircônia Redonda Prata 925,2026-07-17T16:28:41-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197118423203,pingente-torre-eiffel-prata,Pingente Torre Eiffel PRATA,2026-07-17T16:28:41-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197118390435,pingente-torre-eiffel-love-paris,Pingente Torre Eiffel Love Paris,2026-07-17T16:28:41-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197118324899,pingente-singular,Pingente Singular,2026-07-17T16:28:40-03:00,52,26,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117866147,pingente-santa-mae-borda-cravejada-prata-925,Pingente Santa Mãe Borda Cravejada Prata 925,2026-07-17T16:28:40-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117833379,pingente-safira-boho-chic-pedra-natural-jade-safira-prata-925,Pingente Safira Boho Chic Pedra Natural Jade Safira Prata 925,2026-07-17T16:28:40-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117800611,pingente-safira-boho-chic-pedra-natural-jade-safira-dourado,Pingente Safira Boho Chic Pedra Natural Jade Safira Dourado,2026-07-17T16:28:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117767843,pingente-relicario-redondo-memorias,Pingente Relicario Redondo Memorias,2026-07-17T16:28:39-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117735075,pingente-relicario-oval-momentos,Pingente Relicario OVAL Momentos,2026-07-17T16:28:39-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117669539,pingente-relicario-de-coracao-eternite,Pingente Relicario de coração ETERNITE,2026-07-17T16:28:38-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117636771,pingente-protecao-boho-chic-pedra-natural-ametista-prata-925,Pingente Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:28:38-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117571235,pingente-protecao-boho-chic-pedra-natural-ametista-dourado,Pingente Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:28:38-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117538467,pingente-ponto-de-luz-redondo-na-prata,Pingente Ponto de Luz Redondo na Prata,2026-07-17T16:28:37-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117440163,pingente-placa-de-fe-na-prata,Pingente Placa de Fé na Prata,2026-07-17T16:28:37-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117407395,pingente-placa-cruz,Pingente placa cruz,2026-07-17T16:28:37-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117341859,pingente-paz-boho-chic-pedra-natural-opala-azul-prata-925,Pingente Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:28:36-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117309091,pingente-paz-boho-chic-pedra-natural-opala-azul-dourado,Pingente Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:28:36-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117276323,pingente-patinha-prata,Pingente Patinha PRATA,2026-07-17T16:28:36-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117210787,pingente-patinha-pet-prata-925,Pingente Patinha Pet Prata 925,2026-07-17T16:28:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117178019,pingente-patinha-pet-dourado,Pingente Patinha Pet Dourado,2026-07-17T16:28:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117145251,pingente-patinha-de-zirconia,Pingente Patinha de Zircônia,2026-07-17T16:28:35-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117079715,pingente-pai,Pingente PAI,2026-07-17T16:28:35-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197117014179,pingente-nossa-senhora-das-gracas-oval-cravejado,Pingente Nossa Senhora das Graças Oval Cravejado,2026-07-17T16:28:34-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116948643,pingente-mini-s-aparecida,Pingente Mini S. Aparecida,2026-07-17T16:28:34-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116915875,pingente-mini-olho-grego,Pingente mini Olho Grego,2026-07-17T16:28:34-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116850339,pingente-mini-mao-de-fatima-com-zirconia,Pingente Mini Mão de Fátima com Zircônia,2026-07-17T16:28:33-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116817571,pingente-mini-espirito-santo-na-prata,Pingente Mini Espirito Santo na Prata,2026-07-17T16:28:33-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116752035,pingente-menino-boy-com-micro-zirconia-cravejada-prata-925,Pingente Menino Boy com Micro Zircônia Cravejada Prata 925,2026-07-17T16:28:33-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116719267,pingente-menino-boy-com-micro-zirconia-cravejada,Pingente Menino Boy com Micro Zircônia Cravejada,2026-07-17T16:28:32-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116653731,pingente-menininho-de-zirconia,Pingente Menininho de Zircônia,2026-07-17T16:28:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116620963,pingente-menininha-de-zirconia,Pingente Menininha de Zircônia,2026-07-17T16:28:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116555427,pingente-menina-girl-com-micro-zirconia-cravejada-prata-925,Pingente Menina Girl com Micro Zircônia Cravejada Prata 925,2026-07-17T16:28:31-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116522659,pingente-menina-girl-com-micro-zirconia-cravejada,Pingente Menina Girl com Micro Zircônia Cravejada,2026-07-17T16:28:31-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116457123,pingente-medalinha-fe,Pingente medalinha fé,2026-07-17T16:28:31-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116424355,pingente-medalha-de-sao-bento,Pingente Medalha de São Bento,2026-07-17T16:28:30-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116358819,pingente-medalha-de-olho-grego,Pingente Medalha de Olho Grego,2026-07-17T16:28:30-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116326051,pingente-marseille,Pingente Marseille,2026-07-17T16:28:30-03:00,6,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116194979,pingente-mao-de-fatima-azul,Pingente Mão de Fatima Azul,2026-07-17T16:28:30-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197116129443,pingente-mao-de-fatima,Pingente Mão de Fátima,2026-07-17T16:28:29-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115441315,pingente-jade-safira-love-paris-prata-925,Pingente Jade Safira Love Paris Prata 925,2026-07-17T16:28:29-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115408547,pingente-jade-safira-love-paris,Pingente Jade Safira Love Paris,2026-07-17T16:28:28-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115375779,pingente-jade-rubi-love-paris-prata-925,Pingente Jade Rubi Love Paris Prata 925,2026-07-17T16:28:28-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115310243,pingente-jade-rubi-love-paris,Pingente Jade Rubi Love Paris,2026-07-17T16:28:28-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115277475,pingente-greta-de-perola-natural-boho-chic,Pingente Greta de pérola natural Boho Chic,2026-07-17T16:28:27-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115211939,pingente-georgia-boho-chic-pedra-natural-jade-branca-prata-925,Pingente Georgia Boho Chic Pedra Natural Jade Branca Prata 925,2026-07-17T16:28:27-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115146403,pingente-georgia-boho-chic-pedra-natural-jade-branca-dourado,Pingente Georgia Boho Chic Pedra Natural Jade Branca Dourado,2026-07-17T16:28:27-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115113635,pingente-gato-cravejado,Pingente Gato Cravejado,2026-07-17T16:28:27-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115080867,pingente-gato,Pingente Gato,2026-07-17T16:28:26-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115048099,pingente-garoto-vazado-prata-925,Pingente Garoto Vazado Prata 925,2026-07-17T16:28:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197115015331,pingente-garoto-cravejado-em-prata-925,Pingente Garoto Cravejado em Prata 925,2026-07-17T16:28:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114949795,pingente-garota-vazada-prata-925,Pingente Garota Vazada Prata 925,2026-07-17T16:28:25-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114917027,pingente-garota-cravejado-prata-925,Pingente Garota Cravejado Prata 925,2026-07-17T16:28:25-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114884259,pingente-ferradura,Pingente Ferradura,2026-07-17T16:28:25-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114851491,pingente-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Pingente Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:28:24-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114785955,pingente-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Pingente Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:28:24-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114753187,pingente-elefantinho,Pingente Elefantinho,2026-07-17T16:28:24-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114720419,pingente-de-trevo,Pingente de Trevo,2026-07-17T16:28:24-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114687651,pingente-de-sao-bento-na-prata,Pingente de São Bento na Prata,2026-07-17T16:28:23-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114654883,pingente-de-perola-natural,Pingente de Pérola natural,2026-07-17T16:28:23-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114589347,pingente-de-pedra-dos-signos,Pingente de Pedra dos Signos,2026-07-17T16:28:23-03:00,26,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114294435,pingente-de-olho-grego,Pingente de Olho Grego,2026-07-17T16:28:22-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114261667,pingente-de-nossa-senhora-das-gracas-na-prata,Pingente de Nossa Senhora das Graças na Prata,2026-07-17T16:28:22-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114196131,pingente-de-nossa-senhora-aparecida-na-prata,Pingente de Nossa Senhora Aparecida na Prata,2026-07-17T16:28:22-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114163363,pingente-de-menininho,Pingente de Menininho,2026-07-17T16:28:22-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114097827,pingente-de-menininha,Pingente de Menininha,2026-07-17T16:28:21-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197114032291,pingente-de-lua,Pingente de Lua,2026-07-17T16:28:21-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197113999523,pingente-de-letra-de-zirconia,Pingente de Letra de Zirconia,2026-07-17T16:28:21-03:00,52,52,NAO_CONFERIDO,NAO_CONFERIDOS
+9197113409699,pingente-de-letra,Pingente de Letra,2026-07-17T16:28:20-03:00,78,51,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112426659,pingente-de-estrela,Pingente de Estrela,2026-07-17T16:28:20-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112393891,pingente-de-coracao-gato,Pingente de Coração Gato,2026-07-17T16:28:20-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112361123,pingente-de-coracao-cachorro-na-prata,Pingente de Coração Cachorro na Prata,2026-07-17T16:28:19-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112328355,pingente-de-coracao,Pingente de Coração,2026-07-17T16:28:19-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112295587,pingente-de-chupeta,Pingente de Chupeta,2026-07-17T16:28:19-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112230051,pingente-cruz-masculina-prata,Pingente Cruz Masculina-Prata,2026-07-17T16:28:18-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112197283,pingente-cruz-feminina-prata,Pingente Cruz Feminina- Prata,2026-07-17T16:28:18-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112164515,pingente-croissant-love-paris,Pingente Croissant Love Paris,2026-07-17T16:28:18-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112098979,pingente-crianca-masculino-com-zirconia,Pingente Criança Masculino com Zircônia,2026-07-17T16:28:17-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112066211,pingente-crianca-feminina-com-zirconia,Pingente Criança Feminina com Zircônia,2026-07-17T16:28:17-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197112000675,pingente-coracao-pet,Pingente Coração Pet,2026-07-17T16:28:17-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291462307,pingente-coracao-e-ponto-de-luz,Pingente Coração e Ponto de Luz,2026-07-17T16:28:16-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291396771,pingente-coracao-de-zirconia,Pingente Coração de Zircônia,2026-07-17T16:28:16-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291331235,pingente-click-patinha-pet-prata-925,Pingente Click Patinha Pet Prata 925,2026-07-17T16:28:16-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291232931,pingente-click-patinha-pet-dourado,Pingente Click Patinha Pet Dourado,2026-07-17T16:28:16-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291167395,pingente-click-girl-com-micro-zirconia-cravejada-prata-925,Pingente Click Girl com Micro Zircônia Cravejada Prata 925,2026-07-17T16:28:15-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291069091,pingente-click-girl-com-micro-zirconia-cravejada-dourado,Pingente Click Girl com Micro Zircônia Cravejada Dourado,2026-07-17T16:28:15-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194291003555,pingente-click-coracao-prata-925,Pingente Click Coração Prata 925,2026-07-17T16:28:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290905251,pingente-click-coracao-com-micro-zirconia-cravejada-dourado,Pingente Click Coração com Micro Zircônia Cravejada Dourado,2026-07-17T16:28:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290839715,pingente-click-boy-com-micro-zirconia-cravejada-prata-925,Pingente Click Boy com Micro Zircônia Cravejada Prata 925,2026-07-17T16:28:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290741411,pingente-click-boy-com-micro-zirconia-cravejada-dourado,Pingente Click Boy com Micro Zircônia Cravejada Dourado,2026-07-17T16:28:14-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290675875,pingente-charm-peixe-cravejado,Pingente Charm Peixe Cravejado,2026-07-17T16:28:13-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290643107,pingente-charm-estrela-do-mar,Pingente Charm Estrela do Mar,2026-07-17T16:28:13-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290544803,pingente-charm-espinha-de-peixe,Pingente Charm Espinha de Peixe,2026-07-17T16:28:13-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290512035,pingente-charm-concha-com-perola,Pingente Charm Concha com Pérola,2026-07-17T16:28:12-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290446499,pingente-charm-buzios-com-zirconias,Pingente Charm Búzios com Zircônias,2026-07-17T16:28:12-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290380963,pingente-cegonha,Pingente Cegonha,2026-07-17T16:28:12-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290315427,pingente-cadeado-cravejado-e-coracao-prata-925,Pingente Cadeado Cravejado e Coração Prata 925,2026-07-17T16:28:11-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290184355,pingente-cacto,Pingente Cacto,2026-07-17T16:28:11-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290151587,pingente-cachorro,Pingente Cachorro,2026-07-17T16:28:11-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194290053283,pingente-brilho-na-prata,Pingente Brilho na Prata,2026-07-17T16:28:10-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289987747,pingente-baguette-love-paris,Pingente Baguette Love Paris,2026-07-17T16:28:10-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289922211,pingente-aviao-na-prata,Pingente Avião na Prata,2026-07-17T16:28:10-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289823907,pingente-aviao-love-paris,Pingente Avião Love Paris,2026-07-17T16:28:10-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289758371,pingente-apego,Pingente Apego,2026-07-17T16:28:09-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289692835,pingente-alma-gemea,Pingente Alma Gêmea,2026-07-17T16:28:09-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289594531,pingente-aime,Pingente Aimê,2026-07-17T16:28:09-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289496227,pingente-afeto-coracao-de-zirconia-prata-925,Pingente Afeto Coração de Zircônia Prata 925,2026-07-17T16:28:08-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289430691,piercing-ponto-de-luz-pedra-incrustada,Piercing Ponto de Luz Pedra Incrustada,2026-07-17T16:28:08-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289365155,piercing-ponto-de-luz-garra,Piercing Ponto de Luz Garra,2026-07-17T16:28:08-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289266851,piercing-nostril-curvado,Piercing Nostril Curvado,2026-07-17T16:28:07-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289201315,piercing-microbell-reto-com-cristais,Piercing Microbell Reto com Cristais,2026-07-17T16:28:07-03:00,4,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194289070243,piercing-microbell-reto,Piercing Microbell Reto,2026-07-17T16:28:07-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288971939,piercing-microbell-formas-100-aco,Piercing Microbell Formas 100% Aço,2026-07-17T16:28:07-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288906403,piercing-microbell-desenhos,Piercing Microbell Desenhos,2026-07-17T16:28:06-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288840867,piercing-microbell-curvo-com-cristais,Piercing Microbell Curvo com Cristais,2026-07-17T16:28:06-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288709795,piercing-microbell-curvo,Piercing Microbell Curvo,2026-07-17T16:28:06-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288611491,piercing-microbell-coracao-liso,Piercing Microbell Coracao Liso,2026-07-17T16:28:05-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288545955,piercing-labret-trinity,Piercing Labret Trinity,2026-07-17T16:28:05-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288480419,piercing-labret-reto,Piercing Labret Reto,2026-07-17T16:28:05-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288382115,piercing-labret-com-cristais,Piercing Labret com Cristais,2026-07-17T16:28:04-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288283811,piercing-ferradura-liso,Piercing Ferradura Liso,2026-07-17T16:28:04-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288152739,piercing-ferradura-com-cristais,Piercing Ferradura com Cristais,2026-07-17T16:28:04-03:00,4,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194288021667,piercing-falso-zuri-prata-925,Piercing Falso Zuri Prata 925,2026-07-17T16:28:03-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287988899,piercing-falso-zuri-dourado,Piercing Falso Zuri Dourado,2026-07-17T16:28:03-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287890595,piercing-falso-zoe,Piercing Falso Zoe,2026-07-17T16:28:03-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287825059,piercing-falso-vera-liso-com-zirconia-redonda-dourado,Piercing Falso Vera Liso com Zircônia Redonda — Dourado,2026-07-17T16:28:03-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287759523,piercing-falso-thea-dourado,Piercing Falso Thea Dourado,2026-07-17T16:28:02-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287693987,piercing-falso-thea-prata-925,Piercing Falso Thea - Prata 925,2026-07-17T16:28:02-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287628451,piercing-falso-tania-com-zirconia-gota-dourado,Piercing Falso Tânia com Zircônia Gota — Dourado,2026-07-17T16:28:02-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287595683,piercing-falso-sienna,Piercing falso Sienna,2026-07-17T16:28:01-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287497379,piercing-falso-priscila,Piercing falso Priscila,2026-07-17T16:28:01-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287431843,piercing-falso-perle,Piercing Falso Perle,2026-07-17T16:28:01-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287333539,piercing-falso-olivia,Piercing Falso Olivia,2026-07-17T16:28:00-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287268003,piercing-falso-ofelia-com-aro-duplo-de-zirconias,Piercing Falso Ofélia com Aro Duplo de Zircônias,2026-07-17T16:28:00-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287202467,piercing-falso-maria,Piercing Falso Maria,2026-07-17T16:28:00-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287104163,piercing-falso-ludy-com-zirconias-cravejadas,Piercing Falso Ludy com Zircônias Cravejadas,2026-07-17T16:27:59-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194287005859,piercing-falso-luciane-prata-925,Piercing Falso Luciane - Prata 925,2026-07-17T16:27:59-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286973091,piercing-falso-liz,Piercing falso Liz,2026-07-17T16:27:59-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286907555,piercing-falso-liso-tati-prata-925,Piercing Falso Liso Tati - Prata 925,2026-07-17T16:27:59-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286809251,piercing-falso-katia-prata-925,Piercing Falso Katia Prata 925,2026-07-17T16:27:58-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286776483,piercing-falso-katia-dourado,Piercing Falso Katia Dourado,2026-07-17T16:27:58-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286678179,piercing-falso-karen,Piercing Falso karen,2026-07-17T16:27:58-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286547107,piercing-falso-jade,Piercing falso Jade,2026-07-17T16:27:57-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286481571,piercing-falso-floresca,Piercing falso Floresça,2026-07-17T16:27:57-03:00,10,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194286055587,piercing-falso-ferradura-trancado,Piercing falso Ferradura trançado,2026-07-17T16:27:57-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285924515,piercing-falso-ferradura-liso,Piercing falso Ferradura liso,2026-07-17T16:27:56-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285858979,piercing-falso-estrela,Piercing falso Estrela,2026-07-17T16:27:56-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285727907,piercing-falso-estella,Piercing falso Estella,2026-07-17T16:27:56-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285629603,piercing-falso-eloa,Piercing Falso Eloa,2026-07-17T16:27:55-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285531299,piercing-falso-com-pedras-de-vidro-verde-turmalina-prata-925-fios-de-luz,Piercing Falso com Pedras de Vidro Verde Turmalina Prata 925 - Fios de Luz,2026-07-17T16:27:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285432995,piercing-falso-com-pedras-de-vidro-verde-turmalina-dourado-fios-de-luz,Piercing Falso com Pedras de Vidro Verde Turmalina Dourado - Fios de Luz,2026-07-17T16:27:55-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285367459,piercing-falso-com-pedras-de-vidro-roxa-ametista-prata-925-fios-de-luz,Piercing Falso com Pedras de Vidro Roxa Ametista Prata 925 - Fios de Luz,2026-07-17T16:27:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285269155,piercing-falso-com-pedras-de-vidro-roxa-ametista-dourado-fios-de-luz,Piercing Falso com Pedras de Vidro Roxa Ametista Dourado - Fios de Luz,2026-07-17T16:27:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285203619,piercing-falso-com-pedras-de-vidro-azul-topazio-prata-925-fios-de-luz,Piercing Falso com Pedras de Vidro Azul Topázio Prata 925 - Fios de Luz,2026-07-17T16:27:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285105315,piercing-falso-com-pedras-de-vidro-azul-topazio-dourado-fios-de-luz,Piercing Falso com Pedras de Vidro Azul Topázio Dourado - Fios de Luz,2026-07-17T16:27:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194285039779,piercing-falso-chloe,Piercing Falso Chloé,2026-07-17T16:27:53-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284908707,piercing-falso-charlote-prata-925,Piercing Falso Charlote - Prata 925,2026-07-17T16:27:53-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284875939,piercing-falso-chain,Piercing falso Chain,2026-07-17T16:27:53-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284777635,piercing-falso-catarina,Piercing Falso Catarina,2026-07-17T16:27:52-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284712099,piercing-falso-bianca,Piercing falso Bianca,2026-07-17T16:27:52-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284679331,piercing-argola-helix-ultrafino-com-cristais,Piercing Argola Hélix Ultrafino com Cristais,2026-07-17T16:27:52-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284482723,piercing-argola-de-aco-cirurgico-para-nariz,Piercing Argola de Aço Cirúrgico para Nariz,2026-07-17T16:27:51-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284417187,piercing-argola-d-ring-de-aco-cirurgico-para-nariz,Piercing Argola D Ring de Aço Cirúrgico para Nariz,2026-07-17T16:27:51-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284351651,piercing-argola-conch-ultrafino-com-cristais,Piercing Argola Conch Ultrafino com Cristais,2026-07-17T16:27:51-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284253347,par-de-argolas-torcidas-essencia,Par de Argolas Torcidas Essência,2026-07-17T16:27:51-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284122275,par-de-argolas-simone-lisa-na-prata-925,Par de Argolas Simone Lisa na Prata 925,2026-07-17T16:27:50-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194284023971,par-de-argolas-marcela,Par de Argolas Marcela,2026-07-17T16:27:50-03:00,9,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9194283630755,par-de-argolas-lisas,Par de Argolas Lisas,2026-07-17T16:27:50-03:00,10,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9194283335843,par-de-argolas-lilian,Par de argolas Lilian,2026-07-17T16:27:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194283237539,par-de-argolas-leticia,Par de Argolas Leticia,2026-07-17T16:27:49-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194283139235,par-de-argolas-de-zirconia-tarci,Par de Argolas de Zircônia Tarci,2026-07-17T16:27:49-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282975395,par-de-argolas-de-zirconia-lavinia,Par de Argolas de Zircônia Lavinia,2026-07-17T16:27:48-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282844323,par-de-argolas-de-zirconia-francisca,Par de Argolas de Zircônia Francisca,2026-07-17T16:27:48-03:00,8,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282614947,par-de-argolas-de-zirconia-celine,Par de Argolas de Zircônia Céline,2026-07-17T16:27:48-03:00,9,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282287267,par-de-argolas-coracao-organico-cravejada,Par de Argolas Coração Orgânico Cravejada,2026-07-17T16:27:47-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282221731,par-de-argolas-coracao-de-zirconia,Par de Argolas Coração de Zirconia,2026-07-17T16:27:47-03:00,6,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9194282057891,par-de-argolas-coracao-cravejado-prata-925,Par de Argolas Coração Cravejado Prata 925,2026-07-17T16:27:47-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281926819,medalha-de-signos-p,Medalha de Signos P,2026-07-17T16:27:47-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281861283,medalha-de-signos-g,Medalha de Signos G,2026-07-17T16:27:46-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281795747,labret-trinity-titanio,LABRET TRINITY TITANIO,2026-07-17T16:27:46-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281664675,labret-topo-trinity-aco,LABRET TOPO TRINITY AÇO,2026-07-17T16:27:46-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281533603,labret-topo-flor-5-navete-titanio,LABRET TOPO FLOR 5 NAVETE TITANIO,2026-07-17T16:27:45-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281435299,labret-topo-4-pedras-centro-liso-aco,LABRET TOPO 4 PEDRAS CENTRO LISO AÇO,2026-07-17T16:27:45-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281304227,labret-titanio-ramo-5-navetes,LABRET TITÂNIO RAMO 5 NAVETES,2026-07-17T16:27:45-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281238691,labret-titanio-ramo-3-navetes,LABRET TITÂNIO RAMO 3 NAVETES,2026-07-17T16:27:44-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194281140387,labret-titanio-ramo-3-folhas,LABRET TITÂNIO RAMO 3 FOLHAS,2026-07-17T16:27:44-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280976547,labret-titanio-morcego-2-navetes,LABRET TITÂNIO MORCEGO 2 NAVETES,2026-07-17T16:27:44-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280812707,labret-titanio-cluster-arco-cravejado,LABRET TITÂNIO CLUSTER ARCO CRAVEJADO,2026-07-17T16:27:43-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280648867,labret-titanio-cluster-4-pedras-crescente,LABRET TITÂNIO CLUSTER 4 PEDRAS CRESCENTE,2026-07-17T16:27:43-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280517795,labret-titanio-clister-barra-5-pedras-redondas,LABRET TITÂNIO CLISTER BARRA 5 PEDRAS REDONDAS,2026-07-17T16:27:43-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280452259,labret-titanio-borboleta-crav-c-antena,LABRET TITÂNIO BORBOLETA CRAV. C/ ANTENA,2026-07-17T16:27:42-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280321187,labret-titanio-3-zirc-navete-inclinadas,LABRET TITÂNIO 3 ZIRC. NAVETE INCLINADAS,2026-07-17T16:27:42-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280190115,labret-titanio-3-pedras-redondas,LABRET TITÂNIO 3 PEDRAS REDONDAS,2026-07-17T16:27:42-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194280059043,labret-ponto-de-luz-garra,Labret Ponto de Luz garra,2026-07-17T16:27:42-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279927971,labret-flor-8-pedras-centro-com-pedra-aco,LABRET FLOR 8 PEDRAS CENTRO COM PEDRA AÇO,2026-07-17T16:27:41-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279829667,labret-flor-6-pedras-centro-liso-aco,LABRET FLOR 6 PEDRAS CENTRO LISO AÇO,2026-07-17T16:27:41-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279731363,labret-com-zirconia-e-rosca-interna,Labret com Zircônia e Rosca Interna,2026-07-17T16:27:41-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279665827,labret-cluster-titanio-4-navetes-3-coracao,LABRET CLUSTER TITÂNIO 4 NAVETES 3 CORAÇÃO,2026-07-17T16:27:40-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279567523,labret-cluster-aco-barra-curva-7-pedras,LABRET CLUSTER AÇO BARRA CURVA 7 PEDRAS,2026-07-17T16:27:40-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279469219,labret-cluster-aco-5-pedrinhas-c-barra,LABRET CLUSTER AÇO 5 PEDRINHAS C/ BARRA,2026-07-17T16:27:40-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279338147,labret-cluster-aco-5-baguetes,LABRET CLUSTER AÇO 5 BAGUETES,2026-07-17T16:27:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279239843,labret-cluster-aco-3-navetes,LABRET CLUSTER AÇO 3 NAVETES,2026-07-17T16:27:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279207075,labret-cluster-5-pedras-redondas,LABRET CLUSTER 5 PEDRAS REDONDAS,2026-07-17T16:27:39-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194279076003,labret-baguette-p-luz-pendurado-titanio,Labret Baguette P. Luz Pendurado Titânio,2026-07-17T16:27:38-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278977699,labret-aco-trevo,LABRET AÇO TREVO,2026-07-17T16:27:38-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278879395,labret-aco-pedra-gota-invertida,LABRET AÇO PEDRA GOTA INVERTIDA,2026-07-17T16:27:38-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278682787,labret-aco-pedra-barra-retangular,LABRET AÇO PEDRA BARRA RETANGULAR,2026-07-17T16:27:37-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278584483,labret-aco-formas-zirconia,LABRET AÇO FORMAS ZIRCONIA,2026-07-17T16:27:37-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278453411,labret-aco-cluster-2-flores,LABRET AÇO CLUSTER 2 FLORES,2026-07-17T16:27:37-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278355107,labret-aco-barrinha-4-pedras,LABRET AÇO BARRINHA 4 PEDRAS,2026-07-17T16:27:37-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278256803,labret-aco-2-navetes-v,"LABRET AÇO 2 NAVETES ""V""",2026-07-17T16:27:36-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194278125731,labret-3-navetes-coroa-titanio,LABRET 3 NAVETES COROA TITANIO,2026-07-17T16:27:36-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9194277961891,labret-2-navetes-pendurado-titanio,Labret 2 Navetes Pendurado Titânio,2026-07-17T16:27:36-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194277896355,labret-2-baguettes-pendurado-titanio,Labret 2 Baguettes Pendurado Titânio,2026-07-17T16:27:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190385123491,extensor-de-10-cm,Extensor de 10 cm,2026-07-17T16:27:35-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190385090723,escapulario-religioso,Escapulário Religioso,2026-07-17T16:27:34-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384992419,escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p,Escapulário Prata 925 Sagrado C. de Jesus e N.S Carmo - Tamanho P,2026-07-17T16:27:34-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384926883,escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m,Escapulário Prata 925 Sagrado C. de Jesus e N.S Carmo - Tamanho M,2026-07-17T16:27:34-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384861347,escapulario-olho-grego-e-mao-de-fatima,Escapulario Olho Grego e Mão de Fatima,2026-07-17T16:27:34-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384795811,escapulario-espirito-santo-e-coracao,Escapulário Espírito Santo e Coração,2026-07-17T16:27:33-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384697507,escapulario-de-cruz-nossa-senhora,Escapulário de Cruz  / Nossa Senhora,2026-07-17T16:27:33-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384664739,escapulario-coracao-de-jesus-nossa-senhora,Escapulário Coração de Jesus / Nossa Senhora,2026-07-17T16:27:33-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384599203,escapulario-de-sao-bento,Escapulario  de São Bento,2026-07-17T16:27:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384533667,earcuff-sarah,Earcuff Sarah,2026-07-17T16:27:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384500899,earcuff-floresca,Earcuff Floresça,2026-07-17T16:27:32-03:00,18,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190384042147,earcuff-elka-com-zirconias-navete,Earcuff Elka com Zircônias Navete,2026-07-17T16:27:31-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383976611,earcuff-cuff-de-zirconias-em-prata-925,Earcuff Cuff de Zircônias em Prata 925,2026-07-17T16:27:31-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383943843,earcuff-amore,Earcuff  Amore,2026-07-17T16:27:31-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383845539,ear-hook-nala,EAR HOOK NALA,2026-07-17T16:27:30-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383812771,ear-hook-flat,Ear hook Flat,2026-07-17T16:27:30-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383714467,ear-hook-essencia,Ear Hook Essencia,2026-07-17T16:27:30-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383648931,ear-hook-brilhante,Ear Hook Brilhante,2026-07-17T16:27:29-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383583395,corrente-veneziana-masculina-prata-925,Corrente Veneziana Masculina Prata 925,2026-07-17T16:27:29-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383550627,corrente-veneziana-60-cm,Corrente Veneziana 60 cm,2026-07-17T16:27:29-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383452323,corrente-veneziana-42cm,Corrente Veneziana 42cm,2026-07-17T16:27:29-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383321251,corrente-de-signos,Corrente de Signos,2026-07-17T16:27:28-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383190179,corrente-cartier-masculina,Corrente Cartier Masculina,2026-07-17T16:27:28-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383124643,corrente-60cm-avulsa,Corrente 60cm Avulsa,2026-07-17T16:27:28-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190383026339,corrente-50cm-avulsa,Corrente 50cm Avulsa,2026-07-17T16:27:27-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382960803,corrente-42cm-avulsa,Corrente 42cm Avulsa,2026-07-17T16:27:27-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382862499,colar-zaya-flor-estrela-cravejada-prata-925,Colar Zaya Flor Estrela Cravejada Prata 925,2026-07-17T16:27:27-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382796963,colar-zara,Colar Zara,2026-07-17T16:27:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382731427,colar-tarsila-dourado,Colar Tarsila Dourado,2026-07-17T16:27:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382698659,colar-tarsila-com-corrente-veneziana-prata-925,Colar Tarsila com Corrente Veneziana PRATA 925,2026-07-17T16:27:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382633123,colar-stefany,Colar Stefany,2026-07-17T16:27:25-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190382502051,colar-simbolo-de-signos,Colar Simbolo de Signos,2026-07-17T16:27:25-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190381944995,colar-signos-p,Colar Signos P,2026-07-17T16:27:25-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190381551779,colar-signos-g,Colar Signos G,2026-07-17T16:27:24-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190381093027,colar-sheila-com-zirconias-navete-dourado,Colar Sheila com Zircônias Navete - Dourado,2026-07-17T16:27:24-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190381027491,colar-sandra-com-pingente-de-zirconias,Colar Sandra com Pingente de Zircônias,2026-07-17T16:27:24-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380994723,colar-rosa-dos-ventos,Colar Rosa Dos Ventos,2026-07-17T16:27:24-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380896419,colar-rita,Colar Rita,2026-07-17T16:27:23-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380798115,colar-pureza,Colar Pureza,2026-07-17T16:27:23-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380765347,colar-ponto-de-luz,Colar ponto de Luz,2026-07-17T16:27:23-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380667043,colar-penelope-riviera-3-mm-zirconia-redonda-com-3-garras-40cm,Colar Penelope Riviera 3 mm Zirconia Redonda com 3 garras 40CM,2026-07-17T16:27:22-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380568739,colar-paula-com-zirconia-gota-prata-925,Colar Paula com Zircônia Gota - Prata 925,2026-07-17T16:27:22-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380470435,colar-paula-com-pingente-de-zirconia-gota-dourado,Colar Paula com Pingente de Zircônia Gota - Dourado,2026-07-17T16:27:22-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380404899,colar-patua-sem-pingentes,Colar Patuá (sem pingentes),2026-07-17T16:27:21-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380339363,colar-musa,Colar Musa,2026-07-17T16:27:21-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380273827,colar-margarita,Colar Margarita,2026-07-17T16:27:21-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380208291,colar-maisa,Colar Maisa,2026-07-17T16:27:21-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380142755,colar-mae-terra,Colar Mãe Terra,2026-07-17T16:27:20-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190380077219,colar-luana,Colar Luana,2026-07-17T16:27:20-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379978915,colar-love-paris-pedra-safira,Colar Love Paris Pedra Safira,2026-07-17T16:27:20-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379913379,colar-love-paris-pedra-granada,Colar Love Paris Pedra Granada,2026-07-17T16:27:19-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379847843,colar-longo-perle,Colar Longo Perle,2026-07-17T16:27:19-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379749539,colar-lila,Colar Lila,2026-07-17T16:27:19-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379684003,colar-leonor,Colar Leonor,2026-07-17T16:27:18-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379585699,colar-julia-riviera-em-v-na-prata-925,Colar Julia Riviera em V na Prata 925,2026-07-17T16:27:18-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379552931,colar-joelma-zirconia-quadrada,Colar Joelma Zircônia Quadrada,2026-07-17T16:27:18-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379487395,colar-jane,Colar Jane,2026-07-17T16:27:17-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379454627,colar-helen,Colar Helen,2026-07-17T16:27:17-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379356323,colar-gravatinha-majeste-riveira-redonda-de-2-mm,Colar Gravatinha Majesté Riveira Redonda de 2 mm,2026-07-17T16:27:17-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379290787,colar-gravatinha-lumara-riviera-baguete-de-3-mm,Colar Gravatinha Lumara Riviera Baguete de 3 mm,2026-07-17T16:27:17-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379225251,colar-gravatinha-lua-e-estrela,Colar Gravatinha Lua e Estrela,2026-07-17T16:27:16-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379159715,colar-gravatinha-elysee-riviera-navete-de-3-mm,Colar Gravatinha Elyseé Riviera Navete de 3 mm,2026-07-17T16:27:16-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379126947,colar-geanne,Colar Geanne,2026-07-17T16:27:16-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190379028643,colar-gaia,Colar GAIA,2026-07-17T16:27:15-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378963107,colar-folie,Colar Folie,2026-07-17T16:27:15-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378864803,colar-fio-de-cetim-torcido-prata-925-fios-de-luz,Colar Fio de Cetim Torcido Prata 925  - Fios de Luz,2026-07-17T16:27:15-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378733731,colar-fio-de-cetim-torcido-dourado-fios-de-luz,Colar Fio de Cetim Torcido Dourado - Fios de Luz,2026-07-17T16:27:14-03:00,4,4,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378635427,colar-fio-de-cetim-marrom-com-ponteira-dourada,Colar Fio de Cetim Marrom com Ponteira Dourada,2026-07-17T16:27:14-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378569891,colar-eva,Colar Eva,2026-07-17T16:27:14-03:00,6,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378438819,colar-espirito-santo,Colar Espirito Santo,2026-07-17T16:27:14-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378340515,colar-emily,Colar Emily,2026-07-17T16:27:13-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378274979,colar-destino,Colar Destino,2026-07-17T16:27:13-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378209443,colar-debora,Colar Débora,2026-07-17T16:27:13-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378111139,colar-de-cetim-para-pingentes-de-click-prata-925-fios-de-luz,Colar de Cetim para Pingentes de Click Prata 925 - Fios de Luz,2026-07-17T16:27:12-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190378012835,colar-de-cetim-para-pingentes-de-click-dourado-fios-de-luz,Colar de Cetim para Pingentes de Click Dourado - Fios de Luz,2026-07-17T16:27:12-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377947299,colar-cross,Colar Cross,2026-07-17T16:27:12-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377848995,colar-cristal,Colar Cristal,2026-07-17T16:27:11-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377586851,colar-corazon,Colar Corazon,2026-07-17T16:27:11-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377521315,colar-com-pastilha-p,Colar com Pastilha P,2026-07-17T16:27:11-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377423011,colar-cintia,Colar Cintia,2026-07-17T16:27:10-03:00,8,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377259171,colar-bruna,Colar Bruna,2026-07-17T16:27:10-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377193635,colar-brille-riviera-de-4-garras-2-mm-em-prata-925,Colar Brille Riviera de 4 Garras 2 mm em Prata 925,2026-07-17T16:27:10-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377128099,colar-bel,Colar Bel,2026-07-17T16:27:10-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190377029795,colar-aventura,Colar Aventura,2026-07-17T16:27:09-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376964259,colar-aurelia,Colar Aurelia,2026-07-17T16:27:09-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376898723,colar-apolonia,Colar Apolonia,2026-07-17T16:27:09-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376734883,colar-anne,Colar Anne,2026-07-17T16:27:08-03:00,4,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376669347,colar-ana-clara,Colar Ana Clara,2026-07-17T16:27:08-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376538275,colar-choker-thaina,Colar / Choker Thaina,2026-07-17T16:27:08-03:00,4,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376407203,colar-choker-luiza,Colar / Choker Luiza,2026-07-17T16:27:07-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376341667,cluster-9-cristais-prata-925,Cluster 9 Cristais Prata 925,2026-07-17T16:27:07-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376276131,choker-vitoria,Choker Vitoria,2026-07-17T16:27:07-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376177827,choker-verde-de-cetim-com-pedra-de-vidro-verde-turmalina-prata-925-fios-de-luz,Choker Verde de Cetim com Pedra de Vidro Verde Turmalina Prata 925 - Fios de Luz,2026-07-17T16:27:06-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376112291,choker-verde-de-cetim-com-pedra-de-vidro-verde-turmalina-dourado-fios-de-luz,Choker Verde de Cetim com Pedra de Vidro Verde Turmalina Dourado - Fios de Luz,2026-07-17T16:27:06-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190376046755,choker-sonho,Choker Sonho,2026-07-17T16:27:06-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9194055368867,choker-snake-prata-925,Choker Snake Prata 925,2026-07-17T16:27:05-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375981219,choker-snake,Choker Snake,2026-07-17T16:27:05-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375915683,choker-protecao-boho-chic-pedra-natural-ametista-prata-925,Choker Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:27:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375850147,choker-protecao-boho-chic-pedra-natural-ametista-dourado,Choker Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:27:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375817379,choker-perle,Choker Perle,2026-07-17T16:27:04-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375751843,choker-paz-boho-chic-pedra-natural-opala-azul-prata-925,Choker Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:27:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375686307,choker-paz-boho-chic-pedra-natural-opala-azul-dourado,Choker Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:27:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375653539,choker-natasha-riviera-navete-de-3-mm,Choker Natasha Riviera Navete de 3 mm,2026-07-17T16:27:03-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375588003,choker-mel,Choker Mel,2026-07-17T16:27:03-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375522467,choker-marrom-de-cetim-com-pedras-de-vidro-prata-925-fios-de-luz,Choker Marrom de Cetim com Pedras de Vidro Prata 925 - Fios de Luz,2026-07-17T16:27:03-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375424163,choker-marrom-de-cetim-com-pedras-de-vidro-dourado-fios-de-luz,Choker Marrom de Cetim com Pedras de Vidro Dourado - Fios de Luz,2026-07-17T16:27:01-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375325859,choker-marrocos,Choker Marrocos,2026-07-17T16:27:01-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375260323,choker-manu,Choker Manu,2026-07-17T16:27:00-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375194787,choker-lume-riviera-redonda-de-2-mm,Choker Lume Riviera Redonda de 2 mm,2026-07-17T16:26:59-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375129251,choker-lua-e-estrela,Choker Lua e Estrela,2026-07-17T16:26:58-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190375063715,choker-lorena,Choker Lorena,2026-07-17T16:26:58-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374998179,choker-lilas-de-cetim-com-pedra-de-vidro-roxa-ametista-prata-925-fios-de-luz,Choker Lilas de Cetim com Pedra de Vidro Roxa Ametista Prata 925 - Fios de Luz,2026-07-17T16:26:57-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374932643,choker-lilas-de-cetim-com-pedra-de-vidro-roxa-ametista-dourado-fios-de-luz,Choker Lilas de Cetim com Pedra de Vidro Roxa Ametista Dourado - Fios de Luz,2026-07-17T16:26:57-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374867107,choker-lets-canutilho-com-bolinha,Choker Lets Canutilho com Bolinha,2026-07-17T16:26:56-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374801571,choker-leiyah,Choker Leiyah,2026-07-17T16:26:56-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374736035,choker-laura,Choker Laura,2026-07-17T16:26:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374670499,choker-jenni,Choker Jenni,2026-07-17T16:26:55-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374572195,choker-jaipur,Choker Jaipur,2026-07-17T16:26:55-03:00,6,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374473891,choker-greta-boho-chic-perola-natural,Choker Greta Boho Chic Perola Natural,2026-07-17T16:26:54-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374342819,choker-glamour-riviera-1-75-mm-4-garras-prata-925,"Choker Glamour Riviera 1,75 mm 4 Garras Prata 925",2026-07-17T16:26:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374277283,choker-esplendor-riviera-baguette-de-3-mm,Choker Esplendor Riviera Baguette de 3 mm,2026-07-17T16:26:53-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374244515,choker-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Choker Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:26:53-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374178979,choker-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Choker Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:26:53-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374146211,choker-duda,Choker Duda,2026-07-17T16:26:52-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190374080675,choker-dalia-boho-chic-pedra-natural-ametista,Choker Dalia Boho Chic Pedra Natural Ametista,2026-07-17T16:26:52-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373982371,choker-cristal,Choker Cristal,2026-07-17T16:26:52-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373720227,choker-cris,Choker Cris,2026-07-17T16:26:52-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373621923,choker-cordao-baiano,Choker Cordão Baiano,2026-07-17T16:26:51-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373556387,choker-coracao,Choker Coração,2026-07-17T16:26:51-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373458083,choker-clea-boho-chic-pedra-natural-angelita,Choker Clea Boho Chic Pedra Natural Angelita,2026-07-17T16:26:51-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373425315,choker-cartier,Choker Cartier,2026-07-17T16:26:50-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373327011,choker-bella,Choker Bella,2026-07-17T16:26:50-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373261475,choker-bege-de-cetim-com-pedras-de-vidro-prata-925-fios-de-luz,Choker Bege de Cetim com Pedras de Vidro Prata 925 - Fios de Luz,2026-07-17T16:26:50-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373163171,choker-bege-de-cetim-com-pedras-de-vidro-dourado-fios-de-luz,Choker Bege de Cetim com Pedras de Vidro Dourado - Fios de Luz,2026-07-17T16:26:49-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190373064867,choker-azul-de-cetim-pedra-de-vidro-azul-topazio-dourado-fios-de-luz,Choker Azul de Cetim Pedra de Vidro Azul Topázio Dourado - Fios de Luz,2026-07-17T16:26:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9190372999331,choker-azul-de-cetim-com-pedra-de-vidro-azul-topazio-prata-925-fios-de-luz,Choker Azul de Cetim com Pedra de Vidro Azul Topázio Prata 925 - Fios de Luz,2026-07-17T16:26:49-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190372933795,choker-aura-riviera-quadrada-4-garras-de-1-75-mm,"Choker Aura Riviera Quadrada  4 garras de 1,75 mm",2026-07-17T16:26:49-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9190372835491,choker-aria-boho-chic-pedra-natural-rodocrosita,Choker Aria Boho Chic Pedra Natural Rodocrosita,2026-07-17T16:26:48-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187168157859,chaveiro-de-torre-eiffel,Chaveiro de Torre Eiffel,2026-07-17T16:26:48-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187167895715,caixa-porta-joias-p-acabamento-em-couro-sintetico-marrom,Caixa Porta-Joias P – Acabamento em Couro Sintético Marrom,2026-07-17T16:26:48-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187167699107,caixa-porta-joias-m-acabamento-em-couro-sintetico-marrom,Caixa Porta-Joias M – Acabamento em Couro Sintético Marrom,2026-07-17T16:26:47-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187167535267,caixa-porta-anel-adula-acabamento-em-couro-sintetico-marrom,Caixa Porta-Anel Adüla – Acabamento em Couro Sintético Marrom,2026-07-17T16:26:47-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187167305891,caixa-porta-aneis-adula-acabamento-em-couro-sintetico-marrom,Caixa Porta-Anéis Adüla – Acabamento em Couro Sintético Marrom,2026-07-17T16:26:47-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187167109283,caixa-colecao-astros,Caixa Coleção Astros,2026-07-17T16:26:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166912675,caixa-de-presente-je-t-aime,Caixa de Presente Je T´Aime,2026-07-17T16:26:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166683299,caixa-de-presente-para-conjunto,Caixa De Presente Para Conjunto,2026-07-17T16:26:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166650531,caixa-para-presente,Caixa para presente,2026-07-17T16:26:46-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166552227,brinco-zaya-flor-estrela-cravejada-em-prata-925,Brinco Zaya Flor Estrela Cravejada em Prata 925,2026-07-17T16:26:45-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166486691,brinco-yoko,Brinco Yoko,2026-07-17T16:26:45-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166355619,brinco-yasmine,Brinco Yasmine,2026-07-17T16:26:45-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166093475,brinco-yara,Brinco Yara,2026-07-17T16:26:44-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187166027939,brinco-x,Brinco x,2026-07-17T16:26:44-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165995171,brinco-white,Brinco White,2026-07-17T16:26:44-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165896867,brinco-vanilla,Brinco Vanilla,2026-07-17T16:26:44-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165733027,brinco-vania,Brinco Vania,2026-07-17T16:26:43-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165634723,brinco-v,Brinco v,2026-07-17T16:26:43-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165569187,brinco-ursinho-baby-infantil,Brinco Ursinho baby - Infantil,2026-07-17T16:26:43-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165503651,brinco-trio-de-luz,Brinco Trio de Luz,2026-07-17T16:26:42-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165405347,brinco-triangulo-vazado,Brinco Triângulo vazado,2026-07-17T16:26:42-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165339811,brinco-soraya-coracao-cravejado-em-prata-925,Brinco Soraya Coração Cravejado em Prata 925,2026-07-17T16:26:42-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165241507,brinco-sol-baby-infantil,Brinco Sol Baby- Infantil,2026-07-17T16:26:42-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165175971,brinco-sofia-perle-baby-infantil,Brinco Sofia Perle baby - infantil,2026-07-17T16:26:41-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187165110435,brinco-simeria,Brinco Simeria,2026-07-17T16:26:41-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164913827,brinco-signos-dos-zodiacos,Brinco Signos dos Zodíacos,2026-07-17T16:26:41-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164389539,brinco-sheila-com-zirconias-navete,Brinco Sheila com Zircônias Navete,2026-07-17T16:26:40-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164291235,brinco-sandra-com-arco-de-zirconias,Brinco Sandra com Arco de Zircônias,2026-07-17T16:26:40-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164225699,brinco-sabrina,Brinco Sabrina,2026-07-17T16:26:40-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164127395,brinco-rosali-geometrico-triangulo-cravejado-em-prata-925,Brinco Rosali Geometrico Triangulo Cravejado em Prata 925,2026-07-17T16:26:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187164061859,brinco-rosa-dos-ventos,Brinco Rosa Dos Ventos,2026-07-17T16:26:39-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163963555,brinco-rara,Brinco Rara,2026-07-17T16:26:39-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163832483,brinco-rana,Brinco Rana,2026-07-17T16:26:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163734179,brinco-ponto-de-luz-prata-925,Brinco Ponto de Luz PRATA 925,2026-07-17T16:26:38-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163635875,brinco-ponto-de-luz-navete,Brinco Ponto de Luz Navete,2026-07-17T16:26:38-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163570339,brinco-ponto-de-luz-baby-infantil,Brinco Ponto de Luz baby - infantil,2026-07-17T16:26:38-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163504803,brinco-ponto-de-luz,Brinco ponto de Luz,2026-07-17T16:26:37-03:00,6,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163406499,brinco-petra,Brinco Petra,2026-07-17T16:26:37-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163308195,brinco-petit-coeur,Brinco Petit Coeur,2026-07-17T16:26:37-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163242659,brinco-perola-em-prata-925,Brinco Pérola em Prata 925,2026-07-17T16:26:36-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163144355,brinco-perle-com-zirconia,Brinco Perle com Zircônia,2026-07-17T16:26:36-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163078819,brinco-perle,Brinco Perle,2026-07-17T16:26:36-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187163013283,brinco-paula-com-zirconia-em-gota,Brinco Paula com Zircônia em Gota,2026-07-17T16:26:35-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162947747,brinco-patinha-de-zirconia,Brinco Patinha de Zirconia,2026-07-17T16:26:35-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162882211,brinco-paola,Brinco Paola,2026-07-17T16:26:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162816675,brinco-paloma,Brinco Paloma,2026-07-17T16:26:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162751139,brinco-orion-coracao-cravejado-em-prata-925,Brinco Orion Coração Cravejado em Prata 925,2026-07-17T16:26:34-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162685603,brinco-oriana,Brinco Oriana,2026-07-17T16:26:34-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162620067,brinco-olga-de-perola-baby-em-prata-925,Brinco Olga de Pérola Baby em Prata 925,2026-07-17T16:26:34-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162521763,brinco-noemie,Brinco Noemie,2026-07-17T16:26:33-03:00,10,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162325155,brinco-nadia,Brinco Nadia,2026-07-17T16:26:33-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162259619,brinco-moana,Brinco Moana,2026-07-17T16:26:33-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162128547,brinco-mirela,Brinco Mirela,2026-07-17T16:26:32-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187162030243,brinco-miranda,Brinco Miranda,2026-07-17T16:26:32-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161964707,brinco-mira-perle,Brinco Mira Perle,2026-07-17T16:26:32-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161866403,brinco-mini-triangulo-prata-925,Brinco Mini Triangulo PRATA 925,2026-07-17T16:26:32-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161800867,brinco-mini-triangulo,Brinco mini Triângulo,2026-07-17T16:26:31-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161735331,brinco-mini-trevo,Brinco mini Trevo,2026-07-17T16:26:31-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161669795,brinco-mini-quadrado-com-zirconia,Brinco Mini Quadrado com Zirconia,2026-07-17T16:26:31-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161571491,brinco-mini-quadrado,Brinco mini Quadrado,2026-07-17T16:26:30-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161473187,brinco-mini-olho-grego-liso,Brinco Mini Olho Grego Liso,2026-07-17T16:26:30-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161407651,brinco-mini-olho-grego,Brinco mini Olho Grego,2026-07-17T16:26:30-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161309347,brinco-mini-mao-de-fatima,Brinco Mini Mão de Fatima,2026-07-17T16:26:29-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161243811,brinco-mini-lua-de-zirconia,Brinco Mini Lua de Zirconia,2026-07-17T16:26:29-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161145507,brinco-mini-lua,Brinco mini Lua,2026-07-17T16:26:29-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187161047203,brinco-mini-juliana-de-zirconia,Brinco Mini Juliana de Zirconia,2026-07-17T16:26:28-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160916131,brinco-mini-infinito-com-zirconia,Brinco Mini Infinito com Zirconia,2026-07-17T16:26:28-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160850595,brinco-mini-gota-vazada,Brinco Mini Gota Vazada,2026-07-17T16:26:28-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160752291,brinco-mini-gota-de-zirconia,Brinco Mini Gota de Zirconia,2026-07-17T16:26:27-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160588451,brinco-mini-fra-de-zirconia,Brinco Mini Fra de Zirconia,2026-07-17T16:26:27-03:00,6,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160391843,brinco-mini-fra,Brinco mini Fra,2026-07-17T16:26:27-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160293539,brinco-mini-estrela,Brinco mini estrela,2026-07-17T16:26:26-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160228003,brinco-mini-coracao-vazado-de-zirconia,Brinco Mini Coração Vazado de Zirconia,2026-07-17T16:26:26-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160096931,brinco-mini-coracao-vazado,Brinco Mini Coração Vazado,2026-07-17T16:26:26-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187160031395,brinco-mini-coracao-prata-925,Brinco Mini Coração PRATA 925,2026-07-17T16:26:25-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159965859,brinco-mini-coracao-ponto-de-luz,Brinco Mini Coração Ponto de Luz,2026-07-17T16:26:25-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159867555,brinco-mini-coracao,Brinco mini coração,2026-07-17T16:26:25-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159769251,brinco-mila-ponto-de-luz-quadrado-com-zirconia,Brinco Mila Ponto de Luz Quadrado com Zirconia,2026-07-17T16:26:25-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159638179,brinco-mia-baby-infantil,Brinco Mia Baby- Infantil,2026-07-17T16:26:24-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159539875,brinco-meire-de-ramos-cravejados,Brinco Meire de ramos cravejados,2026-07-17T16:26:24-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159474339,brinco-megan-ponto-de-luz-grande-8mm-com-zirconia-redonda-na-prata-925,Brinco Megan Ponto de Luz Grande 8mm com Zirconia Redonda na Prata 925,2026-07-17T16:26:24-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159376035,brinco-marta-com-zirconias-dourado,Brinco Marta com Zircônias - Dourado,2026-07-17T16:26:23-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159343267,brinco-mari-de-perola-baby-em-prata-925,Brinco Mari de Pérola Baby em Prata 925,2026-07-17T16:26:23-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159277731,brinco-margo-geometrico-redondo-cravejado-em-prata-925,Brinco Margo Geometrico Redondo Cravejado em Prata 925,2026-07-17T16:26:23-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159212195,brinco-mao-de-fatima-cravejado,Brinco Mão de Fatima Cravejado,2026-07-17T16:26:22-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159081123,brinco-malika-baby-infantil,Brinco Malika baby - infantil,2026-07-17T16:26:22-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187159015587,brinco-malika,Brinco Malika,2026-07-17T16:26:22-03:00,6,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158851747,brinco-maju-ponto-de-luz-com-zirconia-redonda-na-prata-925,Brinco Maju Ponto de Luz com Zirconia Redonda na Prata 925,2026-07-17T16:26:22-03:00,4,4,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158589603,brinco-maisa,Brinco Maisa,2026-07-17T16:26:21-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158524067,brinco-lyra,Brinco Lyra,2026-07-17T16:26:21-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158491299,brinco-luma-perle,Brinco Luma Perle,2026-07-17T16:26:21-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158392995,brinco-lucy,Brinco Lucy,2026-07-17T16:26:20-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158327459,brinco-lua-de-zirconia,Brinco Lua de Zircônia,2026-07-17T16:26:20-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158229155,brinco-love-cravejado,Brinco Love Cravejado,2026-07-17T16:26:20-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187158130851,brinco-love,Brinco Love,2026-07-17T16:26:19-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187157967011,brinco-longo-perle,Brinco longo Perle,2026-07-17T16:26:19-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187157901475,brinco-longo-lua,Brinco longo Lua,2026-07-17T16:26:19-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187157803171,brinco-longo-eva,Brinco Longo Eva,2026-07-17T16:26:18-03:00,6,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9187157442723,brinco-longo-estrela,Brinco Longo Estrela,2026-07-17T16:26:18-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187157311651,brinco-longo-cristal,Brinco Longo Cristal,2026-07-17T16:26:18-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156983971,brinco-longo-aline,Brinco Longo Aline,2026-07-17T16:26:17-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156885667,brinco-livia-com-microzirconias-dourado,Brinco Livia com Microzircônias - Dourado,2026-07-17T16:26:17-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156820131,brinco-linda-borboleta,Brinco Linda Borboleta,2026-07-17T16:26:17-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156754595,brinco-liberte,Brinco Liberté,2026-07-17T16:26:16-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156590755,brinco-leonor,Brinco Leonor,2026-07-17T16:26:16-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156525219,brinco-lara,Brinco Lara,2026-07-17T16:26:16-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156426915,brinco-lana-de-bolinha-baby-em-prata-925,Brinco Lana de Bolinha Baby em Prata 925,2026-07-17T16:26:15-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156361379,brinco-kenia-baby-dourado,Brinco Kenia Baby Dourado,2026-07-17T16:26:15-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156295843,brinco-karina,Brinco Karina,2026-07-17T16:26:15-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156230307,brinco-juliana-de-zirconia,Brinco Juliana de Zircônia,2026-07-17T16:26:14-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156132003,brinco-juliana,Brinco Juliana,2026-07-17T16:26:14-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187156066467,brinco-jojo-de-bolinha-em-prata-925,Brinco Jojo de Bolinha em Prata 925,2026-07-17T16:26:14-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155935395,brinco-joaninha-baby-infantil,Brinco Joaninha Baby - Infantil,2026-07-17T16:26:14-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155837091,brinco-jaque,Brinco Jaque,2026-07-17T16:26:13-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155771555,brinco-janaina,Brinco Janaína,2026-07-17T16:26:13-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155673251,brinco-iza-oval-de-zirconia,Brinco Iza Oval de Zircônia,2026-07-17T16:26:13-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155574947,brinco-ivy-prata-925,Brinco Ivy Prata 925,2026-07-17T16:26:12-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155542179,brinco-ivy-dourado,Brinco Ivy Dourado,2026-07-17T16:26:12-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155476643,brinco-heart,Brinco Heart,2026-07-17T16:26:12-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155378339,brinco-gota-vazada,Brinco Gota vazada,2026-07-17T16:26:12-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155280035,brinco-gota,Brinco Gota,2026-07-17T16:26:11-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155181731,brinco-gisele,Brinco Gisele,2026-07-17T16:26:11-03:00,6,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187155017891,brinco-gaia,Brinco Gaia,2026-07-17T16:26:11-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154886819,brinco-gabi-de-bolinhas,Brinco Gabi de bolinhas,2026-07-17T16:26:10-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154690211,brinco-fra-de-zirconia-gg,Brinco Fra de Zircônia GG,2026-07-17T16:26:10-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154624675,brinco-fra-com-ponto-de-luz,Brinco Fra com Ponto de Luz,2026-07-17T16:26:10-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154526371,brinco-fra,Brinco Fra,2026-07-17T16:26:09-03:00,3,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154460835,brinco-folie,Brinco Folie,2026-07-17T16:26:09-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154362531,brinco-floresca,Brinco Floresça,2026-07-17T16:26:09-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187154034851,brinco-fleur,Brinco Fleur,2026-07-17T16:26:08-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153936547,brinco-felicia,Brinco Felicia,2026-07-17T16:26:08-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153871011,brinco-evelin-baby-prata-925,Brinco Evelin Baby Prata 925,2026-07-17T16:26:08-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153838243,brinco-evelin-baby-dourado,Brinco Evelin Baby Dourado,2026-07-17T16:26:07-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153739939,brinco-estrela-de-zirconia,Brinco Estrela de Zircônia,2026-07-17T16:26:07-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153674403,brinco-erica,Brinco Erica,2026-07-17T16:26:07-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153576099,brinco-elle-riviera-4-garras-1-75mm,"Brinco Elle Riviera 4 garras 1,75mm",2026-07-17T16:26:06-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153510563,brinco-eduarda-coracao-fixo-com-borda-cravejado-em-prata-925,Brinco Eduarda Coração fixo com Borda Cravejado em Prata 925,2026-07-17T16:26:06-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153445027,brinco-edna-com-zirconia-rosa,Brinco Edna com Zircônia Rosa,2026-07-17T16:26:06-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153379491,brinco-earline-protecao-boho-chic-pedra-natural-ametista-prata-925,Brinco Earline Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:26:06-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153313955,brinco-earline-protecao-boho-chic-pedra-natural-ametista-dourado,Brinco Earline Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:26:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153281187,brinco-earline-paz-boho-chic-pedra-natural-opala-azul-prata-925,Brinco Earline Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:26:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153182883,brinco-earline-paz-boho-chic-pedra-natural-opala-azul-dourado,Brinco Earline Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:26:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153117347,brinco-earline-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Brinco Earline Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:26:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187153084579,brinco-earline-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Brinco Earline Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:26:04-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152986275,brinco-earline-aika-boho-chic-pedra-natural-granada-vermelha-dourado,Brinco Earline Aika Boho Chic Pedra Natural Granada Vermelha Dourado,2026-07-17T16:26:04-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152920739,brinco-earcuff-flor-de-luz,Brinco Earcuff Flor de Luz,2026-07-17T16:26:03-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152822435,brinco-earcuff-cristina,Brinco Earcuff Cristina,2026-07-17T16:26:03-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152724131,brinco-earcuff-brilho,Brinco Earcuff Brilho,2026-07-17T16:26:03-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152625827,brinco-earcuff-beatriz,Brinco Earcuff Beatriz,2026-07-17T16:26:03-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152560291,brinco-earcuff-barbara,Brinco Earcuff Barbara,2026-07-17T16:26:02-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152461987,brinco-ear-hook-strass,Brinco Ear Hook Strass,2026-07-17T16:26:02-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152429219,brinco-ear-hook-ponto-de-luz,Brinco Ear Hook Ponto de Luz,2026-07-17T16:26:02-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152363683,brinco-ear-hook-liso,Brinco Ear Hook Liso,2026-07-17T16:26:01-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152265379,brinco-drop,Brinco Drop,2026-07-17T16:26:01-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152167075,brinco-douce,Brinco Douce,2026-07-17T16:26:00-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152101539,brinco-dot,Brinco Dot,2026-07-17T16:26:00-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187152003235,brinco-divina-nossa-senhora-aparecida-dourado,Brinco Divina Nossa Senhora Aparecida - Dourado,2026-07-17T16:26:00-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151937699,brinco-diva-gota-cravejada,Brinco Diva gota cravejada,2026-07-17T16:26:00-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151872163,brinco-de-raio,Brinco de Raio,2026-07-17T16:25:59-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151773859,brinco-de-patinha,Brinco de Patinha,2026-07-17T16:25:59-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151642787,brinco-de-cupido,Brinco de Cupido,2026-07-17T16:25:59-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151544483,brinco-danuza-articulado-com-zirconia-redonda,Brinco Danuza articulado com zircônia redonda,2026-07-17T16:25:58-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151446179,brinco-dani,Brinco Dani,2026-07-17T16:25:58-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151413411,brinco-cristal,Brinco Cristal,2026-07-17T16:25:58-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151184035,brinco-cris,Brinco Cris,2026-07-17T16:25:57-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151085731,brinco-cora-baby-infantil,Brinco Cora Baby - Infantil,2026-07-17T16:25:57-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187151020195,brinco-com-pedra-de-vidro-verde-turmalina-prata-925-fios-de-luz,Brinco com Pedra de Vidro Verde Turmalina Prata 925 - Fios de Luz,2026-07-17T16:25:57-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150921891,brinco-com-pedra-de-vidro-verde-turmalina-dourado-fios-de-luz,Brinco com Pedra de Vidro Verde Turmalina Dourado - Fios de Luz,2026-07-17T16:25:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150889123,brinco-com-pedra-de-vidro-roxa-ametista-prata-925-fios-de-luz,Brinco com Pedra de Vidro Roxa Ametista Prata 925 - Fios de Luz,2026-07-17T16:25:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150790819,brinco-com-pedra-de-vidro-roxa-ametista-dourado-fios-de-luz,Brinco com Pedra de Vidro Roxa Ametista Dourado - Fios de Luz,2026-07-17T16:25:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150725283,brinco-com-pedra-de-vidro-azul-topazio-prata-925-fios-de-luz,Brinco com Pedra de Vidro Azul Topázio Prata 925 - Fios de Luz,2026-07-17T16:25:56-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150659747,brinco-com-pedra-de-vidro-azul-topazio-dourado-fios-de-luz,Brinco com Pedra de Vidro Azul Topázio Dourado - Fios de Luz,2026-07-17T16:25:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150561443,brinco-cleo-riviera-baguette,Brinco Cleo Riviera baguette,2026-07-17T16:25:55-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150495907,brinco-clau,Brinco Clau,2026-07-17T16:25:55-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150397603,brinco-clara,Brinco Clara,2026-07-17T16:25:54-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150299299,brinco-clair-perle,Brinco Clair Perle,2026-07-17T16:25:54-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150200995,brinco-cintilante,Brinco Cintilante,2026-07-17T16:25:54-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187150069923,brinco-cherie,Brinco Cherie,2026-07-17T16:25:53-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149971619,brinco-celeste,Brinco Celeste,2026-07-17T16:25:53-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149873315,brinco-cecilia-baby-infantil,Brinco Cecilia Baby- Infantil,2026-07-17T16:25:53-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149775011,brinco-carmen,Brinco Carmen,2026-07-17T16:25:52-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149676707,brinco-cacto,Brinco Cacto,2026-07-17T16:25:52-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149611171,brinco-brisa-prata-925,Brinco Brisa Prata 925,2026-07-17T16:25:52-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149545635,brinco-brisa-dourado,Brinco Brisa Dourado,2026-07-17T16:25:52-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149447331,brinco-brisa-baby-prata-925,Brinco Brisa Baby Prata 925,2026-07-17T16:25:51-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149414563,brinco-brisa-baby-dourado,Brinco Brisa Baby Dourado,2026-07-17T16:25:51-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149349027,brinco-branca,Brinco Branca,2026-07-17T16:25:51-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149250723,brinco-borboleta-baby-infantil,Brinco Borboleta baby - Infantil,2026-07-17T16:25:50-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187149152419,brinco-baby-unicornio-dourado,Brinco Baby Unicórnio Dourado,2026-07-17T16:25:50-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148955811,brinco-baby-perle,Brinco Baby Perle,2026-07-17T16:25:50-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148890275,brinco-baby-orquidea-flora-dourado,Brinco Baby Orquídea Flora Dourado,2026-07-17T16:25:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148824739,brinco-baby-abelha-dourado,Brinco Baby Abelha Dourado,2026-07-17T16:25:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148726435,brinco-aya-perle,Brinco Aya Perle,2026-07-17T16:25:49-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148628131,brinco-aviao,Brinco Avião,2026-07-17T16:25:49-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148529827,brinco-ariel-de-zirconia-redonda-cravejada,Brinco Ariel de Zircônia Redonda Cravejada,2026-07-17T16:25:48-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148464291,brinco-ariane-com-tres-zirconias-dourado,Brinco Ariane com Três Zircônias -  Dourado,2026-07-17T16:25:48-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148431523,brinco-areia,Brinco Areia,2026-07-17T16:25:48-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148365987,brinco-apolonia,Brinco Apolonia,2026-07-17T16:25:47-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148267683,brinco-andy,Brinco Andy,2026-07-17T16:25:47-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148103843,brinco-analia-com-zirconia-oval-prata-925,Brinco Analia com Zircônia Oval - Prata 925,2026-07-17T16:25:47-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187148038307,brinco-amora-perle-baby-infantil,Brinco Amora Perle baby - Infantil,2026-07-17T16:25:46-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147972771,brinco-amelie-geometrico-quadradro-cravejado-em-prata-925,Brinco Amelie Geometrico Quadradro Cravejado em Prata 925,2026-07-17T16:25:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147940003,brinco-alexa,Brinco Alexa,2026-07-17T16:25:46-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147841699,brinco-akira-com-duas-zirconias,Brinco Akira com Duas Zircônias,2026-07-17T16:25:46-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147776163,brinco-agape,Brinco Agape,2026-07-17T16:25:45-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147645091,brinco-adore,Brinco Adore,2026-07-17T16:25:45-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147514019,bracelete-vivi,Bracelete Vivi,2026-07-17T16:25:45-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147415715,bracelete-sunshine,Bracelete Sunshine,2026-07-17T16:25:44-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147284643,bracelete-protecao-boho-chic-pedra-natural-ametista-prata-925,Bracelete Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:25:44-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147219107,bracelete-protecao-boho-chic-pedra-natural-ametista-dourado,Bracelete Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:25:44-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147153571,bracelete-paz-boho-chic-pedra-natural-opala-azul-prata-925,Bracelete Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:25:43-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147088035,bracelete-paz-boho-chic-pedra-natural-opala-azul-dourado,Bracelete Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:25:43-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187147055267,bracelete-michele,Bracelete Michele,2026-07-17T16:25:43-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146956963,bracelete-liso,Bracelete Liso,2026-07-17T16:25:42-03:00,4,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146793123,bracelete-lea,Bracelete Lea,2026-07-17T16:25:42-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146629283,bracelete-ines,Bracelete Ines,2026-07-17T16:25:42-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146530979,bracelete-floresca,Bracelete Floresça,2026-07-17T16:25:42-03:00,6,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146399907,bracelete-flavia,Bracelete Flávia,2026-07-17T16:25:41-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146301603,bracelete-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Bracelete Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:25:41-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146268835,bracelete-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Bracelete Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:25:41-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146170531,bracelete-aika-boho-chic-pedra-natural-granada-vermelha-prata-925,Bracelete Aika Boho Chic Pedra Natural Granada Vermelha Prata 925,2026-07-17T16:25:40-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146137763,bracelete-aika-boho-chic-pedra-natural-granada-vermelha-dourado,Bracelete Aika Boho Chic Pedra Natural Granada Vermelha Dourado,2026-07-17T16:25:40-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146104995,bolinha-avulsa,Bolinha Avulsa,2026-07-17T16:25:40-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187146006691,argola-virginia,Argola Virginia,2026-07-17T16:25:39-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145908387,argola-vicki,Argola Vicki,2026-07-17T16:25:39-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145842851,argola-valentina,Argola Valentina,2026-07-17T16:25:39-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145744547,argola-unic,Argola Unic,2026-07-17T16:25:39-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145679011,argola-tranca,Argola Trança,2026-07-17T16:25:38-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145580707,argola-thaila,Argola Thaila,2026-07-17T16:25:38-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145449635,argola-square,ARGOLA SQUARE,2026-07-17T16:25:38-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145416867,argola-soleil,Argola Soleil,2026-07-17T16:25:37-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145253027,argola-segmento-articulado-lisa,Argola Segmento Articulado Lisa,2026-07-17T16:25:37-03:00,8,4,NAO_CONFERIDO,NAO_CONFERIDOS
+9187145056419,argola-segmento-articulado-com-cristais,Argola Segmento Articulado com Cristais,2026-07-17T16:25:37-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144990883,argola-rafaela,Argola Rafaela,2026-07-17T16:25:36-03:00,8,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144761507,argola-ponto-de-luz,Argola ponto de Luz,2026-07-17T16:25:36-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144663203,argola-perle,Argola Perle,2026-07-17T16:25:36-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144630435,argola-olho-grego,Argola Olho Grego,2026-07-17T16:25:36-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144532131,argola-nora,Argola Nora,2026-07-17T16:25:35-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144433827,argola-nina,Argola Nina,2026-07-17T16:25:35-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144335523,argola-nel,Argola Nel,2026-07-17T16:25:35-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144269987,argola-monique-com-zirconias,Argola Monique com Zircônias,2026-07-17T16:25:34-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144171683,argola-mao-de-fatima,Argola mão de Fátima,2026-07-17T16:25:34-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144106147,argola-lua,Argola Lua,2026-07-17T16:25:34-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187144007843,argola-larissa,Argola Larissa,2026-07-17T16:25:33-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143975075,argola-laisa,ARGOLA LAISA,2026-07-17T16:25:33-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143844003,argola-laila,Argola Laila,2026-07-17T16:25:33-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143745699,argola-keith,Argola Keith,2026-07-17T16:25:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143680163,argola-kaya,Argola Kaya,2026-07-17T16:25:32-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143549091,argola-junia,Argola Junia,2026-07-17T16:25:32-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143319715,argola-helix-ultrafino-cravejada-retangulo,Argola Hélix Ultrafino Cravejada Retângulo,2026-07-17T16:25:32-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143254179,argola-helix-ultrafino-com-zirconia-lateral,Argola Hélix Ultrafino com Zircônia Lateral,2026-07-17T16:25:31-03:00,4,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143155875,argola-helena,Argola Helena,2026-07-17T16:25:31-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187143090339,argola-giovanna,Argola Giovanna,2026-07-17T16:25:31-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187142959267,argola-gabi,Argola Gabi,2026-07-17T16:25:30-03:00,9,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9187142664355,argola-floresca,Argola Floresça,2026-07-17T16:25:30-03:00,18,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187142008995,argola-fernanda,Argola Fernanda,2026-07-17T16:25:30-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187142795427,argola-estrela,Argola Estrela,2026-07-17T16:25:29-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187141943459,argola-eva,Argola Eva,2026-07-17T16:25:29-03:00,3,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187141746851,argola-dora,Argola Dora,2026-07-17T16:25:29-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187141648547,argola-cristal-p,Argola Cristal P,2026-07-17T16:25:29-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187141255331,argola-cristal-m,Argola Cristal M,2026-07-17T16:25:28-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140993187,argola-coracao,Argola Coração,2026-07-17T16:25:28-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140894883,argola-conch-lisa,Argola Conch Lisa,2026-07-17T16:25:28-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140829347,argola-charlote,Argola Charlote,2026-07-17T16:25:27-03:00,6,4,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140599971,argola-chamone,Argola Chamone,2026-07-17T16:25:27-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140501667,argola-cecilia,Argola Cecilia,2026-07-17T16:25:27-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140436131,argola-brenda,Argola Brenda,2026-07-17T16:25:26-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140305059,argola-bia,Argola Bia,2026-07-17T16:25:26-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140173987,argola-aninha,Argola Aninha,2026-07-17T16:25:26-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140108451,argola-amelie-jade-rubi-love-paris-dourado,Argola Amélie Jade Rubi Love Paris Dourado,2026-07-17T16:25:25-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187140010147,argola-amelie-calcedonia-love-paris-dourado,Argola Amélie Calcedonia Love Paris Dourado,2026-07-17T16:25:25-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187139977379,argola-amelie-amazonita-love-paris-dourado,Argola Amélie Amazonita Love Paris Dourado,2026-07-17T16:25:25-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9187139911843,argola-alice,Argola Alice,2026-07-17T16:25:25-03:00,4,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9187139813539,argola-afrodite,Argola Afrodite,2026-07-17T16:25:24-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9186956214435,anel-zahara,Anel Zahara,2026-07-17T16:25:24-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186955755683,anel-wendy,Anel Wendy,2026-07-17T16:25:24-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186955526307,anel-valeria,Anel Valéria,2026-07-17T16:25:23-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186955264163,anel-unic,Anel Unic,2026-07-17T16:25:23-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186955002019,anel-torcido,Anel Torcido,2026-07-17T16:25:23-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186954674339,anel-thilda,Anel Thilda,2026-07-17T16:25:22-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186954543267,anel-suzane-com-zirconias,Anel Suzane com Zirconias,2026-07-17T16:25:22-03:00,14,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186954477731,anel-special,Anel Special,2026-07-17T16:25:22-03:00,12,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186954281123,anel-solitario-magnolia-quadrado-dourado,Anel Solitário Magnólia Quadrado Dourado,2026-07-17T16:25:22-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186954150051,anel-solitario,Anel Solitário,2026-07-17T16:25:21-03:00,14,13,NAO_CONFERIDO,NAO_CONFERIDOS
+9186953920675,anel-signos-virgem,Anel Signos - Virgem,2026-07-17T16:25:21-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186953691299,anel-signos-touro,Anel Signos - Touro,2026-07-17T16:25:21-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186953461923,anel-signos-sagitario,Anel Signos - Sagitário,2026-07-17T16:25:20-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186953199779,anel-signos-peixes,Anel Signos - Peixes,2026-07-17T16:25:20-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186952970403,anel-signos-libra,Anel Signos - Libra,2026-07-17T16:25:19-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186952741027,anel-signos-leao,Anel Signos - Leão,2026-07-17T16:25:19-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186952478883,anel-signos-gemeos,Anel Signos - Gêmeos,2026-07-17T16:25:19-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186952249507,anel-signos-escorpiao,Anel Signos - Escorpião,2026-07-17T16:25:19-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186951954595,anel-signos-capricornio,Anel Signos - Capricórnio,2026-07-17T16:25:18-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186951692451,anel-signos-cancer,Anel Signos - Câncer,2026-07-17T16:25:18-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186951430307,anel-signos-aries,Anel Signos - Áries,2026-07-17T16:25:18-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186951135395,anel-signos-aquario,Anel Signos - Aquário,2026-07-17T16:25:17-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950938787,anel-shirlei-com-zirconias-prata-925,Anel Shirlei com Zircônias - Prata 925,2026-07-17T16:25:17-03:00,6,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950873251,anel-shine,Anel Shine,2026-07-17T16:25:17-03:00,13,13,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950643875,anel-serena,Anel Serena,2026-07-17T16:25:16-03:00,14,11,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950447267,anel-rubia-com-zirconias,Anel Rubia com Zircônias,2026-07-17T16:25:16-03:00,14,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950381731,anel-rosa-dos-ventos,Anel Rosa Dos Ventos,2026-07-17T16:25:16-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186950217891,anel-renata,Anel Renata,2026-07-17T16:25:15-03:00,16,15,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949955747,anel-rejane-com-zirconias-prata-925,Anel Rejane com Zircônias – Prata 925,2026-07-17T16:25:15-03:00,6,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949890211,anel-rayanne,Anel Rayanne,2026-07-17T16:25:15-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949660835,anel-raissa,Anel Raissa,2026-07-17T16:25:14-03:00,12,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949398691,anel-quadrado-com-zirconia,Anel Quadrado com Zirconia,2026-07-17T16:25:14-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949169315,anel-protecao-boho-chic-pedra-natural-ametista-prata-925,Anel Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:25:14-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949103779,anel-protecao-boho-chic-pedra-natural-ametista-dourado,Anel Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:25:14-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186949071011,anel-poliana,Anel Poliana,2026-07-17T16:25:13-03:00,8,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948808867,anel-perle,Anel Perle,2026-07-17T16:25:13-03:00,9,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948645027,anel-paz-boho-chic-pedra-natural-opala-azul-prata-925,Anel Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:25:13-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948612259,anel-paz-boho-chic-pedra-natural-opala-azul-dourado,Anel Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:25:12-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948546723,anel-ondinha,Anel Ondinha,2026-07-17T16:25:12-03:00,12,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948219043,anel-olho-grego,Anel Olho Grego,2026-07-17T16:25:12-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186948022435,anel-odete-com-zirconias-cravejadas-dourado,Anel Odete com Zircônias Cravejadas - Dourado,2026-07-17T16:25:12-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186947956899,anel-no,Anel Nó,2026-07-17T16:25:11-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186947629219,anel-nicole,Anel Nicole,2026-07-17T16:25:11-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186947498147,anel-natalia,Anel Natalia,2026-07-17T16:25:11-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186947334307,anel-nara,Anel Nara,2026-07-17T16:25:10-03:00,17,15,NAO_CONFERIDO,NAO_CONFERIDOS
+9186946973859,anel-nair,Anel Nair,2026-07-17T16:25:10-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186946711715,anel-monaco,Anel Mônaco,2026-07-17T16:25:10-03:00,12,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186946515107,anel-miriam-com-zirconias,Anel Miriam com Zircônias,2026-07-17T16:25:09-03:00,14,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186946449571,anel-minimal,Anel Minimal,2026-07-17T16:25:09-03:00,14,11,NAO_CONFERIDO,NAO_CONFERIDOS
+9186946220195,anel-mini-lua,Anel Mini Lua,2026-07-17T16:25:09-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945958051,anel-mini-fra,Anel Mini Fra,2026-07-17T16:25:08-03:00,18,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945728675,anel-mini-estrela,Anel Mini Estrela,2026-07-17T16:25:08-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945532067,anel-mini-coracao,Anel Mini Coração,2026-07-17T16:25:08-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945335459,anel-melodia-martelado-prata-925,Anel Melodia Martelado Prata 925,2026-07-17T16:25:07-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945269923,anel-melodia-martelado-dourado,Anel Melodia Martelado Dourado,2026-07-17T16:25:07-03:00,7,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9186945237155,anel-marseille,Anel marseille,2026-07-17T16:25:07-03:00,27,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186944745635,anel-marly-com-zirconia-retangular,Anel Marly com Zircônia Retangular,2026-07-17T16:25:06-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186944712867,anel-mariana,Anel Mariana,2026-07-17T16:25:06-03:00,16,13,NAO_CONFERIDO,NAO_CONFERIDOS
+9186944352419,anel-mara-com-zirconia-gota,Anel Mara com Zircônia Gota,2026-07-17T16:25:06-03:00,14,13,NAO_CONFERIDO,NAO_CONFERIDOS
+9186944319651,anel-maite,Anel Maitê,2026-07-17T16:25:05-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943959203,anel-lux,Anel Lux,2026-07-17T16:25:05-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943729827,anel-lucia,Anel Lucia,2026-07-17T16:25:05-03:00,7,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943500451,anel-lua-de-zirconia,Anel Lua de Zircônia,2026-07-17T16:25:05-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943369379,anel-louise,Anel Louise,2026-07-17T16:25:04-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943074467,anel-layra-com-microzirconia-prata-925,Anel Layra com Microzircônia - Prata 925,2026-07-17T16:25:04-03:00,6,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186943041699,anel-lais,Anel Lais,2026-07-17T16:25:04-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186942714019,anel-kiara,Anel Kiara,2026-07-17T16:25:03-03:00,14,11,NAO_CONFERIDO,NAO_CONFERIDOS
+9186942451875,anel-kelly-com-zirconias,Anel Kelly com Zircônias,2026-07-17T16:25:03-03:00,14,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186942419107,anel-juliette,Anel Juliette,2026-07-17T16:25:03-03:00,7,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186942288035,anel-jolie,Anel Jolie,2026-07-17T16:25:02-03:00,7,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186942058659,anel-jasmine,Anel Jasmine,2026-07-17T16:25:02-03:00,16,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186941763747,anel-isis,Anel Isis,2026-07-17T16:25:02-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186958311587,anel-hanna,Anel Hanna,2026-07-17T16:25:01-03:00,16,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186941501603,anel-heloisa,Anel Heloisa,2026-07-17T16:25:01-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186941141155,anel-grazi,Anel Grazi,2026-07-17T16:25:01-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186940780707,anel-fran-com-zirconias-ovais,Anel Fran com Zircônias Ovais,2026-07-17T16:25:00-03:00,14,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186940747939,anel-fra-duplo,Anel Fra Duplo,2026-07-17T16:25:00-03:00,16,14,NAO_CONFERIDO,NAO_CONFERIDOS
+9186940518563,anel-folie,Anel Folie,2026-07-17T16:25:00-03:00,16,16,NAO_CONFERIDO,NAO_CONFERIDOS
+9186940256419,anel-fabi,Anel Fabi,2026-07-17T16:24:59-03:00,14,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186939928739,anel-explora,Anel Explora,2026-07-17T16:24:59-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186939764899,anel-eva-prata,Anel Eva Prata,2026-07-17T16:24:59-03:00,21,13,NAO_CONFERIDO,NAO_CONFERIDOS
+9186939338915,anel-eva-dourado,Anel Eva Dourado,2026-07-17T16:24:58-03:00,21,17,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938880163,anel-essencia,Anel Essência,2026-07-17T16:24:58-03:00,8,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938683555,anel-espiritualidade-boho-chic-pedra-natural-rodocrosita-prata-925,Anel Espiritualidade Boho Chic Pedra Natural Rodocrosita Prata 925,2026-07-17T16:24:58-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938618019,anel-espiritualidade-boho-chic-pedra-natural-rodocrosita-dourado,Anel Espiritualidade Boho Chic Pedra Natural Rodocrosita Dourado,2026-07-17T16:24:58-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938585251,anel-emma,Anel Emma,2026-07-17T16:24:57-03:00,14,11,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938224803,anel-eliete-com-microzirconias-prata-925,Anel Eliete com Microzircônias – Prata 925,2026-07-17T16:24:57-03:00,7,7,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938159267,anel-edna-com-zirconia-rosa,Anel Edna com Zircônia Rosa,2026-07-17T16:24:57-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186938126499,anel-dois-pontos-de-luz,Anel Dois Pontos de Luz,2026-07-17T16:24:56-03:00,16,12,NAO_CONFERIDO,NAO_CONFERIDOS
+9186937864355,anel-diana,Anel Diana,2026-07-17T16:24:56-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186937471139,anel-dafne,Anel Dafne,2026-07-17T16:24:56-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186937143459,anel-croissant,Anel Croissant,2026-07-17T16:24:55-03:00,7,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186936979619,anel-cristal-prata-925,Anel Cristal Prata 925,2026-07-17T16:24:55-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186936225955,anel-cristal-dourado,Anel Cristal Dourado,2026-07-17T16:24:55-03:00,24,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186935701667,anel-clarisse,Anel Clarisse,2026-07-17T16:24:54-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186935275683,anel-cigano,Anel Cigano,2026-07-17T16:24:54-03:00,14,10,NAO_CONFERIDO,NAO_CONFERIDOS
+9186934948003,anel-cercle,Anel Cercle,2026-07-17T16:24:54-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186934718627,anel-celeste,Anel Celeste,2026-07-17T16:24:53-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186934522019,anel-carol,Anel Carol,2026-07-17T16:24:53-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186934259875,anel-carmen,Anel Carmen,2026-07-17T16:24:53-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186934128803,anel-belle,Anel Belle,2026-07-17T16:24:52-03:00,7,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186933964963,anel-aurora,Anel Aurora,2026-07-17T16:24:52-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9186933801123,anel-antonela-com-zirconias-prata-925,Anel Antonela com Zircônias - Prata 925,2026-07-17T16:24:52-03:00,6,5,NAO_CONFERIDO,NAO_CONFERIDOS
+9186933768355,anel-anna,Anel Anna,2026-07-17T16:24:52-03:00,8,6,NAO_CONFERIDO,NAO_CONFERIDOS
+9186933604515,anel-amelia,Anel Amelia,2026-07-17T16:24:51-03:00,14,8,NAO_CONFERIDO,NAO_CONFERIDOS
+9186913058979,anel-amara-de-moissanite-prata-925,Anel Amara  de Moissanite Prata 925,2026-07-17T16:24:51-03:00,8,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9180491645091,anel-akemi,Anel Akemi,2026-07-17T16:24:51-03:00,14,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197270761635,pulseira-snake-prata-925,Pulseira Snake Prata 925,2026-07-17T16:18:13-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197261422755,vale-presente,Vale Presente,2026-07-17T16:18:13-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197261258915,tornozeleira-jenni,Tornozeleira Jenni,2026-07-17T16:18:12-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197261193379,tornozeleira-duda-prata-925,Tornozeleira Duda Prata 925,2026-07-17T16:18:12-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197261095075,relicario-oval-momentos,Relicario Oval Momentos,2026-07-17T16:18:12-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260964003,relicario-de-coracao-eternite,Relicario de coração ETERNITE,2026-07-17T16:18:11-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260832931,pulseira-verde-de-cetim-com-pedra-de-vidro-verde-turmalina-prata-925-fios-de-luz,Pulseira Verde de Cetim com Pedra de Vidro Verde Turmalina Prata 925 - Fios de Luz,2026-07-17T16:18:11-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260767395,pulseira-verde-de-cetim-com-pedra-de-vidro-verde-turmalina-dourado-fios-de-luz,Pulseira Verde de Cetim com Pedra de Vidro Verde Turmalina Dourado - Fios de Luz,2026-07-17T16:18:11-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260636323,pulseira-vanilla,Pulseira Vanilla,2026-07-17T16:18:10-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260570787,pulseira-trevo,Pulseira Trevo,2026-07-17T16:18:10-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260472483,pulseira-thaina,Pulseira Thaina,2026-07-17T16:18:10-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260406947,pulseira-terra,Pulseira Terra,2026-07-17T16:18:09-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260308643,pulseira-sonho,Pulseira Sonho,2026-07-17T16:18:09-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260210339,pulseira-soleil,Pulseira Soleil,2026-07-17T16:18:09-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260112035,pulseira-snake,Pulseira Snake,2026-07-17T16:18:08-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197260046499,pulseira-signos,Pulseira Signos,2026-07-17T16:18:08-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259948195,pulseira-riviera,Pulseira Riviera,2026-07-17T16:18:08-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259849891,pulseira-pureza,Pulseira Pureza,2026-07-17T16:18:08-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259784355,pulseira-protecao-boho-chic-pedra-natural-ametista-prata-925,Pulseira Proteção Boho Chic Pedra Natural Ametista Prata 925,2026-07-17T16:18:07-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259751587,pulseira-perle,Pulseira Perle,2026-07-17T16:18:07-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259718819,pulseira-protecao-boho-chic-pedra-natural-ametista-dourado,Pulseira Proteção Boho Chic Pedra Natural Ametista Dourado,2026-07-17T16:18:07-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259653283,pulseira-ponto-de-luz,Pulseira ponto de Luz,2026-07-17T16:18:06-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259587747,pulseira-petite-marseille,Pulseira Petite Marseille,2026-07-17T16:18:06-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259489443,pulseira-penelope-3-mm-zirconia-redonda-com-3-garras-16-5-cm,"Pulseira Penelope 3 mm Zirconia Redonda com 3 garras 16,5 CM",2026-07-17T16:18:06-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259423907,pulseira-paz-boho-chic-pedra-natural-opala-azul-prata-925,Pulseira Paz Boho Chic Pedra Natural Opala Azul Prata 925,2026-07-17T16:18:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259391139,pulseira-paz-boho-chic-pedra-natural-opala-azul-dourado,Pulseira Paz Boho Chic Pedra Natural Opala Azul Dourado,2026-07-17T16:18:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259325603,pulseira-olho-grego,Pulseira Olho Grego,2026-07-17T16:18:05-03:00,2,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259292835,pulseira-natasha-riviera-navete-de-3-mm,Pulseira Natasha Riviera Navete de 3 mm,2026-07-17T16:18:05-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259227299,pulseira-mel,Pulseira Mel,2026-07-17T16:18:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259161763,pulseira-masculina-noah,Pulseira Masculina Noah,2026-07-17T16:18:04-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197259128995,pulseira-marrom-de-cetim-com-pedras-de-vidro-prata-925-fios-de-luz,Pulseira Marrom de Cetim com Pedras de Vidro Prata 925 - Fios de Luz,2026-07-17T16:18:04-03:00,3,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258965155,pulseira-marrom-de-cetim-com-pedras-de-vidro-dourado-fios-de-luz,Pulseira Marrom de Cetim com Pedras de Vidro Dourado - Fios de Luz,2026-07-17T16:18:03-03:00,3,3,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258834083,pulseira-mapa-do-brasil-fio-verde,Pulseira Mapa Do Brasil Fio Verde,2026-07-17T16:18:03-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258768547,pulseira-mapa-do-brasil-fio-de-corda-bege-e-dourado,Pulseira Mapa Do Brasil Fio de corda bege e dourado,2026-07-17T16:18:03-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258670243,pulseira-mapa-do-brasil-fio-azul,Pulseira Mapa Do Brasil Fio Azul,2026-07-17T16:18:02-03:00,1,0,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258571939,pulseira-mao-de-fatima,Pulseira Mão de Fátima,2026-07-17T16:18:02-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258506403,pulseira-maisa,Pulseira Maisa,2026-07-17T16:18:02-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258440867,pulseira-lume-riviera-redonda-de-2-mm,Pulseira Lume Riviera Redonda de 2 mm,2026-07-17T16:18:01-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258342563,pulseira-luana,Pulseira Luana,2026-07-17T16:18:01-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258277027,pulseira-lorena,Pulseira Lorena,2026-07-17T16:18:01-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258178723,pulseira-lilas-de-cetim-com-pedra-de-vidro-roxa-ametista-prata-925-fios-de-luz,Pulseira Lilas de Cetim com Pedra de Vidro Roxa Ametista Prata 925 - Fios de Luz,2026-07-17T16:18:01-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258145955,pulseira-lilas-de-cetim-com-pedra-de-vidro-roxa-ametista-dourado-fios-de-luz,Pulseira Lilas de Cetim com Pedra de Vidro Roxa Ametista Dourado - Fios de Luz,2026-07-17T16:18:00-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197258047651,pulseira-lila,Pulseira Lila,2026-07-17T16:18:00-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257949347,pulseira-lets-canutilho-com-bolinha,Pulseira Lets Canutilho com Bolinha,2026-07-17T16:18:00-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257916579,pulseira-leonor,Pulseira Leonor,2026-07-17T16:17:59-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257851043,pulseira-laura,Pulseira Laura,2026-07-17T16:17:59-03:00,1,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257785507,pulseira-jessica,Pulseira Jessica,2026-07-17T16:17:59-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257719971,pulseira-jenni,Pulseira Jenni,2026-07-17T16:17:59-03:00,2,2,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257556131,pulseira-jane,Pulseira Jane,2026-07-17T16:17:58-03:00,2,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9197257490595,pulseira-jaipur,Pulseira Jaipur,2026-07-17T16:17:58-03:00,6,1,NAO_CONFERIDO,NAO_CONFERIDOS
+9180337701027,anel-adriana-dourado,Anel Adriana Dourado,2026-07-10T15:44:33-03:00,64,28,NAO_CONFERIDO,NAO_CONFERIDOS
+9180295528611,alianca-uniao-prata-925-2mm,Aliança União Prata 925 – 2mm,2026-07-10T15:26:11-03:00,8,8,NAO_CONFERIDO,NAO_CONFERIDOS
+9180210823331,alianca-lacos-prata-925-3mm,Aliança Laços Prata 925 – 3mm,2026-07-10T14:56:10-03:00,8,8,NAO_CONFERIDO,NAO_CONFERIDOS
