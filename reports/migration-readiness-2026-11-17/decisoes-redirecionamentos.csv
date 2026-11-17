@@ -1,0 +1,4 @@
+﻿origem,destino,classificacao,operacao,prioridade_tecnica_seo,http_final_origem,destino_301_existente,http_destino_proposto,saltos_destino,titulo_destino,decisao
+/blog,/blogs/revista-adula,AGUARDA_DECISAO,CRIAR_301_NOVO,MEDIA_CONTEUDO_CATEGORIA,404,,200,0,Revista Adüla – Adüla Brasil,"Publicar/migrar conteúdo editorial ou confirmar destino equivalente; a Revista está vazia, sem links de artigos."
+/garantia,/#guia-garantia,AGUARDA_DECISAO,CRIAR_301_NOVO,MEDIA_CONTEUDO_CATEGORIA,404,,200,0,Joias e Semijoias com Design Francês | Adüla Brasil,Decidir página institucional dedicada ou aceitar âncora da home; validar preservação do texto e acesso direto após o 301.
+/sobre-a-adula,/#sobre-a-adula,AGUARDA_DECISAO,CRIAR_301_NOVO,MEDIA_CONTEUDO_CATEGORIA,404,,200,0,Joias e Semijoias com Design Francês | Adüla Brasil,Decidir página institucional dedicada ou aceitar âncora da home; validar preservação do texto e acesso direto após o 301.

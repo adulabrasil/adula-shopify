@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-17T20:19:00.625111+00:00",
+  "reviewed": 53,
+  "destinations_200": 53,
+  "ready": 50,
+  "new": 40,
+  "replace_existing": 10,
+  "decisions": 3,
+  "technical_failures": 0,
+  "shopify_http_requests": 104,
+  "bagy_source_http_403": 52,
+  "imported": 0,
+  "limitations": "No GSC traffic/backlinks or Bagy body/SKUs. Priority is technical, not measured traffic. Technical eligibility is not import authorization."
+}
