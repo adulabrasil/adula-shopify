@@ -432,7 +432,9 @@
       }
     },
     "rejected": [],
-    "loops_in_proposals": false
+    "loops_in_proposals": false,
+    "existing_redirects_ending_404": 16,
+    "proposals_updating_broken_existing_redirects": 10
   },
   "theme_check": {
     "valid": true,

@@ -109,6 +109,9 @@ shopify-301-propostos.csv
   53 propostas: 52 resolvem URLs do sitemap antigo e uma resolve a URL extra
   /pages/trocas-e-devolucoes. Todos os destinos tiveram HTTP 200, zero saltos,
   sem noindex e, quando há fragmento, âncora existente. Sem duplicatas ou loops.
+  10 propostas substituem registros que já redirecionam para um 404.
+  Exportar a tabela administrativa como backup e autorizar a substituição dos
+  registros existentes que coincidam com as origens do CSV, sem criar cadeia.
   Inclui /produtos, /blog, /sobre-a-adula, /politica-de-privacidade,
   /trocas-e-devolucoes, /garantia, /guia-de-medidas e a Caixa Je T'Aime.
   /blog aponta para /blogs/revista-adula; validar a escolha editorial e a
