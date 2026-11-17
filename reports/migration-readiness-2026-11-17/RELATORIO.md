@@ -2,6 +2,8 @@
 
 Nenhum merge, deploy, publicação, importação de CSV, alteração de domínio/DNS, tema, desconto ou catálogo foi executado. PR #46 preservado em rascunho e no mesmo commit. Os novos arquivos tratam somente de auditoria, testes e documentação, em branch independente `audit/migration-readiness-2026` baseada na branch oficial.
 
+Atualização de autenticação: a instalação foi confirmada pelo usuário, mas a execução local retornou HTTP 400. A causa exata ainda depende do novo **[diagnóstico seguro](DIAGNOSTICO-HTTP400.md)**; instalação não comprova elegibilidade de organização para client_credentials. A correção preserva a requisição documentada e passa a distinguir códigos OAuth sem expor segredos.
+
 ## Prioridade 1 — canais de vendas
 
 **Situação: auditor pronto para execução local; resultado administrativo pendente da sua execução.** Você escolheu executar no próprio computador e informou que os produtos devem estar em todos os canais. Isso foi aplicado como expectativa para produtos ACTIVE. Não se propõe publicar DRAFT/ARCHIVED.

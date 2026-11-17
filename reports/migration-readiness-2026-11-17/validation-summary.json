@@ -8,5 +8,10 @@
   "bagy_catalog_comparison": "PENDING_EXPORT_HTTP_403",
   "pr46_changed": false,
   "theme_files_changed": false,
-  "shopify_writes": false
+  "shopify_writes": false,
+  "safe_oauth_tests_passed": 25,
+  "bash_launcher_tests_passed": 6,
+  "total_audit_auth_launcher_scenarios_passed": 46,
+  "authentication_diagnosis": "Pending user rerun with --diagnose-auth; HTTP 400 exact cause unknown",
+  "real_windows_runtime_tested": false
 }

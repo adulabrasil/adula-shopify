@@ -3,17 +3,24 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import { pathToFileURL } from 'node:url';
+import { acquireLocalToken, SafeAuditError, safeDiagnostic } from './shopify-readonly-auth.mjs';
 const REQUIRED_SCOPES = ['read_products', 'read_publications'];
 
 async function context({shop, token, request = fetch}) {
   if (!/^[a-z0-9-]+\.myshopify\.com$/.test(shop || '') || !token) throw new Error('Set SHOPIFY_SHOP and a read-only token in the local environment.');
   const graphql = async (query, variables = {}) => {
     if (!query.trimStart().startsWith('query ')) throw new Error('Only named queries are allowed.');
-    const response = await request(`https://${shop}/admin/api/2026-10/graphql.json`, {
+    const queryName=query.match(/^query\s+(\w+)/)?.[1];
+    const stage=({AuditIdentity:'admin_identity',PublicationInventory:'admin_publications',ProductPublications:'admin_products',ProductVariantPages:'admin_variants',AdminProductCount:'admin_count'})[queryName] || 'admin';
+    let response;
+    try {response = await request(`https://${shop}/admin/api/2026-10/graphql.json`, {
       method:'POST', headers:{'Content-Type':'application/json','X-Shopify-Access-Token':token}, body:JSON.stringify({query,variables}),
-    });
-    const body = await response.json();
-    if (!response.ok || body.errors) throw new Error(`Admin read failed: HTTP ${response.status}. Check access scopes/API response locally; no credential or response body was logged.`);
+      redirect:'manual', signal:AbortSignal.timeout(30000),
+    });}catch{throw new SafeAuditError('ADMIN_NETWORK_FAILURE',{stage,category:'NETWORK_OR_TLS',message:'Não foi possível receber resposta da Admin API; a exceção bruta não foi exibida.'});}
+    let body;try{body=await response.json();}catch{throw new SafeAuditError('ADMIN_RESPONSE_INVALID',{stage,http_status:response.status,message:'A Admin API não retornou JSON válido; o corpo não foi exibido.'});}
+    if (!response.ok || body.errors) throw new SafeAuditError('ADMIN_READ_FAILED',{stage,http_status:response.status,category:'ADMIN_ACCESS_OR_CONFIGURATION',
+      message:'Admin read failed: a Shopify recusou a leitura. O corpo e os detalhes brutos não foram exibidos.',
+      next_action:'Confira instalação e os dois escopos de leitura aprovados. Não acrescente permissões de escrita. Este erro ocorre depois da etapa de autenticação.'});
     const throttle = body.extensions?.cost?.throttleStatus;
     if (throttle && throttle.currentlyAvailable < 150 && throttle.restoreRate > 0) {
       let remaining = Math.ceil((150-throttle.currentlyAvailable)/throttle.restoreRate)*1000;
@@ -25,11 +32,12 @@ async function context({shop, token, request = fetch}) {
     shop { name myshopifyDomain }
     currentAppInstallation { accessScopes { handle } }
   }`);
-  if (identity.shop?.myshopifyDomain !== shop) throw new Error('Shop identity mismatch.');
+  if (identity.shop?.myshopifyDomain !== shop) throw new SafeAuditError('ADMIN_SHOP_MISMATCH',{stage:'admin_identity',category:'STORE_CONFIGURATION',message:'Shop identity mismatch: a loja retornada não corresponde ao destino autorizado.'});
   const scopes = identity.currentAppInstallation?.accessScopes?.map(s=>s.handle) || [];
-  if (REQUIRED_SCOPES.some(s=>!scopes.includes(s)) || scopes.some(s=>!REQUIRED_SCOPES.includes(s))) {
-    throw new Error('Use a dedicated installation granting exactly read_products and read_publications. No writes, customer, order or inventory access is required.');
-  }
+  if (REQUIRED_SCOPES.some(s=>!scopes.includes(s)))throw new SafeAuditError('READ_SCOPES_MISSING',{stage:'admin_scopes',category:'ACCESS_CONFIGURATION',
+    message:'Use a dedicated installation: falta um dos dois escopos obrigatórios de leitura.',next_action:'Confira read_products e read_publications na versão ativa e na instalação; não amplie para escopos de escrita.'});
+  if (scopes.some(s=>!REQUIRED_SCOPES.includes(s)))throw new SafeAuditError('READ_SCOPES_EXCESS',{stage:'admin_scopes',category:'ACCESS_CONFIGURATION',
+    message:'Use a dedicated installation: a instalação concedeu acesso além dos dois escopos autorizados. A leitura foi interrompida.',next_action:'Use exclusivamente read_products e read_publications no app de auditoria. Não altere o app de fotos.'});
   const publications=[];let after=null;
   do {
     const data=await graphql(`query PublicationInventory($after:String) {
@@ -143,18 +151,22 @@ export async function auditPublications({shop,token,onlineStorePublicationId,out
   return result;
 }
 
-async function localToken(shop) {
-  if(process.env.SHOPIFY_ADMIN_ACCESS_TOKEN)return process.env.SHOPIFY_ADMIN_ACCESS_TOKEN;
-  if(!process.env.SHOPIFY_CLIENT_ID||!process.env.SHOPIFY_CLIENT_SECRET)throw new Error('Set local app credentials or an existing read-only access token; never paste them into chat.');
-  const r=await fetch(`https://${shop}/admin/oauth/access_token`,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'client_credentials',client_id:process.env.SHOPIFY_CLIENT_ID,client_secret:process.env.SHOPIFY_CLIENT_SECRET})});
-  if(!r.ok)throw new Error(`Local authentication failed (HTTP ${r.status}). Check app installation, scopes and same-organization eligibility; token response not logged.`);
-  const body=await r.json();if(!body.access_token)throw new Error('No access token returned.');return body.access_token;
+export async function diagnoseAuthorization({shop,env=process.env,request=fetch}) {
+  const auth=await acquireLocalToken({shop,env,request});
+  const result=await listPublications({shop,token:auth.token,request});
+  return {diagnostic_version:1,stage:'complete',code:'AUTH_AND_READ_ACCESS_OK',category:'SUCCESS',
+    shop,auth_method:auth.method,scopes:REQUIRED_SCOPES,sales_publications_visible:result.publications.length,
+    message:'Autenticação, identidade da loja e os dois escopos de leitura conferidos. Nenhum produto foi auditado neste modo.',
+    next_action:'Execute o roteiro sem --diagnose-auth para iniciar a auditoria completa.'};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href) {
   try {
     const shop=process.env.SHOPIFY_SHOP||'adula-brasil.myshopify.com';
     if(shop!=='adula-brasil.myshopify.com')throw new Error('This local audit is restricted to adula-brasil.myshopify.com.');
-    const token=await localToken(shop),outputDir=process.env.OUTPUT_DIR||path.join(os.homedir(),'adula-audit-results');
+    if(process.argv.includes('--diagnose-auth')) {
+      console.log(JSON.stringify(await diagnoseAuthorization({shop}),null,2));
+    } else {
+    const {token}=await acquireLocalToken({shop}),outputDir=process.env.OUTPUT_DIR||path.join(os.homedir(),'adula-audit-results');
     if(process.argv.includes('--list-publications')) {
       const list=await listPublications({shop,token});console.log(JSON.stringify(list,null,2));
     } else {
@@ -163,5 +175,6 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1]
       const r=await auditPublications({shop,token,onlineStorePublicationId:process.env.ONLINE_STORE_PUBLICATION_ID,allChannels:process.env.ALL_SALES_CHANNELS==='1',baselinePublic,outputDir});
       console.log(JSON.stringify({outputDir,products:r.product_count,variants:r.variant_count,statuses:r.status_counts,public_now:r.public_comparison.current_public_count,missing_online:r.active_missing_online_store.length,missing_other_channels:r.active_missing_other_channels.length},null,2));
     }
-  } catch(error) {console.error(error.message);process.exitCode=1;}
+    }
+  } catch(error) {console.error(JSON.stringify(safeDiagnostic(error),null,2));process.exitCode=1;}
 }

@@ -2,6 +2,8 @@
 
 Decisão do usuário em 17/11/2026: executar no próprio computador e considerar **todos os canais de vendas** para produtos ACTIVE. Não se propõe publicar rascunhos ou arquivados. A execução real ainda não aconteceu; os testes do auditor usam dados simulados.
 
+Para falhas HTTP 400, use primeiro o **[diagnóstico seguro para Windows/Git Bash](DIAGNOSTICO-HTTP400.md)**. O modo `--diagnose-auth` valida o acesso sem consultar produtos e sem registrar credenciais.
+
 ## Permissões exatas
 
 | Escopo Admin API | Uso |
