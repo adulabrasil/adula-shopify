@@ -1,0 +1,202 @@
+ADÜLA BRASIL — REVISÃO FINAL DE MIGRAÇÃO
+Data: 17/11/2026 — America/Sao_Paulo
+Branch de trabalho: fix/migration-final-review-2026
+Base preservada: dfcfddf (fix/chic-friday-pause-gifts-2026)
+Tema de referência: TESTE – CHIC FRIDAY 2026, ID 168887910563
+
+RECOMENDAÇÃO: NÃO APTO PARA A VIRADA AGORA.
+As correções estão preparadas na branch, mas não foram enviadas à Shopify.
+Os CSVs não foram importados. Há decisões de SEO e catálogo pendentes, e os
+brindes ainda recebem 20% quando adicionados manualmente ao carrinho.
+Não houve merge, publicação, alteração de DNS, domínio, Bagy ou catálogo.
+
+1. CORREÇÕES DE CÓDIGO PREPARADAS
+
+- Descrição SEO: fallback quando a coleção não possui descrição.
+- JSON-LD promocional: ProductGroup com preços por variante iguais aos
+  exibidos pela apresentação já testada. Mantém disponibilidade, SKU e
+  identificadores; o structured_data nativo volta a ser usado quando não há
+  variante com preço de campanha. Não altera preços reais.
+- Open Graph: preço de apresentação sem formatação monetária regional.
+- Galeria: selo usa a mesma elegibilidade da apresentação testada de preços
+  e badges, incluindo período e exclusões.
+- Shop the Look: preços individuais, seleção de variante e soma usam essa
+  mesma apresentação; IDs e quantidades enviados ao carrinho não mudam.
+- Giftback: estimativa sobre o preço apresentado, com indicação explícita de
+  estimativa e ressalva para descontos finais do carrinho/Pix.
+- Wishlist: chama a integração somente quando o botão e a função existem;
+  aguarda inserção assíncrona por até 10 segundos, sem remover o aplicativo.
+- Retirado o redirecionamento JavaScript da página antiga de trocas. O CSV
+  contém a substituição HTTP 301; importar antes/junto do deploy autorizado.
+- Corrigidos quatro erros do Theme Check: dois tipos de documentação Liquid,
+  uma chave de tradução e referência a um bloco inexistente.
+
+As regras de descontos da Shopify, produtos SALE e coleção Santuário de Paris
+não foram alterados. Os quatro arquivos da campanha já testada (price-list,
+product-badges, product-card e main-product) permanecem intocados nesta revisão.
+
+2. CRÍTICOS AINDA PENDENTES
+
+- Brindes: inclusão automática permanece pausada no tema de teste. Contudo,
+  teste de carrinho isolado confirmou bandeja 49,00 -> 39,20 e chaveiro
+  19,00 -> 15,20 com CHIC FRIDAY 20% OFF. Excluir os brindes da elegibilidade
+  requer ajuste administrativo a ser autorizado. Não alterar SALE ou Santuário.
+- As correções novas exigem aprovação de deploy SOMENTE no tema de teste,
+  seguida de validação remota. Testes locais não equivalem ao render Shopify.
+- O CSV de 53 propostas exige revisão/aprovação e importação administrativa.
+- Há 182 URLs antigas sem destino equivalente confirmado. Algumas podem
+  representar produtos retirados para o evento; não se presumiu que devam
+  voltar ao site nem que devam ser redirecionadas genericamente à home.
+- O artigo /presentes-adulantes-escolha-semijoias-neste-natal não tem artigo
+  equivalente no sitemap Shopify consultado. Restaurar conteúdo ou definir
+  um destino editorial relevante depende de decisão administrativa.
+- A variante 47861271036067 (12 / Quartzo Rosa) está associada à mídia
+  51629617086627, identificada como #pedra_turquesa. Revisar foto/associação e
+  marcadores do Prestige/Rubik, sem mudar o catálogo antes de autorização.
+
+3. ARQUIVOS ALTERADOS
+
+Código (13 arquivos):
+  layout/theme.liquid
+  snippets/adula-chic-friday-price.liquid (novo)
+  snippets/adula-chic-friday-structured-data.liquid (novo)
+  snippets/microdata-schema.liquid
+  snippets/social-meta-tags.liquid
+  snippets/product-gallery.liquid
+  snippets/product-giftback.liquid
+  snippets/select.liquid
+  snippets/variant-picker.liquid
+  sections/adula-shop-the-look.liquid
+  sections/footer.liquid
+  sections/predictive-search.liquid
+  blocks/_dynamic-grid-item.liquid
+
+Testes: tests/migration-2026/ (package.json, package-lock.json, .gitignore e
+dois arquivos de testes). Relatórios e CSVs: este diretório.
+
+4. RESULTADOS DOS TESTES
+
+Shopify Theme Check: 0 erros, 154 avisos; antes: 4 erros, 159 avisos.
+Os avisos preexistentes de argumentos/documentação do Prestige ainda existem.
+20 cenários Liquid com fixtures e filtros Shopify simulados: aprovados.
+3 cenários DOM/JavaScript: aprovados (look, wishlist e ausência de requisições,
+temporizadores/interceptação de fetch pelos brindes pausados).
+Sintaxe JavaScript de assets e trechos alterados: aprovada.
+Os três arquivos remotos de pausa dos brindes foram baixados e comparados:
+continuam idênticos à versão dfcfddf já testada. Não houve reimplementação.
+
+Reprodução dos testes locais:
+  npm ci --prefix tests/migration-2026
+  npm test --prefix tests/migration-2026
+  shopify theme check --path .
+
+Teste real na versão ATUAL do tema de teste, não na branch nova:
+  - breakpoint responsivo de 444 px CSS, via zoom de 300% em Chrome desktop;
+  - home sem overflow horizontal global nessa largura;
+  - menu e submenu de anéis: abriram e navegaram;
+  - filtro Em estoque: aplicado, URL com filter.v.availability=1;
+  - busca Adriana: retornou produtos e preço promocional;
+  - adicionar Adriana 10 / Quartzo Verde: abriu drawer a R$ 55,20;
+  - item de teste removido e zoom restaurado.
+Isso não é emulação de aparelho físico nem teste Safari/iOS.
+Não foi feito novo pedido, pagamento ou auditoria Bling.
+
+5. CSV DE REDIRECIONAMENTOS
+
+Formato Shopify: cabeçalhos exatos Redirect from,Redirect to; UTF-8 com BOM.
+
+shopify-301-propostos.csv
+  53 propostas: 52 resolvem URLs do sitemap antigo e uma resolve a URL extra
+  /pages/trocas-e-devolucoes. Todos os destinos tiveram HTTP 200, zero saltos,
+  sem noindex e, quando há fragmento, âncora existente. Sem duplicatas ou loops.
+  Inclui /produtos, /blog, /sobre-a-adula, /politica-de-privacidade,
+  /trocas-e-devolucoes, /garantia, /guia-de-medidas e a Caixa Je T'Aime.
+  /blog aponta para /blogs/revista-adula; validar a escolha editorial e a
+  migração dos artigos antes da importação. Não foi criado conteúdo no painel.
+
+redirecionamentos-existentes-verificados.csv
+  674 rotas com 301 e destino 200. É um inventário por teste HTTP dos caminhos
+  do sitemap, não uma exportação completa da tabela administrativa Shopify.
+  Não é necessário reimportar esses registros.
+
+auditoria-909-urls.csv
+  Cobertura completa do sitemap antigo: 674 rotas com 301 -> 200, home 200,
+  234 caminhos 404. Máximo de um salto nas rotas existentes; nenhum loop.
+
+urls-sem-destino-confirmado.csv
+  182 decisões pendentes. Sugestões aproximadas estão marcadas NÃO aprovadas
+  e foram excluídas do CSV de importação. Decidir por equivalente, restauração
+  de conteúdo, ou manutenção de 404/410 para retirada definitiva.
+
+6. PAINEL ADMINISTRATIVO SHOPIFY
+
+- Autorizar/importar apenas o CSV de propostas e repetir verificação HTTP.
+- Resolver elegibilidade dos dois brindes, preservando os descontos aprovados.
+- Revisar mídia da variante Quartzo Rosa; não foi alterada foto/variante/ALT.
+- Confirmar conteúdo editorial e as 182 URLs sem destino seguro.
+- Confirmar a base operacional do Giftback/Zoppy; a vitrine mostra estimativa,
+  mas não controla a apuração final do programa.
+- Validar a wishlist após enviar a correção ao tema de teste.
+- Rever nomes/categorização de coleções: apareceu Limpa Joias na coleção Anéis;
+  não houve mudança de coleção ou produto.
+
+7. DESEMPENHO E SEO
+
+Não há LCP, CLS ou INP medidos/confirmados nesta execução.
+O navegador headless falhou em confiança de certificado; o Chrome gerenciado
+bloqueia DevTools; o PageSpeed retornou HTTP 429 de cota. Nenhuma proteção de
+segurança foi desativada e não foram inventadas métricas.
+
+Amostras HTTP reais de imagens, não medições de LCP:
+  hero mobile 700w: 102.244 bytes, image/webp;
+  hero desktop 2200w: 85.032 bytes, image/webp.
+
+Verificação estática/HTML anterior confirmada como base: primeira imagem eager
+e prioridade alta, demais slides lazy, Stories com preload none. A home possui
+10 vídeos, e apps de avaliações, wishlist, recomendações e Instagram carregam
+globalmente. Rever carga por página sem remover recursos sem aprovação.
+HTML amostrado: home ~606 KiB e PDP ~893 KiB, descomprimidos; não são peso de
+transferência comprimida nem prova de reprovação em Web Vitals.
+
+As páginas principais amostradas têm title, H1 único e canonical; robots e
+sitemap Shopify responderam 200. O canonical myshopify é esperado antes de
+definir o domínio principal. Rastreabilidade não confirma indexação no Google:
+Search Console e validação no domínio definitivo permanecem pendentes.
+Marcadores ALT #cor_/#pedra_ fazem parte das personalizações de mídia; revisar
+suas associações sem remover indiscriminadamente os marcadores de variantes.
+
+8. RISCOS RESTANTES
+
+- Nova branch ainda não renderizada remotamente pela Shopify.
+- CSV proposto ainda não importado e conteúdo de algumas URLs não migrado.
+- Brindes ainda elegíveis ao desconto quando adicionados manualmente.
+- Associação de foto e integração da wishlist precisam de validação final.
+- Web Vitals e dispositivos físicos sem medição/certificação.
+- Adula-Shopify possui workflow que envia arquivos ao tema ativo ao receber
+  push. Não fazer merge como forma de testar ou aprovar esta revisão.
+- SALE receber 20% é comportamento AUTORIZADO; não é tratado como bloqueador.
+- Testes de Bling e pagamentos aprovados pelo usuário não foram invalidados
+  nem repetidos como auditoria completa.
+
+9. CHECKLIST PARA PUBLICAÇÃO/DOMÍNIO — SOMENTE APÓS AUTORIZAÇÃO
+
+[ ] Revisar diff e salvar backup dos arquivos atuais do tema de teste.
+[ ] Autorizar envio seletivo das correções para 168887910563; não usar MAIN.
+[ ] Retestar render Shopify, schema, selo, look, giftback e wishlist na prévia.
+[ ] Aprovar/importar CSV de 53 rotas e validar 301 -> 200 sem cadeias/loops.
+[ ] Resolver/aceitar explicitamente os destinos pendentes conforme relevância.
+[ ] Resolver elegibilidade dos brindes e aprovar ajuste de catálogo necessário.
+[ ] Conferir pedidos Bagy pendentes e estoque/pedidos entre Bling e Shopify.
+[ ] Registrar DNS atual e plano de retorno; obter os registros no painel Shopify.
+[ ] Dar autorização EXPRESSA para publicar o tema e conectar/trocar o domínio.
+[ ] Validar www, domínio sem www, HTTPS/SSL e redirecionamento para host principal.
+[ ] Conferir canonical, robots e sitemap no domínio final, sem noindex indevido.
+[ ] Conferir compra/frete/pagamento e chegada do pedido ao Bling na virada.
+[ ] Enviar sitemap ao Search Console e monitorar 404/checkout após lançamento.
+
+10. DECISÃO OBJETIVA
+
+NÃO APTO AGORA. Há material concreto para revisão e para autorizar os próximos
+passos, mas não é possível declarar a virada aprovada antes da importação dos
+redirecionamentos, da resolução da elegibilidade dos brindes e da validação
+remota da branch. Não foi executada a virada nem solicitado merge na oficial.

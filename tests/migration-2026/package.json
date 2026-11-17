@@ -1,0 +1,14 @@
+{
+  "name": "adula-migration-presentation-tests",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node liquid.test.cjs && node dom.test.cjs"
+  },
+  "devDependencies": {
+    "liquidjs": "10.30.1",
+    "jsdom": "31.0.1"
+  }
+}

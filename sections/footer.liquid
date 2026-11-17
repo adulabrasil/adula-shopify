@@ -499,13 +499,21 @@
 
     })();
 
-    /* Move wishlist button in product title */
+    /* App embeds can arrive after DOMContentLoaded. Move only an existing button. */
     document.addEventListener('DOMContentLoaded', () => {
-      window.Maestrooo?.moveProductPageButton({
-        target: '.shopify-section--main-product .product-info__block-item[data-block-type="title"] .product-title',
-
-        buttonSelector: '.shopify-section--main-product [id*="_block_wishlist_product_page_button_"] ooo-wl-access-button',
-
+      const target = '.shopify-section--main-product .product-info__block-item[data-block-type="title"] .product-title';
+      const buttonSelector = '.shopify-section--main-product [id*="_block_wishlist_product_page_button_"] ooo-wl-access-button';
+      const productSection = document.querySelector('.shopify-section--main-product');
+      if (!productSection || !document.querySelector(target)) return;
+      let moved = false;
+      let observer;
+      const moveButton = () => {
+        if (moved || typeof window.Maestrooo?.moveProductPageButton !== 'function' || !document.querySelector(buttonSelector)) return;
+        moved = true;
+        observer?.disconnect();
+        window.Maestrooo.moveProductPageButton({
+        target,
+        buttonSelector,
         useWrapper: true,
         hideMessage: true,
 
@@ -519,7 +527,19 @@
           '--ooo-wl-product-page-button-height': '42px',
           '--ooo-wl-product-page-button-padding-inline': '14px'
         }
-      });
+        });
+      };
+      observer = new MutationObserver(moveButton);
+      observer.observe(productSection, { childList: true, subtree: true });
+      moveButton();
+      const retry = window.setInterval(() => {
+        moveButton();
+        if (moved) window.clearInterval(retry);
+      }, 500);
+      window.setTimeout(() => {
+        observer.disconnect();
+        window.clearInterval(retry);
+      }, 10000);
     });
 </script>
 

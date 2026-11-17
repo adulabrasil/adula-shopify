@@ -1,0 +1,71 @@
+{%- doc -%}
+  ProductGroup offers matching the campaign prices displayed by the theme.
+  Only used while at least one variant has the tested Chic Friday presentation.
+
+  @param {product} product
+{%- enddoc -%}
+{%- assign group_url = shop.url | append: product.url -%}
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "@id": {{ group_url | append: '#product' | json }},
+  "url": {{ group_url | json }},
+  "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | json }},
+  "productGroupID": {{ product.id | append: '' | json }},
+  "brand": { "@type": "Brand", "name": {{ product.vendor | default: shop.name | json }} },
+  "category": {{ product.type | json }},
+  {%- assign review_count = product.metafields.reviews.rating_count | default: 0 | plus: 0 -%}
+  {%- if review_count > 0 and product.metafields.reviews.rating.value.rating != blank -%}
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": {{ product.metafields.reviews.rating.value.rating | json }},
+      "reviewCount": {{ review_count | json }}
+    },
+  {%- endif -%}
+  "image": [
+    {%- for image in product.images limit: 10 -%}
+      {{ image | image_url: width: 1920 | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  "variesBy": [
+    {%- for option in product.options_with_values -%}
+      {{ option.name | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  "hasVariant": [
+    {%- for offer_variant in product.variants -%}
+      {%- capture offer_price -%}{%- render 'adula-chic-friday-price', product: product, variant: offer_variant -%}{%- endcapture -%}
+      {%- assign offer_price = offer_price | plus: 0 -%}
+      {%- assign offer_url = group_url | append: '?variant=' | append: offer_variant.id -%}
+      {
+        "@type": "Product",
+        "@id": {{ offer_url | append: '#variant' | json }},
+        "name": {{ product.title | append: ' - ' | append: offer_variant.title | json }},
+        "sku": {{ offer_variant.sku | json }},
+        {%- if offer_variant.featured_image or product.featured_image -%}
+          "image": {{ offer_variant.featured_image | default: product.featured_image | image_url: width: 1920 | prepend: 'https:' | json }},
+        {%- endif -%}
+        {%- assign barcode_length = offer_variant.barcode | size -%}
+        {%- if barcode_length == 8 or barcode_length == 12 or barcode_length == 13 or barcode_length == 14 -%}
+          "gtin": {{ offer_variant.barcode | json }},
+        {%- endif -%}
+        "additionalProperty": [
+          {%- for option in product.options_with_values -%}
+            { "@type": "PropertyValue", "name": {{ option.name | json }}, "value": {{ offer_variant.options[forloop.index0] | json }} }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ],
+        "isVariantOf": { "@id": {{ group_url | append: '#product' | json }} },
+        "offers": {
+          "@type": "Offer",
+          "url": {{ offer_url | json }},
+          "price": {{ offer_price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | default: shop.currency | json }},
+          "availability": "https://schema.org/{% if offer_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          {% if offer_price < offer_variant.price %}"priceValidUntil": "2026-11-30",{% endif %}
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}

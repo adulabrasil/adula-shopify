@@ -1,0 +1,43 @@
+{%- doc -%}
+  Returns the displayed variant price in cents, using the tested Chic Friday rules.
+  Does not change catalog prices or Shopify discount configuration.
+
+  @param {product} product
+  @param {variant} [variant]
+{%- enddoc -%}
+{%- liquid
+  assign selected_variant = variant | default: product.selected_or_first_available_variant
+  assign display_price = selected_variant.price | default: 0
+  assign campaign_time = 'now' | date: '%s' | plus: 0
+  assign campaign_start = '2026-11-16 00:00:00 -0300' | date: '%s' | plus: 0
+  assign campaign_end = '2026-11-30 23:59:59 -0300' | date: '%s' | plus: 0
+  assign in_collection = false
+  assign excluded = false
+
+  for campaign_collection in product.collections
+    if campaign_collection.id == 514558328995
+      assign in_collection = true
+      break
+    endif
+  endfor
+
+  for product_tag in product.tags
+    assign normalized_tag = product_tag | strip | downcase
+    if normalized_tag == 'santuário de paris' or normalized_tag == 'santuario de paris' or normalized_tag == 'brinde'
+      assign excluded = true
+    endif
+  endfor
+
+  if product.handle contains 'chaveiro-de-torre-eiffel' or product.handle contains 'bandeja'
+    assign excluded = true
+  endif
+
+  if campaign_time >= campaign_start and campaign_time <= campaign_end and in_collection and excluded == false and selected_variant != blank
+    unless selected_variant.compare_at_price > selected_variant.price
+      if selected_variant.price > 0
+        assign display_price = selected_variant.price | times: 0.8 | round
+      endif
+    endunless
+  endif
+  echo display_price
+-%}

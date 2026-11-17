@@ -1,0 +1,1548 @@
+{
+  "valid": true,
+  "issues": [
+    {
+      "filePath": "blocks/icon.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 8,
+      "startColumn": 16,
+      "endRow": 8,
+      "endColumn": 141,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "blocks/icon.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 8,
+      "startColumn": 85,
+      "endRow": 8,
+      "endColumn": 120,
+      "message": "Unknown argument 'height' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "blocks/icon.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 9,
+      "startColumn": 16,
+      "endRow": 9,
+      "endColumn": 133,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "blocks/icon.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 9,
+      "startColumn": 78,
+      "endRow": 9,
+      "endColumn": 106,
+      "message": "Unknown argument 'height' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 728,
+      "startColumn": 22,
+      "endRow": 728,
+      "endColumn": 73,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 841,
+      "startColumn": 52,
+      "endRow": 841,
+      "endColumn": 111,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 929,
+      "startColumn": 30,
+      "endRow": 929,
+      "endColumn": 79,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 931,
+      "startColumn": 54,
+      "endRow": 931,
+      "endColumn": 103,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 948,
+      "startColumn": 28,
+      "endRow": 948,
+      "endColumn": 76,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 950,
+      "startColumn": 52,
+      "endRow": 950,
+      "endColumn": 100,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 983,
+      "startColumn": 30,
+      "endRow": 983,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 988,
+      "startColumn": 30,
+      "endRow": 988,
+      "endColumn": 61,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 1004,
+      "startColumn": 34,
+      "endRow": 1004,
+      "endColumn": 71,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 1047,
+      "startColumn": 26,
+      "endRow": 1047,
+      "endColumn": 72,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/header.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 1049,
+      "startColumn": 50,
+      "endRow": 1049,
+      "endColumn": 96,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-customers-account.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 6,
+      "startColumn": 22,
+      "endRow": 6,
+      "endColumn": 83,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-customers-addresses.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 15,
+      "startColumn": 24,
+      "endRow": 15,
+      "endColumn": 85,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-customers-order.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 6,
+      "startColumn": 22,
+      "endRow": 6,
+      "endColumn": 83,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-password.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 30,
+      "startColumn": 22,
+      "endRow": 30,
+      "endColumn": 52,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-password.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 128,
+      "startColumn": 22,
+      "endRow": 128,
+      "endColumn": 49,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-product.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 114,
+      "startColumn": 22,
+      "endRow": 123,
+      "endColumn": 11,
+      "message": "Missing required argument 'media' in render tag for snippet 'product-gallery'."
+    },
+    {
+      "filePath": "sections/main-search.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 110,
+      "startColumn": 48,
+      "endRow": 110,
+      "endColumn": 75,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-search.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 270,
+      "startColumn": 81,
+      "endRow": 270,
+      "endColumn": 102,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-search.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 295,
+      "startColumn": 79,
+      "endRow": 295,
+      "endColumn": 100,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/newsletter-popup.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 27,
+      "startColumn": 22,
+      "endRow": 27,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/privacy-banner.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 5,
+      "startColumn": 18,
+      "endRow": 5,
+      "endColumn": 38,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/text-with-icons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 26,
+      "startColumn": 32,
+      "endRow": 26,
+      "endColumn": 125,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/text-with-icons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 27,
+      "startColumn": 32,
+      "endRow": 27,
+      "endColumn": 124,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/accordion.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 36,
+      "startColumn": 26,
+      "endRow": 36,
+      "endColumn": 54,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/accordion.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 46,
+      "startColumn": 22,
+      "endRow": 46,
+      "endColumn": 81,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/active-facets.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 18,
+      "startColumn": 26,
+      "endRow": 18,
+      "endColumn": 57,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/active-facets.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 36,
+      "startColumn": 26,
+      "endRow": 36,
+      "endColumn": 57,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/button.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 107,
+      "startColumn": 18,
+      "endRow": 107,
+      "endColumn": 35,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-search.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 11,
+      "startColumn": 20,
+      "endRow": 11,
+      "endColumn": 52,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-search.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 24,
+      "startColumn": 24,
+      "endRow": 24,
+      "endColumn": 55,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-sidebar.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 23,
+      "startColumn": 24,
+      "endRow": 23,
+      "endColumn": 55,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-sidebar.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 57,
+      "startColumn": 28,
+      "endRow": 57,
+      "endColumn": 90,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-sidebar.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 67,
+      "startColumn": 28,
+      "endRow": 67,
+      "endColumn": 90,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-sidebar.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 95,
+      "startColumn": 28,
+      "endRow": 95,
+      "endColumn": 61,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/header-sidebar.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 140,
+      "startColumn": 28,
+      "endRow": 140,
+      "endColumn": 89,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/line-item.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 29,
+      "startColumn": 20,
+      "endRow": 29,
+      "endColumn": 72,
+      "message": "Missing required argument 'vendor' in render tag for snippet 'vendor'."
+    },
+    {
+      "filePath": "snippets/line-item.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 163,
+      "startColumn": 26,
+      "endRow": 163,
+      "endColumn": 60,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/line-item.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 168,
+      "startColumn": 52,
+      "endRow": 168,
+      "endColumn": 82,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/localization-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 47,
+      "startColumn": 20,
+      "endRow": 47,
+      "endColumn": 47,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/localization-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 106,
+      "startColumn": 20,
+      "endRow": 106,
+      "endColumn": 47,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pagination.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 16,
+      "startColumn": 22,
+      "endRow": 16,
+      "endColumn": 83,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pagination.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 57,
+      "startColumn": 22,
+      "endRow": 57,
+      "endColumn": 84,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pickup-availability.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 18,
+      "startColumn": 22,
+      "endRow": 18,
+      "endColumn": 81,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pickup-availability.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 20,
+      "startColumn": 22,
+      "endRow": 20,
+      "endColumn": 77,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pickup-availability.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 73,
+      "startColumn": 32,
+      "endRow": 73,
+      "endColumn": 91,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/pickup-availability.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 76,
+      "startColumn": 32,
+      "endRow": 76,
+      "endColumn": 87,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 104,
+      "startColumn": 20,
+      "endRow": 104,
+      "endColumn": 39,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 134,
+      "startColumn": 24,
+      "endRow": 134,
+      "endColumn": 72,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 228,
+      "startColumn": 24,
+      "endRow": 228,
+      "endColumn": 73,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 254,
+      "startColumn": 22,
+      "endRow": 254,
+      "endColumn": 56,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 303,
+      "startColumn": 34,
+      "endRow": 303,
+      "endColumn": 77,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-gallery.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 305,
+      "startColumn": 34,
+      "endRow": 305,
+      "endColumn": 77,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-quick-buy.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 18,
+      "startColumn": 22,
+      "endRow": 18,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-quick-buy.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 24,
+      "startColumn": 22,
+      "endRow": 32,
+      "endColumn": 11,
+      "message": "Missing required argument 'media' in render tag for snippet 'product-gallery'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 44,
+      "startColumn": 20,
+      "endRow": 44,
+      "endColumn": 51,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 46,
+      "startColumn": 20,
+      "endRow": 46,
+      "endColumn": 45,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 51,
+      "startColumn": 22,
+      "endRow": 51,
+      "endColumn": 53,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 54,
+      "startColumn": 24,
+      "endRow": 54,
+      "endColumn": 49,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 57,
+      "startColumn": 26,
+      "endRow": 57,
+      "endColumn": 56,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 59,
+      "startColumn": 26,
+      "endRow": 59,
+      "endColumn": 51,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-rating.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 61,
+      "startColumn": 26,
+      "endRow": 61,
+      "endColumn": 57,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/quantity-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 48,
+      "startColumn": 18,
+      "endRow": 48,
+      "endColumn": 49,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/quantity-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 56,
+      "startColumn": 18,
+      "endRow": 56,
+      "endColumn": 49,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/quantity-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 99,
+      "startColumn": 18,
+      "endRow": 99,
+      "endColumn": 48,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/quantity-selector.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 107,
+      "startColumn": 18,
+      "endRow": 107,
+      "endColumn": 48,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/select.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 47,
+      "startColumn": 14,
+      "endRow": 47,
+      "endColumn": 45,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/shadow-dom-templates.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 19,
+      "startColumn": 24,
+      "endRow": 19,
+      "endColumn": 55,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/shadow-dom-templates.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 50,
+      "startColumn": 24,
+      "endRow": 50,
+      "endColumn": 55,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/shadow-dom-templates.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 76,
+      "startColumn": 24,
+      "endRow": 76,
+      "endColumn": 55,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/share-buttons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 17,
+      "startColumn": 18,
+      "endRow": 17,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/share-buttons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 25,
+      "startColumn": 18,
+      "endRow": 25,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/share-buttons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 33,
+      "startColumn": 18,
+      "endRow": 33,
+      "endColumn": 40,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/share-buttons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 41,
+      "startColumn": 18,
+      "endRow": 41,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/share-buttons.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 49,
+      "startColumn": 18,
+      "endRow": 49,
+      "endColumn": 38,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 11,
+      "startColumn": 20,
+      "endRow": 11,
+      "endColumn": 43,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 19,
+      "startColumn": 20,
+      "endRow": 19,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 27,
+      "startColumn": 20,
+      "endRow": 27,
+      "endColumn": 44,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 35,
+      "startColumn": 20,
+      "endRow": 35,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 43,
+      "startColumn": 20,
+      "endRow": 43,
+      "endColumn": 44,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 51,
+      "startColumn": 20,
+      "endRow": 51,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 59,
+      "startColumn": 20,
+      "endRow": 59,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 67,
+      "startColumn": 20,
+      "endRow": 67,
+      "endColumn": 40,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 75,
+      "startColumn": 20,
+      "endRow": 75,
+      "endColumn": 43,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 83,
+      "startColumn": 20,
+      "endRow": 83,
+      "endColumn": 43,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 91,
+      "startColumn": 20,
+      "endRow": 91,
+      "endColumn": 43,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 99,
+      "startColumn": 20,
+      "endRow": 99,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 107,
+      "startColumn": 20,
+      "endRow": 107,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 115,
+      "startColumn": 20,
+      "endRow": 115,
+      "endColumn": 41,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 123,
+      "startColumn": 20,
+      "endRow": 123,
+      "endColumn": 39,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 131,
+      "startColumn": 20,
+      "endRow": 131,
+      "endColumn": 42,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/social-media.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 139,
+      "startColumn": 20,
+      "endRow": 139,
+      "endColumn": 44,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/variant-picker.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 134,
+      "startColumn": 26,
+      "endRow": 134,
+      "endColumn": 57,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 125,
+      "startColumn": 26,
+      "endRow": 125,
+      "endColumn": 79,
+      "message": "Missing required argument 'vendor' in render tag for snippet 'vendor'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 128,
+      "startColumn": 26,
+      "endRow": 128,
+      "endColumn": 83,
+      "message": "Missing required argument 'vendor' in render tag for snippet 'vendor'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 212,
+      "startColumn": 26,
+      "endRow": 212,
+      "endColumn": 67,
+      "message": "Missing required argument 'product' in render tag for snippet 'product-rating'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 412,
+      "startColumn": 146,
+      "endRow": 412,
+      "endColumn": 164,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 415,
+      "startColumn": 156,
+      "endRow": 415,
+      "endColumn": 174,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 418,
+      "startColumn": 154,
+      "endRow": 418,
+      "endColumn": 172,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 421,
+      "startColumn": 171,
+      "endRow": 421,
+      "endColumn": 189,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 424,
+      "startColumn": 109,
+      "endRow": 424,
+      "endColumn": 127,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 427,
+      "startColumn": 145,
+      "endRow": 427,
+      "endColumn": 163,
+      "message": "Unknown argument 'selected' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 613,
+      "startColumn": 30,
+      "endRow": 613,
+      "endColumn": 96,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 684,
+      "startColumn": 28,
+      "endRow": 684,
+      "endColumn": 48,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 698,
+      "startColumn": 28,
+      "endRow": 698,
+      "endColumn": 56,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-info.liquid",
+      "check": "LiquidComplexity",
+      "severity": "warning",
+      "startRow": 320,
+      "startColumn": 13,
+      "endRow": 320,
+      "endColumn": 82,
+      "message": "Liquid complexity is 229, which exceeds the maximum of 120. The decision at line 320 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag."
+    },
+    {
+      "filePath": "snippets/product-shipping-estimator.liquid",
+      "check": "UnusedDocParam",
+      "severity": "warning",
+      "startRow": 6,
+      "startColumn": 3,
+      "endRow": 6,
+      "endColumn": 26,
+      "message": "The parameter 'product' is defined but not used in this file."
+    },
+    {
+      "filePath": "layout/theme.liquid",
+      "check": "AssetPreload",
+      "severity": "warning",
+      "startRow": 62,
+      "startColumn": 7,
+      "endRow": 62,
+      "endColumn": 113,
+      "message": "For better performance, prefer using the preload_tag filter"
+    },
+    {
+      "filePath": "layout/theme.liquid",
+      "check": "AssetPreload",
+      "severity": "warning",
+      "startRow": 66,
+      "startColumn": 7,
+      "endRow": 66,
+      "endColumn": 110,
+      "message": "For better performance, prefer using the preload_tag filter"
+    },
+    {
+      "filePath": "sections/faq.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 42,
+      "startColumn": 36,
+      "endRow": 42,
+      "endColumn": 102,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/featured-product.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 30,
+      "startColumn": 24,
+      "endRow": 39,
+      "endColumn": 13,
+      "message": "Missing required argument 'media' in render tag for snippet 'product-gallery'."
+    },
+    {
+      "filePath": "sections/main-article.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 31,
+      "startColumn": 30,
+      "endRow": 31,
+      "endColumn": 57,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-article.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 39,
+      "startColumn": 30,
+      "endRow": 39,
+      "endColumn": 58,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-blog.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 29,
+      "startColumn": 34,
+      "endRow": 29,
+      "endColumn": 63,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 144,
+      "startColumn": 34,
+      "endRow": 144,
+      "endColumn": 61,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 192,
+      "startColumn": 30,
+      "endRow": 192,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 200,
+      "startColumn": 30,
+      "endRow": 200,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 211,
+      "startColumn": 30,
+      "endRow": 211,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 219,
+      "startColumn": 30,
+      "endRow": 219,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-collection.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 227,
+      "startColumn": 30,
+      "endRow": 227,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/quick-order-list.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 155,
+      "startColumn": 48,
+      "endRow": 155,
+      "endColumn": 74,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/quick-order-list.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 177,
+      "startColumn": 50,
+      "endRow": 177,
+      "endColumn": 76,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/quick-order-list.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 224,
+      "startColumn": 42,
+      "endRow": 224,
+      "endColumn": 68,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/product-card-placeholder.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 82,
+      "startColumn": 18,
+      "endRow": 82,
+      "endColumn": 103,
+      "message": "Missing required argument 'product' in render tag for snippet 'product-rating'."
+    },
+    {
+      "filePath": "snippets/product-card.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 205,
+      "startColumn": 22,
+      "endRow": 205,
+      "endColumn": 72,
+      "message": "Missing required argument 'vendor' in render tag for snippet 'vendor'."
+    },
+    {
+      "filePath": "snippets/product-card.liquid",
+      "check": "UnrecognizedRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 273,
+      "startColumn": 188,
+      "endRow": 273,
+      "endColumn": 198,
+      "message": "Unknown argument 'size' in render tag for snippet 'option-value'."
+    },
+    {
+      "filePath": "sections/blog-posts.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 40,
+      "startColumn": 24,
+      "endRow": 40,
+      "endColumn": 133,
+      "message": "Missing required argument 'article' in render tag for snippet 'blog-post-card'."
+    },
+    {
+      "filePath": "sections/collection-list.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 154,
+      "startColumn": 28,
+      "endRow": 154,
+      "endColumn": 76,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/collection-list.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 170,
+      "startColumn": 28,
+      "endRow": 170,
+      "endColumn": 77,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/featured-collections.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 83,
+      "startColumn": 34,
+      "endRow": 83,
+      "endColumn": 82,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/featured-collections.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 99,
+      "startColumn": 34,
+      "endRow": 99,
+      "endColumn": 83,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/recently-viewed-products.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 62,
+      "startColumn": 30,
+      "endRow": 62,
+      "endColumn": 78,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/recently-viewed-products.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 78,
+      "startColumn": 30,
+      "endRow": 78,
+      "endColumn": 79,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/related-products.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 46,
+      "startColumn": 30,
+      "endRow": 46,
+      "endColumn": 78,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/related-products.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 62,
+      "startColumn": 30,
+      "endRow": 62,
+      "endColumn": 79,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/cart-drawer.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 294,
+      "startColumn": 30,
+      "endRow": 294,
+      "endColumn": 64,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/cart-drawer.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 299,
+      "startColumn": 56,
+      "endRow": 299,
+      "endColumn": 86,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/cart-drawer.liquid",
+      "check": "UnusedAssign",
+      "severity": "warning",
+      "startRow": 40,
+      "startColumn": 7,
+      "endRow": 40,
+      "endColumn": 94,
+      "message": "The variable 'adula_remaining_keychain' is assigned but not used"
+    },
+    {
+      "filePath": "sections/cart-drawer.liquid",
+      "check": "UnusedAssign",
+      "severity": "warning",
+      "startRow": 41,
+      "startColumn": 7,
+      "endRow": 41,
+      "endColumn": 86,
+      "message": "The variable 'adula_remaining_tray' is assigned but not used"
+    },
+    {
+      "filePath": "sections/main-cart.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 101,
+      "startColumn": 38,
+      "endRow": 101,
+      "endColumn": 72,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/main-cart.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 107,
+      "startColumn": 64,
+      "endRow": 107,
+      "endColumn": 94,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/slideshow.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 173,
+      "startColumn": 26,
+      "endRow": 173,
+      "endColumn": 47,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/slideshow.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 178,
+      "startColumn": 26,
+      "endRow": 178,
+      "endColumn": 45,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/slideshow.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 236,
+      "startColumn": 20,
+      "endRow": 236,
+      "endColumn": 45,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/shop-the-look.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 140,
+      "startColumn": 34,
+      "endRow": 140,
+      "endColumn": 82,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "sections/shop-the-look.liquid",
+      "check": "MissingRenderSnippetArguments",
+      "severity": "warning",
+      "startRow": 153,
+      "startColumn": 34,
+      "endRow": 153,
+      "endColumn": 83,
+      "message": "Missing required argument 'icon' in render tag for snippet 'icon'."
+    },
+    {
+      "filePath": "snippets/address-form.liquid",
+      "check": "ValidRenderSnippetArgumentTypes",
+      "severity": "warning",
+      "startRow": 73,
+      "startColumn": 89,
+      "endRow": 73,
+      "endColumn": 90,
+      "message": "Type mismatch for argument 'value': expected string, got number"
+    },
+    {
+      "filePath": "snippets/icon.liquid",
+      "check": "LiquidComplexity",
+      "severity": "warning",
+      "startRow": 1181,
+      "startColumn": 3,
+      "endRow": 1181,
+      "endColumn": 37,
+      "message": "Liquid complexity is 124, which exceeds the maximum of 120. The decision at line 1181 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag."
+    },
+    {
+      "filePath": "config/settings_schema.json",
+      "check": "DeprecatedFontsOnSettingsSchema",
+      "severity": "warning",
+      "startRow": 245,
+      "startColumn": 20,
+      "endRow": 245,
+      "endColumn": 34,
+      "message": "The font \"helvetica_n4\" is deprecated"
+    },
+    {
+      "filePath": "config/settings_schema.json",
+      "check": "DeprecatedFontsOnSettingsSchema",
+      "severity": "warning",
+      "startRow": 296,
+      "startColumn": 20,
+      "endRow": 296,
+      "endColumn": 34,
+      "message": "The font \"helvetica_n4\" is deprecated"
+    }
+  ],
+  "errorCount": 0,
+  "warningCount": 154,
+  "infoCount": 0
+}

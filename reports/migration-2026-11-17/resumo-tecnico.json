@@ -1,0 +1,509 @@
+{
+  "date": "2026-11-17",
+  "timezone": "America/Sao_Paulo",
+  "branch": "fix/migration-final-review-2026",
+  "base_commit": "dfcfddf",
+  "theme_id": "168887910563",
+  "theme_name": "TESTE – CHIC FRIDAY 2026",
+  "decision": "NAO APTO AGORA: correcoes ainda sem deploy; CSV sem importacao; brindes ainda recebem desconto; URLs e catalogo pendentes",
+  "no_deploy": true,
+  "no_redirect_import": true,
+  "no_merge": true,
+  "no_domain_or_dns_changes": true,
+  "no_catalog_changes": true,
+  "approved_sale_discount_unchanged": true,
+  "redirects": {
+    "old_urls": 909,
+    "existing_301": 674,
+    "direct_200": 1,
+    "old_404": 234,
+    "ready_redirects": 53,
+    "resolved_old_404": 52,
+    "extra_legacy_urls": 1,
+    "pending": 182,
+    "target_checks": {
+      "/#guia-garantia": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/#guia-garantia",
+        "hops": 0,
+        "title": "Joias e Semijoias com Design Francês | Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/#sobre-a-adula": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/#sobre-a-adula",
+        "hops": 0,
+        "title": "Joias e Semijoias com Design Francês | Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/blogs/revista-adula": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/blogs/revista-adula",
+        "hops": 0,
+        "title": "Revista Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/aliancas-1": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/aliancas-1",
+        "hops": 0,
+        "title": "Alianças – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/all": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/all",
+        "hops": 0,
+        "title": "Produtos – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/aneis": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/aneis",
+        "hops": 0,
+        "title": "Anéis femininos: ouro 18K, ródio e Prata 925 | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/aneis-com-pedra": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/aneis-com-pedra",
+        "hops": 0,
+        "title": "Anéis com Pedra – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/aneis-lisos": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/aneis-lisos",
+        "hops": 0,
+        "title": "Anéis Lisos – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/ate-r-199": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/ate-r-199",
+        "hops": 0,
+        "title": "Até R$ 199 – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/ate-r-99": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/ate-r-99",
+        "hops": 0,
+        "title": "Até R$ 99 – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/boho-minimalista": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/boho-minimalista",
+        "hops": 0,
+        "title": "Boho Chic – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/braceletes": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/braceletes",
+        "hops": 0,
+        "title": "Braceletes – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/brinco-pequeno": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/brinco-pequeno",
+        "hops": 0,
+        "title": "Brinco Pequeno – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/brinco-prata-925": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/brinco-prata-925",
+        "hops": 0,
+        "title": "Brinco Prata 925 – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/charm-de-praia": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/charm-de-praia",
+        "hops": 0,
+        "title": "Charm de Praia – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/colares-masculinos": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/colares-masculinos",
+        "hops": 0,
+        "title": "Colares Masculinos – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/ear-hooks": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/ear-hooks",
+        "hops": 0,
+        "title": "Ear Hooks – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/escapularios": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/escapularios",
+        "hops": 0,
+        "title": "Escapulários – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/festa": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/festa",
+        "hops": 0,
+        "title": "Festa – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/fios-de-luz": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/fios-de-luz",
+        "hops": 0,
+        "title": "Fios De Luz – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/love-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/love-paris",
+        "hops": 0,
+        "title": "Love Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/moissanite": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/moissanite",
+        "hops": 0,
+        "title": "MOISSANITE – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/noivas-madrinhas": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/noivas-madrinhas",
+        "hops": 0,
+        "title": "Noivas / Madrinhas – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/personalize-sua-peca": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/personalize-sua-peca",
+        "hops": 0,
+        "title": "Personalize sua peça – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pingentes-dourado": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pingentes-dourado",
+        "hops": 0,
+        "title": "Pingentes Dourado – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pingentes-pedra-natural": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pingentes-pedra-natural",
+        "hops": 0,
+        "title": "Pingentes Pedra Natural – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pingentes-prata-925": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pingentes-prata-925",
+        "hops": 0,
+        "title": "Pingentes Prata 925 – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pingentes-relicario": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pingentes-relicario",
+        "hops": 0,
+        "title": "Pingentes Relicário – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/porta-joias-e-estojos": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/porta-joias-e-estojos",
+        "hops": 0,
+        "title": "Porta Jóias e Estojos – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/presentes-adulantes": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/presentes-adulantes",
+        "hops": 0,
+        "title": "Presentes Adulantes – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pulseiras": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pulseiras",
+        "hops": 0,
+        "title": "Pulseiras femininas em ouro 18K, ródio e Prata 925 | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/pulseiras-prata-925": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/pulseiras-prata-925",
+        "hops": 0,
+        "title": "Pulseiras Prata 925 – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/riviera-francesa": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/riviera-francesa",
+        "hops": 0,
+        "title": "Riviera Francesa – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/santuario-de-paris",
+        "hops": 0,
+        "title": "Santuário de Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/collections/voyage": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/collections/voyage",
+        "hops": 0,
+        "title": "Voyage – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/pages/guia-de-medidas": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/pages/guia-de-medidas",
+        "hops": 0,
+        "title": "Guia de Medidas – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/policies/privacy-policy": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/policies/privacy-policy",
+        "hops": 0,
+        "title": "Política de privacidade – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/policies/refund-policy": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/policies/refund-policy",
+        "hops": 0,
+        "title": "Política de reembolso – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris",
+        "hops": 0,
+        "title": "Brinco Prisma Curvado de Pedra Natural Turmalina - Santuario de Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/caixa-de-presente-je-t-aime": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/caixa-de-presente-je-t-aime",
+        "hops": 0,
+        "title": "Caixa de Presente Je T´Aime | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925",
+        "hops": 0,
+        "title": "Choker Glamour Riviera 1,75 mm 4 Garras Prata 925 | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/colar-chuva-de-bencaos-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/colar-chuva-de-bencaos-santuario-de-paris",
+        "hops": 0,
+        "title": "Colar chuva de bênçãos – Santuário de Paris | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris",
+        "hops": 0,
+        "title": "Colar Regard Sacré (Olhar Sagrado) | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris",
+        "hops": 0,
+        "title": "Colar Sacré Coeur (Coração Sagrado) | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m",
+        "hops": 0,
+        "title": "Escapulário Prata 925 Sagrado C. de Jesus e N.S | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p",
+        "hops": 0,
+        "title": "Escapulário Prata 925 Sagrado C. de Jesus e N.S | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/limpa-joias-de-60ml": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/limpa-joias-de-60ml",
+        "hops": 0,
+        "title": "Limpa Joias de 60ml | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925",
+        "hops": 0,
+        "title": "Pulseira Glamour Riviera 1,75 mm 4 Garras Prata 925 | Adüla – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris",
+        "hops": 0,
+        "title": "Pulseira Renda Sagrada de Pedra Natural - Santuario de Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/pulseira-rosario-de-pedra-natural-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/pulseira-rosario-de-pedra-natural-santuario-de-paris",
+        "hops": 0,
+        "title": "Pulseira Rosario De Pedra Natural - Santuario de Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      },
+      "/products/pulseira-vitral-de-pedra-natural-santuario-de-paris": {
+        "status": 200,
+        "final": "https://adula-brasil.myshopify.com/products/pulseira-vitral-de-pedra-natural-santuario-de-paris",
+        "hops": 0,
+        "title": "Pulseira Vitral de Pedra Natural - Santuario de Paris – Adüla Brasil",
+        "fragment_ok": true,
+        "noindex": false
+      }
+    },
+    "rejected": [],
+    "loops_in_proposals": false
+  },
+  "theme_check": {
+    "valid": true,
+    "errorCount": 0,
+    "warningCount": 154,
+    "infoCount": 0
+  },
+  "unit_tests": {
+    "liquid_scenarios": 20,
+    "dom_and_gift_scenarios": 3,
+    "failed": 0,
+    "remote_shopify_rendering_of_new_code": false
+  },
+  "responsive_tests": {
+    "theme": "existing test theme, not new branch",
+    "css_width": 444,
+    "method": "Chrome desktop zoom 300%, not mobile hardware emulation",
+    "horizontal_overflow_home": false,
+    "menu": "passed",
+    "submenu": "passed",
+    "availability_filter": "passed; filter.v.availability=1",
+    "predictive_search": "passed; Adriana returned",
+    "add_to_cart": "passed; Adriana 10 / Quartzo Verde at 55.20",
+    "cleanup": "test item removed; zoom restored"
+  },
+  "gift_pause": "all 3 remote files identical to tested dfcfddf; no reimplementation",
+  "gift_discount_remaining": {
+    "tray": {
+      "original_cents": 4900,
+      "final_cents": 3920
+    },
+    "keychain": {
+      "original_cents": 1900,
+      "final_cents": 1520
+    },
+    "method": "isolated fresh carts; no orders"
+  },
+  "performance": {
+    "real_web_vitals": null,
+    "headless_issue": "ERR_CERT_AUTHORITY_INVALID",
+    "pagespeed_issue": "HTTP 429 quota exhausted",
+    "managed_chrome": "DevTools blocked by organization; no bypass attempted",
+    "image_samples": [
+      {
+        "sample": "hero-mobile-700",
+        "bytes": 102244,
+        "type": "image/webp",
+        "url": "https://adula-brasil.myshopify.com/cdn/shop/files/2_64eff1f5-6da9-4a03-9206-e7e8086a48ea.png?v=1794335088&width=700"
+      },
+      {
+        "sample": "hero-desktop-2200",
+        "bytes": 85032,
+        "type": "image/webp",
+        "url": "https://adula-brasil.myshopify.com/cdn/shop/files/5desktop.png?v=1794335070&width=2200"
+      }
+    ]
+  },
+  "catalog_pending": {
+    "variant_id": 47861271036067,
+    "variant_title": "12 / Quartzo Rosa",
+    "featured_image_id": 51629617086627,
+    "featured_image_alt": "#pedra_turquesa",
+    "no_mutation": true
+  },
+  "admin_pending": [
+    "Revisar exclusao dos brindes da promocao, sem alterar SALE ou Santuario",
+    "Autorizar importacao do CSV de 53 redirecionamentos",
+    "Decidir 182 URLs sem equivalente confirmado",
+    "Revisar associacao de midia Quartzo Rosa",
+    "Validar destino editorial /blog -> /blogs/revista-adula e migrar conteudo se aplicavel",
+    "Validar Giftback com regras operacionais Zoppy e repetir wishlist apos deploy",
+    "Conferir dominio, SSL, canonical e sitemap depois da conexao autorizada"
+  ]
+}
