@@ -218,11 +218,13 @@
 {%- if context == 'card' or context == 'product' -%}
   {%- assign payment_item = variant | default: product.selected_or_first_available_variant -%}
   {%- if payment_item != blank -%}
-    {%- assign adula_payment_base = payment_item.price
-    if adula_chic_friday_show
-      assign adula_payment_base = adula_chic_friday_price
-    endif
-    assign pix_price = adula_payment_base | times: 0.97 -%}
+    {%- liquid
+      assign adula_payment_base = payment_item.price
+      if adula_chic_friday_show
+        assign adula_payment_base = adula_chic_friday_price
+      endif
+      assign pix_price = adula_payment_base | times: 0.97
+    -%}
     {%- assign installment_price = adula_payment_base | divided_by: 4.0 -%}
     <div class="adula-payment-conditions{% if context == 'product' %} adula-payment-conditions--product{% endif %}" aria-label="Condições de pagamento">
       <p class="adula-payment-conditions__installment">
