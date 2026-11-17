@@ -89,6 +89,10 @@
     </script>
 
     {%- comment -%}Brindes pausados durante a Chic Friday 2026: nao carregar a automacao de inclusao de chaveiro/bandeja.{%- endcomment -%}
+    <script>
+      // Reativar manualmente em dezembro, apos revisar a campanha e os IDs dos brindes.
+      window.AdulaAutoGiftsEnabled = false;
+    </script>
     <script src="{{ 'adula-video-carousel-focus.js' | asset_url }}" defer></script>
     <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>

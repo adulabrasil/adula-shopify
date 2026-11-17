@@ -1,4 +1,6 @@
 (() => {
+  if (window.AdulaAutoGiftsEnabled !== true) return;
+
   const ROOT = window.Shopify?.routes?.root || '/';
   const FIRST_THRESHOLD = 19900;
   const SECOND_THRESHOLD = 39900;
@@ -225,6 +227,8 @@
 })();
 
 (() => {
+  if (window.AdulaAutoGiftsEnabled !== true) return;
+
   const money = (cents) => (cents / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   let painting = false;
 

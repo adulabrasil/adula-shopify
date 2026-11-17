@@ -3,6 +3,9 @@
  * Mantém apenas o brinde correspondente à faixa atual do carrinho.
  */
 (function giftGuardTop() {
+  // Keep card variants active while the automatic gift campaign is paused.
+  if (window.AdulaAutoGiftsEnabled !== true) return;
+
   const KEYCHAIN_VARIANT_ID = 47876818075811;
   const TRAY_VARIANT_ID = 47977612837027;
   const FIRST_THRESHOLD = 19900;
