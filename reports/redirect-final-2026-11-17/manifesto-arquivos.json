@@ -1,0 +1,111 @@
+{
+  "format": "UTF-8 BOM CSV with LF; HTML drafts unpublished",
+  "state": "APPROVAL_REQUIRED_NO_IMPORT_EXECUTED",
+  "files": [
+    {
+      "path": "00-consolidado-50.csv",
+      "bytes": 3086,
+      "sha256": "7dc056736735f4f5ccc242455a12035f8cd5b038a282b8704a2b56496f94ed6d"
+    },
+    {
+      "path": "00-consolidado-opcional-55.csv",
+      "bytes": 3649,
+      "sha256": "34cb87f879db8ec380e36eb1a5aeaeb1d20a52fd60388e22db31e1c85f19a1c3"
+    },
+    {
+      "path": "01-novos-40.csv",
+      "bytes": 2641,
+      "sha256": "75d937a0b646d71fa96c1fa0d59ed4a16749a5ef0bdf40441782750a6e5c5d40"
+    },
+    {
+      "path": "02-corrigir-existentes-10.csv",
+      "bytes": 474,
+      "sha256": "0b292153581744d5db1f1c86223e383effe1ae944bc2cfca588ab10b1b7d7158"
+    },
+    {
+      "path": "03-adicionais-produtos-5.csv",
+      "bytes": 592,
+      "sha256": "dc8c8ec131817a37db2b59d06e52e1c4031eb70e61360b58903e06e8b163b010"
+    },
+    {
+      "path": "LEIA-ME.md",
+      "bytes": 13204,
+      "sha256": "d60e4b7ad11a2180f431b54ef2d5dc7281f6af4c34ea9f9674e1ca15126db822"
+    },
+    {
+      "path": "artigos-antigos-a-migrar.csv",
+      "bytes": 484,
+      "sha256": "2af1821cf83dc03f38acde64c6791e373fce224019b12cab7049530db65af664"
+    },
+    {
+      "path": "evidencia-institucional.json",
+      "bytes": 3881,
+      "sha256": "7ac174c6a52b95b0db9ab89d7e41e6e337409b741e223d7fb099b807c4b434df"
+    },
+    {
+      "path": "funcionais-674-NAO-IMPORTAR.csv",
+      "bytes": 139211,
+      "sha256": "4abbe795c3fa1b61042ab6cdf8a5e2c948793eb315f6ced6db3d174dbc569f5f"
+    },
+    {
+      "path": "paginas-rascunho/garantia.html",
+      "bytes": 2135,
+      "sha256": "61cb21a893f0d80ec7ab6754febd8a5a262de2fd242f461103026c277bf2b7db"
+    },
+    {
+      "path": "paginas-rascunho/metadados.json",
+      "bytes": 1376,
+      "sha256": "b7355cd9defe687e79aeddd3c9d0defdbf040cd6f6ce1cee388d50dd3f01bae5"
+    },
+    {
+      "path": "paginas-rascunho/sobre-a-adula.html",
+      "bytes": 1075,
+      "sha256": "02f34fa281d0e5c7c4aa7ad7625e70995af9e6182b9089b1eaf8e4f21f45896f"
+    },
+    {
+      "path": "pendentes-3-NAO-IMPORTAR.csv",
+      "bytes": 490,
+      "sha256": "a1698b45a1e361ef07a2cdff5906f09d06a7d9916db34aec2c5ed68f38e5a2bd"
+    },
+    {
+      "path": "regras-existentes-quebradas-fora-do-lote-6.csv",
+      "bytes": 1081,
+      "sha256": "305a2dee111d2ecb8cbe9846d9ee05fed422ac36a44808fbca44cf647f83e003"
+    },
+    {
+      "path": "resumo.json",
+      "bytes": 1060,
+      "sha256": "0cff3f7610f3cdf389a0bdc1c079f17791d3549ba44013242ea88b4ee82fb6bc"
+    },
+    {
+      "path": "revisao-final-55.csv",
+      "bytes": 10442,
+      "sha256": "1e6e750ed65cf184574e485d8ddc3b8ecc9754c4795af3741cb5b798c0cd917c"
+    },
+    {
+      "path": "sem-correspondencia-colecoes-10.csv",
+      "bytes": 2137,
+      "sha256": "cb003286c0f31cf3f50110efd3d4c5f8d519d5618de091f91877415ef4b56fd2"
+    },
+    {
+      "path": "sem-correspondencia-editorial-2.csv",
+      "bytes": 428,
+      "sha256": "b9e8bbe1476759c44a1ce4673926415ee61115c5716347b5f43c0e2e3c666d2e"
+    },
+    {
+      "path": "sem-correspondencia-institucional-2.csv",
+      "bytes": 354,
+      "sha256": "5a9d3b6cc64e837ebe9e65111c57674233181dca3f9b493b18b5e51306d02930"
+    },
+    {
+      "path": "sem-correspondencia-produtos-166.csv",
+      "bytes": 35137,
+      "sha256": "f98faff9f39f11ccec7ac58944e3f8e1b53403da019dc5f663c1cba77c2c675f"
+    },
+    {
+      "path": "urls-sem-correspondencia-180.csv",
+      "bytes": 37777,
+      "sha256": "c87abe5a8a788de98968ed928af921056c851441654a01191922e55f9a3b3f36"
+    }
+  ]
+}

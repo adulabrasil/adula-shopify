@@ -4,6 +4,8 @@ Nenhum merge, deploy, publicação, importação de CSV, alteração de domínio
 
 Atualização de autenticação: a instalação foi confirmada pelo usuário, mas a execução local retornou HTTP 400. A causa exata ainda depende do novo **[diagnóstico seguro](DIAGNOSTICO-HTTP400.md)**; instalação não comprova elegibilidade de organização para client_credentials. A correção preserva a requisição documentada e passa a distinguir códigos OAuth sem expor segredos.
 
+Atualização de escopo: o usuário informou ter disponibilizado os produtos em todos os canais pelo Admin e pausou a auditoria local. A entrega atual de redirecionamentos e rascunhos está em `../redirect-final-2026-11-17/LEIA-ME.md`; as pendências anteriores abaixo são históricas e não retomam a auditoria de publicações.
+
 ## Prioridade 1 — canais de vendas
 
 **Situação: auditor pronto para execução local; resultado administrativo pendente da sua execução.** Você escolheu executar no próprio computador e informou que os produtos devem estar em todos os canais. Isso foi aplicado como expectativa para produtos ACTIVE. Não se propõe publicar DRAFT/ARCHIVED.
