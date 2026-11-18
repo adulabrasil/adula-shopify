@@ -287,7 +287,7 @@
             "collection": "all",
             "products_count": 8,
             "title": "Mais vendidos",
-            "link_url": "/collections/all?sort_by=best-selling",
+            "link_url": "shopify://collections/mais-vendidos",
             "link_text": "Ver todas as peças"
           }
         }
