@@ -306,7 +306,8 @@
                 aria-current="{% if media == default_media %}true{% else %}false{% endif %}"
                 aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}"
               >
-                {{- media | image_url: width: media.preview_image.width | image_tag: sizes: '56px', widths: '56,112,168', class: 'object-contain' -}}
+                {%- capture customer_thumbnail_alt -%}{%- render 'adula-customer-media-alt', text: media.alt, fallback: product.title -%}{%- endcapture -%}
+                {{- media | image_url: width: media.preview_image.width | image_tag: alt: customer_thumbnail_alt, sizes: '56px', widths: '56,112,168', class: 'object-contain' -}}
 
                 {%- unless media.media_type == 'image' -%}
                   <div class="product-gallery__media-badge">

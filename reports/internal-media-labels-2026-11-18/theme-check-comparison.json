@@ -1,0 +1,38 @@
+{
+  "base": {
+    "warning": 172,
+    "error": 4
+  },
+  "after": {
+    "warning": 172,
+    "error": 4
+  },
+  "new": [],
+  "removed": [],
+  "existing_errors": [
+    [
+      "snippets/select.liquid",
+      "ValidDocParamTypes",
+      "error",
+      "The parameter type 'array' is not supported."
+    ],
+    [
+      "snippets/variant-picker.liquid",
+      "ValidDocParamTypes",
+      "error",
+      "The parameter type 'array' is not supported."
+    ],
+    [
+      "sections/predictive-search.liquid",
+      "ValidSchemaName",
+      "error",
+      "'t:sections.predictive_search.predictive_search' does not have a matching entry in 'locales/en.default.schema.json'"
+    ],
+    [
+      "blocks/_dynamic-grid-item.liquid",
+      "ValidBlockTarget",
+      "error",
+      "Theme block 'blocks/subheading.liquid' does not exist."
+    ]
+  ]
+}

@@ -214,6 +214,7 @@
             <a class="adula-category-nav__link" href="{{ category_url | default: '#' }}">
               <div class="adula-category-nav__media">
                 {%- if category_image != blank -%}
+                  {%- capture customer_category_alt -%}{%- render 'adula-customer-media-alt', text: category_image.alt, fallback: category_title -%}{%- endcapture -%}
                   <img
                     src="{{ category_image | image_url: width: 520 }}"
                     srcset="{{ category_image | image_url: width: 260 }} 260w, {{ category_image | image_url: width: 380 }} 380w, {{ category_image | image_url: width: 520 }} 520w"
@@ -222,7 +223,7 @@
                     height="520"
                     loading="lazy"
                     decoding="async"
-                    alt="{{ category_image.alt | default: category_title | escape }}"
+                    alt="{{ customer_category_alt | escape }}"
                   >
                 {%- else -%}
                   {{ 'collection-1' | placeholder_svg_tag: 'placeholder' }}

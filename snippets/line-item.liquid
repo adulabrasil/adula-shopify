@@ -9,10 +9,12 @@
 
 <line-item class="line-item">
   {%- if line_item.image != blank -%}
+    {%- assign customer_line_title = line_item.product.title | default: line_item.title -%}
+    {%- capture customer_line_alt -%}{%- render 'adula-customer-media-alt', text: line_item.image.alt, fallback: customer_line_title -%}{%- endcapture -%}
     {{-
       line_item.image
       | image_url: width: line_item.image.width
-      | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 70px, 120px', widths: '70,120,140,210,240,360', class: 'line-item__media'
+      | image_tag: alt: customer_line_alt, loading: 'lazy', sizes: '(max-width: 699px) 70px, 120px', widths: '70,120,140,210,240,360', class: 'line-item__media'
     -}}
   {%- endif -%}
 

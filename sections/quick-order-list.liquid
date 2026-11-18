@@ -72,10 +72,12 @@
                       <div class="h-stack">
                         <div class="h-stack gap-5">
                           {%- if section.settings.show_image and product.featured_media != blank -%}
+                            {%- capture customer_order_product_alt -%}{%- render 'adula-customer-media-alt', text: product.featured_media.alt, fallback: product.title -%}{%- endcapture -%}
                             {{-
                               product.featured_media
                               | image_url: width: product.featured_media.width
                               | image_tag:
+                                alt: customer_order_product_alt,
                                 loading: 'lazy',
                                 sizes: '(max-width: 740px) 40px, 68px',
                                 widths: '40,68,80,120,136,204',
@@ -101,10 +103,13 @@
                           assign image_to_use = variant.featured_media | default: product.featured_media
 
                           if section.settings.show_image and image_to_use != blank
+                            capture customer_order_variant_alt
+                              render 'adula-customer-media-alt', text: image_to_use.alt, fallback: product.title
+                            endcapture
                             if product.variants.size > 1
-                              echo image_to_use | image_url: width: image_to_use.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 40px, 48px', widths: '40,48,80,96,136,144', class: 'quick-order-list__variant-image constrained-image shrink-0', style: '--image-mobile-max-width: 40px; --image-max-width: 48px'
+                              echo image_to_use | image_url: width: image_to_use.width | image_tag: alt: customer_order_variant_alt, loading: 'lazy', sizes: '(max-width: 740px) 40px, 48px', widths: '40,48,80,96,136,144', class: 'quick-order-list__variant-image constrained-image shrink-0', style: '--image-mobile-max-width: 40px; --image-max-width: 48px'
                             else
-                              echo image_to_use | image_url: width: image_to_use.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 40px, 68px', widths: '40,68,80,120,136,204', class: 'quick-order-list__variant-image constrained-image shrink-0', style: '--image-mobile-max-width: 40px; --image-max-width: 68px'
+                              echo image_to_use | image_url: width: image_to_use.width | image_tag: alt: customer_order_variant_alt, loading: 'lazy', sizes: '(max-width: 740px) 40px, 68px', widths: '40,68,80,120,136,204', class: 'quick-order-list__variant-image constrained-image shrink-0', style: '--image-mobile-max-width: 40px; --image-max-width: 68px'
                             endif
                           endif
                         -%}
