@@ -30,7 +30,8 @@
   {%- when 'collection' -%}
     <a href="{{ collection.url }}" class="v-stack gap-3 sm:gap-5">
       {%- if collection.image -%}
-        {{- collection.image | image_url: width: collection.image.width | image_tag: sizes: '(max-width: 699px) 160px, 500px', widths: '200,300,400,500,600,800,1000,1200,1400' -}}
+        {%- capture customer_search_collection_alt -%}{%- render 'adula-customer-media-alt', text: collection.image.alt, fallback: collection.title -%}{%- endcapture -%}
+        {{- collection.image | image_url: width: collection.image.width | image_tag: alt: customer_search_collection_alt, sizes: '(max-width: 699px) 160px, 500px', widths: '200,300,400,500,600,800,1000,1200,1400' -}}
       {%- endif -%}
 
       <span class="h6 sm:h5">{{ collection.title }}</span>

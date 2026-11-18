@@ -1,3 +1,13 @@
+// Presentation only: preserve raw media.alt in JSON for Prestige variant-image groups.
+const ADULA_INTERNAL_MEDIA_KEYS = new Set(['cor', 'cores', 'pedra', 'pedras', 'signos', 'pingente de letra', 'cor de metal semijoias']);
+function adulaCustomerMediaAlt(raw, fallback = '') {
+  const parts = String(raw ?? '').split('#');
+  const prefix = parts.shift();
+  const text = prefix + parts.filter((part) => !part.includes('_') || !ADULA_INTERNAL_MEDIA_KEYS.has(part.split('_')[0].trim().toLowerCase())).map((part) => '#' + part).join('');
+  return text.trim() || String(fallback ?? '').trim();
+}
+// End customer-facing media text helper.
+
 /*
  * Adula — brindes não cumulativos.
  * Mantém apenas o brinde correspondente à faixa atual do carrinho.
@@ -308,7 +318,7 @@ const sourceWithWidth = (source, width) => {
   return `${source}${separator}width=${width}`;
 };
 
-const updateImage = (image, media) => {
+const updateImage = (image, media, fallbackAlt = '') => {
   const source = imageSource(media);
 
   if (!image || !source) {
@@ -322,7 +332,7 @@ const updateImage = (image, media) => {
 
   if (media.width) image.width = media.width;
   if (media.height) image.height = media.height;
-  if (media.alt) image.alt = media.alt;
+  image.alt = adulaCustomerMediaAlt(media.alt, fallbackAlt);
 };
 
 const sameMedia = (media, featuredImage) => {
@@ -357,10 +367,11 @@ const updateCardMedia = async (card, control, variant) => {
   const primaryImage = card.querySelector('.product-card__image--primary');
   const secondaryImage = card.querySelector('.product-card__image--secondary');
 
-  updateImage(primaryImage, primaryMedia);
+  const commercialTitle = product?.title || card.getAttribute('data-product-title') || '';
+  updateImage(primaryImage, primaryMedia, commercialTitle);
 
   if (secondaryImage && secondaryMedia?.media_type === 'image') {
-    updateImage(secondaryImage, secondaryMedia);
+    updateImage(secondaryImage, secondaryMedia, commercialTitle);
     secondaryImage.removeAttribute('hidden');
   } else {
     secondaryImage?.setAttribute('hidden', '');

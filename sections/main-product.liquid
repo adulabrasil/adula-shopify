@@ -656,7 +656,8 @@
         <div class="h-stack gap-6">
           {%- if product.media.size > 0 -%}
             {%- assign default_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-            {{- default_media | image_url: width: default_media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120,180' -}}
+            {%- capture customer_sticky_alt -%}{%- render 'adula-customer-media-alt', text: default_media.alt, fallback: product.title -%}{%- endcapture -%}
+            {{- default_media | image_url: width: default_media.width | image_tag: alt: customer_sticky_alt, loading: 'lazy', sizes: '60px', widths: '60,120,180' -}}
           {%- endif -%}
 
           <div class="v-stack">
