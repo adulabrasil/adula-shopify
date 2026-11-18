@@ -14,6 +14,12 @@ O nome “TESTE” não significa que o tema continue não publicado. O ID `1688
 
 A equivalência acima é entre fontes Git de preparação. Não foi possível comparar integralmente os arquivos atuais do Admin com os commits; portanto, não afirmamos que o tema publicado coincide exatamente com o PR #45. Os PRs #45 e #46 continuam abertos/em rascunho, sem merge ou alteração das respectivas branches. Evidência pública: [public-theme-map.json](public-theme-map.json).
 
+## Atualização externa detectada na conferência final
+
+A branch remota `Adula-Shopify` avançou para `5c3179174640bbf9829337c019571d194bf18d1e` por um commit “Update from Shopify ... by Minha loja Admin”, sem merge dos nossos PRs. A única diferença em relação a `0472f65` é `templates/index.json`: o link Mais vendidos mudou de `/collections/all?sort_by=best-selling` para `shopify://collections/mais-vendidos`. Nenhuma das correções deste trabalho altera esse template. A comparação dos 65 arquivos protegidos refere-se às bases Git #45/#46 declaradas acima; não representa um backup das configurações atuais do Admin. Antes de qualquer aplicação, incorporar/preservar essa edição e outras diferenças remotas confirmadas, sem sobrescrever o template com uma cópia antiga. As branches #45/#46 permanecem nos commits documentados.
+
+Os PRs de integração são [#49 (Oficial)](https://github.com/adulabrasil/adula-shopify/pull/49) e [#50 (Chic Friday)](https://github.com/adulabrasil/adula-shopify/pull/50), ambos em rascunho e com base nas branches de preparação específicas; não houve merge.
+
 ## O que foi implementado
 
 A mesma limpeza seletiva de apresentação de `media.alt` foi aplicada às duas bases por patch de código, sem copiar configurações entre elas. A adaptação do Shop the Look foi feita sobre o arquivo próprio de cada base, preservando suas regras distintas de preço. Inclui galeria, thumbnails, swatches, cards, imagens secundárias, busca, recomendações, menus, categorias, coleções, carrinho, barra fixa, pedidos rápidos, badges personalizados e twitter:image:alt.
