@@ -1,0 +1,22 @@
+{
+  "official": {
+    "base_counts": {
+      "warning": 165
+    },
+    "after_counts": {
+      "warning": 165
+    },
+    "new": [],
+    "removed": []
+  },
+  "chic": {
+    "base_counts": {
+      "warning": 167
+    },
+    "after_counts": {
+      "warning": 167
+    },
+    "new": [],
+    "removed": []
+  }
+}

@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('node:vm'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
 const {Liquid}=require('liquidjs'),{JSDOM}=require('jsdom');
-const root=path.resolve(__dirname,'../..'),output=path.join(__dirname,'.test-output'),base='0472f65395eac2d3e1c47fb0f8844fd082d7f4ef';fs.mkdirSync(output,{recursive:true});
+const root=path.resolve(__dirname,'../..'),output=path.join(__dirname,'.test-output'),base=process.env.ADULA_BASE_REF||'0472f65395eac2d3e1c47fb0f8844fd082d7f4ef';fs.mkdirSync(output,{recursive:true});
 const original=file=>execFileSync('git',['show',base+':'+file],{cwd:root,encoding:'utf8'});
 const strip=s=>s.replace(/{%-?\s*doc\s*-?%}[\s\S]*?{%-?\s*enddoc\s*-?%}/g,'').replace(/{%-?\s*form\s[^%]*%}/g,'<form data-fixture="true">').replace(/{%-?\s*endform\s*-?%}/g,'</form>');
 const escape=s=>String(s??'').replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
@@ -42,6 +42,20 @@ const cases=[['#cor_dourado','Produto'],['#cor_prata 925','Produto'],['#COR_prat
  const grouping=dom=>({filtered:dom.window.document.querySelector('product-gallery').getAttribute('filtered-indexes'),media:[...dom.window.document.querySelectorAll('[data-media-id]')].map(e=>[e.getAttribute('data-media-id'),e.getAttribute('data-media-type'),e.hasAttribute('hidden')])});
  assert.deepEqual(grouping(oldDom),grouping(newDom));oldDom.window.close();newDom.window.close();passed++;
  for(const result of results){const d=new JSDOM(result);const images=[...d.window.document.querySelectorAll('img')];assert.ok(images.length);for(const image of images){assert.ok(!image.alt.includes('#cor_'));assert.equal(image.getAttribute('src'),media.src, JSON.stringify({alt:image.alt,html:image.outerHTML.slice(0,600)}));assert.ok(image.alt.includes('Pulseira A & B'));}d.window.close();passed++;}
+ // Each complete finish label must keep its own image group and the same filtering.
+ const finishes=['Dourado (Banho Ouro 18k)','Prateado (Banhado a Ródio Branco)','Prata 925 (Prata 925 Legítima)'];
+ for(let chosen=0;chosen<finishes.length;chosen++){
+  const images=finishes.map((finish,i)=>({...media,id:20+i,position:i+1,alt:'#cor_'+finish.toLowerCase()}));
+  const selected={...variant,title:finishes[chosen],featured_media:images[chosen]};
+  const grouped={...product,media:images,options_by_name:{cor:{selected_value:finishes[chosen]}},selected_or_first_available_variant:selected};
+  const context={...ctx,product:grouped,product_form_id:'form',desktop_layout:'carousel_thumbnails_bottom',mobile_controls:'thumbnails'};
+  const oldView=new JSDOM(await before.renderFile('product-gallery',context));const view=new JSDOM(await after.renderFile('product-gallery',context));
+  assert.deepEqual(grouping(oldView),grouping(view));
+  const galleryMedia=[...view.window.document.querySelectorAll('.product-gallery__media[data-media-id]')];
+  assert.equal(galleryMedia.length,3);assert.deepEqual(galleryMedia.filter(el=>!el.hasAttribute('hidden')).map(el=>el.getAttribute('data-media-id')),[String(20+chosen)]);
+  for(const image of view.window.document.querySelectorAll('img'))assert.ok(!image.alt.includes('#cor_'));
+  assert.equal(images[chosen].alt,'#cor_'+finishes[chosen].toLowerCase());oldView.window.close();view.window.close();passed++;
+ }
  const badgeProduct={...product,metafields:{custom:{badges:{value:['#cor_dourado','NOVO','Edição #1']}}}};
  const badges=await after.renderFile('product-badges',{...ctx,product:badgeProduct,types:'custom'});assert.ok(!badges.includes('#cor_'));assert.ok(badges.includes('NOVO'));assert.ok(badges.includes('Edição #1'));passed++;
  // Native and custom JS update image alt without modifying selection metadata, URLs or prices.

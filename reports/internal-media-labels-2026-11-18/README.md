@@ -1,5 +1,7 @@
 # Auditoria e correção — marcadores internos nas imagens
 
+**Atualização:** a preparação e os testes separados da versão permanente e da campanha estão no [relatório pareado](../paired-themes-2026-11-18/README.md). A regra permanente está registrada em `AGENTS.md`.
+
 Repositório: `adulabrasil/adula-shopify`. Branch isolada: `fix/hide-internal-media-labels-2026`, baseada na oficial `Adula-Shopify`, commit `0472f65395eac2d3e1c47fb0f8844fd082d7f4ef`. Relatório de 18/11/2026.
 
 ## Resultado e causa
@@ -70,7 +72,7 @@ A relação verificável dos 22 arquivos está em [code-files.json](code-files.j
 
 ## Testes locais após a correção
 
-- **33 cenários aprovados**, sem falhas, em LiquidJS, JSDOM e VM JavaScript.
+- **36 cenários aprovados**, sem falhas, em LiquidJS, JSDOM e VM JavaScript.
 - **960 alts reais** do catálogo produziram o mesmo resultado em Liquid e nas duas implementações JavaScript; os marcadores identificados não permaneceram na apresentação.
 - Renderização de mídia, cards normal/horizontal, galeria, miniaturas e barra fixa; caracteres especiais e fallback comercial conferidos.
 - Agrupamento, mídia selecionada/oculta e `filtered-indexes` iguais antes/depois na galeria de teste.
