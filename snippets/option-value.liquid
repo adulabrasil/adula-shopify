@@ -194,7 +194,9 @@
         {{ attributes }}
       >
         <span class="sr-only">{{ label | default: value }}</span>
-        {{- image | image_url: width: image.width | image_tag: sizes: '(max-width: 699px) 48px, 68px', widths: '48,68,96,136', class: 'object-contain' -}}
+        {%- assign customer_option_label = label | default: value -%}
+        {%- capture customer_option_alt -%}{%- render 'adula-customer-media-alt', text: image.alt, fallback: customer_option_label -%}{%- endcapture -%}
+        {{- image | image_url: width: image.width | image_tag: alt: customer_option_alt, sizes: '(max-width: 699px) 48px, 68px', widths: '48,68,96,136', class: 'object-contain' -}}
       </{{ option_value_tag }}>
     {%- else -%}
       <{{ option_value_tag }} class="block-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }}>
@@ -226,7 +228,8 @@
   {%- when 'image_filter' -%}
     <label class="image-filter {% if disabled %}is-disabled{% endif %}" for="{{ id | escape }}">
       {%- if filter_value.image -%}
-        {{- filter_value.image | image_url: width: filter_value.image.width | image_tag: loading: 'lazy', sizes: '48px', widths: '48,96,144', class: 'image-filter__image' -}}
+        {%- capture customer_filter_alt -%}{%- render 'adula-customer-media-alt', text: filter_value.image.alt, fallback: filter_value.label -%}{%- endcapture -%}
+        {{- filter_value.image | image_url: width: filter_value.image.width | image_tag: alt: customer_filter_alt, loading: 'lazy', sizes: '48px', widths: '48,96,144', class: 'image-filter__image' -}}
       {%- endif -%}
 
       <span class="image-filter__label link-faded">{{ filter_value.label }}</span>

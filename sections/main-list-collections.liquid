@@ -81,10 +81,12 @@
                       {%- assign loading_strategy = 'lazy' -%}
                     {%- endif -%}
 
+                    {%- capture customer_collection_list_alt -%}{%- render 'adula-customer-media-alt', text: collection.featured_image.alt, fallback: collection.title -%}{%- endcapture -%}
                     {{-
                       collection.featured_image
                       | image_url: width: collection.featured_image.width
                       | image_tag:
+                        alt: customer_collection_list_alt,
                         loading: loading_strategy,
                         sizes: sizes,
                         widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400',

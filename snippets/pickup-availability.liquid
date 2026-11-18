@@ -47,10 +47,11 @@
       <x-drawer id="{{ drawer_id }}" class="drawer color-scheme color-scheme--dialog">
         <div class="h-stack gap-4" slot="header">
           {%- assign image = product_variant.featured_media | default: product_variant.product.featured_media -%}
+          {%- capture customer_pickup_alt -%}{%- render 'adula-customer-media-alt', text: image.alt, fallback: product_variant.product.title -%}{%- endcapture -%}
           {{-
             image
             | image_url: width: image.width
-            | image_tag: loading: 'lazy', sizes: '48px', widths: '48,96,144', class: 'constrained-image', style: '--image-max-width: 48px'
+            | image_tag: alt: customer_pickup_alt, loading: 'lazy', sizes: '48px', widths: '48,96,144', class: 'constrained-image', style: '--image-max-width: 48px'
           -}}
 
           <div class="v-stack">

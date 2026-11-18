@@ -1,0 +1,1 @@
+A auditoria pública original e a lista de produtos estão no PR #48. Para a integração nas duas versões e o estado de homologação, consulte [o relatório pareado](../paired-themes-2026-11-18/README.md). O arquivo media-markers.json é a amostra real original utilizada nos testes locais; não deve ser importado na Shopify.
