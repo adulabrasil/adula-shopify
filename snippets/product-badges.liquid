@@ -61,7 +61,10 @@
         {%- assign custom_badges = product.metafields.custom.badges.value -%}
 
         {%- for custom_badge in custom_badges -%}
-          <span class="badge badge--custom badge--{{ custom_badge | handle }}">{{ custom_badge }}</span>
+          {%- capture customer_badge -%}{%- render 'adula-customer-media-alt', text: custom_badge -%}{%- endcapture -%}
+          {%- if customer_badge != blank -%}
+            <span class="badge badge--custom badge--{{ customer_badge | handle }}">{{ customer_badge | escape }}</span>
+          {%- endif -%}
         {%- endfor -%}
 
       {%- when 'sold_out' -%}
