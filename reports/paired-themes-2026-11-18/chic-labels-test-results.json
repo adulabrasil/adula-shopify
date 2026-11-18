@@ -1,0 +1,6 @@
+{
+  "scenarios": 36,
+  "catalog_vectors": 960,
+  "failed": 0,
+  "scope": "LiquidJS Shopify filters mocked, JSDOM/VM only; no deploy/catalog writes"
+}

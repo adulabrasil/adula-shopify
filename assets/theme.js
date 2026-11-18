@@ -1,3 +1,13 @@
+// Presentation only: preserve raw media.alt in JSON for Prestige variant-image groups.
+const ADULA_INTERNAL_MEDIA_KEYS = new Set(['cor', 'cores', 'pedra', 'pedras', 'signos', 'pingente de letra', 'cor de metal semijoias']);
+function adulaCustomerMediaAlt(raw, fallback = '') {
+  const parts = String(raw ?? '').split('#');
+  const prefix = parts.shift();
+  const text = prefix + parts.filter((part) => !part.includes('_') || !ADULA_INTERNAL_MEDIA_KEYS.has(part.split('_')[0].trim().toLowerCase())).map((part) => '#' + part).join('');
+  return text.trim() || String(fallback ?? '').trim();
+}
+// End customer-facing media text helper.
+
 var __typeError = (msg) => {
   throw TypeError(msg);
 };
@@ -391,7 +401,7 @@ function createMediaImg(media, widths = [], attributes = {}) {
   for (const attributeKey in attributes) {
     image.setAttribute(attributeKey, attributes[attributeKey]);
   }
-  image.alt = media["alt"] || "";
+  image.alt = adulaCustomerMediaAlt(media["alt"], attributes.alt);
   image.src = featuredMediaUrl.href;
   image.srcset = generateSrcset(media["preview_image"], widths);
   return image;
@@ -2996,7 +3006,7 @@ onSwatchChanged_fn = async function(event, target) {
   }
 };
 createMediaImg_fn = function(media, className, sizes) {
-  return createMediaImg(media, [200, 300, 400, 500, 600, 700, 800, 1e3, 1200, 1400, 1600, 1800], { class: className, sizes });
+  return createMediaImg(media, [200, 300, 400, 500, 600, 700, 800, 1e3, 1200, 1400, 1600, 1800], { class: className, sizes, alt: this.getAttribute("data-product-title") || this.querySelector(".product-title")?.textContent?.trim() || "" });
 };
 if (!window.customElements.get("product-card")) {
   window.customElements.define("product-card", ProductCard);

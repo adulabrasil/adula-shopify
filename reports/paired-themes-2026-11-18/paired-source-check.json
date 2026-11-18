@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "shared": [
+    {
+      "file": "snippets/adula-customer-media-alt.liquid",
+      "sha256": "1994d1311d0337cc446bae43c62c4e3e16536a0cb3d368dc9ac711709f9b26d5"
+    },
+    {
+      "file": "AGENTS.md",
+      "sha256": "51ce79b7e836d8d82cdc81c8e1a2da2485c0d3af635252fb7ca4a1fdc7729583"
+    },
+    {
+      "file": "tests/internal-media-labels/labels.test.cjs",
+      "sha256": "dfcee407489e423bec1ae3b55186a07348b781cfeaace8a3177e15d0a0294325"
+    }
+  ],
+  "preserved": [
+    {
+      "version": "official",
+      "base": "6f5fae433066e6d29b225483b35636197a85f8ab",
+      "protected_files": 65,
+      "shop_the_look_only_alt": true
+    },
+    {
+      "version": "chic",
+      "base": "2649e7b6df56a054602bb1d7cb008914dae75815",
+      "protected_files": 65,
+      "shop_the_look_only_alt": true
+    }
+  ],
+  "scope": "Local source invariants only; not remote settings or real storefront validation"
+}
