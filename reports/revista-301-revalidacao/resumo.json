@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-11-18T00:06:01.064002+00:00",
+  "blog_HTTP": 200,
+  "article_count": 17,
+  "index_pages": [
+    10,
+    7
+  ],
+  "redirect_prepared": {
+    "Redirect from": "/blog",
+    "Redirect to": "/blogs/revista-adula"
+  },
+  "redirect_imported": false,
+  "core_ready_rules": 51,
+  "new_ready_rules": 41,
+  "existing_corrections": 10,
+  "optional_additional_products": 5,
+  "optional_total": 56,
+  "held_institutional_pages": {
+    "/pages/garantia": 404,
+    "/pages/sobre-a-adula": 404
+  },
+  "legacy_natal_article_suggested_url_HTTP": 404,
+  "scope": "Public read-only validation; no theme/admin/catalog/DNS changes."
+}
