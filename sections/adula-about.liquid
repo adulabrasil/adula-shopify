@@ -143,6 +143,11 @@
 
         <p>Desde 2017, com vendas online, conquistamos clientes de norte a sul do Brasil. Agora estamos com vários cantinhos adulantes em Belo Horizonte: quiosques no Boulevard Shopping, Pátio Savassi e BH Shopping, além de uma loja conceito no coração da Savassi.</p>
 
+        {%- assign story_page = section.settings.story_page | default: pages['sobre-a-adula'] -%}
+        {%- if story_page != blank and section.settings.story_link_label != blank -%}
+          <p><a href="{{ story_page.url }}" class="link">{{ section.settings.story_link_label | escape }}</a></p>
+        {%- endif -%}
+
         <p class="adula-about__signature">Vem ser Adülada! ♥</p>
       </div>
     </div>
@@ -154,7 +159,19 @@
   "name": "Sobre a Adüla",
   "tag": "section",
   "class": "shopify-section--adula-about",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "story_link_label",
+      "label": "Texto do link da história",
+      "default": "Conheça nossa história"
+    },
+    {
+      "type": "page",
+      "id": "story_page",
+      "label": "Página da história"
+    }
+  ],
   "presets": [
     {
       "name": "Sobre a Adüla"
