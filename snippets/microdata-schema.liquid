@@ -1,10 +1,25 @@
 {%- doc -%}
-  This snippet structures the micro-data using JSON-LD specification. Starting from Prestige 10, we are using the structured_data built-in filter to ensure that Shopify can keep it up to date without requiring theme upgrade. If you believe some information for products are missing, please reach Shopify support directly, as it is no longer managed at the theme level.
+  Uses Shopify structured_data by default. During the tested Chic Friday presentation,
+  campaign ProductGroup offers match the prices displayed by the theme without editing
+  catalog prices. Native Shopify output resumes when no variant has a campaign price.
 {%- enddoc -%}
 
 {%- if request.page_type == 'product' -%}
+  {%- assign has_campaign_offer = false -%}
+  {%- for schema_variant in product.variants -%}
+    {%- capture schema_price -%}{%- render 'adula-chic-friday-price', product: product, variant: schema_variant -%}{%- endcapture -%}
+    {%- assign schema_price = schema_price | plus: 0 -%}
+    {%- if schema_price < schema_variant.price -%}
+      {%- assign has_campaign_offer = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
   <script type="application/ld+json">
-    {{- product | structured_data -}}
+    {%- if has_campaign_offer -%}
+      {%- render 'adula-chic-friday-structured-data', product: product -%}
+    {%- else -%}
+      {{- product | structured_data -}}
+    {%- endif -%}
   </script>
 {%- elsif request.page_type == 'article' -%}
   <script type="application/ld+json">
