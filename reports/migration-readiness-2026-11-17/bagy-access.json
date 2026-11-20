@@ -1,0 +1,12 @@
+{
+  "checked_source_pages": 52,
+  "status_counts": {
+    "403": 52
+  },
+  "title": "Azion - Default error page",
+  "sample_urls": [
+    "https://www.adulabrasil.com/aliancas",
+    "https://www.adulabrasil.com/aneis-1"
+  ],
+  "limitations": "No source product titles, SKUs, stock or administrative status available; do not classify as discontinued."
+}

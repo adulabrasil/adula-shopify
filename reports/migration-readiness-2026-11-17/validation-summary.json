@@ -1,0 +1,17 @@
+{
+  "admin_tests_passed": 15,
+  "admin_tests_failed": 0,
+  "admin_tests_scope": "Mock requests only, no real credentials",
+  "redirect_artifact_check": "passed; 40 new +10 updates, 3 decisions, no imports",
+  "script_syntax": "Node.js and Bash passed",
+  "shopify_admin_audit": "PENDING_LOCAL_USER_EXECUTION",
+  "bagy_catalog_comparison": "PENDING_EXPORT_HTTP_403",
+  "pr46_changed": false,
+  "theme_files_changed": false,
+  "shopify_writes": false,
+  "safe_oauth_tests_passed": 25,
+  "bash_launcher_tests_passed": 6,
+  "total_audit_auth_launcher_scenarios_passed": 46,
+  "authentication_diagnosis": "Pending user rerun with --diagnose-auth; HTTP 400 exact cause unknown",
+  "real_windows_runtime_tested": false
+}

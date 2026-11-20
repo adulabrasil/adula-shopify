@@ -1,0 +1,26 @@
+[
+  {
+    "file": "garantia.html",
+    "title": "Cuidados e Garantia Adüla",
+    "handle": "garantia",
+    "intended_path": "/pages/garantia",
+    "seo_title": "Cuidados e Garantia das Joias | Adüla Brasil",
+    "meta_description": "Conheça a Garantia Adüla de 6 meses para defeitos de fabricação, as condições de atendimento e os cuidados recomendados para suas joias e semijoias.",
+    "visibility": "HIDDEN",
+    "published": false,
+    "source": "https://adula-brasil.myshopify.com/#guia-garantia",
+    "notes": "Texto do guia público existente, sem alteração de prazo/cobertura. Revisar redação antes de publicar. Sem H1 no corpo para evitar duplicar o título do template."
+  },
+  {
+    "file": "sobre-a-adula.html",
+    "title": "Sobre a Adüla",
+    "handle": "sobre-a-adula",
+    "intended_path": "/pages/sobre-a-adula",
+    "seo_title": "Sobre a Adüla: Design Francês, Feito no Brasil",
+    "meta_description": "Conheça a Adüla Brasil, criada por Nadia Fontaine: joias e semijoias com inspiração francesa, produção brasileira e presença em Belo Horizonte.",
+    "visibility": "HIDDEN",
+    "published": false,
+    "source": "https://adula-brasil.myshopify.com/#sobre-a-adula",
+    "notes": "Adaptação do conteúdo público e sections/adula-about.liquid; sem ofertas, prazos de entrega ou regras temporárias. Revisar antes de publicar."
+  }
+]

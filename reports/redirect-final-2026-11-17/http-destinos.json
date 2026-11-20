@@ -1,0 +1,2032 @@
+{
+  "targets": {
+    "https://adula-brasil.myshopify.com/aliancas": {
+      "url": "https://adula-brasil.myshopify.com/aliancas",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/aliancas",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/aneis-1": {
+      "url": "https://adula-brasil.myshopify.com/aneis-1",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/aneis-1",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/anel-com-pedra": {
+      "url": "https://adula-brasil.myshopify.com/anel-com-pedra",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/anel-com-pedra",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/anel-com-pedra"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/anel-sem-pedra": {
+      "url": "https://adula-brasil.myshopify.com/anel-sem-pedra",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/anel-sem-pedra",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/anel-sem-pedra"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/ate-r199": {
+      "url": "https://adula-brasil.myshopify.com/ate-r199",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/ate-r199",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/ate-r99": {
+      "url": "https://adula-brasil.myshopify.com/ate-r99",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/ate-r99",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/blog": {
+      "url": "https://adula-brasil.myshopify.com/blog",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/blog",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/blogs/revista-adula": {
+      "url": "https://adula-brasil.myshopify.com/blogs/revista-adula",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/blogs/revista-adula",
+      "hops": [],
+      "title": "Revista Adüla – Adüla Brasil",
+      "h1": [
+        "Revista Adüla"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/blogs/revista-adula"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/boho-chic-2": {
+      "url": "https://adula-brasil.myshopify.com/boho-chic-2",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/boho-chic-2",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/bracelete": {
+      "url": "https://adula-brasil.myshopify.com/bracelete",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/bracelete",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/bracelete"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/brinco-de-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/brinco-de-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/brinco-de-prata-925",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/brinco-de-prata-925"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/brincos-pequenos": {
+      "url": "https://adula-brasil.myshopify.com/brincos-pequenos",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/brincos-pequenos",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/brincos-pequenos"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/caixa-de-presente-je-taime": {
+      "url": "https://adula-brasil.myshopify.com/caixa-de-presente-je-taime",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/caixa-de-presente-je-taime",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/charms-de-praia": {
+      "url": "https://adula-brasil.myshopify.com/charms-de-praia",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/charms-de-praia",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/choker-glamour-riviera-175-mm-4-garras-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/choker-glamour-riviera-175-mm-4-garras-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/choker-glamour-riviera-175-mm-4-garras-prata-925",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/colar-chuva-de-bencaos-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/colar-chuva-de-bencaos-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/colar-chuva-de-bencaos-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/colar-masculino": {
+      "url": "https://adula-brasil.myshopify.com/colar-masculino",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/colar-masculino",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/colar-masculino"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/colar-regard-sacre-olhar-sagrado-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/colar-regard-sacre-olhar-sagrado-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/colar-regard-sacre-olhar-sagrado-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/colar-sacre-coeur-coracao-sagrado-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/colar-sacre-coeur-coracao-sagrado-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/colar-sacre-coeur-coracao-sagrado-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/collections/aliancas-1": {
+      "url": "https://adula-brasil.myshopify.com/collections/aliancas-1",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/aliancas-1",
+      "hops": [],
+      "title": "Alianças – Adüla Brasil",
+      "h1": [
+        "Alianças"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/aliancas-1"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 2
+    },
+    "https://adula-brasil.myshopify.com/collections/all": {
+      "url": "https://adula-brasil.myshopify.com/collections/all",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/all",
+      "hops": [],
+      "title": "Produtos – Adüla Brasil",
+      "h1": [
+        "Produtos"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/all"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/aneis": {
+      "url": "https://adula-brasil.myshopify.com/collections/aneis",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/aneis",
+      "hops": [],
+      "title": "Anéis femininos: ouro 18K, ródio e Prata 925 | Adüla – Adüla Brasil",
+      "h1": [
+        "Anéis"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/aneis"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/aneis-com-pedra": {
+      "url": "https://adula-brasil.myshopify.com/collections/aneis-com-pedra",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/aneis-com-pedra",
+      "hops": [],
+      "title": "Anéis com Pedra – Adüla Brasil",
+      "h1": [
+        "Anéis com Pedra"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/aneis-com-pedra"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/aneis-lisos": {
+      "url": "https://adula-brasil.myshopify.com/collections/aneis-lisos",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/aneis-lisos",
+      "hops": [],
+      "title": "Anéis Lisos – Adüla Brasil",
+      "h1": [
+        "Anéis Lisos"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/aneis-lisos"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/ate-r-199": {
+      "url": "https://adula-brasil.myshopify.com/collections/ate-r-199",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/ate-r-199",
+      "hops": [],
+      "title": "Até R$ 199 – Adüla Brasil",
+      "h1": [
+        "Até R$ 199"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/ate-r-199"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/ate-r-99": {
+      "url": "https://adula-brasil.myshopify.com/collections/ate-r-99",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/ate-r-99",
+      "hops": [],
+      "title": "Até R$ 99 – Adüla Brasil",
+      "h1": [
+        "Até R$ 99"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/ate-r-99"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/boho-minimalista": {
+      "url": "https://adula-brasil.myshopify.com/collections/boho-minimalista",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/boho-minimalista",
+      "hops": [],
+      "title": "Boho Chic – Adüla Brasil",
+      "h1": [
+        "Boho Chic"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/boho-minimalista"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 20
+    },
+    "https://adula-brasil.myshopify.com/collections/braceletes": {
+      "url": "https://adula-brasil.myshopify.com/collections/braceletes",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/braceletes",
+      "hops": [],
+      "title": "Braceletes – Adüla Brasil",
+      "h1": [
+        "Braceletes"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/braceletes"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 17
+    },
+    "https://adula-brasil.myshopify.com/collections/brinco-pequeno": {
+      "url": "https://adula-brasil.myshopify.com/collections/brinco-pequeno",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/brinco-pequeno",
+      "hops": [],
+      "title": "Brinco Pequeno – Adüla Brasil",
+      "h1": [
+        "Brinco Pequeno"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/brinco-pequeno"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/brinco-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/collections/brinco-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/brinco-prata-925",
+      "hops": [],
+      "title": "Brinco Prata 925 – Adüla Brasil",
+      "h1": [
+        "Brinco Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/brinco-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/charm-de-praia": {
+      "url": "https://adula-brasil.myshopify.com/collections/charm-de-praia",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/charm-de-praia",
+      "hops": [],
+      "title": "Charm de Praia – Adüla Brasil",
+      "h1": [
+        "Charm de Praia"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/charm-de-praia"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 5
+    },
+    "https://adula-brasil.myshopify.com/collections/colares-masculinos": {
+      "url": "https://adula-brasil.myshopify.com/collections/colares-masculinos",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/colares-masculinos",
+      "hops": [],
+      "title": "Colares Masculinos – Adüla Brasil",
+      "h1": [
+        "Colares Masculinos"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/colares-masculinos"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 6
+    },
+    "https://adula-brasil.myshopify.com/collections/ear-hooks": {
+      "url": "https://adula-brasil.myshopify.com/collections/ear-hooks",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/ear-hooks",
+      "hops": [],
+      "title": "Ear Hooks – Adüla Brasil",
+      "h1": [
+        "Ear Hooks"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/ear-hooks"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 9
+    },
+    "https://adula-brasil.myshopify.com/collections/escapularios": {
+      "url": "https://adula-brasil.myshopify.com/collections/escapularios",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/escapularios",
+      "hops": [],
+      "title": "Escapulários – Adüla Brasil",
+      "h1": [
+        "Escapulários"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/escapularios"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 7
+    },
+    "https://adula-brasil.myshopify.com/collections/festa": {
+      "url": "https://adula-brasil.myshopify.com/collections/festa",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/festa",
+      "hops": [],
+      "title": "Festa – Adüla Brasil",
+      "h1": [
+        "Festa"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/festa"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 18
+    },
+    "https://adula-brasil.myshopify.com/collections/fios-de-luz": {
+      "url": "https://adula-brasil.myshopify.com/collections/fios-de-luz",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/fios-de-luz",
+      "hops": [],
+      "title": "Fios De Luz – Adüla Brasil",
+      "h1": [
+        "Fios De Luz"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/fios-de-luz"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/love-paris": {
+      "url": "https://adula-brasil.myshopify.com/collections/love-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/love-paris",
+      "hops": [],
+      "title": "Love Paris – Adüla Brasil",
+      "h1": [
+        "Love Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/love-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 14
+    },
+    "https://adula-brasil.myshopify.com/collections/moissanite": {
+      "url": "https://adula-brasil.myshopify.com/collections/moissanite",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/moissanite",
+      "hops": [],
+      "title": "MOISSANITE – Adüla Brasil",
+      "h1": [
+        "MOISSANITE"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/moissanite"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 4
+    },
+    "https://adula-brasil.myshopify.com/collections/noivas-madrinhas": {
+      "url": "https://adula-brasil.myshopify.com/collections/noivas-madrinhas",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/noivas-madrinhas",
+      "hops": [],
+      "title": "Noivas / Madrinhas – Adüla Brasil",
+      "h1": [
+        "Noivas / Madrinhas"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/noivas-madrinhas"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/personalize-sua-peca": {
+      "url": "https://adula-brasil.myshopify.com/collections/personalize-sua-peca",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/personalize-sua-peca",
+      "hops": [],
+      "title": "Personalize sua peça – Adüla Brasil",
+      "h1": [
+        "Personalize sua peça"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/personalize-sua-peca"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pingentes-dourado": {
+      "url": "https://adula-brasil.myshopify.com/collections/pingentes-dourado",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pingentes-dourado",
+      "hops": [],
+      "title": "Pingentes Dourado – Adüla Brasil",
+      "h1": [
+        "Pingentes Dourado"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pingentes-dourado"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pingentes-pedra-natural": {
+      "url": "https://adula-brasil.myshopify.com/collections/pingentes-pedra-natural",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pingentes-pedra-natural",
+      "hops": [],
+      "title": "Pingentes Pedra Natural – Adüla Brasil",
+      "h1": [
+        "Pingentes Pedra Natural"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pingentes-pedra-natural"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pingentes-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/collections/pingentes-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pingentes-prata-925",
+      "hops": [],
+      "title": "Pingentes Prata 925 – Adüla Brasil",
+      "h1": [
+        "Pingentes Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pingentes-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pingentes-relicario": {
+      "url": "https://adula-brasil.myshopify.com/collections/pingentes-relicario",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pingentes-relicario",
+      "hops": [],
+      "title": "Pingentes Relicário – Adüla Brasil",
+      "h1": [
+        "Pingentes Relicário"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pingentes-relicario"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 3
+    },
+    "https://adula-brasil.myshopify.com/collections/porta-joias-e-estojos": {
+      "url": "https://adula-brasil.myshopify.com/collections/porta-joias-e-estojos",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/porta-joias-e-estojos",
+      "hops": [],
+      "title": "Porta Jóias e Estojos – Adüla Brasil",
+      "h1": [
+        "Porta Jóias e Estojos"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/porta-joias-e-estojos"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 11
+    },
+    "https://adula-brasil.myshopify.com/collections/presentes-adulantes": {
+      "url": "https://adula-brasil.myshopify.com/collections/presentes-adulantes",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/presentes-adulantes",
+      "hops": [],
+      "title": "Presentes Adulantes – Adüla Brasil",
+      "h1": [
+        "Presentes Adulantes"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/presentes-adulantes"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pulseiras": {
+      "url": "https://adula-brasil.myshopify.com/collections/pulseiras",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pulseiras",
+      "hops": [],
+      "title": "Pulseiras femininas em ouro 18K, ródio e Prata 925 | Adüla – Adüla Brasil",
+      "h1": [
+        "Pulseiras"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pulseiras"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/pulseiras-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/collections/pulseiras-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/pulseiras-prata-925",
+      "hops": [],
+      "title": "Pulseiras Prata 925 – Adüla Brasil",
+      "h1": [
+        "Pulseiras Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/pulseiras-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 24
+    },
+    "https://adula-brasil.myshopify.com/collections/riviera-francesa": {
+      "url": "https://adula-brasil.myshopify.com/collections/riviera-francesa",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/riviera-francesa",
+      "hops": [],
+      "title": "Riviera Francesa – Adüla Brasil",
+      "h1": [
+        "Riviera Francesa"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/riviera-francesa"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 21
+    },
+    "https://adula-brasil.myshopify.com/collections/santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/collections/santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/santuario-de-paris",
+      "hops": [],
+      "title": "Santuário de Paris – Adüla Brasil",
+      "h1": [
+        "Santuário de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 9
+    },
+    "https://adula-brasil.myshopify.com/collections/voyage": {
+      "url": "https://adula-brasil.myshopify.com/collections/voyage",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/collections/voyage",
+      "hops": [],
+      "title": "Voyage – Adüla Brasil",
+      "h1": [
+        "Voyage"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/collections/voyage"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 13
+    },
+    "https://adula-brasil.myshopify.com/ear-hook": {
+      "url": "https://adula-brasil.myshopify.com/ear-hook",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/ear-hook",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/ear-hook"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/escapulario": {
+      "url": "https://adula-brasil.myshopify.com/escapulario",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/escapulario",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/escapulario"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-m": {
+      "url": "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-m",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-m",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-p": {
+      "url": "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-p",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/escapulario-prata-925-sagrado-c-de-jesus-e-ns-carmo-tamanho-p",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/festa": {
+      "url": "https://adula-brasil.myshopify.com/festa",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/festa",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/fio-de-luz": {
+      "url": "https://adula-brasil.myshopify.com/fio-de-luz",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/fio-de-luz",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/garantia": {
+      "url": "https://adula-brasil.myshopify.com/garantia",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/garantia",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/guia-de-medidas": {
+      "url": "https://adula-brasil.myshopify.com/guia-de-medidas",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/guia-de-medidas",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/limpa-joias-de-60ml": {
+      "url": "https://adula-brasil.myshopify.com/limpa-joias-de-60ml",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/limpa-joias-de-60ml",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/love-paris": {
+      "url": "https://adula-brasil.myshopify.com/love-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/love-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/moissanite": {
+      "url": "https://adula-brasil.myshopify.com/moissanite",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/moissanite",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/noivas-madrinhas": {
+      "url": "https://adula-brasil.myshopify.com/noivas-madrinhas",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/noivas-madrinhas",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pages/garantia": {
+      "url": "https://adula-brasil.myshopify.com/pages/garantia",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pages/garantia",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pages/guia-de-medidas": {
+      "url": "https://adula-brasil.myshopify.com/pages/guia-de-medidas",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/pages/guia-de-medidas",
+      "hops": [],
+      "title": "Guia de Medidas – Adüla Brasil",
+      "h1": [
+        "Guia de Medidas"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/pages/guia-de-medidas"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pages/sobre-a-adula": {
+      "url": "https://adula-brasil.myshopify.com/pages/sobre-a-adula",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pages/sobre-a-adula",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pages/trocas-e-devolucoes": {
+      "url": "https://adula-brasil.myshopify.com/pages/trocas-e-devolucoes",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pages/trocas-e-devolucoes",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/personalizesuapeca": {
+      "url": "https://adula-brasil.myshopify.com/personalizesuapeca",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/personalizesuapeca",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pingente-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/pingente-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/pingente-prata-925",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/pingente-prata-925"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pingentes-ouro-18k": {
+      "url": "https://adula-brasil.myshopify.com/pingentes-ouro-18k",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pingentes-ouro-18k",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pingentes-pedras-naturais": {
+      "url": "https://adula-brasil.myshopify.com/pingentes-pedras-naturais",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pingentes-pedras-naturais",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pingentes-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/pingentes-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pingentes-prata-925",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pingentes-relicario": {
+      "url": "https://adula-brasil.myshopify.com/pingentes-relicario",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pingentes-relicario",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/policies/privacy-policy": {
+      "url": "https://adula-brasil.myshopify.com/policies/privacy-policy",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/policies/privacy-policy",
+      "hops": [],
+      "title": "Política de privacidade – Adüla Brasil",
+      "h1": [
+        "Política de privacidade"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/policies/privacy-policy"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/policies/refund-policy": {
+      "url": "https://adula-brasil.myshopify.com/policies/refund-policy",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/policies/refund-policy",
+      "hops": [],
+      "title": "Política de reembolso – Adüla Brasil",
+      "h1": [
+        "Política de reembolso",
+        "Trocas e Devoluções"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/policies/refund-policy"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/politica-de-privacidade": {
+      "url": "https://adula-brasil.myshopify.com/politica-de-privacidade",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/politica-de-privacidade",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/porta-joias-e-outros": {
+      "url": "https://adula-brasil.myshopify.com/porta-joias-e-outros",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/porta-joias-e-outros",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/presentes-adulantes": {
+      "url": "https://adula-brasil.myshopify.com/presentes-adulantes",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/presentes-adulantes",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris",
+      "hops": [],
+      "title": "Brinco Prisma Curvado de Pedra Natural Turmalina - Santuario de Paris – Adüla Brasil",
+      "h1": [
+        "Brinco Prisma Curvado de Pedra Natural Turmalina - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/brinco-prisma-curvado-de-pedra-natural-turmalina-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/caixa-de-presente-je-t-aime": {
+      "url": "https://adula-brasil.myshopify.com/products/caixa-de-presente-je-t-aime",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/caixa-de-presente-je-t-aime",
+      "hops": [],
+      "title": "Caixa de Presente Je T´Aime | Adüla – Adüla Brasil",
+      "h1": [
+        "Caixa de Presente Je T´Aime"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/caixa-de-presente-je-t-aime"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925",
+      "hops": [],
+      "title": "Choker Glamour Riviera 1,75 mm 4 Garras Prata 925 | Adüla – Adüla Brasil",
+      "h1": [
+        "Choker Glamour Riviera 1,75 mm 4 Garras Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/choker-glamour-riviera-1-75-mm-4-garras-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/colar-chuva-de-bencaos-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/colar-chuva-de-bencaos-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/colar-chuva-de-bencaos-santuario-de-paris",
+      "hops": [],
+      "title": "Colar chuva de bênçãos – Santuário de Paris | Adüla – Adüla Brasil",
+      "h1": [
+        "Colar chuva de bênçãos de Pedra Natural - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/colar-chuva-de-bencaos-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris",
+      "hops": [],
+      "title": "Colar Regard Sacré (Olhar Sagrado) | Adüla – Adüla Brasil",
+      "h1": [
+        "Colar Regard Sacré (Olhar Sagrado) de Pedra Natural e Placa resinada cor amarela - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/colar-regard-sacre-olhar-sagrado-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris",
+      "hops": [],
+      "title": "Colar Sacré Coeur (Coração Sagrado) | Adüla – Adüla Brasil",
+      "h1": [
+        "Colar Sacré Coeur (Coração Sagrado) de Pedra Natural e placa resinada cor Amexa - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/colar-sacre-coeur-coracao-sagrado-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m": {
+      "url": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m",
+      "hops": [],
+      "title": "Escapulário Prata 925 Sagrado C. de Jesus e N.S | Adüla – Adüla Brasil",
+      "h1": [
+        "Escapulário Prata 925 Sagrado C. de Jesus e N.S Carmo - Tamanho M"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-m"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p": {
+      "url": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p",
+      "hops": [],
+      "title": "Escapulário Prata 925 Sagrado C. de Jesus e N.S | Adüla – Adüla Brasil",
+      "h1": [
+        "Escapulário Prata 925 Sagrado C. de Jesus e N.S Carmo - Tamanho P"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/escapulario-prata-925-sagrado-c-de-jesus-e-n-s-carmo-tamanho-p"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/limpa-joias-de-60ml": {
+      "url": "https://adula-brasil.myshopify.com/products/limpa-joias-de-60ml",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/limpa-joias-de-60ml",
+      "hops": [],
+      "title": "Limpa Joias de 60ml | Adüla – Adüla Brasil",
+      "h1": [
+        "Limpa Joias de 60ml"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/limpa-joias-de-60ml"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925",
+      "hops": [],
+      "title": "Pulseira Glamour Riviera 1,75 mm 4 Garras Prata 925 | Adüla – Adüla Brasil",
+      "h1": [
+        "Pulseira Glamour Riviera 1,75 mm 4 Garras Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-glamour-riviera-1-75-mm-4-garras-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "Pulseira Renda Sagrada de Pedra Natural - Santuario de Paris – Adüla Brasil",
+      "h1": [
+        "Pulseira Renda Sagrada de Pedra Natural  - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/pulseira-rosario-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-rosario-de-pedra-natural-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-rosario-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "Pulseira Rosario De Pedra Natural - Santuario de Paris – Adüla Brasil",
+      "h1": [
+        "Pulseira Rosario De Pedra Natural - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-rosario-de-pedra-natural-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/products/pulseira-vitral-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-vitral-de-pedra-natural-santuario-de-paris",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-vitral-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "Pulseira Vitral de Pedra Natural - Santuario de Paris – Adüla Brasil",
+      "h1": [
+        "Pulseira Vitral de Pedra Natural - Santuario de Paris"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-vitral-de-pedra-natural-santuario-de-paris"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "https://adula-brasil.myshopify.com/produtos": {
+      "url": "https://adula-brasil.myshopify.com/produtos",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/produtos",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseira-glamour-riviera-175-mm-4-garras-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/pulseira-glamour-riviera-175-mm-4-garras-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pulseira-glamour-riviera-175-mm-4-garras-prata-925",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseira-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/pulseira-prata-925",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/collections/pulseira-prata-925",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://adula-brasil.myshopify.com/collections/pulseira-prata-925"
+        }
+      ],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pulseira-renda-sagrada-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseira-rosario-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/pulseira-rosario-de-pedra-natural-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pulseira-rosario-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseira-vitral-de-pedra-natural-santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/pulseira-vitral-de-pedra-natural-santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pulseira-vitral-de-pedra-natural-santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/pulseiras-1": {
+      "url": "https://adula-brasil.myshopify.com/pulseiras-1",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/pulseiras-1",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/riviera-francesa": {
+      "url": "https://adula-brasil.myshopify.com/riviera-francesa",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/riviera-francesa",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/santuario-de-paris": {
+      "url": "https://adula-brasil.myshopify.com/santuario-de-paris",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/santuario-de-paris",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/sobre-a-adula": {
+      "url": "https://adula-brasil.myshopify.com/sobre-a-adula",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/sobre-a-adula",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/trocas-e-devolucoes": {
+      "url": "https://adula-brasil.myshopify.com/trocas-e-devolucoes",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/trocas-e-devolucoes",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    },
+    "https://adula-brasil.myshopify.com/voyage-1": {
+      "url": "https://adula-brasil.myshopify.com/voyage-1",
+      "status": 404,
+      "final": "https://adula-brasil.myshopify.com/voyage-1",
+      "hops": [],
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "h1": [
+        "Vamos ajudar você a encontrar sua próxima joia?"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 0
+    }
+  },
+  "additional": {
+    "/products/hand-chain-pulseira-de-mao-2-pontos-de-luz-dourado": {
+      "url": "https://adula-brasil.myshopify.com/products/hand-chain-pulseira-de-mao-2-pontos-de-luz-dourado",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/hand-chain-pulseira-de-mao-2-pontos-de-luz-dourado",
+      "hops": [],
+      "title": "Hand Chain Pulseira de Mão 2 Pontos de Luz Dourado | Adüla – Adüla Brasil",
+      "h1": [
+        "Hand Chain Pulseira de Mão 2 Pontos de Luz Dourado"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/hand-chain-pulseira-de-mao-2-pontos-de-luz-dourado"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "/products/pulseira-religiosa-nossa-senhora-aparecida-com-coracao-de-zirconia-dourado": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-religiosa-nossa-senhora-aparecida-com-coracao-de-zirconia-dourado",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-religiosa-nossa-senhora-aparecida-com-coracao-de-zirconia-dourado",
+      "hops": [],
+      "title": "Pulseira Religiosa Nossa Senhora Aparecida com | Adüla – Adüla Brasil",
+      "h1": [
+        "Pulseira Religiosa Nossa Senhora Aparecida com Coração de Zircônia Dourado"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-religiosa-nossa-senhora-aparecida-com-coracao-de-zirconia-dourado"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "/products/pulseira-religiosa-cruz-cravejada-bom-caminho-dourado": {
+      "url": "https://adula-brasil.myshopify.com/products/pulseira-religiosa-cruz-cravejada-bom-caminho-dourado",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/pulseira-religiosa-cruz-cravejada-bom-caminho-dourado",
+      "hops": [],
+      "title": "Pulseira Religiosa Cruz Cravejada Bom Caminho | Adüla – Adüla Brasil",
+      "h1": [
+        "Pulseira Religiosa Cruz Cravejada Bom Caminho Dourado"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/pulseira-religiosa-cruz-cravejada-bom-caminho-dourado"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "/products/par-de-argolas-coracao-liso-prata-925": {
+      "url": "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-prata-925",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-prata-925",
+      "hops": [],
+      "title": "Par de Argolas Coração Liso Prata 925 | Adüla – Adüla Brasil",
+      "h1": [
+        "Par de Argolas Coração Liso Prata 925"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-prata-925"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "/products/par-de-argolas-coracao-liso-dourado": {
+      "url": "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-dourado",
+      "status": 200,
+      "final": "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-dourado",
+      "hops": [],
+      "title": "Par de Argolas Coração Liso Dourado | Adüla – Adüla Brasil",
+      "h1": [
+        "Par de Argolas Coração Liso Dourado"
+      ],
+      "canonical": [
+        "https://adula-brasil.myshopify.com/products/par-de-argolas-coracao-liso-dourado"
+      ],
+      "robots": [],
+      "fragment_ok": true,
+      "liquid_error": false,
+      "products_links": 1
+    },
+    "/blogs/revista-adula/presentes-adulantes-escolha-semijoias-neste-natal": {
+      "status": 404,
+      "url": "https://adula-brasil.myshopify.com/blogs/revista-adula/presentes-adulantes-escolha-semijoias-neste-natal",
+      "title": "404 – Não Encontrado – Adüla Brasil",
+      "canonical": [
+        "https://adula-brasil.myshopify.com/404"
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "liquid_error": false
+    }
+  }
+}

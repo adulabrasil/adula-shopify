@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "path": "00-consolidado-atualizado-51.csv",
+      "sha256": "09c7459c33cfbcfc3288279c36d32041c79d1ec980be01e050673600b862de3d"
+    },
+    {
+      "path": "00-consolidado-opcional-atualizado-56.csv",
+      "sha256": "332c5254c2c93dd1d646f172ff6e536976e538e1dd4ae26a69f9af9b44b6b203"
+    },
+    {
+      "path": "01-novos-atualizado-41.csv",
+      "sha256": "4deb0c6edb11a193ac76180f38cb5ad1a684d23297ecf4048588686f219bfbbb"
+    },
+    {
+      "path": "02-corrigir-existentes-10.csv",
+      "sha256": "0b292153581744d5db1f1c86223e383effe1ae944bc2cfca588ab10b1b7d7158"
+    },
+    {
+      "path": "03-adicionais-produtos-5.csv",
+      "sha256": "dc8c8ec131817a37db2b59d06e52e1c4031eb70e61360b58903e06e8b163b010"
+    },
+    {
+      "path": "04-revista-1.csv",
+      "sha256": "1295fa3de51d2075dd68517a9ec617a823174a9cdef63f4a830f7ecc94b9420d"
+    },
+    {
+      "path": "LEIA-ME.md",
+      "sha256": "c90970426701596fd97bcf308a95826a022e10694e0a90824b8d91ff3143e013"
+    },
+    {
+      "path": "artigos-publicos-17.csv",
+      "sha256": "5e410dbbd6c358b880e30441f78096a4785de786b0bbfe772fd3f89fc7ae76e3"
+    },
+    {
+      "path": "pendentes-institucionais-2-NAO-IMPORTAR.csv",
+      "sha256": "6951c5e56d6561c39aaf43fd83b7b2033a75a8f4fc4c874b90d1c6bec81cafcc"
+    },
+    {
+      "path": "resumo.json",
+      "sha256": "6a6c52aecc92b542aa168e6c0e01def646d1d6471f8b23e85ab7989d35a809d1"
+    }
+  ],
+  "imported": false
+}

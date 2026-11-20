@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-17T23:46:04.008386+00:00",
+  "legacy_sources_checked": 909,
+  "working_redirect_sources_preserved": 674,
+  "legacy_direct_200": 1,
+  "legacy_final_404": 234,
+  "required_core": {
+    "new": 40,
+    "corrections": 10,
+    "consolidated_ready": 50,
+    "held": 3
+  },
+  "additional_products_ready": 5,
+  "optional_consolidated_ready": 55,
+  "unmatched_outside_ready55": {
+    "conteudo_editorial": 2,
+    "colecao_categoria_provavel": 10,
+    "produto_provavel": 166,
+    "institucional": 2
+  },
+  "public_products_seen_for_url_matching": 869,
+  "blog": {
+    "HTTP": 200,
+    "public_article_links": 0,
+    "atom_entries": 0,
+    "known_legacy_articles_to_recover": 1
+  },
+  "dedicated_pages": {
+    "/pages/garantia": 404,
+    "/pages/sobre-a-adula": 404
+  },
+  "admin_redirect_backup_obtained": false,
+  "imports_executed": 0,
+  "publication_audit": "Paused by user; publication completion reported by user, no Admin verification resumed.",
+  "preexisting_broken_redirects_outside_ready55": 6,
+  "global_zero_404_claim": false
+}
