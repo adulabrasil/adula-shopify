@@ -71,7 +71,8 @@
           {%- endif -%}
 
           {%- assign image = section.settings.image | default: collection.image -%}
-          {{- image | image_url: width: image.width | image_tag: fetchpriority: 'high', widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+          {%- capture customer_banner_alt -%}{%- render 'adula-customer-media-alt', text: image.alt, fallback: collection.title -%}{%- endcapture -%}
+          {{- image | image_url: width: image.width | image_tag: alt: customer_banner_alt, fetchpriority: 'high', widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
         </picture>
       {%- endcapture -%}
 

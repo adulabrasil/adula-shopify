@@ -1,0 +1,948 @@
+[
+  {
+    "surface": "home",
+    "url": "https://www.adulabrasil.com/",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      }
+    ],
+    "image_count": 78,
+    "h1": [
+      "Joias e semijoias com design francês"
+    ]
+  },
+  {
+    "surface": "collection",
+    "url": "https://www.adulabrasil.com/collections/aneis",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      }
+    ],
+    "image_count": 58,
+    "h1": [
+      "Anéis"
+    ]
+  },
+  {
+    "surface": "collection-prata",
+    "url": "https://www.adulabrasil.com/collections/prata-925",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      }
+    ],
+    "image_count": 43,
+    "h1": [
+      "Prata 925"
+    ]
+  },
+  {
+    "surface": "search",
+    "url": "https://www.adulabrasil.com/search?q=anel&type=product",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_água marinha",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ametista",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      }
+    ],
+    "image_count": 58,
+    "h1": [
+      "Pesquisar"
+    ]
+  },
+  {
+    "surface": "predictive",
+    "url": "https://www.adulabrasil.com/search/suggest?q=anel&resources[type]=product&section_id=predictive-search",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_água marinha",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ametista",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ametista",
+        "class": "horizontal-product-card__image",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "horizontal-product-card__image",
+        "parent": "a"
+      }
+    ],
+    "image_count": 15,
+    "h1": []
+  },
+  {
+    "surface": "product",
+    "url": "https://www.adulabrasil.com/products/anel-adriana-dourado",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata preta",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata preta",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata preta",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_turquesa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_granada vermelha",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_quartzo rosa",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ágata verde",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_jade céu",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_olho de tigre",
+        "class": null,
+        "parent": "div"
+      }
+    ],
+    "image_count": 81,
+    "h1": [
+      "Anel Adriana Dourado"
+    ]
+  },
+  {
+    "surface": "product-colors",
+    "url": "https://www.adulabrasil.com/products/pulseira-greta-boho-chic-perola-natural",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "zoom-image group-hover:zoom",
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "object-contain",
+        "parent": "button"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_dourado (banho ouro 18k)",
+        "class": null,
+        "parent": "div"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": null,
+        "parent": "div"
+      }
+    ],
+    "image_count": 33,
+    "h1": [
+      "Pulseira Greta Boho Chic Perola Natural"
+    ]
+  },
+  {
+    "surface": "recommendations",
+    "url": "https://www.adulabrasil.com/recommendations/products?product_id=9180337701027&section_id=related-products&limit=8&intent=related",
+    "status": 200,
+    "technical_text_nodes": [],
+    "technical_attributes": [
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ametista",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#pedra_ametista",
+        "class": "product-card__image product-card__image--secondary",
+        "parent": "a"
+      },
+      {
+        "tag": "img",
+        "attribute": "alt",
+        "value": "#cor_prata 925",
+        "class": "product-card__image product-card__image--primary  aspect-natural",
+        "parent": "a"
+      }
+    ],
+    "image_count": 16,
+    "h1": []
+  }
+]

@@ -1,0 +1,28 @@
+{%- doc -%}
+  Removes known Prestige variant-image grouping markers from presentation text only.
+  Never use this output to change product/media data or grouping/filter values.
+  Unknown hashtags and the commercial description preceding a marker are preserved.
+  @param {string} [text] - Original alt text (or a custom badge label).
+  @param {string} [fallback] - Commercial product title when only metadata remains.
+{%- enddoc -%}
+{%- liquid
+  assign internal_keys = 'cor|cores|pedra|pedras|signos|pingente de letra|cor de metal semijoias' | split: '|'
+  assign customer_text = text | default: ''
+  assign parts = customer_text | split: '#'
+  for part in parts
+    unless forloop.first
+      if part contains '_'
+        assign marker_key = part | split: '_' | first | strip | downcase
+        if internal_keys contains marker_key
+          assign internal_segment = '#' | append: part
+          assign customer_text = customer_text | remove: internal_segment
+        endif
+      endif
+    endunless
+  endfor
+  assign customer_text = customer_text | strip
+  if customer_text == blank
+    assign customer_text = fallback | default: '' | strip
+  endif
+  echo customer_text
+-%}

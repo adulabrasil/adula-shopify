@@ -44,7 +44,8 @@
 
             {%- capture sizes -%}(max-width: 700px) 100vw, {% if block.settings.size == '1' %}(max-width: 1000px)calc(100vw / 3), 25vw{% else %}(max-width: 1000px)calc((100vw / 1.5)), 50vw{% endif %}{%- endcapture -%}
 
-            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '800,1200,1800,2400,2800,3200' -}}
+            {%- capture customer_promo_alt -%}{%- render 'adula-customer-media-alt', text: block.settings.image.alt, fallback: block.settings.heading -%}{%- endcapture -%}
+            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: alt: customer_promo_alt, loading: 'lazy', sizes: sizes, widths: '800,1200,1800,2400,2800,3200' -}}
           </picture>
         {%- endif -%}
 

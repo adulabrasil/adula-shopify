@@ -13,8 +13,9 @@
 
   {%- capture image_content -%}
     {%- if block.settings[image_setting] -%}
+      {%- capture customer_menu_alt -%}{%- render 'adula-customer-media-alt', text: block.settings[image_setting].alt, fallback: block.settings[heading_setting] -%}{%- endcapture -%}
       <div class="overflow-hidden">
-        {{- block.settings[image_setting] | image_url: width: block.settings[image_setting].width | image_tag: loading: 'lazy', sizes: '315px', widths: '315,630,945', class: 'zoom-image group-hover:zoom' -}}
+        {{- block.settings[image_setting] | image_url: width: block.settings[image_setting].width | image_tag: alt: customer_menu_alt, loading: 'lazy', sizes: '315px', widths: '315,630,945', class: 'zoom-image group-hover:zoom' -}}
       </div>
     {%- endif -%}
 

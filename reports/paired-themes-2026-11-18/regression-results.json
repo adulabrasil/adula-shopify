@@ -1,0 +1,14 @@
+{
+  "official": {
+    "passed": 30,
+    "failed": 0,
+    "suite": "tests/post-chic",
+    "scope": "Local mocked presentation, gifts, channel script and URL classification; no Admin calls"
+  },
+  "chic": {
+    "passed": 23,
+    "failed": 0,
+    "suite": "tests/migration-2026",
+    "scope": "Local mocked campaign Liquid/DOM/cart/wishlist; no store writes"
+  }
+}

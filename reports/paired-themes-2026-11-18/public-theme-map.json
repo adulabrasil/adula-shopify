@@ -1,0 +1,41 @@
+[
+  {
+    "requested": "published",
+    "status": 200,
+    "url": "https://www.adulabrasil.com/",
+    "theme": {
+      "name": "TESTE – CHIC FRIDAY 2026",
+      "id": 168887910563,
+      "schema_name": "Prestige",
+      "schema_version": "11.4.0",
+      "theme_store_id": null,
+      "role": "main"
+    }
+  },
+  {
+    "requested": "previous-test",
+    "status": 200,
+    "url": "https://www.adulabrasil.com/",
+    "theme": {
+      "name": "TESTE – CHIC FRIDAY 2026",
+      "id": 168887910563,
+      "schema_name": "Prestige",
+      "schema_version": "11.4.0",
+      "theme_store_id": null,
+      "role": "main"
+    }
+  },
+  {
+    "requested": "previous-official",
+    "status": 200,
+    "url": "https://www.adulabrasil.com/",
+    "theme": {
+      "name": "TESTE – CHIC FRIDAY 2026",
+      "id": 168887910563,
+      "schema_name": "Prestige",
+      "schema_version": "11.4.0",
+      "theme_store_id": null,
+      "role": "main"
+    }
+  }
+]

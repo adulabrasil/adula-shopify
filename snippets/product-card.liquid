@@ -76,6 +76,7 @@
     reveal-on-scroll="true"
   {% endif %}
   handle="{{ product.handle | escape }}"
+  data-product-title="{{ product.title | escape }}"
 >
   {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
@@ -114,10 +115,12 @@
         -%}
 
         {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
+        {%- capture customer_card_alt -%}{%- render 'adula-customer-media-alt', text: featured_media.alt, fallback: product.title -%}{%- endcapture -%}
         {{-
           featured_media
           | image_url: width: featured_media.width
           | image_tag:
+            alt: customer_card_alt,
             loading: main_media_loading_strategy,
             sizes: sizes,
             widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800',
@@ -137,7 +140,10 @@
             endif
 
             if next_media != blank
-              echo next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', aria-hidden: 'true'
+              capture customer_secondary_alt
+                render 'adula-customer-media-alt', text: next_media.alt, fallback: product.title
+              endcapture
+              echo next_media | image_url: width: next_media.width | image_tag: alt: customer_secondary_alt, class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', aria-hidden: 'true'
             endif
           endif
         -%}

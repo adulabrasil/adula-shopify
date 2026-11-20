@@ -1,0 +1,19 @@
+{
+  "product_count": 868,
+  "products_fetched": 868,
+  "field_counts": {
+    "media_alt": 960
+  },
+  "marker_prefixes": {
+    "cor": 656,
+    "pedra": 166,
+    "pedras": 13,
+    "signos": 63,
+    "pingente de letra": 53,
+    "cores": 1,
+    "cor de metal semijoias": 8
+  },
+  "affected_products": 376,
+  "failures": [],
+  "limitations": "Public catalog only; products.json omits alt, so all 868 product .js media feeds were fetched. No Admin/private/inactive catalog access."
+}

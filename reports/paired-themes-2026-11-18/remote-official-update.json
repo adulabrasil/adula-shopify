@@ -1,0 +1,13 @@
+{
+  "observed_head": "5c3179174640bbf9829337c019571d194bf18d1e",
+  "previous_head": "0472f65395eac2d3e1c47fb0f8844fd082d7f4ef",
+  "commit_subject": "Update from Shopify for theme adula-shopify/Adula-Shopify by Minha loja Admin",
+  "changed_files": [
+    "templates/index.json"
+  ],
+  "field": "sections category_navigation blocks best-selling collection link_url",
+  "before": "/collections/all?sort_by=best-selling",
+  "after": "shopify://collections/mais-vendidos",
+  "changed_by_this_work": false,
+  "action": "Preserve this remote template edit before future application; no template upload performed"
+}

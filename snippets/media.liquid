@@ -28,12 +28,14 @@
   assign media_type = media.media_type | default: 'image'
 -%}
 
+{%- capture customer_media_alt -%}{%- render 'adula-customer-media-alt', text: media.alt, fallback: product.title -%}{%- endcapture -%}
+
 {%- case media_type -%}
   {%- when 'image' -%}
     {{-
       media
       | image_url: width: media.preview_image.width
-      | image_tag: loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: class
+      | image_tag: alt: customer_media_alt, loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: class
     -}}
 
   {%- when 'video', 'external_video' -%}
@@ -60,7 +62,7 @@
         {{-
           media
           | image_url: width: media.preview_image.width
-          | image_tag: loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200'
+          | image_tag: alt: customer_media_alt, loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200'
         -}}
       {%- endunless -%}
 
