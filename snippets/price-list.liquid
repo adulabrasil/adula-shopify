@@ -28,10 +28,56 @@
       assign compare_at_price_classes = base_text_class | append: 'h5 text-subdued line-through'
       assign unit_price_classes = base_text_class | append: 'h6 text-subdued'
   endcase
+  assign adula_chic_friday_active = false
+  assign adula_chic_friday_time = 'now' | date: '%s' | plus: 0
+  assign adula_chic_friday_start = '2026-11-16 00:00:00 -0300' | date: '%s' | plus: 0
+  assign adula_chic_friday_end = '2026-11-30 23:59:59 -0300' | date: '%s' | plus: 0
+  if adula_chic_friday_time >= adula_chic_friday_start and adula_chic_friday_time <= adula_chic_friday_end
+    assign adula_chic_friday_active = true
+  endif
+  assign adula_chic_friday_in_collection = false
+  if product != blank
+    for adula_collection in product.collections
+      if adula_collection.id == 514558328995
+        assign adula_chic_friday_in_collection = true
+        break
+      endif
+    endfor
+  endif
+  assign adula_chic_friday_excluded = false
+  if product != blank
+    for adula_tag in product.tags
+      assign adula_tag_normalized = adula_tag | strip | downcase
+      if adula_tag_normalized == 'santuário de paris' or adula_tag_normalized == 'santuario de paris' or adula_tag_normalized == 'brinde'
+        assign adula_chic_friday_excluded = true
+      endif
+    endfor
+  endif
+  if product != blank and product.handle contains 'chaveiro-de-torre-eiffel'
+    assign adula_chic_friday_excluded = true
+  endif
+  if product != blank and product.handle contains 'bandeja'
+    assign adula_chic_friday_excluded = true
+  endif
+  assign adula_chic_friday_variant = variant | default: product.selected_or_first_available_variant
+  assign adula_chic_friday_show = false
+  if context != 'line_item' and adula_chic_friday_active and adula_chic_friday_in_collection and adula_chic_friday_excluded == false and adula_chic_friday_variant != blank
+    assign adula_variant_has_prior_sale = false
+    if adula_chic_friday_variant.compare_at_price > adula_chic_friday_variant.price
+      assign adula_variant_has_prior_sale = true
+    endif
+    if adula_chic_friday_variant.price > 0 and adula_variant_has_prior_sale == false
+      assign adula_chic_friday_show = true
+      assign adula_chic_friday_price = adula_chic_friday_variant.price | times: 0.8 | round
+    endif
+  endif
 -%}
 
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
-  {%- if variant != blank -%}
+  {%- if adula_chic_friday_show -%}
+    <sale-price class="{{ on_sale_price_classes }}">{{ adula_chic_friday_price | money }}</sale-price>
+    <compare-at-price class="{{ compare_at_price_classes }}">{{ adula_chic_friday_variant.price | money }}</compare-at-price>
+  {%- elsif variant != blank -%}
     {%- comment -%}
       --------------------------------------------------------------------------------------------------------------------
       VARIANT CASE (used on product page, quick view...)
@@ -172,8 +218,14 @@
 {%- if context == 'card' or context == 'product' -%}
   {%- assign payment_item = variant | default: product.selected_or_first_available_variant -%}
   {%- if payment_item != blank -%}
-    {%- assign pix_price = payment_item.price | times: 0.97 -%}
-    {%- assign installment_price = payment_item.price | divided_by: 4.0 -%}
+    {%- liquid
+      assign adula_payment_base = payment_item.price
+      if adula_chic_friday_show
+        assign adula_payment_base = adula_chic_friday_price
+      endif
+      assign pix_price = adula_payment_base | times: 0.97
+    -%}
+    {%- assign installment_price = adula_payment_base | divided_by: 4.0 -%}
     <div class="adula-payment-conditions{% if context == 'product' %} adula-payment-conditions--product{% endif %}" aria-label="Condições de pagamento">
       <p class="adula-payment-conditions__installment">
         em até <strong>4x de {{ installment_price | money }}</strong> <span>sem juros</span>
