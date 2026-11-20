@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-11-17T19:58:25.030280+00:00",
+  "public_products": 850,
+  "old_urls": 909,
+  "counts": {
+    "CONTEUDO_OU_CATEGORIA": 72,
+    "SEM_EQUIVALENCIA_CONFIRMADA": 180,
+    "PRODUTO_PUBLICADO_OBSERVADO": 657
+  },
+  "discontinued_confirmed": 0,
+  "admin_verified": false,
+  "warning": "Public visibility is not administrative ACTIVE status. No 301 import or catalog change. Unknown URLs require business evidence."
+}

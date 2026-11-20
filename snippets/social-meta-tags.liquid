@@ -1,11 +1,15 @@
 {%- doc -%}
   Add Facebook and Pinterest Open Graph meta tags to product pages for friendly Facebook sharing and Pinterest pinning.
+
+  @param {string} [seo_description] - Description prepared by the theme layout.
 {%- enddoc -%}
 
 {%- if request.page_type == 'product' -%}
   <meta property="og:type" content="product">
   <meta property="og:title" content="{{ product.title | strip_html | escape }}">
-  <meta property="product:price:amount" content="{{ product.selected_or_first_available_variant.price | money_without_currency | strip_html | escape }}">
+  {%- capture social_display_price -%}{%- render 'adula-display-price', product: product -%}{%- endcapture -%}
+  {%- assign social_display_price = social_display_price | plus: 0 -%}
+  <meta property="product:price:amount" content="{{ social_display_price | divided_by: 100.0 }}">
   <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
   <meta property="product:availability" content="{% if product.available %}in stock{% else %}out of stock{% endif %}">
 {%- elsif request.page_type == 'article' -%}

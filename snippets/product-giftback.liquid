@@ -5,9 +5,11 @@
   @param {variant} variant
 {%- enddoc -%}
 
+{%- capture giftback_base -%}
+  {%- render 'adula-display-price', product: product, variant: variant -%}
+{%- endcapture -%}
 {%- liquid
-  assign selected_variant = variant | default: product.selected_or_first_available_variant
-  assign giftback_value = selected_variant.price | divided_by: 10
+  assign giftback_value = giftback_base | plus: 0 | divided_by: 10.0 | round
 -%}
 
 {%- if giftback_value > 0 -%}
@@ -134,7 +136,7 @@
 
   <div class="product-giftback">
     <span class="product-giftback__pill">
-      GANHE {{ giftback_value | money }} DE GIFTBACK
+      GIFTBACK ESTIMADO: {{ giftback_value | money }}
     </span>
 
     <details class="product-giftback__details">

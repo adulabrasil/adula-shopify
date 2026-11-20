@@ -5,13 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
 
-    {%- comment -%}
-      Keep legacy institutional URLs working while these contents live as
-      on-demand sections on the home page.
-    {%- endcomment -%}
-    {%- if request.path == '/pages/trocas-e-devolucoes' -%}
-      <script>window.location.replace({{ routes.root_url | append: '#trocas-devolucoes' | json }});</script>
-    {%- endif -%}
+    {%- comment -%}Legacy institutional URLs require reviewed Shopify HTTP 301 redirects.{%- endcomment -%}
 
     {%- liquid
       assign seo_description = page_description
@@ -24,6 +18,9 @@
             assign seo_description = product.description | strip_html | strip_newlines | truncate: 155
           when 'collection'
             assign seo_description = collection.description | strip_html | strip_newlines | truncate: 155
+            if seo_description == blank
+              assign seo_description = collection.title | append: ' na Adüla Brasil. Descubra joias e semijoias com design francês e escolha suas peças favoritas.' | truncate: 155
+            endif
           when 'article'
             assign seo_description = article.excerpt_or_content | strip_html | strip_newlines | truncate: 155
           when 'page'
@@ -88,7 +85,9 @@
       }
     </script>
 
-    {%- comment -%}Brindes pausados durante a Chic Friday 2026: nao carregar a automacao de inclusao de chaveiro/bandeja.{%- endcomment -%}
+    {%- comment -%}Normal storefront gift policy. Deploy only after the campaign and explicit approval.{%- endcomment -%}
+    <script>window.AdulaAutoGiftsEnabled = true;</script>
+    <script src="{{ 'adula-gift-tier-guard-v2.js' | asset_url }}" defer></script>
     <script src="{{ 'adula-video-carousel-focus.js' | asset_url }}" defer></script>
     <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
